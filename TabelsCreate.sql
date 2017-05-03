@@ -289,4 +289,3 @@ ALTER TABLE Raspuns ADD CONSTRAINT Raspuns_User
     REFERENCES "User" (Id);
 
 -- End of file.
-
