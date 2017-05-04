@@ -375,13 +375,7 @@ function validateDate($date)
     return $d && $d->format('Y-m-d') === $date;
 }
 
-function IDValidare(String $Id)
-{
-	if($Id>0) 
-	    return 1;
-    else 
-		return 0;
-}
+
 
 function FilieraValidare(String $Filiera)
 {
@@ -427,21 +421,7 @@ function An_AbsolvireValidare(String $An_Absolvire)
 		return 0;
 }
 
-function Locatie_IdValidare(String $Locatie_Id)
-{
-	if($Locatie_Id > 0) 
-	    return 1;
-    else 
-		return 0;
-}
 
-function Pregatiri_Anterioar_IdValidare(String $Pregatiri_Anterioar_Id)
-{
-	if($Pregatiri_Anterioar_Id > 0) 
-	    return 1;
-    else 
-		return 0;
-}
 
 function Data_InceputValidare(String $Data_Inceput, String $Data_Sfarsit)
 {
@@ -477,12 +457,6 @@ function Data_SfarsitValidare(String $Data_Inceput, String $Data_Sfarsit)
 		return 0;
 }
     
-function validareId($input)
-{
-    if($input < 0) return "Id-ul trebuie sa fie pozitiv!";
-    if(ctype_digit($input) == 0) return "Id-ul liceului nu este valid!";
-    return "corect";
-}
 
 function validareNume($nume)
 {
@@ -504,11 +478,6 @@ function validareDiplomaNr($Diploma_Nr)
     return "corect";
 }
 
-function validareLocatieId($Locatie_Id)
-{
-    if(ctype_digit($Locatie_Id) == 0) return "Id-ul locatiei nu este valid!!";
-    return "corect";
-}
 
 function validareData($Data_Inceput, $Diploma_Data_Eliberarii, $Data_Sfarsit)
 {
@@ -533,40 +502,6 @@ function validareDiplomaEmisa($Diploma_Emisa)
     return "corect";
 }
 
-function validareLiceu($input, $nume, $Data_Inceput, $Data_Sfarsit, $Profil, $Diploma_Serie, $Diploma_Nr, $Diploma_Emisa, $Diploma_Data_Eliberarii, $Locatie_Id)
-{
-    
-    $id = validareId($input);
-   
-    $name = validareNume($nume);
-    
-    $profile = validareProfil($Profil);
-   
-    $dipl_nr = validareDiplomaNr($Diploma_Nr);
-    
-    $loc_id = validareLocatieId($Locatie_Id);
-   
-    $val_data = validareData($Data_Inceput, $Diploma_Data_Eliberarii, $Data_Sfarsit);
-   
-    $dipl_ser = validareDiplomaSerie($Diploma_Serie);
-    
-    $dipl_emis = validareDiplomaEmisa($Diploma_Emisa);
-    
-    
-    if($id == "corect" and $name == "corect" and $profile == "corect" and $dipl_nr == "corect" and $loc_id == "corect" and $val_data == "corect" and $dipl_ser == "corect" and $dipl_emis == "corect") return "Inregistrare reusita!";
-    
-    else
-    {
-         echo "ID: ".$id."<br>";
-         echo "Nume: ".$name."<br>";
-         echo "Profil: ".$profile."<br>";
-         echo "Diploma Nr: ".$dipl_nr."<br>";
-         echo "Id-ul locatiei: ".$loc_id."<br>";
-         echo "Date introduse: ".$val_data."<br>";
-         echo "Diploma Serie: ".$dipl_ser."<br>";
-         echo "Diploma Emisa: ".$dipl_emis."<br>";
-    }
-}
 function validare_locatie($id,$tara,$judet,$localitate,$strada)
 {
 	if(!ctype_digit($id))
@@ -616,45 +551,39 @@ function validarePremiulObtinut($input){
 
 }
 
-function validareid($id)
-{
-	if($id>0&&$id<999999)
-		return 1;
-	return 0;
-}
-function validaretipaplicare($tip_aplicare)
+function validareTipAplicare($tip_aplicare)
 {
 	if(strlen($tip_aplicare)<5 || strlen($tip_aplicare)>30)
 		return 0;
 	if(ctype_alpha($tip_aplicare) == 0) return 0;
 	return 1;
 }
-function validareprobaconcurs($tip_aplicare)
+function validAreProbaConcurs($tip_aplicare)
 {
 	if((strcmp($tip_aplicare,'matematica')==0)||(strcmp($tip_aplicare,'informatica')==0))
 		return 1;
 	return 0;
 }
-function validarelimbastudiu($limba_studiu)
+function validarLimbaStudiu($limba_studiu)
 {
 	if((strcmp($limba_studiu,'engleza')==0)||(strcmp($limba_studiu,'romana')==0))
 		return 1;
 	return 0;
 }
-function validarefrecventa($frecventa)
+function validarFrecventa($frecventa)
 {
 	if((strcmp($frecventa,'z')==0)||(strcmp($frecventa,'s')==0))// zi sau seral
 		return 1;
 	return 0;
 }
-function validareoptional($optional)
+function validareOptional($optional)
 {
 	if(strlen($optional)>50)
 		return 0;
 	if(ctype_alpha($optional) == 0) return 0;
 	return 1;
 }
-function validarecazare($cazare)
+function validareCazare($cazare)
 {
 	if($cazare<0||$cazare>1)
 		return 0;
