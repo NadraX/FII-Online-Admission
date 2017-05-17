@@ -72,6 +72,7 @@ CREATE TABLE Domiciliu (
     Numar integer  NULL,
     Bloc varchar2(6)  NOT NULL,
     Etaj varchar2(6)  NOT NULL,
+    Scara varchar2(6) NOT NULL,
     Apartament integer  NOT NULL,
     Cod_Postal number(6,0)  NOT NULL,
     Locatie_Id integer  NOT NULL,
@@ -197,6 +198,10 @@ CREATE TABLE "User" (
     CONSTRAINT User_pk PRIMARY KEY (Id)
 ) ;
 
+DROP TABLE Useri;
+-- Table: Useri
+CREATE TABLE Useri(ID INTEGER, username VARCHAR2(50), parola VARCHAR2(50), email VARCHAR2(50), nume VARCHAR2(50), prenume VARCHAR2(50));
+
 -- foreign keys
 -- Reference: Candidat_Domiciliu (table: Date_Personale_Candidat)
 ALTER TABLE Date_Personale_Candidat ADD CONSTRAINT Candidat_Domiciliu
@@ -289,3 +294,4 @@ ALTER TABLE Raspuns ADD CONSTRAINT Raspuns_User
     REFERENCES "User" (Id);
 
 -- End of file.
+
