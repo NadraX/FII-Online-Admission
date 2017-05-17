@@ -52,48 +52,45 @@ public function validCetatetnie($p_cetatenie)
     return true;
 }
 
-function validCNP($p_cnp) {
-    // CNP must have 13 characters
-    if(strlen($p_cnp) != 13) {
-        return false;
-    }
-    $cnp = str_split($p_cnp);
-    unset($p_cnp);
-    $hashTable = array( 2 , 7 , 9 , 1 , 4 , 6 , 3 , 5 , 8 , 2 , 7 , 9 );
-    $hashResult = 0;
-    // All characters must be numeric
-    for($i=0 ; $i<13 ; $i++) {
-        if(!is_numeric($cnp[$i])) {
-            return false;
-        }
-        $cnp[$i] = (int)$cnp[$i];
-        if($i < 12) {
-            $hashResult += (int)$cnp[$i] * (int)$hashTable[$i];
-        }
-    }
-    unset($hashTable, $i);
-    $hashResult = $hashResult % 11;
-    if($hashResult == 10) {
-        $hashResult = 1;
-    }
-    // Check Year
-    $year = ($cnp[1] * 10) + $cnp[2];
-    switch( $cnp[0] ) {
-        case 1  : case 2 : { $year += 1900; } break; // cetateni romani nascuti intre 1 ian 1900 si 31 dec 1999
-        case 3  : case 4 : { $year += 1800; } break; // cetateni romani nascuti intre 1 ian 1800 si 31 dec 1899
-        case 5  : case 6 : { $year += 2000; } break; // cetateni romani nascuti intre 1 ian 2000 si 31 dec 2099
-        case 7  : case 8 : case 9 : {                // rezidenti si Cetateni Straini
-        $year += 2000;
-        if($year > (int)date('Y')-14) {
-            $year -= 100;
-        }
-    } break;
-        default : {
-            return false;
-        } break;
-    }
-    return ($year > 1800 && $year < 2099 && $cnp[12] == $hashResult);
-}
+function validCNP($p_cnp)
+	{  
+		// CNP must have 13 characters
+		if(strlen($p_cnp) != 13) {
+			return 0;
+		}
+		
+		$cnp = str_split($p_cnp);
+		
+		if($cnp[0]<=0 || $cnp[0]>=3)
+			return 0;
+		
+		$an=$cnp[1]*10+$cnp[2];
+		$luna=$cnp[3]*10+$cnp[4];
+		$zi=$cnp[5]*10+$cnp[6];
+		
+		if(checkdate($luna,$zi,$an)==0)
+			return 0;
+		
+		if($cnp[7]<0 || $cnp[7]>9)
+			return 0;
+			
+		if($cnp[8]<0 || $cnp[8]>9)
+			return 0;
+		
+		if($cnp[9]<0 || $cnp[9]>9)
+			return 0;
+		
+		if($cnp[10]<0 || $cnp[10]>9)
+			return 0;
+		
+		if($cnp[11]<0 || $cnp[11]>9)
+			return 0;
+		
+		if($cnp[12]<0 || $cnp[12]>9)
+			return 0;
+		
+		return 1;
+	}
 
 function checkData_Nasterii($dataNastere) {
     if(strlen($dataNastere)!=10)
@@ -137,7 +134,7 @@ function an_bisect($year)
     return ((($year % 4) == 0) && ((($year % 100) != 0) || (($year %400) == 0)));
 }
 
-function validEmail($p_email)
+/*function validEmail($p_email)
 {
     if (!$p_email) {
         return false;
@@ -145,6 +142,13 @@ function validEmail($p_email)
         return false;
     }
     return true;
+}*/
+function validEmail($p_email)
+{ 
+	if(filter_var($p_email, FILTER_VALIDATE_EMAIL))
+		return 1;
+	else 
+		return 0;
 }
 
 function validEtnie($p_etnie)
@@ -154,18 +158,6 @@ function validEtnie($p_etnie)
         return false;
     }
     else if (!preg_match('/^roman|rom|maghiar|britanic|bulgar|italian|slav|slovac|spaniol|sarb|suedez$/', $p_etnie))
-    {
-        return false;
-    }
-    return true;
-}
-    
-function validInitialaTata($p_initTata)
-{
-    if(strlen($p_initTata) != 1) {
-        return false;
-    }
-    else if (!preg_match('/^[A-Z]$/', $p_initTata))
     {
         return false;
     }
@@ -185,19 +177,13 @@ function validLimbaMaterna($p_limba)
     return true;
 }
 
-function validNumarBuletin($p_nr)
-{
-    if(!is_numeric($p_nr) || strlen($p_nr) < 6 || strlen($p_nr) > 6) {
-        return false;
-    } else {
-        if(preg_match("/^[0-9]{6}$/", $p_nr)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-
+function validNumarBuletin($p_numar)
+	{
+		if(!preg_match('/^[0123456789]{6}$/', $p_numar))
+			return 0;
+		return 1;
+	}
+/*
 function validNume($p_nume)
 {
     if (!$p_nume)
@@ -209,19 +195,32 @@ function validNume($p_nume)
         return false;
     }
     return true;
-}
+}*/
+    function validNume($p_nume)
+	{
+		if(!$p_nume)
+		   return 0;
+		else 
+			if(!preg_match('/^[a-zA-Z ]*$/', $p_nume))
+				return 0;
+		return 1;
+	}
+
+	function validPremume($p_prenume)
+	{
+		if (!ctype_alpha(str_replace(' ','',str_replace('-', '', $p_prenume))))
+			return 0;
+		return 1;
+	}
 
 function validSerieBuletin($p_serie)
 {
-    if (!$p_serie)
-    {
-        return false;
-    }
-    else if (!preg_match('/^[A-Z]{2}$/', $p_serie))
-    {
-        return false;
-    }
-    return true;
+	if (!$p_serie)
+		return 0;
+	else 
+		if(!preg_match('/^[A-Z]{2}$/', $p_serie))
+			return 0;
+	return 1;
 }
 
 function validSex($p_sex)
@@ -249,19 +248,60 @@ function validStareCivila($p_stare_civila)
     return true;
 }
 
-function validTelefon($p_nr)
-{
-    if(!is_numeric($p_nr) || strlen($p_nr) < 10 || strlen($p_nr) > 10) {
-        return false;
-    } else {
-        if(preg_match("/^07[0-9]{8}$/", $p_nr)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
+    function validareNumar($p_numar)
+	{
+		if($p_numar=='-')
+			return 1;
+		else 
+			if(ctype_digit($p_numar))
+				return 1;
+		return 0;
+	}
+	
 
+	function validareBloc($p_bloc)
+	{
+		if($p_bloc=='-')
+			return 1;
+		if(ctype_alnum($p_bloc))
+			return 1;
+		return 0;
+	}
+	
+
+	function validareEtaj($p_etaj)
+	{
+		if($p_etaj=='-')
+			return 1;
+		
+		if($p_etaj=='p')
+			return 1;
+			
+		if($p_etaj=='Parter')
+			return 1;
+		
+		if($p_etaj=='parter')
+			return 1;
+
+		if(preg_match('/^[0-9]$/', $p_etaj))
+			return 1;
+		return 0;
+	}
+
+
+	function validTelefon($p_nr)
+	{
+		if(!is_numeric($p_nr) || strlen($p_nr) < 10 || strlen($p_nr) > 10)
+			return 0;
+		else
+			if(preg_match("/^07[0-9]{8}$/", $p_nr)) 
+				return 1;
+			else 
+				return 0;
+	}
+	
+	
+	
 function check_nationalitate($nationalitate) {
     if($nationalitate != 'daneza' && $nationalitate != 'engleza' && $nationalitate != 'estoniana' && $nationalitate != 'finlandeza' && 
       $nationalitate != 'islandeza' && $nationalitate != 'irlandeza' && $nationalitate != 'letoniana' && $nationalitate != 'lituaniana' && 
@@ -298,7 +338,7 @@ function check_nationalitate($nationalitate) {
     return 1;
 }
     
-function validTipBuletin($p_tip)
+/*function validTipBuletin($p_tip)
 {
     if (!$p_tip)
     {
@@ -309,7 +349,29 @@ function validTipBuletin($p_tip)
         return false;
     }
     return true;
-} 
+} */
+function validTipBuletin($p_tip)
+{
+	if(!ctype_alpha(str_replace('.','',str_replace(' ', '', $p_tip))))
+		return 0;
+	return 1;
+}
+	
+function validareStrada($p_Strada)
+{
+	if(!ctype_alpha(str_replace(' ', '', $p_Strada)))
+		return 0;
+	return 1;
+}
+
+function validEliberareBuletin($p_eliberat)
+{
+	if(!ctype_alpha(str_replace(',','',str_replace('.','',str_replace(' ', '', $p_eliberat)))))
+		return 0;
+	return 1;
+}
+
+
 
  function validareMedieBac($input){
         if(ctype_digit(str_replace(array(".", ","), '', $input)) == 0)
@@ -642,5 +704,69 @@ while ($row = oci_fetch_assoc($stmt)) {
 		
 oci_free_statement($stmt);
 }
+
+    function validInitialaTata($p_initTata)
+	{
+		if(strlen($p_initTata) > 5) 
+			return 0;
+		
+		$lung=strlen($p_initTata);
+		
+		$initialaTata=str_split($p_initTata);
+		
+		if($lung==1)  // C (Costel)
+		{
+			if(!preg_match('/^[A-Z]$/', $initialaTata[0]))
+				return 0;
+			else 
+				return 1;
+		}
+		else 
+		{ 
+			if($lung==2)  // C. (Costel) sau CI (Costel Ion)
+			{
+				if(!preg_match('/^[A-Z]$/', $initialaTata[0]))
+					return 0;
+				else if(!preg_match('/^[.A-Z]$/', $initialaTata[1]))
+						 return 0;
+					 else return 1;
+
+			}
+			else
+			{
+				if($lung==3)
+					return 0;
+				else
+				{
+					if($lung==4)  // C.I.(Costel Ion)
+					{
+						if(!preg_match('/^[A-Z]$/', $initialaTata[0]))
+							return 0;
+						else if($initialaTata[1]!='.')
+								return 0;
+							 else if(!preg_match('/^[A-Z]$/', $initialaTata[2]))
+									  return 0;
+								  else if($initialaTata[3]!='.')
+										   return 0;
+									   else return 1;
+					}
+					else // lungime 5  C.-I. (Costel-Ion)
+					{
+						if(!preg_match('/^[A-Z]$/', $initialaTata[0]))
+							return 0;
+						else if($initialaTata[1]!='.')
+								return 0;
+							 else if($initialaTata[2]!='-')
+									  return 0;
+								  else if(!preg_match('/^[A-Z]$/', $initialaTata[3]))
+										   return 0;
+									   else if($initialaTata[4]!='.')
+												return 0;
+											else return 1;
+					}
+				}
+			}
+		}
+	}
 
 ?>
