@@ -1,4 +1,4 @@
-.container2 {
+.container2{
 	margin-top: 2%;
 	margin-left: 20%;
 	margin-right: 20%;
@@ -8,18 +8,19 @@
 	padding-right: 15px;
 	padding-bottom: 15px;
 	background: rgba(192, 192, 192,0.6);
+	height: 30%;
 }
 
-body {
+body{
 	color: #000;
 	font: 1em/1.65em  Helvetica, Verdana, sans-serif;
 }
 
-.navbar-brand {
+.navbar-brand{
 	padding-top: 2px;
 	padding-bottom: 0px;
 }
-.navbar-brand p {
+.navbar-brand p{
 	padding-top: 10px;
 }
 
@@ -38,9 +39,10 @@ hr.style18:before {
   border-style: solid; 
   border-color: #ffffff; 
   border-width: 0 0 3px 0; 
+   
 }
 
-.harta {
+.harta{
 	border-radius: 30px;
 	width: 60px;
 	height: 60px;
@@ -49,9 +51,73 @@ hr.style18:before {
 	padding-bottom: 5px;
 	padding-left: 0px;
 	margin-left: 0px;
+
 }
 
-.tick {
+.tick{
 	width: 25px;
 	height: 25px;
+}
+
+.img{
+	width: 20px;
+	height: 30px;
+	border-radius: 25px;
+}
+
+.textformat{
+	color: #3488CB;
+}
+
+
+#top{
+	color: #3488CB;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+span{
+	padding-right: 0px;
+	margin-right: 0px;
+}
+
+.bar{
+	background: #3488CB;
+	color: #ffffff;
+}
+
+li{
+	list-style-type: none;
+}
+
+.list-group{
+	margin-top: 5px;
+}
+
+.badge{
+	align-content: right !important;
+}
+
+.casuta{
+	margin-left: 25px;
+	background: #E0E0E0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.box{
+	text-align: center;
+
+}
+
+.list-group-item{
+	padding-left: 7px;
+}
+
+body{
+	background-repeat: no-repeat;
 }
