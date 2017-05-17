@@ -313,10 +313,10 @@
 											<input type="text"  name="Licenta_Numele_De_Familie" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" value="" data-component="first" />
 											<span style="color:red">
 												<?php
-													include "exempluLicenta.php";
+													include "ValidClass.php";
 													if(isset($_POST['Submit'])) {
 														$v_Numele_De_Familie = $_POST["Licenta_Numele_De_Familie"];
-														$vNumele_De_Familie = validNume($v_Numele_De_Familie);
+														$vNumele_De_Familie = Validare.validNume($v_Numele_De_Familie);
 														if($vNumele_De_Familie==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -330,7 +330,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Initiala_Tata = $_POST["Licenta_Initiala_Tata"];
-														$vLicenta_Initiala_Tata = validInitialaTata($v_Licenta_Initiala_Tata);
+														$vLicenta_Initiala_Tata = Validare.validInitialaTata($v_Licenta_Initiala_Tata);
 														if($vLicenta_Initiala_Tata==0)
 															echo "C&#226;mp invalid!";
 														}
@@ -344,7 +344,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Prenumele = $_POST["Licenta_Prenumele"];
-														$vLicenta_Prenumele = validPremume($v_Licenta_Prenumele);
+														$vLicenta_Prenumele = Validare.validPremume($v_Licenta_Prenumele);
 														if($vLicenta_Prenumele==0)
 															echo "C&#226;mp invalid!";
 														}
@@ -363,7 +363,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Prenume_Mama = $_POST["Licenta_Prenume_Mama"];
-														$vLicenta_PrenumeMama = validNume($v_Licenta_Prenume_Mama);
+														$vLicenta_PrenumeMama = Validare.validNume($v_Licenta_Prenume_Mama);
 														if($vLicenta_PrenumeMama==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -377,7 +377,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Prenume_Tata = $_POST["Licenta_Prenume_Tata"];
-														$vLicenta_PrenumeTata = validNume($v_Licenta_Prenume_Tata);
+														$vLicenta_PrenumeTata = Validare.validNume($v_Licenta_Prenume_Tata);
 														if($vLicenta_PrenumeTata==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -411,7 +411,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Nationalitate = $_POST["Licenta_Nationalitate"];
-														$vLicenta_Nationalitate = validNume($v_Licenta_Nationalitate);
+														$vLicenta_Nationalitate = Validare.validNume($v_Licenta_Nationalitate);
 														if($vLicenta_Nationalitate==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -426,7 +426,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Etnie = $_POST["Licenta_Etnie"];
-														$vLicenta_Etnie = validNume($v_Licenta_Etnie);
+														$vLicenta_Etnie = Validare.validNume($v_Licenta_Etnie);
 														if($vLicenta_Etnie==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -441,7 +441,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Limba_Materna = $_POST["Licenta_Limba_Materna"];
-														$vLicenta_Limba_Materna = validNume($v_Licenta_Limba_Materna);
+														$vLicenta_Limba_Materna = Validare.validNume($v_Licenta_Limba_Materna);
 														if($vLicenta_Limba_Materna==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -463,7 +463,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_CNP = $_POST["Licenta_CNP"];
-														$vLicenta_CNP = validCNP($v_Licenta_CNP);
+														$vLicenta_CNP = Validare.validCNP($v_Licenta_CNP);
 														if($vLicenta_CNP==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -477,7 +477,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Tip_Buletin = $_POST["Licenta_Tip_Buletin"];  // V
-														$vLicenta_Tip_Buletin = validTipBuletin($v_Licenta_Tip_Buletin);
+														$vLicenta_Tip_Buletin = Validare.validTipBuletin($v_Licenta_Tip_Buletin);
 														if($vLicenta_Tip_Buletin==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -491,7 +491,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Serie_Buletin = $_POST["Licenta_Serie_Buletin"];  // V
-														$vLicenta_Serie_Buletin = validSerieBuletin($v_Licenta_Serie_Buletin);
+														$vLicenta_Serie_Buletin = Validare.validSerieBuletin($v_Licenta_Serie_Buletin);
 														if($vLicenta_Serie_Buletin==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -505,7 +505,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Numar_Buletin = $_POST["Licenta_Numar_Buletin"];  // V
-														$vLicenta_Numar_Buletin = validNumarBuletin($v_Licenta_Numar_Buletin);
+														$vLicenta_Numar_Buletin = Validare.validNumarBuletin($v_Licenta_Numar_Buletin);
 														if($vLicenta_Numar_Buletin==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -519,7 +519,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Buletin_Eliberat_De = $_POST["Licenta_Buletin_Eliberat_De"];  // V
-														$vLicenta_Buletin_Eliberat_De = validEliberareBuletin($v_Licenta_Buletin_Eliberat_De);
+														$vLicenta_Buletin_Eliberat_De = Validare.validEliberareBuletin($v_Licenta_Buletin_Eliberat_De);
 														if($vLicenta_Buletin_Eliberat_De==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -738,7 +738,7 @@
 													<?php
 														if(isset($_POST['Submit'])) {
 															$v_Licenta_Medie_BAC = $_POST["Licenta_Medie_BAC"];
-															$vLicenta_Medie_BAC = validareMedieBac($v_Licenta_Medie_BAC);
+															$vLicenta_Medie_BAC = Validare.validareMedieBac($v_Licenta_Medie_BAC);
 															if($vLicenta_Medie_BAC==0)
 																echo "C&#226;mp invalid!";
 													}
@@ -754,7 +754,7 @@
 													<?php
 														if(isset($_POST['Submit'])) {
 															$v_Licenta_Nota_MI = $_POST["Licenta_Nota_MI"];  // V
-															$vLicenta_Nota_MI = validareProbaAlegere($v_Licenta_Nota_MI);
+															$vLicenta_Nota_MI = Validare.validareProbaAlegere($v_Licenta_Nota_MI);
 															if($vLicenta_Nota_MI==0)
 																echo "C&#226;mp invalid!";
 														}
@@ -801,7 +801,7 @@
 															<?php
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Strada = $_POST["Licenta_Strada"];  // V
-																	$vLicenta_Strada = validareStrada($v_Licenta_Strada);
+																	$vLicenta_Strada = Validare.validareStrada($v_Licenta_Strada);
 																	if($vLicenta_Strada==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -815,7 +815,7 @@
 															<?php
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Numar = $_POST["Licenta_Numar"];  // V
-																	$vLicenta_Numar = validareNumar($v_Licenta_Numar);
+																	$vLicenta_Numar = Validare.validareNumar($v_Licenta_Numar);
 																	if($vLicenta_Numar==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -829,7 +829,7 @@
 															<?php
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Bloc = $_POST["Licenta_Bloc"];  // V
-																	$vLicenta_Bloc = validareBloc($v_Licenta_Bloc);
+																	$vLicenta_Bloc = Validare.validareBloc($v_Licenta_Bloc);
 																	if($vLicenta_Bloc==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -843,7 +843,7 @@
 															<?php
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Scara = $_POST["Licenta_Scara"];  // V
-																	$vLicenta_Scara = validareBloc($v_Licenta_Scara);
+																	$vLicenta_Scara = Validare.validareBloc($v_Licenta_Scara);
 																	if($vLicenta_Scara==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -857,7 +857,7 @@
 															<?php
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Etaj = $_POST["Licenta_Etaj"];  // V
-																	$vLicenta_Etaj = validareEtaj($v_Licenta_Etaj);
+																	$vLicenta_Etaj = Validare.validareEtaj($v_Licenta_Etaj);
 																	if($vLicenta_Etaj==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -871,7 +871,7 @@
 															<?php
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Apartament = $_POST["Licenta_Apartament"];  // V
-																	$vLicenta_Apartament = validareNumar($v_Licenta_Apartament);
+																	$vLicenta_Apartament = Validare.validareNumar($v_Licenta_Apartament);
 																	if($vLicenta_Apartament==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -890,7 +890,7 @@
 															<?php
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Localitate = $_POST["Licenta_Localitate"];  // V
-																	$vLicenta_Localitate = validPremume($v_Licenta_Localitate);
+																	$vLicenta_Localitate = Validare.validPremume($v_Licenta_Localitate);
 																	if($vLicenta_Localitate==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -950,7 +950,7 @@
 															<?php
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Cod_Postal = $_POST["Licenta_Cod_Postal"];  // V
-																	$vLicenta_Cod_Postal = validNumarBuletin($v_Licenta_Cod_Postal);
+																	$vLicenta_Cod_Postal = Validare.validNumarBuletin($v_Licenta_Cod_Postal);
 																	if($vLicenta_Cod_Postal==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -984,7 +984,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Telefon = $_POST["Licenta_Telefon"];  // V
-														$vLicenta_Telefon = validTelefon($v_Licenta_Telefon);
+														$vLicenta_Telefon = Validare.validTelefon($v_Licenta_Telefon);
 														if($vLicenta_Telefon==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -1001,7 +1001,7 @@
 												<?php
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Email = $_POST["Licenta_Email"];  // V
-														$vLicenta_Email = validEmail($v_Licenta_Email);
+														$vLicenta_Email = Validare.validEmail($v_Licenta_Email);
 														if($vLicenta_Email==0)
 															echo "C&#226;mp invalid!";
 													}
