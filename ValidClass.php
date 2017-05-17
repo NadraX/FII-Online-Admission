@@ -589,5 +589,58 @@ function validareCazare($cazare)
 		return 0;
 	return 1;
 }
+function validareLogin($username, $password)
+{
+    
+$user = 'ip';
+
+// Oracle DB user password
+$pass = 'ip';
+
+// Oracle DB connection string
+$connection_string = 'localhost/xe';
+
+//Connect to an Oracle database
+$connection = oci_connect(
+$user,
+$pass,
+$connection_string
+);
+
+    
+   $stmt=oci_parse($connection, 'select u.username, u.parola from useri u
+where u.username = :username and u.parola = :password');
+oci_bind_by_name($stmt, ':username',$username);
+oci_bind_by_name($stmt, ':password',$password);
+ if(!$stmt){
+	 $error=oci_error($connection);
+	 trigger_error(htmlentities($error
+
+['message'],ENT_QUOTES),E_USER_ERROR);
+	 }
+ $result=oci_execute($stmt);
+ if(!$result) {
+    $error = oci_error($stmt);
+    trigger_error(htmlentities($error['message'], ENT_QUOTES), 
+
+E_USER_ERROR);
+}
+
+$count=0;
+
+while ($row = oci_fetch_assoc($stmt)) {  
+    $count++;
+  echo 'Login realizat cu succes';
+}
+
+
+    
+ if(!$count){
+		$message_error="User-ul/Parola sunt incorecte";
+		print htmlentities($message_error);
+	}
+		
+oci_free_statement($stmt);
+}
 
 ?>
