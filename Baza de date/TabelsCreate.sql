@@ -47,8 +47,6 @@ CREATE TABLE Date_Personale_Candidat (
     Numar_Buletin number(6,0)  NOT NULL,
     Buletin_Eliberat_De varchar2(50)  NOT NULL,
     Buletin_Data_Eliberarii date  NOT NULL,
-    Domiciliu_Id integer  NOT NULL,
-    Locul_Nasterii_Id integer  NOT NULL,
     CONSTRAINT Date_Personale_Candidat_pk PRIMARY KEY (Id)
 ) ;
 

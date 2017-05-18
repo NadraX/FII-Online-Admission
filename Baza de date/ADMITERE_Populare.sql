@@ -73,34 +73,34 @@ insert into domiciliu values(10,1,'bl.3','2','20',715202,10);
 
 Insert into DATE_PERSONALE_CANDIDAT values(1,'1960303071375','Atodiresei','Alin','M','M','necasatorit','romana','Viorica','Mihai',
                                           '0756636643','alin.atod@gmail.com', to_Date('03/03/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'),1,1);
+                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'));
 Insert into DATE_PERSONALE_CANDIDAT values(2,'1961220071375','Manolache','irinel','M','M','necasatorit','romana','Liliana','Mihai',
                                           '0756636643','manolache.irinel@gmail.com', to_Date('20/12/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP Bucuresti',to_date('03/04/2015','dd/mm/yyyy'),2,2);
+                                          'CI','XT','692582','SPCLEP Bucuresti',to_date('03/04/2015','dd/mm/yyyy'));
 Insert into DATE_PERSONALE_CANDIDAT values(3,'1960304071375','Marcu','Alin','M','M','necasatorit','romana','Viorica','Mihai',
                                           '0756636643','alin.marcu@gmail.com', to_Date('03/03/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP Iasi',to_date('03/04/2015','dd/mm/yyyy'),3,3);
+                                          'CI','XT','692582','SPCLEP Iasi',to_date('03/04/2015','dd/mm/yyyy'));
 Insert into DATE_PERSONALE_CANDIDAT values(4,'1960403071375','Radu','Alin','M','M','necasatorit','romana','Viorica','Mihai',
                                           '0756636643','alin.rd@gmail.com', to_Date('03/04/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP Vaslui',to_date('03/04/2015','dd/mm/yyyy'),4,4);
+                                          'CI','XT','692582','SPCLEP Vaslui',to_date('03/04/2015','dd/mm/yyyy'));
 Insert into DATE_PERSONALE_CANDIDAT values(5,'1960503071375','Verciuc','Sergiu','M','M','necasatorit','romana','Viorica','Mihai',
                                           '0756636643','sergiu.ver@gmail.com', to_Date('03/05/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'),5,5);
+                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'));
 Insert into DATE_PERSONALE_CANDIDAT values(6,'1960603071375','Like','Alin','M','M','necasatorit','romana','Viorica','Mihai',
                                           '0756636643','alin.like@gmail.com', to_Date('03/06/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'),6,6);
+                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'));
 Insert into DATE_PERSONALE_CANDIDAT values(7,'1960703071375','Rotaru','Alin','M','M','necasatorit','romana','Viorica','Mihai',
                                           '0756636643','alin.rot@gmail.com', to_Date('03/07/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'),7,7);
+                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'));
 Insert into DATE_PERSONALE_CANDIDAT values(8,'1960803071375','Gerasim','Cosmin','M','M','necasatorit','romana','Viorica','Mihai',
                                           '0756636643','cosmin.ger@gmail.com', to_Date('03/08/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'),8,1);
+                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'));
 Insert into DATE_PERSONALE_CANDIDAT values(9,'1960903071375','Grama','Dragos','M','M','necasatorit','romana','Viorica','Mihai',
                                           '0756636643','dragos.gr@gmail.com', to_Date('03/09/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'),10,1);
+                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'));
 Insert into DATE_PERSONALE_CANDIDAT values(10,'1960303071375','Alex','Lupu','M','M','necasatorit','romana','Viorica','Mihai',
                                           '0756636643','alex.lupu@gmail.com', to_Date('03/03/1996','dd/mm/yyyy'),'romana','romana','Romana',
-                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'),1,9);
+                                          'CI','XT','692582','SPCLEP RESITA',to_date('03/04/2015','dd/mm/yyyy'));
 
 insert into liceu values(1,'Liceul teoretic Mihail Kogalniceanu',to_date('15/08/2012','dd/mm/yyyy'),to_date('15/07/2016','dd/mm/yyyy'),
                           'teoretic','1',1,'Diplima de absolvire',to_date('15/07/2016','dd/mm/yyyy'),1);
