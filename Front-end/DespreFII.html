@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
@@ -33,65 +32,90 @@
 </head>
 
 <body>
-    <header id="header" role="banner" class="site-header">
-        <nav class="brandbar theme-bb-blue">
-            <div class="row2">
-                <ul class="column">
-                    <li class="dept-nd">
-                        <a href="https://www.info.uaic.ro/bin/Main/"></a>
-                    </li>
-                    <li>
-                        <i class="glyphicon glyphicon-log-in buton-login">Login</i> 
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+
     
-    <div class="nav-group nav-group--consistent ">
-        <div class="bar2">
-            <ul class="left-menu">
-                <li><a href="#">Despre FII</a></li>
-                <li><a href="contact2.html">Contact</a></li>
-            </ul>
-            <ul class="right-menu">
-                <li>
-                    <a href="#">Admitere &#9662;</a>
-                    <ul class="dropdown">
-                        <li><a class="makeB" href="licenta.html">Licen&#355;&#259;</a></li>
-                        <li><a class="makeB" href="master.html">Master</a></li>
-                        <li><a class="makeB" href="preadmitere.html">Preadmitere</a></li>
-                    </ul>
-                </li>
-                <li><a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri frecvente</a></li>
-                <!-- <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> </a></li> -->
-            </ul>
-        </div>
+  <div class="mare collapse navbar-collapse navbar nav-group nav-group--consistent">
 
-        <a href="#">
-            <img id="no-scroll" class="sigla" src="imagini/sigla2.png">
-            <img id="scroll" class="sigla" src="imagini/sigla2 - Copy.png">
-        </a>
+    
+      <div class="nav navbar-nav bar2">
+        <ul style="widht:100%; height:40px; background-color:#3488CB;"></ul>
+        <ul class="left-menu">
+            <li class="lung"><a href="DespreFII.html">Despre FII</a></li>
+            <li class="scurt"><a href="DespreFII.html">FII</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        <ul class="right-menu">
+              <li><a href="paginaAdmitere.html">Admitere</a></li>
+              <li><a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri</a></li>
+
+        </ul>
+      </div>      
+
+
+      <a href="#" >
+        <img id="no-scroll" class="sigla" src="imagini/sigla2.png" alt="sigla" />
+        <img id="scroll" class="sigla" src="imagini/sigla2-Copy.png" alt="sigla" />
+
+      </a>
+
+  </div >
+  <div class="mic" style="background-color:white; height:80px; width:100%;; z-index:90;">
+
+    <a href="#menu" id="toggle"><span></span></a>
+
+    <div id="menu">
+      <ul class="tog1">
+        <li class="tog2"><a href="DespreFII.html">Despre FII</a></li>
+        <li class="tog2"><a href="contact.html">Contact</a></li>
+        <li class="tog2"><a href="paginaAdmitere.html">Admitere</a></li>
+        <li class="tog2"><a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri</a></li>
+      </ul>
     </div>
+    
+  </div>
 
-    <div class="row pictures">
-        <div class="col-md-6 half">
-            <img class="picture" src="imagini/lab6.jpg">
+    <div class="col-md-12 col-sm-12">
+        <!-- <div class="col-md-6 half">
+            <img class="picture" src="lab6.jpg">
         </div>
         <div class="col-md-6 half">
-            <img class="picture" src="imagini/fac1.jpg">
+            <img class="picture" src="labs.jpg">
         </div>
         <div class="motto-wrap">
-            <img style="position: relative; left: 370px; top:-420px; height: inherit;" src="imagini/motto.png">
+            <img style="position: relative; left: 470%; top:-420px; height: inherit;" src="motto.png">
+        </div> -->
+    </div>
+
+
+    <div class="row" style="position:relative">
+        <div class="col-md-4" style="padding:0; margin:0">
+            <div class="divbutton" >
+                <a class="containerPic">
+                    <img class="mpic" src="imagini/profesori.jpg" alt="Profesori UAIC" />
+                    <button id="bprof" type="button" class="button"> PROFESORI </button>
+                </a>
+            </div>            
+        </div>
+        <div class="col-md-4" style="padding:0; margin:0">
+            <div class="divbutton">
+                <a class="containerPic">
+                    <img class="mpic" src="imagini/studenti.jpg" alt="Studenti UAIC" />            
+                    <button id="bstud" type="button" class="button"> STUDENTI </button>
+                </a>
+            </div>        
+        </div>
+        <div class="col-md-4" style="padding:0; margin:0">
+            <div class="divbutton">
+                <a class="containerPic">
+                    <img class="mpic" src="imagini/labs.jpg" alt="Laboratoare Faculatatea de Informatica Iasi" />
+                    <button id="blabs" type="button" class="button"> LABORATOARE </button>
+                </a>
+            </div>
         </div>
     </div>
     
-    <div style="width:100%; text-align:center; color:#3488CB; position:relative; top:-50px">
-        <h3>Ce spun studen&#355;ii no&#351;ri?</h3>
-    </div>
-    
-    <div class="container">
-        <div style="margin-bottom:30px" class="row">
+    <div  class="container" style="padding-top: 50px;">
+        <div id="divstud" style="margin-bottom:30px; display:none;" class="row">
             <div class="col-md-offset-1 col-md-10">
                 <div id="testimonial-slider" class="owl-carousel">
                     <div class="testimonial">
@@ -99,22 +123,22 @@
                             <img src="imagini/alex.jpg" alt="">
                         </div>
                         <p class="description">
-                            "Sunt un absolvent al Facult&#259&#355;ii de Informatic&#259; a Universit&#259&#355;ii "Alexandru Ioan Cuza" din Ia&#351;i. M&#259; consider, din acest punct de vedere, o persoan&#259; privilegiat&#259; c&#259; am avut &#351;ansa s&#259; fiu educat de profesori recunoscu&#355;i &#351;i deschi&#351;i, &#351;i s&#259; am colegi studen&#355;i de la care am avut multe de &#238;nv&#259;&#355;at."
+                           "Sunt un absolvent al Facult&#259;&#355;ii de Informatic&#259; a Universit&#259;&#355;ii "Alexandru Ioan Cuza" din Ia&#351;i. M&#259; consider, din acest punct de vedere, o persoan&#259; privilegiat&#259; c&#259; am avut &#351;ansa s&#259; fiu educat de profesori recunoscu&#355;i &#351;i deschi&#351;i, &#351;i s&#259; am colegi studen&#355;i de la care am avut multe de &#238;nv&#259;&#355;at."
                         </p>
                         <h3 class="testimonial-title">
                             Alexandru Pruteanu
                             <small class="post">Absolvent FII 2001</small>
                         </h3>
                     </div>
-
+     
                     <div class="testimonial">
                         <div class="pic">
                             <img src="imagini/andrew.jpg" alt="">
                         </div>
                         <p class="description">
-                            "FII bine venit &#238n Familia InfoIa&#351i!
-                            Drag&#259 viitor boboc,
-                            Evolu&#355ia fiin&#355ei umane este rodul exclusiv al cunoa&#351terii continue &#351i aprofundate. Acum, &#238n pragul deciziei care va avea impact asupra &#238ntregii tale cariere, ai &#351ansa s&#259 p&#259trunzi &#238n fascinanta lume a sistemelor informatice &#351i s&#259 po&#355i pune &#351i tu o c&#259r&#259mid&#259 la puntea ce leaga cunoa&#351terea uman&#259 de tehnologia computa&#355ional&#259."
+                           "FII bine venit &#238;n Familia InfoIa&#351;i!
+                            Drag&#259; viitor boboc,
+                            Evolu&#355;ia fiin&#355;ei umane este rodul exclusiv al cunoa&#351;terii continue &#351;i aprofundate. Acum, &#238;n pragul deciziei care va avea impact asupra &#238;ntregii tale cariere, ai &#351;ansa s&#259; p&#259;trunzi &#238;n fascinanta lume a sistemelor informatice &#351;i s&#259; po&#355;i pune &#351;i tu o c&#259;r&#259;mid&#259; la puntea ce leaga cunoa&#351;terea uman&#259; de tehnologia computa&#355;ional&#259;."
                         </p>
                         <h3 class="testimonial-title">
                             Cosmin Adrian Bejan
@@ -126,7 +150,7 @@
                             <img src="imagini/mia.jpg" alt="">
                         </div>
                         <p class="description">
-                            "Informatica nu e un drum de pe care, o data intrat, s&#259; nu mai po&#355;i devia. Din contra, sunt o mul&#355;ime de c&#259;i prin biologie (bio-informatic&#259;), arta (grafic&#259;, design), medicin&#259; (lucrul cu imagini medicale), movie industry (efecte speciale gen Matrix), economie (baze de date, securitatea tranzac&#355;iilor), fizic&#259; (informatica cuantic&#259;), &#351;i c&#226;te altele."
+                           "Informatica nu e un drum de pe care, o data intrat, s&#259; nu mai po&#355;i devia. Din contra, sunt o mul&#355;ime de c&#259;i prin biologie (bio-informatic&#259;), arta (grafic&#259;, design), medicin&#259; (lucrul cu imagini medicale), movie industry (efecte speciale gen Matrix), economie (baze de date, securitatea tranzac&#355;iilor), fizic&#259; (informatica cuantic&#259;), &#351;i c&#226;te altele."
                         </p>
                         <h3 class="testimonial-title">
                             Alexandrina Orzan
@@ -135,48 +159,123 @@
                     </div>
                 </div>
             </div>
+        </div>  
+
+        <div id="divprof" class="row a12q" style="margin-bottom:30px; display:none;">
+            <div >
+                <a href="https://profs.info.uaic.ro/~adiftene/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="AdrianIftene.jpg" alt="pers" />
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        ADRIAN IFTENE </span><br> Decan</figcaption>
+                    </figure>
+                </a>
+                <br>
+                <a href="https://profs.info.uaic.ro/~masalagiu/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="cristian_masalagiu_bw.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        CRISTIAN MASALAGIU </span><br> Profesor, Dr</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div >
+                <a href="https://profs.info.uaic.ro/~adria/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="LenutaAlboaie.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        LENUTA ALBOAIE </span><br> ProDecan</figcaption>
+                    </figure>
+                </a>
+                <br>
+                <a href="https://profs.info.uaic.ro/~nicky/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="nicoleta_leon_bw.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        NICOLETA ARMANU </span><br> Asistent, Dr</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div >
+                <a href="https://profs.info.uaic.ro/~rvlad/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="vlad_radulescu_bw.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        VLAD RADULESCU </span><br> ProDecan</figcaption>
+                    </figure>
+                </a>
+                <br>
+                <a href="https://profs.info.uaic.ro/~cbirjoveanu/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="catalin_birjoveanu_bw.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        CATALIN BIRJOVEANU </span><br> Lector, Dr</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div >
+                <a href="https://fmse.info.uaic.ro/~dorel.lucanu/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="dorel_lucanu_bw.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        DOREL LUCANU </span><br> Sef Dep. Informatica</figcaption>
+                    </figure>
+                </a>
+                <br>
+                <a href="https://profs.info.uaic.ro/~fliacob/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="florin_iacob_bw.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        FLORIN IACOB </span><br> Lector, Dr</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div >
+              <a href="https://profs.info.uaic.ro/~busaco/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="sabin_buraga_bw.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        SABIN BURAGA </span><br> Conferentiar</figcaption>
+                    </figure>
+                </a>
+                <br>
+                <a href="https://profs.info.uaic.ro/~branzeir/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="rodica_branzei_bw.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        RODICA BRANZEI </span><br> Conferentiar, Dr</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div >
+                <a href="https://profs.info.uaic.ro/~otto/">
+                    <figure style="text-align:center;">
+                        <img class="res" src="oana_prisecaru_bw.jpg" alt="pers" />
+
+                        <figcaption style="color:black; padding-top:10px;"><span style="font-size:16px; color:#3488CB; font-weight:bold;">
+                        OANA CAPTARENCU </span><br> Lector, Dr</figcaption>
+                    </figure>
+                </a>
+            </div>
         </div>
+
+        <div id="labs" class="row gy a12q" style="display:none;margin-bottom:30px;" >
+            <img  style="display:none;" src="labs.jpg" alt="as" />
+        </div>
+
     </div>
     
-    <div id="events" class="">
-        <div id="events-p" class="">
-            <div class="col-md-4">
-                <a class="poza" href="#">
-                    <figure>
-                        <img class="p2" src="imagini/1.jpg" alt="">
-                    </figure>
-                </a>
-                <a class="poza" href="#">
-                    <figure>
-                        <img class="p2" src="imagini/5.jpg" alt="">
-                    </figure>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="poza" href="#">
-                    <figure>
-                        <img class="p2" src="imagini/2.jpg" alt="">
-                    </figure>
-                </a>
-                <a class="poza" href="#">
-                    <figure>
-                        <img class="p2" src="imagini/4.jpg" alt="">
-                    </figure>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="poza" href="#">
-                    <figure>
-                        <img class="p2" src="imagini/3.jpg" alt="">
-                    </figure>
-                </a>
-                <a class="poza" href="#">
-                    <figure>
-                        <img class="p2" src="imagini/laborator6.jpg" alt="">
-                    </figure>
-                </a>
-            </div>
-        </div>
-    </div>
+
+
+
 </body>
 </html>
