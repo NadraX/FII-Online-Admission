@@ -93,12 +93,12 @@ li {
     background-position: center center;
     margin: 0;
     display: block;
-    margin-left: -120px;
+    margin-left: -100px;
     position:fixed;
     left:50%;
     z-index:23;
-    width:230px;
-    height:146px;
+    width:200px;
+    height:124px;
 }
 
 .nav-group {
