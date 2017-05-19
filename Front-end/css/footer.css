@@ -1,0 +1,225 @@
+.footer-distributed{
+	background-color: #414141;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font-family: 'Merriweather Light', 'Times New Roman', serif;
+
+	padding: 10px 50px;
+	margin-top: 80px;
+	padding-left: 130px;
+	padding-right: 130px;
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right,
+.footer-distributed .footer-4{
+	display: inline-block;
+	vertical-align: top;
+	color:  #a9a9a9;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+	
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	font-size: 30px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+	font-family: 'Merriweather Light', 'Times New Roman', serif;
+}
+
+/* Footer links */
+
+
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-links a:hover {
+    background-color: transparent;
+	text-decoration: none;
+}
+
+.footer-distributed .footer-company-name{
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	padding-left: 25px;
+	width: 28%;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	vertical-align: middle;
+	margin:0;
+	color:  #a9a9a9;
+	font-family: 'Merriweather Light', 'Times New Roman', serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center div {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	padding-left: 45px;
+	width: 28%;
+}
+
+.footer-distributed .footer-right p{
+	color:  #a9a9a9;
+	font-family: 'Merriweather Light', 'Times New Roman', serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.footer-distributed .footer-right div{
+	margin-top: -25px;
+	margin-bottom: -25px;
+}
+
+.footer-distributed .footer-company-about{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+.footer-distributed .footer-4{
+	width: 12%;
+	margin-bottom: 40px;
+}
+
+/*demo*/
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+.footer_img{
+	height:20px;
+    width:20px;
+}
+
+.footer_img2{
+	height:110px;
+    width:140px;
+	padding-top: 5px;
+	margin-top: 30px;
+	padding-left: 40px;
+}
+.grayscale {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
+
+.hr_footer{
+	border-top: 1px solid #8c8b8b;
+	margin-bottom: 0px;
+}
+.hr_text{
+	color:  #a9a9a9;
+	font-family: 'Merriweather Light', 'Times New Roman', serif;
+	padding-bottom: 40px;
+}
+#bloc1, #bloc2
+{
+    display:inline;
+}
+.headernou{
+	padding-bottom: 20px;
+	
+}
+.headernou2{
+	padding-bottom: 0px;
+	margin-bottom:3px;
+	
+}
