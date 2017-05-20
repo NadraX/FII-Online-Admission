@@ -102,7 +102,7 @@ li {
 }
 
 .nav-group {
-    height:150px;
+    height:130px;
 }
 
 .nav-group ul{
@@ -541,6 +541,10 @@ li.tog2 a:focus {
   text-align:left;
 }
 
+.align-center{
+    text-align:center;
+}
+
 .marg-r5{
   margin-right:5px;
 }
@@ -564,4 +568,29 @@ li.tog2 a:focus {
 text-decoration: none;
 color:black;
 opacity: 0.7;
+}
+
+.scroll-page{
+    max-height:400px;
+    overflow:auto;
+}
+
+.blue{
+    color:#337ab7;
+}
+
+.back-button{
+    font-size:20px;
+    margin-left:3px;
+    cursor:pointer;
+}
+
+.back-button:hover{
+    text-decoration:none;
+    opacity:0.7;
+}
+
+.entire-name{
+    font-size:25px;
+    border-bottom: 1px solid #eee;
 }
