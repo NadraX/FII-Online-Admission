@@ -4,3 +4,7 @@ function showTable(id, element) {
 	$(".active").removeClass('active');
 	$(element).addClass('active');
 }
+
+function showModal() {
+    $('#TrimiteMail').modal('show');
+}
