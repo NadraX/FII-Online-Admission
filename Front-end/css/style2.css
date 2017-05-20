@@ -14,7 +14,9 @@ html {
     overflow-y: scroll;
     
 }
-
+input{
+    padding:10px;
+}
 .site-header {
     text-align: left;
 }
@@ -289,7 +291,8 @@ a.makeB:hover {
 
 #scroll {
     display:none;
-    height:42px;
+    height:40px;
+    width:150px;
 }
 
 #events {
@@ -552,7 +555,21 @@ li.tog2 a:focus {
 .marg-l10{
   margin-left:10px;
 }
+.marg-b10{
+    margin-bottom:10px;
+}
 
+.marg-t10{
+    margin-top:10px;
+}
+
+.marg-t30{
+    margin-top:30px;
+}
+
+.marg-r1{
+    margin-right:1px;
+}
 .icon-admin{
   height: 60px;
   width: 60px;
@@ -593,4 +610,32 @@ opacity: 0.7;
 .entire-name{
     font-size:25px;
     border-bottom: 1px solid #eee;
+}
+
+.sub-title{
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.block{
+    display:block;
+}
+
+.wid33{
+    width:33%;
+}
+
+.wid100{
+    width:100%;
+}
+
+.validare-btn{
+    height:40px;
+    margin-top:25px;
+    background-color:green;
+
 }

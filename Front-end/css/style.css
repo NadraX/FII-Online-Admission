@@ -15,7 +15,9 @@ body{
 	color: #000;
 	font: 1em/1.65em  Helvetica, Verdana, sans-serif;
 }
-
+input{
+	padding:10px;
+}
 .navbar-brand{
 	padding-top: 2px;
 	padding-bottom: 0px;
