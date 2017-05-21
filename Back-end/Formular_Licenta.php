@@ -296,7 +296,7 @@
 					</ul>
 					<div class="formular2">
 					    <?php
-							include "ValidClass.php";
+							include "exempluLicenta.php";
 							error_reporting(0);
                             ini_set('display_errors', 0);
 							$v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie"];
@@ -806,7 +806,7 @@
 									<div  class="form-input jf-required cid_1" >
 										<div data-wrapper-react="true" class="mg">
 											<span class="form-sub-label-container" style="vertical-align:top; width:100%" >
-												<input type="text"  name="Licenta_Medie_BAC" class="form-textbox first_1"  size="20" data-component="first"  value="<?php 
+												<input type="number"  name="Licenta_Medie_BAC" class="form-textbox first_1"  size="20" data-component="first"  value="<?php 
 																																										if($v_Licenta_Medie_BAC == '') 
 																																											echo '';
 																																										else
@@ -827,7 +827,7 @@
 										</div> 
 										<div data-wrapper-react="true" class="mg">
 											<span  class="form-sub-label-container gen" style="vertical-align:top;">
-												<input type="text"  name="Licenta_Nota_MI" class="form-textbox first_1" size="20" data-component="first" value="<?php 
+												<input type="number"  name="Licenta_Nota_MI" class="form-textbox first_1" size="20" data-component="first" value="<?php 
 																																									if($v_Licenta_Nota_MI == '') 
 																																										echo '';
 																																									else
