@@ -1,8 +1,8 @@
 .container2{
-	margin-top: 2%;
+	margin-top: 5%;
 	margin-left: 20%;
 	margin-right: 20%;
-	margin-top: 1%;
+	margin-top: 5%;
 	padding-top: 20px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -15,7 +15,9 @@ body{
 	color: #000;
 	font: 1em/1.65em  Helvetica, Verdana, sans-serif;
 }
-
+input{
+	padding:10px;
+}
 .navbar-brand{
 	padding-top: 2px;
 	padding-bottom: 0px;
@@ -72,8 +74,6 @@ hr.style18:before {
 
 #top{
 	color: #3488CB;
-	padding-bottom: 10px;
-	margin-bottom: 15px;
 	margin-top: 0px;
 	padding-top: 0px;
 }

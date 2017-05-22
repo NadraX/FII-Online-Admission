@@ -276,7 +276,7 @@
   <div class="container formular2" style="width:100%">
 
 
-    <form  style="width:90%" action="" method='post'>
+    <form  style="width:90%" action="createpdf.php" method='post'>
       <input type="hidden" name="formID" value="71274520949360" />
       <div class="">
       <ul class="form-section page-section">
@@ -388,15 +388,15 @@
                 </span>
                 <span  class="form-sub-label-container" style="vertical-align:top; width:24%;padding:0;margin:0;">
                   <select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Stare_Civila" data-component="country">
-                      <option value="">Singur/&#259;</option>
-                      <option value="">C&#259;s&#259;torit/&#259;</option>
+                      <option value="Singur">Singur/&#259;</option>
+                      <option value="Casatorit(a)">C&#259;s&#259;torit/&#259;</option>
                     </select>
                     <label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Stare civil&#259;</label>
                 </span>
                 <span  class="form-sub-label-container" style="vertical-align:top; width:25%;padding:0;margin:0;">
                   <select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Sex" data-component="country">
-                      <option value="">Feminin</option>
-                      <option value="">Masculin</option>
+                      <option value="Feminin">Feminin</option>
+                      <option value="Masculin">Masculin</option>
                     </select>
                     <label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Sex</label>
                 </span>
@@ -695,35 +695,35 @@
               <div>
                 <span class="form-sub-label-container liceu" style="vertical-align:top;">
                   <select  class="form-dropdown form-address-country liceu" name="Licenta_Liceu" id="input_3_country" data-component="country">
-                  <option value="">GRUP &#350;COLAR "HOREA CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
-                  <option value="">LICEUL "HOREA, CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
-                  <option value="">COLEGIUL NATIONAL "BETHLEN GABOR" AIUD</option>
-                  <option value="">COLEGIUL TEHNIC AIUD</option>
-                  <option value="">GRUPUL &#350;COLAR "AVRAM IANCU" AIUD</option>
-                  <option value="">COLEGIUL DE AFACERI ALBA IULIA</option>
-                  <option value="">COLEGIUL ECONOMIC "DIONISIE POP MARTIAN" ALBA IULIA</option>
-                  <option value="">COLEGIUL LICEAL MILITAR "MIHAI VITEAUL" ALBA IULIA</option>
-                  <option value="">COLEGIUL NA&#354;IONAL "HOREA CLO&#350;CA &#350;I CRI&#350;AN" ALBA IULIA</option>
-                  <option value="">COLEGIUL NA&#354;IONAL MILITAR "MIHAI VITEAZUL" ALBA IULIA</option>
-                  <option value="">COLEGIUL TEHNIC "ALEXANDRU DOMSA" ALBA IULIA</option>
-                  <option value="">COLEGIUL TEHNIC "APULUM" ALBA IULIA</option>
-                  <option value="">COLEGIUL TEHNIC "DORIN PAVEL" ALBA IULIA</option>
-                  <option value="">GRUP &#350;COLAR DE COOPERA&#354;IE ALBA IULIA</option>
-                  <option value="">GRUP &#350;COLAR DE INDUSTRIE USOAR&#258; ALBA IULIA</option>
-                  <option value="">GRUP &#350;COLAR INDUSTRIAL METALURGIC ALBA IULIA</option>
-                  <option value="">GRUPUL &#350;COLAR "DORIN PAVEL" ALBA IULIA</option>
-                  <option value="">GRUPUL &#350;COLAR DE COOPERATIE ALBA IULIA</option>
-                  <option value="">GRUPUL &#350;COLAR DE INDUSTRIE USOARA ALBA IULIA</option>
-                  <option value="">GRUPUL &#350;COLAR INDUSTRIAL METALURGIC ALBA IULIA</option>
-                  <option value="">LICEUL CU PROGRAM SPORTIV ALBA IULIA</option>
-                  <option value="">LICEUL DE ARTE "REGINA MARIA" ALBA IULIA</option>
-                  <option value="">LICEUL DE ARTE ALBA IULIA</option>
-                  <option value="">LICEUL DE MUZICA &#350;I ARTE PLASTICE ALBA IULIA</option>
-                  <option value="">LICEUL SPORTIV ALBA IULIA</option>
-                  <option value="">LICEUL TEOLOGIC ROMANO CATOLIC ALBA IULIA</option>
-                  <option value="">LICEUL TEOLOGIC ROMANO-CATOLIC "GROF MAJLATH GUSZTAV KAROLY" ALBA IULIA</option>
-                  <option value="">LICEUL TEORETIC "SF&#194;NTUL IOSIF" ALBA IULIA</option>
-                  <option value="">altul</option>
+                  <option value="Grup Scolar Horea Closca si Crisan">GRUP &#350;COLAR "HOREA CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
+                  <option value="Liceul Horea Closca si Crisan">LICEUL "HOREA, CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
+                  <option value="COLEGIUL NATIONAL "BETHLEN GABOR" AIUD">COLEGIUL NATIONAL "BETHLEN GABOR" AIUD</option>
+                  <option value="COLEGIUL TEHNIC AIUD">COLEGIUL TEHNIC AIUD</option>
+                  <option value="Grupul Scolar Avram Iancu Aiud">GRUPUL &#350;COLAR "AVRAM IANCU" AIUD</option>
+                  <option value="COLEGIUL DE AFACERI ALBA IULIA">COLEGIUL DE AFACERI ALBA IULIA</option>
+                  <option value="COLEGIUL ECONOMIC "DIONISIE POP MARTIAN" ALBA IULIA">COLEGIUL ECONOMIC "DIONISIE POP MARTIAN" ALBA IULIA</option>
+                  <option value="COLEGIUL LICEAL MILITAR "MIHAI VITEAUL" ALBA IULIA">COLEGIUL LICEAL MILITAR "MIHAI VITEAUL" ALBA IULIA</option>
+                  <option value="Colegiul National Horea Closca si Crisan Alba Iulia">COLEGIUL NA&#354;IONAL "HOREA CLO&#350;CA &#350;I CRI&#350;AN" ALBA IULIA</option>
+                  <option value="Colegiul National Militar Mihai Viteazul Alba Iulia">COLEGIUL NA&#354;IONAL MILITAR "MIHAI VITEAZUL" ALBA IULIA</option>
+                  <option value="COLEGIUL TEHNIC ALEXANDRU DOMSA ALBA IULIA">COLEGIUL TEHNIC "ALEXANDRU DOMSA" ALBA IULIA</option>
+                  <option value="COLEGIUL TEHNIC APULUM ALBA IULIA">COLEGIUL TEHNIC "APULUM" ALBA IULIA</option>
+                  <option value="COLEGIUL TEHNIC DORIN PAVEL ALBA IULIA">COLEGIUL TEHNIC "DORIN PAVEL" ALBA IULIA</option>
+                  <option value="GRUP SCOLAR DE COOPERATIE ALBA IULIA">GRUP &#350;COLAR DE COOPERA&#354;IE ALBA IULIA</option>
+                  <option value="GRUP SCOLAR DE INDUSTRIE USOARA ALBA IULIA">GRUP &#350;COLAR DE INDUSTRIE USOAR&#258; ALBA IULIA</option>
+                  <option value="GRUP SCOLAR INDUSTRIAL METALURGIC ALBA IULIA">GRUP &#350;COLAR INDUSTRIAL METALURGIC ALBA IULIA</option>
+                  <option value="GRUP SCOLAR DORIN PAVEL ALBA IULIA">GRUPUL &#350;COLAR "DORIN PAVEL" ALBA IULIA</option>
+                  <option value="GRUPUL SCOLAR DE COOPERATIE ALBA IULIA">GRUPUL &#350;COLAR DE COOPERATIE ALBA IULIA</option>
+                  <option value="GRUPUL SCOLAR DE INDUSTRIE USOARA ALBA IULIA">GRUPUL &#350;COLAR DE INDUSTRIE USOARA ALBA IULIA</option>
+                  <option value="GRUPUL SCOLAR INDUSTRIAL METALURGIC ALBA IULIA">GRUPUL &#350;COLAR INDUSTRIAL METALURGIC ALBA IULIA</option>
+                  <option value="LICEUL CU PROGRAM SPORTIV ALBA IULIA">LICEUL CU PROGRAM SPORTIV ALBA IULIA</option>
+                  <option value="LICEUL DE ARTE REGINA MARIA ALBA IULIA">LICEUL DE ARTE "REGINA MARIA" ALBA IULIA</option>
+                  <option value="LICEUL DE ARTE ALBA IULIA">LICEUL DE ARTE ALBA IULIA</option>
+                  <option value="LICEUL DE MUZICA SI ARTE PLASTICE ALBA IULIA">LICEUL DE MUZICA &#350;I ARTE PLASTICE ALBA IULIA</option>
+                  <option value="LICEUL SPORTIV ALBA IULIA">LICEUL SPORTIV ALBA IULIA</option>
+                  <option value="LICEUL TEOLOGIC ROMANO CATOLIC ALBA IULIA">LICEUL TEOLOGIC ROMANO CATOLIC ALBA IULIA</option>
+                  <option value="LICEUL TEOLOGIC ROMANO-CATOLIC GROF MAJLATH GUSZTAV KAROLY ALBA IULIA">LICEUL TEOLOGIC ROMANO-CATOLIC "GROF MAJLATH GUSZTAV KAROLY" ALBA IULIA</option>
+                  <option value="LICEUL TEORETIC SFANTUL IOSIF ALBA IULIA">LICEUL TEORETIC "SF&#194;NTUL IOSIF" ALBA IULIA</option>
+                  <option value="altul">altul</option>
                  </select>
                 </span>
                 <label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Liceul pe care l-ați absolvit</label>
@@ -765,9 +765,9 @@
               </div>
               <div class="mg">
                 <span class="form-sub-label-container gen" style="vertical-align:top;">
-                    <select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Limba_Aleasa middle_1" data-component="country">
-                      <option value="">&#206;n limba rom&#226;n&#259;</option>
-                      <option value="">&#206;n limba englez&#259;</option>
+                    <select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Limba_Aleasa_middle_1" data-component="country">
+                      <option value="In limba romana">&#206;n limba rom&#226;n&#259;</option>
+                      <option value="In limba engleza">&#206;n limba englez&#259;</option>
                     </select>
                     <label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Doresc &#238;nva&#355;&#259;m&#226;nt de zi</label>
                 </span>   
@@ -776,9 +776,9 @@
               
                 <span class="form-sub-label-container gen" style="vertical-align:top;">
                   <select class="form-dropdown form-address-country middle_1" name="Licenta_Obiect_Test_Ales"  data-component="country">
-                    <option value="">Matematic&#259;</option>
-                    <option value="">Informatic&#259; C/C++</option>
-                    <option value="">Informatic&#259; Pascal</option>
+                    <option value="Matematica">Matematic&#259;</option>
+                    <option value="Informatica C/C++">Informatic&#259; C/C++</option>
+                    <option value="Informatica Pascal">Informatic&#259; Pascal</option>
                   </select>
                   <label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Doresc s&#259; dau admitere la obiectul</label>
                 </span>   
@@ -830,47 +830,47 @@
                         </span>
                         <span class="form-sub-label-container" style="vertical-align:top; width:24%">
                           <select class="form-dropdown form-address-country gen" name="Licenta_Judet"  data-component="country">
-                          <option value="">Alba</option>
-                          <option value="">Arad</option>
-                          <option value="">Arge&#351;</option>  
-                          <option value="">Bac&#259;u</option>
-                          <option value="">Bihor</option>
-                          <option value="">Bistri&#355;a-N&#259;s&#259;ud</option>
-                          <option value="">Boto&#351;ani</option>
-                          <option value="">Br&#259;ila</option>
-                          <option value="">Bra&#351;ov</option>
-                          <option value="">Bucure&#351;ti</option>
-                          <option value="">Buz&#259;u</option>
-                          <option value="">C&#259;l&#259;ra&#351;i</option>
-                          <option value="">Cara&#351;-Severin</option>
-                          <option value="">Cluj</option>
-                          <option value="">Constan&#355;a</option>
-                          <option value="">Covasna</option>
-                          <option value="">D&#226;mbovi&#355;a</option>
-                          <option value="">Gala&#355;i</option>
-                          <option value="">Giurgiu</option>
-                          <option value="">Gorj</option>
-                          <option value="">Harghita</option>
-                          <option value="">Hunedoara</option>
-                          <option value="">Ialomi&#355;a</option>
-                          <option value="">Ia&#351;i</option>
-                          <option value="">Ilfov</option>
-                          <option value="">Maramure&#351;</option>
-                          <option value="">Mehedin&#355;i</option>
-                          <option value="">Mures</option>
-                          <option value="">Neam&#355;</option>
-                          <option value="">Olt</option>
-                          <option value="">Prahova</option>
-                          <option value="">S&#259;laj</option>
-                          <option value="">Satu Mare</option>
-                          <option value="">Sibiu</option>
-                          <option value="">Suceava</option>
-                          <option value="">Teleorman</option>
-                          <option value="">Timi&#351;</option>
-                          <option value="">Tulcea</option>
-                          <option value="">V&#226;lcea</option>
-                          <option value="">Vaslui</option>
-                          <option value="">Vrancea</option>
+                          <option value="Alba">Alba</option>
+                          <option value="Arad">Arad</option>
+                          <option value="Arges">Arge&#351;</option>  
+                          <option value="Bacau">Bac&#259;u</option>
+                          <option value="Bihor">Bihor</option>
+                          <option value="BistritaNasaud">Bistri&#355;a-N&#259;s&#259;ud</option>
+                          <option value="Botosani">Boto&#351;ani</option>
+                          <option value="Braila">Br&#259;ila</option>
+                          <option value="Brasov">Bra&#351;ov</option>
+                          <option value="Bucuresti">Bucure&#351;ti</option>
+                          <option value="Buzau">Buz&#259;u</option>
+                          <option value="Calarasi">C&#259;l&#259;ra&#351;i</option>
+                          <option value="Caras-Severin">Cara&#351;-Severin</option>
+                          <option value="Cluj">Cluj</option>
+                          <option value="Constanta">Constan&#355;a</option>
+                          <option value="Covasna">Covasna</option>
+                          <option value="Dambovita">D&#226;mbovi&#355;a</option>
+                          <option value="Galati">Gala&#355;i</option>
+                          <option value="Giurgiu">Giurgiu</option>
+                          <option value="Gorj">Gorj</option>
+                          <option value="Harghita">Harghita</option>
+                          <option value="Hunedoara">Hunedoara</option>
+                          <option value="Ialomita">Ialomi&#355;a</option>
+                          <option value="Iasi">Ia&#351;i</option>
+                          <option value="Ilfov">Ilfov</option>
+                          <option value="Maramures">Maramure&#351;</option>
+                          <option value="Mehedinti">Mehedin&#355;i</option>
+                          <option value="Mures">Mures</option>
+                          <option value="Neamt">Neam&#355;</option>
+                          <option value="Olt">Olt</option>
+                          <option value="Prahova">Prahova</option>
+                          <option value="Salaj">S&#259;laj</option>
+                          <option value="Satu Mare">Satu Mare</option>
+                          <option value="Sibiu">Sibiu</option>
+                          <option value="Suceava">Suceava</option>
+                          <option value="Teleorman">Teleorman</option>
+                          <option value="Timisoara">Timi&#351;</option>
+                          <option value="Tulcea">Tulcea</option>
+                          <option value="Valcea">V&#226;lcea</option>
+                          <option value="Vaslui">Vaslui</option>
+                          <option value="Vrancea">Vrancea</option>
                             </select>
                           <label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Jude&#355; </label>
                         </span>
@@ -880,9 +880,9 @@
                         </span>
                         <span class="form-sub-label-container" style="vertical-align:top; width:24%">
                           <select class="form-dropdown form-address-country gen" name="Licenta_Tara" data-component="country">
-                            <option value="United States"> Rom&#226;nia </option>
-                            <option value="Afghanistan"> Republica Moldova </option>
-                            <option value="other"> Alta op&#355;iune</option>
+                            <option value="Romania"> Rom&#226;nia </option>
+                            <option value="Republica Moldova"> Republica Moldova </option>
+                            <option value="Alta Optiune"> Alta op&#355;iune</option>
                           </select>
                           <label class="form-sub-label" for="input_3_country"  style="min-height:13px;">&#354;ar&#259; </label>
                         </span>

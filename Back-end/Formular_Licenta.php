@@ -1,282 +1,273 @@
 <!DOCTYPE HTML>
 <html class="supernova">
 
-	<head>
-		<meta charset="UTF-8">
-		<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.292" rel="stylesheet" type="text/css">
-		<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.292">
-		<link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.292">
-		<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?themeRevisionID=59107387cf3bfe1ec421e0c1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style2.css">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jotfor.ms/static/formCss.css?3.3.292" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.292">
+    <link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.292">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?themeRevisionID=59107387cf3bfe1ec421e0c1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
-		<script type="text/javascript">
-		$(document).ready(function()
-		{
-			var $logo = $('#scroll');
-			var $logo2 = $('#no-scroll');
-			var $head2 = $('#header');
-			$(document).scroll(function() 
-			{
-				$head2.css({display: $(this).scrollTop() < 50? "block":"none"});
-				$logo2.css({display: $(this).scrollTop() < 50? "block":"none"});
-				$logo.css({display: $(this).scrollTop() > 100? "block":"none"});
-			});
-		});
-		</script>
-		<style type="text/css">
-			.form-line{
-				padding-top:12px;
-				padding-bottom:12px;
-			}
-			body, html{
-				margin:0;
-				padding:0;
-				background:#fff;
-			}
-			.form-all{
-				margin:0px auto;
-				padding-top:0px;
-				width:690px;
-				color:#555 !important;
-				font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
-				font-size:14px;
-			}
-			.form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
-				color: false;
-			}
-		</style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var $logo = $('#scroll');
+        var $logo2 = $('#no-scroll');
+        var $head2 = $('#header');
+        $(document).scroll(function() {
+            $head2.css({display: $(this).scrollTop() < 50? "block":"none"});
+            $logo2.css({display: $(this).scrollTop() < 50? "block":"none"});
+            $logo.css({display: $(this).scrollTop() > 100? "block":"none"});
+        });
+    });
+    </script>
+    <style type="text/css">
+        .form-line{
+            padding-top:12px;
+            padding-bottom:12px;
+        }
+        body, html{
+            margin:0;
+            padding:0;
+            background:#fff;
+        }
+        .form-all{
+            margin:0px auto;
+            padding-top:0px;
+            width:690px;
+            color:#555 !important;
+            font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+            font-size:14px;
+        }
+        .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
+            color: false;
+        }
+    </style>
 
-		<style type="text/css" id="form-designer-style">
-			/* Injected CSS Code */
-			/*PREFERENCES STYLE*/
-			.form-all {
-			  font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-all .qq-upload-button,
-			.form-all .form-submit-button,
-			.form-all .form-submit-reset,
-			.form-all .form-submit-print {
-				font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-all .form-pagebreak-back-container,
-			.form-all .form-pagebreak-next-container {
-				font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-header-group {
-				font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-label {
-				font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-label.form-label-auto {
-				display: block;
-				float: none;
-				text-align: left;
-				width: 100%;
-			}
-			.form-line {
-				margin-top: 12px 36px 12px 36px px;
-				margin-bottom: 12px 36px 12px 36px px;
-			}
-			.form-all {
-				width: 590px;
-			}
-			.form-label-left,
-			.form-label-right {
-				width: 200px;
-			}
-			.form-all {
-				font-size: 14pxpx
-			}
-			.form-all .qq-upload-button,
-			.form-all .qq-upload-button,
-			.form-all .form-submit-button,
-			.form-all .form-submit-reset,
-			.form-all .form-submit-print {
-				font-size: 14pxpx
-			}
-			.form-all .form-pagebreak-back-container,
-			.form-all .form-pagebreak-next-container {
-				font-size: 14pxpx
-			}
-			.supernova .form-all, .form-all {
-				border: 1px solid transparent;
-			}
-			.form-all {
-				color: #555;
-			}
-			.form-header-group .form-header {
-				color: #555;
-			}
-			.form-header-group .form-subHeader {
-				color: #555;
-			}
-			.form-label-top,
-			.form-label-left,
-			.form-label-right,
-			.form-html,
-			.form-checkbox-item label,
-			.form-radio-item label {
-				color: #555;
-			}
-			.form-sub-label {
-				color: #6f6f6f;
-			}
-			.supernova body {
-				background: transparent;
-			}
-			.form-textbox,
-			.form-textarea,
-			.form-radio-other-input,
-			.form-checkbox-other-input,
-			.form-captcha input,
-			.form-spinner input {
-				background-color: undefined;
-			}
-			.supernova {
-				background-image: none;
-				background-color: white;
-			}
-			#stage {
-				background-image: none;
-			}
-			.form-all {
-				background-image: none;
-			}
-			.ie-8 .form-all:before { display: none; }
-			.ie-8 {
-				margin-top: auto;
-				margin-top: initial;
-			}
-			.formular2 {
-				margin: 80px;
-				margin-top: 0px;
-			}
-			#subHeader_34 {
-				margin-left: 65px;
-				margin-top:30px;
-			}
-			.form-line {
-				padding-right: 0;
-				padding-left: 0;
-			}
-			.cid_1 {
-				width: 100%;
-			}
-			.general_name {
-				width:100%;
-				padding:0px;
-			}
-			#num {
-				width:44.5%;
-				padding:0;
-				margin:0;
-			}
-			#prenum {
-				width:44.5%;
-				padding:0;
-				margin:0;
-			}
-			#initiala {
-				width: 10%;
-				margin:0;
-				padding:0;
-			}
-			#id_1 {
-				padding-right: 0;
-			}
-			.first_1 {
-				width:100%;
-				height:40px;
-			}
-			.middle_1 {
-				width:100%;
-				height:40px;
-			}
-			.last_1 {
-				width:100%;
-				height:40px;
-			}
-			#CNP {
-				width:40%;
-			}
-			#serie {
-				width:41.5%;
-			}
-			.liceu{
-				width:100%;
-				height:40px;
-			}
-			.mg {
-				width: 25%;
-				float:left;
-				height:40px;
-			}
-			.gen {
-				width:100%;
-				padding-left: 7px;
-				height:40px;
-			}
-			#id_10 {
-				padding-left: 10px;
-			}
-		</style>
+    <style type="text/css" id="form-designer-style">
+        /* Injected CSS Code */
+    /*PREFERENCES STYLE*/
+        .form-all {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-all .qq-upload-button,
+        .form-all .form-submit-button,
+        .form-all .form-submit-reset,
+        .form-all .form-submit-print {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-all .form-pagebreak-back-container,
+        .form-all .form-pagebreak-next-container {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-header-group {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-label {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-label.form-label-auto {
+        display: block;
+        float: none;
+        text-align: left;
+        width: 100%;
+        }
+        .form-line {
+          margin-top: 12px 36px 12px 36px px;
+          margin-bottom: 12px 36px 12px 36px px;
+        }
+        .form-all {
+          width: 590px;
+        }
+        .form-label-left,
+        .form-label-right {
+          width: 200px;
+        }
+        .form-all {
+          font-size: 14pxpx
+        }
+        .form-all .qq-upload-button,
+        .form-all .qq-upload-button,
+        .form-all .form-submit-button,
+        .form-all .form-submit-reset,
+        .form-all .form-submit-print {
+          font-size: 14pxpx
+        }
+        .form-all .form-pagebreak-back-container,
+        .form-all .form-pagebreak-next-container {
+          font-size: 14pxpx
+        }
+        .supernova .form-all, .form-all {
+          border: 1px solid transparent;
+        }
+        .form-all {
+          color: #555;
+        }
+        .form-header-group .form-header {
+          color: #555;
+        }
+        .form-header-group .form-subHeader {
+          color: #555;
+        }
+        .form-label-top,
+        .form-label-left,
+        .form-label-right,
+        .form-html,
+        .form-checkbox-item label,
+        .form-radio-item label {
+          color: #555;
+        }
+        .form-sub-label {
+          color: #6f6f6f;
+        }
+        .supernova body {
+          background: transparent;
+        }
+        .form-textbox,
+        .form-textarea,
+        .form-radio-other-input,
+        .form-checkbox-other-input,
+        .form-captcha input,
+        .form-spinner input {
+          background-color: undefined;
+        }
+        .supernova {
+          background-image: none;
+          background-color: white;
+        }
+        #stage {
+          background-image: none;
+        }
+        .form-all {
+          background-image: none;
+        }
+      .ie-8 .form-all:before { display: none; }
+      .ie-8 {
+        margin-top: auto;
+        margin-top: initial;
+      }
+      .formular2 {
+        margin: 80px;
+        margin-top: 0px;
+      }
+      #subHeader_34 {
+        margin-left: 65px;
+        margin-top:30px;
+      }
+      .form-line {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .cid_1 {
+        width: 100%;
+      }
+      .general_name {
+        width:100%;
+        padding:0px;
+      }
+      #num {
+        width:44.5%;
+        padding:0;
+        margin:0;
+      }
+      #prenum {
+        width:44.5%;
+        padding:0;
+        margin:0;
+      }
+      #initiala {
+        width: 10%;
+        margin:0;
+        padding:0;
+      }
+      #id_1 {
+        padding-right: 0;
+      }
+      .first_1 {
+        width:100%;
+        height:40px;
+      }
+      .middle_1 {
+        width:100%;
+        height:40px;
+      }
+      .last_1 {
+        width:100%;
+        height:40px;
+      }
+      #CNP {
+        width:35%;
+      }
+      #serie {
+        width:41.5%;
+      }
+      .liceu{
+        width:100%;
+        height:40px;
+      }
+      .mg {
+        width: 25%;
+        float:left;
+        height:40px;
+      }
+      .gen {
+        width:100%;
+        padding-left: 7px;
+        height:40px;
+      }
 
-		<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-steel.css?3.3.292"/>
-		
-		<title>
-			Admitere licen&#355;&#259;
-		</title>
-	</head>
-	<body>
-		<header id="header"  class="site-header">
-			<nav class="brandbar theme-bb-blue">
-				<div class="row2">
-					<ul class="column">
-						<li class="dept-nd">
-							<a href="https://www.info.uaic.ro/bin/Main/"></a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
-		
-		<div class="nav-group nav-group--consistent ">
-			<div class="bar2">
-				<ul class="left-menu">
-					<li><a href="DespreFII.html">Despre FII</a></li>
-					<li><a href="contact2.html" >Contact</a></li>
-				</ul>
-				<ul class="right-menu">
-					<li>
-						<a href="#">Admitere &#9662;</a>
-						<ul class="dropdown">
-							<li><a class="makeB" href="licenta.html">Licen&#355;&#259;</a></li>
-							<li><a class="makeB" href="master.html">Master</a></li>
-							<li><a class="makeB" href="licenta.html">Preadmitere</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri frecvente</a>
-					</li>
-				</ul>
-			</div>   
+      #id_10 {
+        padding-left: 10px;
+      }
+    </style>
 
-			<a href="#" >
-				<img id="no-scroll" class="sigla" src="imagini/sigla2.png" alt="sigla" />
-				<img id="scroll" class="sigla" src="imagini/sigla2%20-%20Copy.png" alt="sigla" />
-			</a>
-		</div >
-		
-		<div class="container formular2" style="width:100%">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-steel.css?3.3.292"/>
+    
+    <title>Admitere licen&#355;&#259;</title>
+</head>
+<body>
+  <div class="mare collapse navbar-collapse navbar nav-group nav-group--consistent">
+      <div class="nav navbar-nav bar2">
+        <ul style="widht:100%; height:40px; background-color:#3488CB;"></ul>
+        <ul class="left-menu">
+            <li class="lung"><a href="DespreFII.html">Despre FII</a></li>
+            <li class="scurt"><a href="DespreFII.html">FII</a></li>
+			<li><a href="paginaAdmitere.html">Admitere</a></li>
+            </ul>
+        <ul class="right-menu">
+              <li><a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri</a></li>
+			  <li><a href="contact.html" >Contact</a></li>
+        </ul>
+      </div>      
+      <a href="https://www.info.uaic.ro/bin/Main/" >
+        <img id="no-scroll" class="sigla" src="imagini/sigla2.png" alt="sigla" />
+        <img id="scroll" class="sigla" src="imagini/sigla2-Copy.png" alt="sigla" />
+      </a>
+  </div>
+  
+  <div class="mic" style="background-color:white; height:80px; width:100%;; z-index:90;">
+    <a href="#menu" id="toggle"><span></span></a>
+   <div id="menu">
+      <ul class="tog1">
+        <li class="tog2"><a href="DespreFII.html">Despre FII</a></li>  
+        <li class="tog2"><a href="paginaAdmitere.html">Admitere</a></li>
+        <li class="tog2"><a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri</a></li>
+		<li class="tog2"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div> 
+  </div> 
+  </br>
+  <div class="container formular2" style="width:100%">
 			<form  style="width:90%" action="" method='post'>
 				<input type="hidden" name="formID" value="71274520949360" />
 				<div class="">
@@ -304,16 +295,50 @@
 						</li>
 					</ul>
 					<div class="formular2">
+					    <?php
+							include "exempluLicenta.php";
+							error_reporting(0);
+                            ini_set('display_errors', 0);
+							$v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie"];
+							$v_Licenta_Initiala_Tata = $_POST["Licenta_Initiala_Tata"];
+							$v_Licenta_Email = $_POST["Licenta_Email"];
+							$v_Licenta_Telefon = $_POST["Licenta_Telefon"];
+							$v_Licenta_Cod_Postal = $_POST["Licenta_Cod_Postal"];
+							$v_Licenta_Localitate = $_POST["Licenta_Localitate"];
+							$v_Licenta_Apartament = $_POST["Licenta_Apartament"];
+							$v_Licenta_Etaj = $_POST["Licenta_Etaj"];
+							$v_Licenta_Scara = $_POST["Licenta_Scara"];
+							$v_Licenta_Bloc = $_POST["Licenta_Bloc"];
+							$v_Licenta_Numar = $_POST["Licenta_Numar"];
+							$v_Licenta_Strada = $_POST["Licenta_Strada"];
+							$v_Licenta_Nota_MI = $_POST["Licenta_Nota_MI"];
+							$v_Licenta_Medie_BAC = $_POST["Licenta_Medie_BAC"];
+							$v_Licenta_Buletin_Eliberat_De = $_POST["Licenta_Buletin_Eliberat_De"];
+							$v_Licenta_Numar_Buletin = $_POST["Licenta_Numar_Buletin"];
+							$v_Licenta_Serie_Buletin = $_POST["Licenta_Serie_Buletin"];
+							$v_Licenta_Tip_Buletin = $_POST["Licenta_Tip_Buletin"];
+							$v_Licenta_CNP = $_POST["Licenta_CNP"];
+							$v_Licenta_Prenumele = $_POST["Licenta_Prenumele"];
+							$v_Licenta_Prenume_Mama = $_POST["Licenta_Prenume_Mama"];
+							$v_Licenta_Prenume_Tata = $_POST["Licenta_Prenume_Tata"];
+							//$v_Licenta_Nationalitate = $_POST["Licenta_Nationalitate"];
+							$v_Licenta_Etnie = $_POST["Licenta_Etnie"];
+							$v_Licenta_Limba_Materna = $_POST["Licenta_Limba_Materna"];
+						?>
 						<ul>
 							<li class="form-line" data-type="control_fullname" id="id_1">
 								<label class="form-label form-label-left form-label-auto" id="label_1"  style="color: #3488CB; font-size:large"> Informa&#355;ii   generale </label>
 								<div  class="form-input jf-required cid_1">
 									<div class="general_name" data-wrapper-react="true">
 										<span id="num" class="form-sub-label-container" style="vertical-align:top;">
-											<input type="text"  name="Licenta_Numele_De_Familie" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" value="" data-component="first" />
+											<input type="text" name="Licenta_Numele_De_Familie" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" data-component="first" value="<?php 
+																																																	if($v_Numele_De_Familie == '') 
+																																																		echo '';
+																																																	else
+																																																		echo $v_Numele_De_Familie;
+																																																?>" />
 											<span style="color:red">
 												<?php
-													include "ValidClass.php";
 													if(isset($_POST['Submit'])) {
 														$v_Numele_De_Familie = $_POST["Licenta_Numele_De_Familie"];
 														$vNumele_De_Familie = validNume($v_Numele_De_Familie);
@@ -325,7 +350,12 @@
 											<label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie </label>
 										</span>
 										<span id="initiala" class="form-sub-label-container" style="vertical-align:top;">
-											<input type="text" name="Licenta_Initiala_Tata" class="form-textbox middle_1" size="10" placeholder="ex: C/C./C.-D." value="" data-component="middle" />
+											<input type="text" name="Licenta_Initiala_Tata" class="form-textbox middle_1" size="10" placeholder="ex: C/C./C.D." data-component="first" value="<?php 
+																																											if($v_Licenta_Initiala_Tata == '') 
+																																												echo '';
+																																											else
+																																												echo $v_Licenta_Initiala_Tata;
+												                                                                                                                         ?>" />
 											<span style="color:red">
 												<?php
 													if(isset($_POST['Submit'])) {
@@ -339,7 +369,12 @@
 											<label class="form-sub-label"  style="min-height:13px;"> Ini&#355;iala tat&#259;lui </label>
 										</span>
 										<span id="prenum" class="form-sub-label-container" style="vertical-align:top;">
-											<input type="text" name="Licenta_Prenumele" class="form-textbox last_1" size="15" placeholder="ex: Ana-Maria / Ana Maria" value="" data-component="last" />
+											<input type="text" name="Licenta_Prenumele" class="form-textbox last_1" size="15" placeholder="ex: Ana-Maria / Ana Maria" data-component="last"  value="<?php 
+																																																		if($v_Licenta_Prenumele == '') 
+																																																			echo '';
+																																																		else
+																																																			echo $v_Licenta_Prenumele;
+																																																	?>" />
 											<span style="color:red">
 												<?php
 													if(isset($_POST['Submit'])) {
@@ -358,9 +393,14 @@
 								<div  class="form-input jf-required cid_1">
 									<div class="general_name" data-wrapper-react="true">
 										<span  class="form-sub-label-container" style="vertical-align:top; width:25%;padding:0;margin:0;">
-											<input type="text"  name="Licenta_Prenume_Mama" class="form-textbox first_1" size="10" placeholder="ex: Ana / Ana-Maria / Ana Maria " value="" data-component="first" />
+											<input type="text"  name="Licenta_Prenume_Mama" class="form-textbox first_1" size="10" placeholder="ex: Ana / Ana-Maria / Ana Maria " data-component="first" value="<?php 
+																																																					if($v_Licenta_Prenume_Mama == '') 
+																																																						echo '';
+																																																					else
+																																																						echo $v_Licenta_Prenume_Mama;
+																																																				?>" />
 											<span style="color:red">
-												<?php
+												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Prenume_Mama = $_POST["Licenta_Prenume_Mama"];
 														$vLicenta_PrenumeMama = validNume($v_Licenta_Prenume_Mama);
@@ -372,9 +412,14 @@
 											<label class="form-sub-label sublabel_first" style="min-height:13px;"> Prenume Mama </label>
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:24%;padding:0;margin:0;">
-											<input type="text" name="Licenta_Prenume_Tata" class="form-textbox middle_1" size="10" placeholder="ex: Cristian / Cristi Ionu&#355; / Cristi-Ionu&#355;" value="" data-component="middle" />
+											<input type="text" name="Licenta_Prenume_Tata" class="form-textbox middle_1" size="10" placeholder="ex: Cristian / Cristi Ionu&#355; / Cristi-Ionu&#355;" data-component="middle" value="<?php 
+																																																										if($v_Licenta_Prenume_Tata == '') 
+																																																											echo '';
+																																																										else
+																																																											echo $v_Licenta_Prenume_Tata;
+																																																									 ?>" />
 											<span style="color:red">
-												<?php
+												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Prenume_Tata = $_POST["Licenta_Prenume_Tata"];
 														$vLicenta_PrenumeTata = validNume($v_Licenta_Prenume_Tata);
@@ -387,15 +432,15 @@
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:24%;padding:0;margin:0;">
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Stare_Civila" data-component="country">
-												<option value="">Singur/&#259;</option>
-												<option value="">C&#259;s&#259;torit/&#259;</option>
+												<option value="Singur">Singur/&#259;</option>
+												<option value="Casatorit(a)">C&#259;s&#259;torit/&#259;</option>
 											</select>
 											<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Stare civil&#259;</label>
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:25%;padding:0;margin:0;">
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Sex" data-component="country">
-												<option value="">Feminin</option>
-												<option value="">Masculin</option>
+												<option value="Feminin">Feminin</option>
+												<option value="Masculin">Masculin</option>
 											</select>
 											<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Sex</label>
 										</span>
@@ -406,24 +451,22 @@
 								<div  class="form-input jf-required cid_1">
 									<div data-wrapper-react="true">
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
-											<input type="text" name="Licenta_Nationalitate"  class="form-textbox first_1" size="20" value="" data-component="first" />
-											<span style="color:red">
-												<?php
-													if(isset($_POST['Submit'])) {
-														$v_Licenta_Nationalitate = $_POST["Licenta_Nationalitate"];
-														$vLicenta_Nationalitate = validNume($v_Licenta_Nationalitate);
-														if($vLicenta_Nationalitate==0)
-															echo "C&#226;mp invalid!";
-													}
-												?>
-											</span>
+											
+											<select class="form-textbox first_1" style="width:100%; height:40px" name="Licenta_Nationalitate" data-component="first">
+												<option value="Romana">Rom&#226;n&#259;</option>
+											</select>
 											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> Nationalitate </label>
 										</span>
 						
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
-											<input type="text" name="Licenta_Etnie"  class="form-textbox first_1" size="20"  data-component="first" />
+											<input type="text" name="Licenta_Etnie"  class="form-textbox first_1" size="20"  data-component="first"  value="<?php 
+																																								if($v_Licenta_Etnie == '') 
+																																									echo '';
+																																								else
+																																									echo $v_Licenta_Etnie;
+																																							?>" />
 											<span style="color:red">
-												<?php
+												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Etnie = $_POST["Licenta_Etnie"];
 														$vLicenta_Etnie = validNume($v_Licenta_Etnie);
@@ -436,9 +479,14 @@
 										</span>
 
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
-											<input type="text" name="Licenta_Limba_Materna"  class="form-textbox first_1" size="20"  data-component="first" />
+											<input type="text" name="Licenta_Limba_Materna"  class="form-textbox first_1" size="20" data-component="first"   value="<?php 
+																																										if($v_Licenta_Limba_Materna == '') 
+																																											echo '';
+																																										else
+																																											echo $v_Licenta_Limba_Materna;
+																																									?>" />
 											<span style="color:red">
-												<?php
+												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Limba_Materna = $_POST["Licenta_Limba_Materna"];
 														$vLicenta_Limba_Materna = validNume($v_Licenta_Limba_Materna);
@@ -458,9 +506,14 @@
 								<div  class="form-input jf-required cid_1">
 									<div data-wrapper-react="true">
 										<span id="CNP" class="form-sub-label-container" style="vertical-align:top; padding:0; margin:0">
-											<input type="text"  name="Licenta_CNP" class="form-textbox first_1" size="20" placeholder="ex: 1960917404400" value="" data-component="first" />
+											<input type="text"  name="Licenta_CNP" class="form-textbox first_1" size="20" placeholder="ex: 1960917404400" data-component="first" value="<?php 
+																																															if($v_Licenta_CNP == '') 
+																																																echo '';
+																																															else
+																																																echo $v_Licenta_CNP;
+																																														?>" />
 											<span style="color:red">
-												<?php
+												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_CNP = $_POST["Licenta_CNP"];
 														$vLicenta_CNP = validCNP($v_Licenta_CNP);
@@ -472,10 +525,15 @@
 											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> CNP </label>
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:6%;padding:0;margin:0;">
-											<input type="text"  name="Licenta_Tip_Buletin" class="form-textbox first_1" size="20" placeholder="ex: C.I. / CI" data-component="first" />
+											<input type="text"  name="Licenta_Tip_Buletin" class="form-textbox first_1" size="20" placeholder="ex: C.I. / CI" data-component="first" value="<?php 
+																																																if($v_Licenta_Tip_Buletin == '') 
+																																																	echo '';
+																																																else
+																																																	echo $v_Licenta_Tip_Buletin;
+																																															?>"/>
 											<span style="color:red">
 												<?php
-													if(isset($_POST['Submit'])) {
+													if(isset($_POST['Submit'])) { 
 														$v_Licenta_Tip_Buletin = $_POST["Licenta_Tip_Buletin"];  // V
 														$vLicenta_Tip_Buletin = validTipBuletin($v_Licenta_Tip_Buletin);
 														if($vLicenta_Tip_Buletin==0)
@@ -486,9 +544,14 @@
 											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> Tip Buletin </label>
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:10%;padding:0;margin:0;">
-											<input type="text"  name="Licenta_Serie_Buletin" class="form-textbox first_1" size="20" placeholder="ex: IS / IF" data-component="first" />
+											<input type="text"  name="Licenta_Serie_Buletin" class="form-textbox first_1" size="20" placeholder="ex: IS / IF" data-component="first" value="<?php 
+																																																if($v_Licenta_Serie_Buletin == '') 
+																																																	echo '';
+																																																else
+																																																	echo $v_Licenta_Serie_Buletin;
+																																															?>" />
 											<span style="color:red">
-												<?php
+												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Serie_Buletin = $_POST["Licenta_Serie_Buletin"];  // V
 														$vLicenta_Serie_Buletin = validSerieBuletin($v_Licenta_Serie_Buletin);
@@ -500,9 +563,14 @@
 											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> Serie Buletin </label>
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:10%;padding:0;margin:0;">
-											<input type="text"  name="Licenta_Numar_Buletin" class="form-textbox first_1" size="20" placeholder="ex: 123456" data-component="first" />
+											<input type="text"  name="Licenta_Numar_Buletin" class="form-textbox first_1" size="20" placeholder="ex: 123456" data-component="first" value="<?php 
+																																																if($v_Licenta_Numar_Buletin == '') 
+																																																	echo '';
+																																																else
+																																																	echo $v_Licenta_Numar_Buletin;
+																																															?>" />
 											<span style="color:red">
-												<?php
+												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Numar_Buletin = $_POST["Licenta_Numar_Buletin"];  // V
 														$vLicenta_Numar_Buletin = validNumarBuletin($v_Licenta_Numar_Buletin);
@@ -514,9 +582,14 @@
 											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> Numar Buletin </label>
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:10%;padding:0;margin:0;">
-											<input type="text"  name="Licenta_Buletin_Eliberat_De" class="form-textbox first_1" size="20" placeholder="ex: SPCLEP IA&#350;I" data-component="first" />
+											<input type="text"  name="Licenta_Buletin_Eliberat_De" class="form-textbox first_1" size="20" placeholder="ex: SPCLEP IA&#350;I" data-component="first"  value="<?php 
+																																																				if($v_Licenta_Buletin_Eliberat_De == '') 
+																																																					echo '';
+																																																				else
+																																																					echo $v_Licenta_Buletin_Eliberat_De;
+																																																				?>" />
 											<span style="color:red">
-												<?php
+												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Buletin_Eliberat_De = $_POST["Licenta_Buletin_Eliberat_De"];  // V
 														$vLicenta_Buletin_Eliberat_De = validEliberareBuletin($v_Licenta_Buletin_Eliberat_De);
@@ -695,35 +768,35 @@
 										<div>
 											<span class="form-sub-label-container liceu" style="vertical-align:top;">
 												<select  class="form-dropdown form-address-country liceu" name="Licenta_Liceu" id="input_3_country" data-component="country">
-													<option value="">GRUP &#350;COLAR "HOREA CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
-													<option value="">LICEUL "HOREA, CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
-													<option value="">COLEGIUL NATIONAL "BETHLEN GABOR" AIUD</option>
-													<option value="">COLEGIUL TEHNIC AIUD</option>
-													<option value="">GRUPUL &#350;COLAR "AVRAM IANCU" AIUD</option>
-													<option value="">COLEGIUL DE AFACERI ALBA IULIA</option>
-													<option value="">COLEGIUL ECONOMIC "DIONISIE POP MARTIAN" ALBA IULIA</option>
-													<option value="">COLEGIUL LICEAL MILITAR "MIHAI VITEAUL" ALBA IULIA</option>
-													<option value="">COLEGIUL NA&#354;IONAL "HOREA CLO&#350;CA &#350;I CRI&#350;AN" ALBA IULIA</option>
-													<option value="">COLEGIUL NA&#354;IONAL MILITAR "MIHAI VITEAZUL" ALBA IULIA</option>
-													<option value="">COLEGIUL TEHNIC "ALEXANDRU DOMSA" ALBA IULIA</option>
-													<option value="">COLEGIUL TEHNIC "APULUM" ALBA IULIA</option>
-													<option value="">COLEGIUL TEHNIC "DORIN PAVEL" ALBA IULIA</option>
-													<option value="">GRUP &#350;COLAR DE COOPERA&#354;IE ALBA IULIA</option>
-													<option value="">GRUP &#350;COLAR DE INDUSTRIE USOAR&#258; ALBA IULIA</option>
-													<option value="">GRUP &#350;COLAR INDUSTRIAL METALURGIC ALBA IULIA</option>
-													<option value="">GRUPUL &#350;COLAR "DORIN PAVEL" ALBA IULIA</option>
-													<option value="">GRUPUL &#350;COLAR DE COOPERATIE ALBA IULIA</option>
-													<option value="">GRUPUL &#350;COLAR DE INDUSTRIE USOARA ALBA IULIA</option>
-													<option value="">GRUPUL &#350;COLAR INDUSTRIAL METALURGIC ALBA IULIA</option>
-													<option value="">LICEUL CU PROGRAM SPORTIV ALBA IULIA</option>
-													<option value="">LICEUL DE ARTE "REGINA MARIA" ALBA IULIA</option>
-													<option value="">LICEUL DE ARTE ALBA IULIA</option>
-													<option value="">LICEUL DE MUZICA &#350;I ARTE PLASTICE ALBA IULIA</option>
-													<option value="">LICEUL SPORTIV ALBA IULIA</option>
-													<option value="">LICEUL TEOLOGIC ROMANO CATOLIC ALBA IULIA</option>
-													<option value="">LICEUL TEOLOGIC ROMANO-CATOLIC "GROF MAJLATH GUSZTAV KAROLY" ALBA IULIA</option>
-													<option value="">LICEUL TEORETIC "SF&#194;NTUL IOSIF" ALBA IULIA</option>
-													<option value="">altul</option>
+														<option value="GRUP SCOLAR HOREA CLOSCA SI CRISAN">GRUP &#350;COLAR "HOREA CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
+														<option value="LICEUL HOREA CLOSCA SI CRISAN">LICEUL "HOREA, CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
+														<option value="COLEGIUL NATIONAL "BETHLEN GABOR" AIUD">COLEGIUL NATIONAL "BETHLEN GABOR" AIUD</option>
+														<option value="COLEGIUL TEHNIC AIUD">COLEGIUL TEHNIC AIUD</option>
+														<option value="GRUPUL SCOLAR AVRAM IANCU AIUD">GRUPUL &#350;COLAR "AVRAM IANCU" AIUD</option>
+														<option value="COLEGIUL DE AFACERI ALBA IULIA">COLEGIUL DE AFACERI ALBA IULIA</option>
+														<option value="COLEGIUL ECONOMIC "DIONISIE POP MARTIAN" ALBA IULIA">COLEGIUL ECONOMIC "DIONISIE POP MARTIAN" ALBA IULIA</option>
+														<option value="COLEGIUL LICEAL MILITAR "MIHAI VITEAUL" ALBA IULIA">COLEGIUL LICEAL MILITAR "MIHAI VITEAUL" ALBA IULIA</option>
+														<option value="COLEGIUL NATIONAL HOREA CLOSCA SI CRISAN ALBA IULIA">COLEGIUL NA&#354;IONAL "HOREA CLO&#350;CA &#350;I CRI&#350;AN" ALBA IULIA</option>
+														<option value="COLEGIUL NATIONAL MILITAR MIHAI VITEAUL ALBA IULIA">COLEGIUL NA&#354;IONAL MILITAR "MIHAI VITEAZUL" ALBA IULIA</option>
+														<option value="COLEGIUL TEHNIC ALEXANDRU DOMSA ALBA IULIA">COLEGIUL TEHNIC "ALEXANDRU DOMSA" ALBA IULIA</option>
+														<option value="COLEGIUL TEHNIC APULUM ALBA IULIA">COLEGIUL TEHNIC "APULUM" ALBA IULIA</option>
+														<option value="COLEGIUL TEHNIC DORIN PAVEL ALBA IULIA">COLEGIUL TEHNIC "DORIN PAVEL" ALBA IULIA</option>
+														<option value="GRUP SCOLAR DE COOPERATIE ALBA IULIA">GRUP &#350;COLAR DE COOPERA&#354;IE ALBA IULIA</option>
+														<option value="GRUP SCOLAR DE INDUSTRIE USOARA ALBA IULIA">GRUP &#350;COLAR DE INDUSTRIE USOAR&#258; ALBA IULIA</option>
+														<option value="GRUP SCOLAR INDUSTRIAL METALURGIC ALBA IULIA">GRUP &#350;COLAR INDUSTRIAL METALURGIC ALBA IULIA</option>
+														<option value="GRUP SCOLAR DORIN PAVEL ALBA IULIA">GRUPUL &#350;COLAR "DORIN PAVEL" ALBA IULIA</option>
+														<option value="GRUPUL SCOLAR DE COOPERATIE ALBA IULIA">GRUPUL &#350;COLAR DE COOPERATIE ALBA IULIA</option>
+														<option value="GRUPUL SCOLAR DE INDUSTRIE USOARA ALBA IULIA">GRUPUL &#350;COLAR DE INDUSTRIE USOARA ALBA IULIA</option>
+														<option value="GRUPUL SCOLAR INDUSTRIAL METALURGIC ALBA IULIA">GRUPUL &#350;COLAR INDUSTRIAL METALURGIC ALBA IULIA</option>
+														<option value="LICEUL CU PROGRAM SPORTIV ALBA IULIA">LICEUL CU PROGRAM SPORTIV ALBA IULIA</option>
+														<option value="LICEUL DE ARTE REGINA MARIA ALBA IULIA">LICEUL DE ARTE "REGINA MARIA" ALBA IULIA</option>
+														<option value="LICEUL DE ARTE ALBA IULIA">LICEUL DE ARTE ALBA IULIA</option>
+														<option value="LICEUL DE MUZICA SI ARTE PLASTICE ALBA IULIA">LICEUL DE MUZICA &#350;I ARTE PLASTICE ALBA IULIA</option>
+														<option value="LICEUL SPORTIV ALBA IULIA">LICEUL SPORTIV ALBA IULIA</option>
+														<option value="LICEUL TEOLOGIC ROMANO CATOLIC ALBA IULIA">LICEUL TEOLOGIC ROMANO CATOLIC ALBA IULIA</option>
+														<option value="LICEUL TEOLOGIC ROMANO-CATOLIC GROF MAJLATH GUSZTAV KAROLY ALBA IULIA">LICEUL TEOLOGIC ROMANO-CATOLIC "GROF MAJLATH GUSZTAV KAROLY" ALBA IULIA</option>
+														<option value="LICEUL TEORETIC SFANTUL IOSIF ALBA IULIA">LICEUL TEORETIC "SF&#194;NTUL IOSIF" ALBA IULIA</option>
+														<option value="ALTUL">altul</option>
 												</select>
 											</span>
 											<label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Liceul pe care l-ați absolvit</label>
@@ -733,9 +806,14 @@
 									<div  class="form-input jf-required cid_1" >
 										<div data-wrapper-react="true" class="mg">
 											<span class="form-sub-label-container" style="vertical-align:top; width:100%" >
-												<input type="text"  name="Licenta_Medie_BAC" class="form-textbox first_1" size="20" value="" data-component="first" />
+												<input type="number"  name="Licenta_Medie_BAC" class="form-textbox first_1"  size="20" data-component="first"  value="<?php 
+																																										if($v_Licenta_Medie_BAC == '') 
+																																											echo '';
+																																										else
+																																											echo $v_Licenta_Medie_BAC;
+																																									?>" />
 												<span style="color:red">
-													<?php
+													<?php 
 														if(isset($_POST['Submit'])) {
 															$v_Licenta_Medie_BAC = $_POST["Licenta_Medie_BAC"];
 															$vLicenta_Medie_BAC = validareMedieBac($v_Licenta_Medie_BAC);
@@ -749,9 +827,14 @@
 										</div> 
 										<div data-wrapper-react="true" class="mg">
 											<span  class="form-sub-label-container gen" style="vertical-align:top;">
-												<input type="text"  name="Licenta_Nota_MI" class="form-textbox first_1" size="20" value="" data-component="first" />
+												<input type="number"  name="Licenta_Nota_MI" class="form-textbox first_1" size="20" data-component="first" value="<?php 
+																																									if($v_Licenta_Nota_MI == '') 
+																																										echo '';
+																																									else
+																																										echo $v_Licenta_Nota_MI;
+																																								?>" />
 												<span style="color:red">
-													<?php
+													<?php 
 														if(isset($_POST['Submit'])) {
 															$v_Licenta_Nota_MI = $_POST["Licenta_Nota_MI"];  // V
 															$vLicenta_Nota_MI = validareProbaAlegere($v_Licenta_Nota_MI);
@@ -765,9 +848,9 @@
 										</div>
 										<div class="mg">
 											<span class="form-sub-label-container gen" style="vertical-align:top;">
-												<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Limba_Aleasa middle_1" data-component="country">
-													<option value="">&#206;n limba rom&#226;n&#259;</option>
-													<option value="">&#206;n limba englez&#259;</option>
+												<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Limba_Aleasa" data-component="country">
+													<option value="In limba romana">&#206;n limba rom&#226;n&#259;</option>
+													<option value="In limba engleza">&#206;n limba englez&#259;</option>
 												</select>
 												<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Doresc &#238;nva&#355;&#259;m&#226;nt de zi</label>
 											</span>   
@@ -775,9 +858,9 @@
 										<div data-wrapper-react="true" class="mg">
 											<span class="form-sub-label-container gen" style="vertical-align:top;">
 												<select class="form-dropdown form-address-country middle_1" name="Licenta_Obiect_Test_Ales"  data-component="country">
-													<option value="">Matematic&#259;</option>
-													<option value="">Informatic&#259; C/C++</option>
-													<option value="">Informatic&#259; Pascal</option>
+													<option value="Matematica">Matematic&#259;</option>
+													<option value="Informatica C/C++">Informatic&#259; C/C++</option>
+													<option value="Informatica Pascal">Informatic&#259; Pascal</option>
 												</select>
 												<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Doresc s&#259; dau admitere la obiectul</label>
 											</span>   
@@ -796,9 +879,14 @@
 												<td>
 								  
 													<span class="form-sub-label-container" style="vertical-align:top; width:44%">
-														<input type="text"  name="Licenta_Strada" class="form-textbox first_1" size="15" value="" placeholder="ex: Independen&#355;ei" data-component="first" />
+														<input type="text" name="Licenta_Strada" class="form-textbox first_1" size="15"  placeholder="ex: Independen&#355;ei" data-component="first" value="<?php 
+																																																				if($v_Licenta_Strada == '') 
+																																																					echo '';
+																																																				else
+																																																					echo $v_Licenta_Strada;
+																																																			?>" />
 														<span style="color:red">
-															<?php
+															<?php 
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Strada = $_POST["Licenta_Strada"];  // V
 																	$vLicenta_Strada = validareStrada($v_Licenta_Strada);
@@ -810,9 +898,14 @@
 														<label class="form-sub-label sublabel_first"   style="min-height:13px;">Strada </label>
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:10%">
-														<input type="text" name="Licenta_Numar" class="form-textbox middle_1" size="15" placeholder="ex: 17 / -" data-component="middle" />
+														<input type="text" name="Licenta_Numar" class="form-textbox middle_1" size="15" placeholder="ex: 17 / -" data-component="middle" value="<?php 
+																																																	if($v_Licenta_Numar == '') 
+																																																		echo '';
+																																																	else
+																																																		echo $v_Licenta_Numar;
+																																																?>" />
 														<span style="color:red">
-															<?php
+															<?php 
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Numar = $_POST["Licenta_Numar"];  // V
 																	$vLicenta_Numar = validareNumar($v_Licenta_Numar);
@@ -824,9 +917,14 @@
 														<label class="form-sub-label"   style="min-height:13px;"> Num&#259;rul</label>
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:10%">
-														<input type="text"  name="Licenta_Bloc" class="form-textbox last_1" size="15" placeholder="ex: 123 / - / C345" data-component="last" />
+														<input type="text"  name="Licenta_Bloc" class="form-textbox last_1" size="15" placeholder="ex: 123 / - / C345" data-component="last" value="<?php 
+																																																		if($v_Licenta_Bloc == '') 
+																																																			echo '';
+																																																		else
+																																																			echo $v_Licenta_Bloc;
+																																																	?>" />
 														<span style="color:red">
-															<?php
+															<?php  
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Bloc = $_POST["Licenta_Bloc"];  // V
 																	$vLicenta_Bloc = validareBloc($v_Licenta_Bloc);
@@ -838,9 +936,14 @@
 														<label class="form-sub-label"  style="min-height:13px;"> Bloc </label>
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:10%">
-														<input type="text"  name="Licenta_Scara" class="form-textbox last_1" size="15" placeholder="ex: A / D3" data-component="last" />
+														<input type="text" name="Licenta_Scara" class="form-textbox last_1" size="15" placeholder="ex: A / D3" data-component="last" value="<?php 
+																																																if($v_Licenta_Scara == '') 
+																																																	echo '';
+																																																else
+																																																	echo $v_Licenta_Scara;
+																																															?>" />
 														<span style="color:red">
-															<?php
+															<?php 
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Scara = $_POST["Licenta_Scara"];  // V
 																	$vLicenta_Scara = validareBloc($v_Licenta_Scara);
@@ -852,9 +955,14 @@
 														<label class="form-sub-label last_1"  style="min-height:13px;"> Scara </label>
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:10% ">
-														<input type="text"  name="Licenta_Etaj" class="form-textbox last_1" size="15" placeholder="ex: Parter / 17 / -" data-component="last" />
+														<input type="text" name="Licenta_Etaj" class="form-textbox last_1" size="15" placeholder="ex: Parter / 17 / -" data-component="last" value="<?php 
+																																																		if($v_Licenta_Etaj == '') 
+																																																			echo '';
+																																																		else
+																																																			echo $v_Licenta_Etaj;
+																																																	?>" />
 														<span style="color:red">
-															<?php
+															<?php 
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Etaj = $_POST["Licenta_Etaj"];  // V
 																	$vLicenta_Etaj = validareEtaj($v_Licenta_Etaj);
@@ -866,9 +974,14 @@
 														<label class="form-sub-label"  style="min-height:13px;"> Etaj </label>
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:11%; margin:0px; padding:0px">
-														<input type="text"  name="Licenta_Apartament" class="form-textbox last_1" size="15" data-component="last" placeholder="ex: 1 / -" style="margin:0px; padding:0px" />
+														<input type="text" name="Licenta_Apartament" class="form-textbox last_1" size="15" data-component="last" placeholder="ex: 1 / -" style="margin:0px; padding:0px" value="<?php 
+																																																									if($v_Licenta_Apartament == '') 
+																																																										echo '';
+																																																									else
+																																																										echo $v_Licenta_Apartament;
+																																																								?>" />
 														<span style="color:red">
-															<?php
+															<?php  
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Apartament = $_POST["Licenta_Apartament"];  // V
 																	$vLicenta_Apartament = validareNumar($v_Licenta_Apartament);
@@ -885,9 +998,14 @@
 												<td>
 													<br>
 													<span class="form-sub-label-container" style="vertical-align:top; width:24%" >
-														<input type="text"  name="Licenta_Localitate" class="form-textbox form-address-city first_1" size="21" placeholder="ex: Ia&#351;i" data-component="city" />
+														<input type="text"  name="Licenta_Localitate" class="form-textbox form-address-city first_1" size="21" placeholder="ex: Ia&#351;i" data-component="city" value="<?php 
+																																																							if($v_Licenta_Localitate == '') 
+																																																								echo '';
+																																																							else
+																																																								echo $v_Licenta_Localitate;
+																																																						?>" />
 														<span style="color:red">
-															<?php
+															<?php 
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Localitate = $_POST["Licenta_Localitate"];  // V
 																	$vLicenta_Localitate = validPremume($v_Licenta_Localitate);
@@ -900,57 +1018,62 @@
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:24%">
 														<select class="form-dropdown form-address-country gen" name="Licenta_Judet"  data-component="country">
-															<option value="">Alba</option>
-															<option value="">Arad</option>
-															<option value="">Arge&#351;</option>  
-															<option value="">Bac&#259;u</option>
-															<option value="">Bihor</option>
-															<option value="">Bistri&#355;a-N&#259;s&#259;ud</option>
-															<option value="">Boto&#351;ani</option>
-															<option value="">Br&#259;ila</option>
-															<option value="">Bra&#351;ov</option>
-															<option value="">Bucure&#351;ti</option>
-															<option value="">Buz&#259;u</option>
-															<option value="">C&#259;l&#259;ra&#351;i</option>
-															<option value="">Cara&#351;-Severin</option>
-															<option value="">Cluj</option>
-															<option value="">Constan&#355;a</option>
-															<option value="">Covasna</option>
-															<option value="">D&#226;mbovi&#355;a</option>
-															<option value="">Gala&#355;i</option>
-															<option value="">Giurgiu</option>
-															<option value="">Gorj</option>
-															<option value="">Harghita</option>
-															<option value="">Hunedoara</option>
-															<option value="">Ialomi&#355;a</option>
-															<option value="">Ia&#351;i</option>
-															<option value="">Ilfov</option>
-															<option value="">Maramure&#351;</option>
-															<option value="">Mehedin&#355;i</option>
-															<option value="">Mures</option>
-															<option value="">Neam&#355;</option>
-															<option value="">Olt</option>
-															<option value="">Prahova</option>
-															<option value="">S&#259;laj</option>
-															<option value="">Satu Mare</option>
-															<option value="">Sibiu</option>
-															<option value="">Suceava</option>
-															<option value="">Teleorman</option>
-															<option value="">Timi&#351;</option>
-															<option value="">Tulcea</option>
-															<option value="">V&#226;lcea</option>
-															<option value="">Vaslui</option>
-															<option value="">Vrancea</option>
+															<option value="Alba">Alba</option>
+															<option value="Arad">Arad</option>
+															<option value="Arges">Arge&#351;</option>  
+															<option value="Bacau">Bac&#259;u</option>
+															<option value="Bihor">Bihor</option>
+															<option value="BistritaNasaud">Bistri&#355;a-N&#259;s&#259;ud</option>
+															<option value="Botosani">Boto&#351;ani</option>
+															<option value="Braila">Br&#259;ila</option>
+															<option value="Brasov">Bra&#351;ov</option>
+															<option value="Bucuresti">Bucure&#351;ti</option>
+															<option value="Buzau">Buz&#259;u</option>
+															<option value="Calarasi">C&#259;l&#259;ra&#351;i</option>
+															<option value="Caras-Severin">Cara&#351;-Severin</option>
+															<option value="Cluj">Cluj</option>
+															<option value="Constanta">Constan&#355;a</option>
+															<option value="Covasna">Covasna</option>
+															<option value="Dambovita">D&#226;mbovi&#355;a</option>
+															<option value="Galati">Gala&#355;i</option>
+															<option value="Giurgiu">Giurgiu</option>
+															<option value="Gorj">Gorj</option>
+															<option value="Harghita">Harghita</option>
+															<option value="Hunedoara">Hunedoara</option>
+															<option value="Ialomita">Ialomi&#355;a</option>
+															<option value="Iasi">Ia&#351;i</option>
+															<option value="Ilfov">Ilfov</option>
+															<option value="Maramures">Maramure&#351;</option>
+															<option value="Mehedinti">Mehedin&#355;i</option>
+															<option value="Mures">Mures</option>
+															<option value="Neamt">Neam&#355;</option>
+															<option value="Olt">Olt</option>
+															<option value="Prahova">Prahova</option>
+															<option value="Salaj">S&#259;laj</option>
+															<option value="Satu Mare">Satu Mare</option>
+															<option value="Sibiu">Sibiu</option>
+															<option value="Suceava">Suceava</option>
+															<option value="Teleorman">Teleorman</option>
+															<option value="Timisoara">Timi&#351;</option>
+															<option value="Tulcea">Tulcea</option>
+															<option value="Valcea">V&#226;lcea</option>
+															<option value="Vaslui">Vaslui</option>
+															<option value="Vrancea">Vrancea</option>
 														</select>
 														<label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Jude&#355; </label>
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:24%">
-														<input type="text" name="Licenta_Cod_Postal" class="gen" size="16" value="" placeholder="ex: 404400" data-component="zip" />
+														<input type="text" name="Licenta_Cod_Postal" class="gen" size="16" placeholder="ex: 404400" data-component="zip" value="<?php 
+																																													if($v_Licenta_Cod_Postal == '') 
+																																														echo '';
+																																													else
+																																														echo $v_Licenta_Cod_Postal;
+																																												?>" />
 														<span style="color:red">
-															<?php
+															<?php 
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Cod_Postal = $_POST["Licenta_Cod_Postal"];  // V
-																	$vLicenta_Cod_Postal = validNumarBuletin($v_Licenta_Cod_Postal);
+																	$vLicenta_Cod_Postal = validareCodPostal($v_Licenta_Cod_Postal);
 																	if($vLicenta_Cod_Postal==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -960,9 +1083,9 @@
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:24%">
 														<select class="form-dropdown form-address-country gen" name="Licenta_Tara" data-component="country">
-															<option value="United States"> Rom&#226;nia </option>
-															<option value="Afghanistan"> Republica Moldova </option>
-															<option value="other"> Alta op&#355;iune</option>
+															<option value="Romania"> Rom&#226;nia </option>
+															<option value="Republica Moldova"> Republica Moldova </option>
+															<option value="Alta Optiune"> Alta op&#355;iune</option>
 														</select>
 														<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">&#354;ar&#259; </label>
 													</span>
@@ -978,10 +1101,15 @@
 								<div id="cid_6" class="form-input jf-required" style="width:100%">
 									<div data-wrapper-react="true" style="width:100%">
 										<span class="form-sub-label-container" style="vertical-align:top; width:100%" >
-											<input type="tel" id="input_6_phone" name="Licenta_Telefon" class="form-textbox" size="20" placeholder="ex: 0751404400" value="" data-component="phone" style="width:100%; height:40px"/>
+											<input type="tel" id="input_6_phone" name="Licenta_Telefon" class="form-textbox" size="20" placeholder="ex: 0751404400"  data-component="phone"  style="width:100%; height:40px" value="<?php 
+																																																										if($v_Licenta_Telefon == '') 
+																																																											echo '';
+																																																										else
+																																																											echo $v_Licenta_Telefon;
+																																																									?>" />
 											<br>
 											<span style="color:red">
-												<?php
+												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Telefon = $_POST["Licenta_Telefon"];  // V
 														$vLicenta_Telefon = validTelefon($v_Licenta_Telefon);
@@ -995,7 +1123,12 @@
 									</div>
 									<div data-wrapper-react="true">
 										<span class="form-sub-label-container" style="vertical-align:top; width:100%">
-											<input type="email" id="input_9" name="Licenta_Email" class="form-textbox validate[Email]" size="30" value="" placeholder="ex: adresamea@yahoo.com" data-component="email"  style="width:100%; height:40px" />
+											<input type="email" id="input_9" name="Licenta_Email" class="form-textbox validate[Email]" size="30" placeholder="ex: adresamea@yahoo.com" data-component="email" style="width:100%;height:40px" value="<?php 
+																																																														if($v_Licenta_Email == '') 
+																																																															echo '';
+																																																														else
+																																																															echo $v_Licenta_Email;
+																																																													?>" />
 											<br>
 											<span style="color:red">
 												<?php
@@ -1203,5 +1336,66 @@
 
 		</div>
 
-	</body>
+  <footer class="footer-distributed">
+
+			<div class="footer-left">
+				<h3 class="headernou2">Admitere <span> FII</span></h3>
+				<p class="footer-links">
+					<a href="DespreFII.html">Despre Fii</a>
+					·
+					<a href="paginaAdmitere.html">Admitere</a>
+					·
+					<a href="IntrebariFrecvente.html">&#206;ntrebari frecvente</a>
+					·
+					<a href="contact.html">Contact</a>	
+				</p>
+			</div>
+
+			<div class="footer-center">
+					<h3 class="headernou2">Contact</h3>
+				<div>
+					<i class="fa fa-map-marker" id="bloc1"></i>
+					<div id="bloc2"><p>&nbsp&nbspStrada General Henri Mathias Barthelot 16</p>
+					<p>Iasi, Rom&#226;nia</p></div>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>&nbsp&nbsp0232 201 102</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p class="footer-links"><a href="secretariat AT info.uaic.ro">&nbsp&nbspsecretariat AT info.uaic.ro</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+				<h3 class="headernou">Linkuri</h3>
+				<div class="footer-links">
+					 <img class="footer_img grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
+					 <a href="https://www.info.uaic.ro/bin/Main/"><p id="bloc2" class="footer-links"> &nbsp&nbspFacultatea de informatic&#259; Iasi<p></a>
+				</div>
+				<div class="footer-links">
+					 <img class="footer_img grayscale" src="imagini/logo.png" alt="uaic" id="bloc1" />
+					 <a href="http://www.uaic.ro/"><p id="bloc2" > &nbsp&nbspUAIC<p></a>
+				</div>
+				
+				<div class="footer-links">
+				<img class="footer_img grayscale" src="imagini/facebook-icon.png" alt="fb" id="bloc1" >
+				<a href="https://www.facebook.com/FacultateaDeInformaticaUAICIasi/?fref=ts"><p id="bloc2"> &nbsp&nbspFacebook-ul faculta&#355;ii de informatic&#259;<p></a>
+				</div>
+				
+			</div>
+			
+			<div class="footer-4"> <img class="footer_img2 grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
+			</div>
+
+			
+			<hr class="hr_footer">
+				<p class="hr_text">&copy; 2017 Grupa B3 Facultatea de Informatic&#259; Iasi</p>
+			</hr>
+		</footer>
+</body>
 </html>
