@@ -65,6 +65,9 @@ alter table institutie
     
 alter table liceu
     add (tara varchar2(200 byte) not null, judet varchar2(60) not null, localitate varchar2(100 byte) not null) ;
+
+alter table date_personale_candidat
+    add (scara varchar2(10 byte));
     
 alter table liceu
     drop column diploma_serie;
