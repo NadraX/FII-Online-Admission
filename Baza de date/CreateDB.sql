@@ -97,6 +97,7 @@ Drop table Institutie;
 -- Table: Institutie
 CREATE TABLE Institutie (
     Id integer  NOT NULL,
+    Nume varchar(50) null,
     Tip_Institutie varchar2(50) null,
     Data_Inceput date  NULL,
     Data_Sfarsit date   NULL,
