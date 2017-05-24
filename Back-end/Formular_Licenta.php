@@ -1,282 +1,273 @@
 <!DOCTYPE HTML>
 <html class="supernova">
 
-	<head>
-		<meta charset="UTF-8">
-		<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.292" rel="stylesheet" type="text/css">
-		<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.292">
-		<link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.292">
-		<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?themeRevisionID=59107387cf3bfe1ec421e0c1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style2.css">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jotfor.ms/static/formCss.css?3.3.292" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.292">
+    <link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.292">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?themeRevisionID=59107387cf3bfe1ec421e0c1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
-		<script type="text/javascript">
-		$(document).ready(function()
-		{
-			var $logo = $('#scroll');
-			var $logo2 = $('#no-scroll');
-			var $head2 = $('#header');
-			$(document).scroll(function() 
-			{
-				$head2.css({display: $(this).scrollTop() < 50? "block":"none"});
-				$logo2.css({display: $(this).scrollTop() < 50? "block":"none"});
-				$logo.css({display: $(this).scrollTop() > 100? "block":"none"});
-			});
-		});
-		</script>
-		<style type="text/css">
-			.form-line{
-				padding-top:12px;
-				padding-bottom:12px;
-			}
-			body, html{
-				margin:0;
-				padding:0;
-				background:#fff;
-			}
-			.form-all{
-				margin:0px auto;
-				padding-top:0px;
-				width:690px;
-				color:#555 !important;
-				font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
-				font-size:14px;
-			}
-			.form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
-				color: false;
-			}
-		</style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var $logo = $('#scroll');
+        var $logo2 = $('#no-scroll');
+        var $head2 = $('#header');
+        $(document).scroll(function() {
+            $head2.css({display: $(this).scrollTop() < 50? "block":"none"});
+            $logo2.css({display: $(this).scrollTop() < 50? "block":"none"});
+            $logo.css({display: $(this).scrollTop() > 100? "block":"none"});
+        });
+    });
+    </script>
+    <style type="text/css">
+        .form-line{
+            padding-top:12px;
+            padding-bottom:12px;
+        }
+        body, html{
+            margin:0;
+            padding:0;
+            background:#fff;
+        }
+        .form-all{
+            margin:0px auto;
+            padding-top:0px;
+            width:690px;
+            color:#555 !important;
+            font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+            font-size:14px;
+        }
+        .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
+            color: false;
+        }
+    </style>
 
-		<style type="text/css" id="form-designer-style">
-			/* Injected CSS Code */
-			/*PREFERENCES STYLE*/
-			.form-all {
-			  font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-all .qq-upload-button,
-			.form-all .form-submit-button,
-			.form-all .form-submit-reset,
-			.form-all .form-submit-print {
-				font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-all .form-pagebreak-back-container,
-			.form-all .form-pagebreak-next-container {
-				font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-header-group {
-				font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-label {
-				font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
-			}
-			.form-label.form-label-auto {
-				display: block;
-				float: none;
-				text-align: left;
-				width: 100%;
-			}
-			.form-line {
-				margin-top: 12px 36px 12px 36px px;
-				margin-bottom: 12px 36px 12px 36px px;
-			}
-			.form-all {
-				width: 590px;
-			}
-			.form-label-left,
-			.form-label-right {
-				width: 200px;
-			}
-			.form-all {
-				font-size: 14pxpx
-			}
-			.form-all .qq-upload-button,
-			.form-all .qq-upload-button,
-			.form-all .form-submit-button,
-			.form-all .form-submit-reset,
-			.form-all .form-submit-print {
-				font-size: 14pxpx
-			}
-			.form-all .form-pagebreak-back-container,
-			.form-all .form-pagebreak-next-container {
-				font-size: 14pxpx
-			}
-			.supernova .form-all, .form-all {
-				border: 1px solid transparent;
-			}
-			.form-all {
-				color: #555;
-			}
-			.form-header-group .form-header {
-				color: #555;
-			}
-			.form-header-group .form-subHeader {
-				color: #555;
-			}
-			.form-label-top,
-			.form-label-left,
-			.form-label-right,
-			.form-html,
-			.form-checkbox-item label,
-			.form-radio-item label {
-				color: #555;
-			}
-			.form-sub-label {
-				color: #6f6f6f;
-			}
-			.supernova body {
-				background: transparent;
-			}
-			.form-textbox,
-			.form-textarea,
-			.form-radio-other-input,
-			.form-checkbox-other-input,
-			.form-captcha input,
-			.form-spinner input {
-				background-color: undefined;
-			}
-			.supernova {
-				background-image: none;
-				background-color: white;
-			}
-			#stage {
-				background-image: none;
-			}
-			.form-all {
-				background-image: none;
-			}
-			.ie-8 .form-all:before { display: none; }
-			.ie-8 {
-				margin-top: auto;
-				margin-top: initial;
-			}
-			.formular2 {
-				margin: 80px;
-				margin-top: 0px;
-			}
-			#subHeader_34 {
-				margin-left: 65px;
-				margin-top:30px;
-			}
-			.form-line {
-				padding-right: 0;
-				padding-left: 0;
-			}
-			.cid_1 {
-				width: 100%;
-			}
-			.general_name {
-				width:100%;
-				padding:0px;
-			}
-			#num {
-				width:44.5%;
-				padding:0;
-				margin:0;
-			}
-			#prenum {
-				width:44.5%;
-				padding:0;
-				margin:0;
-			}
-			#initiala {
-				width: 10%;
-				margin:0;
-				padding:0;
-			}
-			#id_1 {
-				padding-right: 0;
-			}
-			.first_1 {
-				width:100%;
-				height:40px;
-			}
-			.middle_1 {
-				width:100%;
-				height:40px;
-			}
-			.last_1 {
-				width:100%;
-				height:40px;
-			}
-			#CNP {
-				width:40%;
-			}
-			#serie {
-				width:41.5%;
-			}
-			.liceu{
-				width:100%;
-				height:40px;
-			}
-			.mg {
-				width: 25%;
-				float:left;
-				height:40px;
-			}
-			.gen {
-				width:100%;
-				padding-left: 7px;
-				height:40px;
-			}
-			#id_10 {
-				padding-left: 10px;
-			}
-		</style>
+    <style type="text/css" id="form-designer-style">
+        /* Injected CSS Code */
+    /*PREFERENCES STYLE*/
+        .form-all {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-all .qq-upload-button,
+        .form-all .form-submit-button,
+        .form-all .form-submit-reset,
+        .form-all .form-submit-print {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-all .form-pagebreak-back-container,
+        .form-all .form-pagebreak-next-container {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-header-group {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-label {
+          font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Verdana,Tahoma,sans-serif, sans-serif;
+        }
+        .form-label.form-label-auto {
+        display: block;
+        float: none;
+        text-align: left;
+        width: 100%;
+        }
+        .form-line {
+          margin-top: 12px 36px 12px 36px px;
+          margin-bottom: 12px 36px 12px 36px px;
+        }
+        .form-all {
+          width: 590px;
+        }
+        .form-label-left,
+        .form-label-right {
+          width: 200px;
+        }
+        .form-all {
+          font-size: 14pxpx
+        }
+        .form-all .qq-upload-button,
+        .form-all .qq-upload-button,
+        .form-all .form-submit-button,
+        .form-all .form-submit-reset,
+        .form-all .form-submit-print {
+          font-size: 14pxpx
+        }
+        .form-all .form-pagebreak-back-container,
+        .form-all .form-pagebreak-next-container {
+          font-size: 14pxpx
+        }
+        .supernova .form-all, .form-all {
+          border: 1px solid transparent;
+        }
+        .form-all {
+          color: #555;
+        }
+        .form-header-group .form-header {
+          color: #555;
+        }
+        .form-header-group .form-subHeader {
+          color: #555;
+        }
+        .form-label-top,
+        .form-label-left,
+        .form-label-right,
+        .form-html,
+        .form-checkbox-item label,
+        .form-radio-item label {
+          color: #555;
+        }
+        .form-sub-label {
+          color: #6f6f6f;
+        }
+        .supernova body {
+          background: transparent;
+        }
+        .form-textbox,
+        .form-textarea,
+        .form-radio-other-input,
+        .form-checkbox-other-input,
+        .form-captcha input,
+        .form-spinner input {
+          background-color: undefined;
+        }
+        .supernova {
+          background-image: none;
+          background-color: white;
+        }
+        #stage {
+          background-image: none;
+        }
+        .form-all {
+          background-image: none;
+        }
+      .ie-8 .form-all:before { display: none; }
+      .ie-8 {
+        margin-top: auto;
+        margin-top: initial;
+      }
+      .formular2 {
+        margin: 80px;
+        margin-top: 0px;
+      }
+      #subHeader_34 {
+        margin-left: 65px;
+        margin-top:30px;
+      }
+      .form-line {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .cid_1 {
+        width: 100%;
+      }
+      .general_name {
+        width:100%;
+        padding:0px;
+      }
+      #num {
+        width:44.5%;
+        padding:0;
+        margin:0;
+      }
+      #prenum {
+        width:44.5%;
+        padding:0;
+        margin:0;
+      }
+      #initiala {
+        width: 10%;
+        margin:0;
+        padding:0;
+      }
+      #id_1 {
+        padding-right: 0;
+      }
+      .first_1 {
+        width:100%;
+        height:40px;
+      }
+      .middle_1 {
+        width:100%;
+        height:40px;
+      }
+      .last_1 {
+        width:100%;
+        height:40px;
+      }
+      #CNP {
+        width:35%;
+      }
+      #serie {
+        width:41.5%;
+      }
+      .liceu{
+        width:100%;
+        height:40px;
+      }
+      .mg {
+        width: 25%;
+        float:left;
+        height:40px;
+      }
+      .gen {
+        width:100%;
+        padding-left: 7px;
+        height:40px;
+      }
 
-		<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-steel.css?3.3.292"/>
-		
-		<title>
-			Admitere licen&#355;&#259;
-		</title>
-	</head>
-	<body>
-		<header id="header"  class="site-header">
-			<nav class="brandbar theme-bb-blue">
-				<div class="row2">
-					<ul class="column">
-						<li class="dept-nd">
-							<a href="https://www.info.uaic.ro/bin/Main/"></a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
-		
-		<div class="nav-group nav-group--consistent ">
-			<div class="bar2">
-				<ul class="left-menu">
-					<li><a href="DespreFII.html">Despre FII</a></li>
-					<li><a href="contact2.html" >Contact</a></li>
-				</ul>
-				<ul class="right-menu">
-					<li>
-						<a href="#">Admitere &#9662;</a>
-						<ul class="dropdown">
-							<li><a class="makeB" href="licenta.html">Licen&#355;&#259;</a></li>
-							<li><a class="makeB" href="master.html">Master</a></li>
-							<li><a class="makeB" href="licenta.html">Preadmitere</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri frecvente</a>
-					</li>
-				</ul>
-			</div>   
+      #id_10 {
+        padding-left: 10px;
+      }
+    </style>
 
-			<a href="#" >
-				<img id="no-scroll" class="sigla" src="imagini/sigla2.png" alt="sigla" />
-				<img id="scroll" class="sigla" src="imagini/sigla2%20-%20Copy.png" alt="sigla" />
-			</a>
-		</div >
-		
-		<div class="container formular2" style="width:100%">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-steel.css?3.3.292"/>
+    
+    <title>Admitere licen&#355;&#259;</title>
+</head>
+<body>
+  <div class="mare collapse navbar-collapse navbar nav-group nav-group--consistent">
+      <div class="nav navbar-nav bar2">
+        <ul style="widht:100%; height:40px; background-color:#3488CB;"></ul>
+        <ul class="left-menu">
+            <li class="lung"><a href="DespreFII.html">Despre FII</a></li>
+            <li class="scurt"><a href="DespreFII.html">FII</a></li>
+			<li><a href="paginaAdmitere.html">Admitere</a></li>
+            </ul>
+        <ul class="right-menu">
+              <li><a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri</a></li>
+			  <li><a href="contact.html" >Contact</a></li>
+        </ul>
+      </div>      
+      <a href="https://www.info.uaic.ro/bin/Main/" >
+        <img id="no-scroll" class="sigla" src="imagini/sigla2.png" alt="sigla" />
+        <img id="scroll" class="sigla" src="imagini/sigla2-Copy.png" alt="sigla" />
+      </a>
+  </div>
+  
+  <div class="mic" style="background-color:white; height:80px; width:100%;; z-index:90;">
+    <a href="#menu" id="toggle"><span></span></a>
+   <div id="menu">
+      <ul class="tog1">
+        <li class="tog2"><a href="DespreFII.html">Despre FII</a></li>  
+        <li class="tog2"><a href="paginaAdmitere.html">Admitere</a></li>
+        <li class="tog2"><a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri</a></li>
+		<li class="tog2"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div> 
+  </div> 
+  </br>
+  <div class="container formular2" style="width:100%">
 			<form  style="width:90%" action="" method='post'>
 				<input type="hidden" name="formID" value="71274520949360" />
 				<div class="">
@@ -305,9 +296,9 @@
 					</ul>
 					<div class="formular2">
 					    <?php
-							include "ValidClass.php";
-							error_reporting(0);            //
-                            ini_set('display_errors', 0);  //
+							include "exempluLicenta.php";
+							error_reporting(0);
+                            ini_set('display_errors', 0);
 							$v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie"];
 							$v_Licenta_Initiala_Tata = $_POST["Licenta_Initiala_Tata"];
 							$v_Licenta_Email = $_POST["Licenta_Email"];
@@ -330,6 +321,7 @@
 							$v_Licenta_Prenumele = $_POST["Licenta_Prenumele"];
 							$v_Licenta_Prenume_Mama = $_POST["Licenta_Prenume_Mama"];
 							$v_Licenta_Prenume_Tata = $_POST["Licenta_Prenume_Tata"];
+							//$v_Licenta_Nationalitate = $_POST["Licenta_Nationalitate"];
 							$v_Licenta_Etnie = $_POST["Licenta_Etnie"];
 							$v_Licenta_Limba_Materna = $_POST["Licenta_Limba_Materna"];
 						?>
@@ -776,7 +768,6 @@
 										<div>
 											<span class="form-sub-label-container liceu" style="vertical-align:top;">
 												<select  class="form-dropdown form-address-country liceu" name="Licenta_Liceu" id="input_3_country" data-component="country">
-													<select  class="form-dropdown form-address-country liceu" name="Licenta_Liceu" id="input_3_country" data-component="country">
 														<option value="GRUP SCOLAR HOREA CLOSCA SI CRISAN">GRUP &#350;COLAR "HOREA CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
 														<option value="LICEUL HOREA CLOSCA SI CRISAN">LICEUL "HOREA, CLO&#350;CA &#350;I CRI&#350;AN" ABRUD</option>
 														<option value="COLEGIUL NATIONAL "BETHLEN GABOR" AIUD">COLEGIUL NATIONAL "BETHLEN GABOR" AIUD</option>
@@ -815,7 +806,7 @@
 									<div  class="form-input jf-required cid_1" >
 										<div data-wrapper-react="true" class="mg">
 											<span class="form-sub-label-container" style="vertical-align:top; width:100%" >
-												<input type="text"  name="Licenta_Medie_BAC" class="form-textbox first_1"  size="20" data-component="first"  value="<?php 
+												<input type="number"  name="Licenta_Medie_BAC" class="form-textbox first_1"  size="20" data-component="first"  value="<?php 
 																																										if($v_Licenta_Medie_BAC == '') 
 																																											echo '';
 																																										else
@@ -836,7 +827,7 @@
 										</div> 
 										<div data-wrapper-react="true" class="mg">
 											<span  class="form-sub-label-container gen" style="vertical-align:top;">
-												<input type="text"  name="Licenta_Nota_MI" class="form-textbox first_1" size="20" data-component="first" value="<?php 
+												<input type="number"  name="Licenta_Nota_MI" class="form-textbox first_1" size="20" data-component="first" value="<?php 
 																																									if($v_Licenta_Nota_MI == '') 
 																																										echo '';
 																																									else
@@ -1082,7 +1073,7 @@
 															<?php 
 																if(isset($_POST['Submit'])) {
 																	$v_Licenta_Cod_Postal = $_POST["Licenta_Cod_Postal"];  // V
-																	$vLicenta_Cod_Postal = validNumarBuletin($v_Licenta_Cod_Postal);
+																	$vLicenta_Cod_Postal = validareCodPostal($v_Licenta_Cod_Postal);
 																	if($vLicenta_Cod_Postal==0)
 																		echo "C&#226;mp invalid!";
 																}
@@ -1345,5 +1336,66 @@
 
 		</div>
 
-	</body>
+  <footer class="footer-distributed">
+
+			<div class="footer-left">
+				<h3 class="headernou2">Admitere <span> FII</span></h3>
+				<p class="footer-links">
+					<a href="DespreFII.html">Despre Fii</a>
+					·
+					<a href="paginaAdmitere.html">Admitere</a>
+					·
+					<a href="IntrebariFrecvente.html">&#206;ntrebari frecvente</a>
+					·
+					<a href="contact.html">Contact</a>	
+				</p>
+			</div>
+
+			<div class="footer-center">
+					<h3 class="headernou2">Contact</h3>
+				<div>
+					<i class="fa fa-map-marker" id="bloc1"></i>
+					<div id="bloc2"><p>&nbsp&nbspStrada General Henri Mathias Barthelot 16</p>
+					<p>Iasi, Rom&#226;nia</p></div>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>&nbsp&nbsp0232 201 102</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p class="footer-links"><a href="secretariat AT info.uaic.ro">&nbsp&nbspsecretariat AT info.uaic.ro</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+				<h3 class="headernou">Linkuri</h3>
+				<div class="footer-links">
+					 <img class="footer_img grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
+					 <a href="https://www.info.uaic.ro/bin/Main/"><p id="bloc2" class="footer-links"> &nbsp&nbspFacultatea de informatic&#259; Iasi<p></a>
+				</div>
+				<div class="footer-links">
+					 <img class="footer_img grayscale" src="imagini/logo.png" alt="uaic" id="bloc1" />
+					 <a href="http://www.uaic.ro/"><p id="bloc2" > &nbsp&nbspUAIC<p></a>
+				</div>
+				
+				<div class="footer-links">
+				<img class="footer_img grayscale" src="imagini/facebook-icon.png" alt="fb" id="bloc1" >
+				<a href="https://www.facebook.com/FacultateaDeInformaticaUAICIasi/?fref=ts"><p id="bloc2"> &nbsp&nbspFacebook-ul faculta&#355;ii de informatic&#259;<p></a>
+				</div>
+				
+			</div>
+			
+			<div class="footer-4"> <img class="footer_img2 grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
+			</div>
+
+			
+			<hr class="hr_footer">
+				<p class="hr_text">&copy; 2017 Grupa B3 Facultatea de Informatic&#259; Iasi</p>
+			</hr>
+		</footer>
+</body>
 </html>

@@ -1,0 +1,30 @@
+Intrati in SQL comand line
+0.Identificativa ca admin
+
+			CONN / AS SYSDBA;
+			
+1.Dati drop la userul ADMITERE, folosind comanda: 
+
+		DROP USER ADMITERE CASCADE;
+
+2.Rulati scriptul de creare a userului facut de Irinel 
+		
+		
+		CREATE USER ADMITERE IDENTIFIED BY ADMITERE DEFAULT TABLESPACE USERS TEMPORARY TABLESPACE TEMP;
+		/
+		ALTER USER STUDENT QUOTA 10000M ON USERS;
+		/
+		GRANT ALL privileges to ADMITERE;
+		/
+
+Intrati in SQL Developer 
+	
+3.Creati o noua conexiune de baza de date identificata cu userul ADMITERE 
+
+4.Rulati scriptul de crreare a tabelelor : "TabelsCreate.SQL" 
+
+5.Rulati scriptul de update a tabelelor :"TabelsUpdate.SQL"
+
+Acum baza de date are trebui sa arate ca ce din poza din acest Folder 
+
+OBS: Scriptul de populare nu va mai functiona pe aceasta Baza de date
