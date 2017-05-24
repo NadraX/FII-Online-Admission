@@ -298,7 +298,7 @@
 					    <?php
 							include "exempluLicenta.php";
 							error_reporting(0);
-                            ini_set('display_errors', 0);
+                                                ini_set('display_errors', 0);
 							$v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie"];
 							$v_Licenta_Initiala_Tata = $_POST["Licenta_Initiala_Tata"];
 							$v_Licenta_Email = $_POST["Licenta_Email"];
@@ -1426,7 +1426,8 @@
       $v_Licenta_Serie_Buletin = $_POST['Licenta_Serie_Buletin'];
       $v_Licenta_Tara = $_POST['Licenta_Tara'];
       $v_Licenta_Judet = $_POST['Licenta_Localitate'];
-	  $v_liceu = $_POST['Licenta_Liceu'];
+      $v_liceu = $_POST['Licenta_Liceu'];
+      $v_licenta_limba_aleasa = $_POST['Licenta_Limba_Aleasa'];
 
       if($vLicenta_CNP !=0 and $vLicenta_Apartament != 0 and $vLicenta_Bloc != 0 and $vLicenta_Buletin_Eliberat_De != 0 and $vLicenta_Cod_Postal !=0
 	  	and $vLicenta_Email != 0 and $vLicenta_Etaj != 0 and $vLicenta_Etnie != 0 and $vLicenta_Initiala_Tata != 0 and $vLicenta_Limba_Materna!=0 
@@ -1438,7 +1439,7 @@
             error_reporting(E_ALL);
            
             $statement1 = oci_parse($connection, "insert into date_personale_candidat values (
-            dept_seq.nextval,
+            dept_seq1.nextval,
             :CNP,
             :nume,
             :prenume,
@@ -1467,7 +1468,8 @@
             :bloc_domiciliu,
             :etaj_domiciliu,
             :apartament_domiciliu,
-            :cod_postal_domiciliu)");
+            :cod_postal_domiciliu,
+            :scara)");
 
             oci_bind_by_name($statement1, ':nume', $v_Numele_De_Familie);
             oci_bind_by_name($statement1, ':CNP', $v_Licenta_CNP);
@@ -1506,6 +1508,7 @@
             oci_bind_by_name($statement1, ':etaj_domiciliu', $v_Licenta_Etaj);
             oci_bind_by_name($statement1, ':apartament_domiciliu', $v_Licenta_Apartament);
             oci_bind_by_name($statement1, ':cod_postal_domiciliu', $v_Licenta_Cod_Postal);
+            oci_bind_by_name($statement1, ':scara', $v_Licenta_Scara);
 
           
             if(!$statement1){
@@ -1519,10 +1522,9 @@
               ini_set('display_errors', 1); 
               error_reporting(E_ALL); 
               }
-            else print "One row inserted";
 
 			$statement2 = oci_parse($connection, "insert into liceu (id, nume, tara, judet, localitate) values (
-				dept_seq.nextval,
+				dept_seq2.nextval,
 				:nume,
 				:tara,
 				:judet,
@@ -1545,10 +1547,8 @@
     			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 			}
 
-			else print "One row inserted"; 
-
 			$statement3 = oci_parse($connection, "insert into date_medie_concurs (id, medie_bac, nota_proba_alegere) values (
-				dept_seq.nextval,
+				dept_seq3.nextval,
 				:medie_bac,
 				:nota_alegere)");
 
@@ -1567,7 +1567,44 @@
     			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 			}
 
-			else print "One row inserted";
+                    $statement4 = oci_parse($connection, "insert into detalii_aplicare (id, tip_aplicare, preferinta_limba_studiu) values (
+                        dept_seq4.nextval,
+                        'licenta',
+                        :limba_studiu)");
+
+                    oci_bind_by_name($statement4, ':limba_studiu', $v_licenta_limba_aleasa);
+
+                    if (!$statement4) {
+                        $e = oci_error($connection);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+                    }
+
+                    $result4= oci_execute($statement4);
+
+                    if(!$result4){
+                      $e = oci_error($statement4);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+                    }
+
+                   $statement5 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, datemedieconcurs_id,  date_personale_candidat_id, creation_date) values (
+                        dept_seq5.nextval,
+                        dept_seq6.nextval,
+                        dept_seq7.nextval,
+                        dept_seq8.nextval,
+                        current_timestamp)
+                        ");
+
+                   if (!$statement5) {
+                        $e = oci_error($connection);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+                    }
+
+                    $result5= oci_execute($statement5);
+
+                    if(!$result5){
+                      $e = oci_error($statement5);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+                    }
 	  }
           }
         }
