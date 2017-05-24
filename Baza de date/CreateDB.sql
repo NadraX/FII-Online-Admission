@@ -281,3 +281,8 @@ alter table formular
 alter table detalii_aplicare
     modify (proba_concurs varchar2(30 byte) null,tip_frecventa char(1 byte) null, cazare_pe_timpul_studiilor char(1 byte) null);
     
+alter table detalii_aplicare
+    modify (preferinta_limba_studiu varchar2(20 byte) null);
+    
+alter table formular
+  modify (datemedieconcurs_id number(38,0) null);
