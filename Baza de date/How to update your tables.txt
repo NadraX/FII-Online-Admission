@@ -12,14 +12,14 @@ Intrati in SQL comand line
 		
 		CREATE USER ADMITERE IDENTIFIED BY ADMITERE DEFAULT TABLESPACE USERS TEMPORARY TABLESPACE TEMP;
 		/
-		ALTER USER STUDENT QUOTA 10000M ON USERS;
+		ALTER USER ADMITERE QUOTA 10000M ON USERS;
 		/
-		GRANT ALL privileges to ADMITERE;
+		GRANT ALL privileges to ADMITERE ;
 		/
 
 Intrati in SQL Developer 
 	
-3.Creati o noua conexiune de baza de date identificata cu userul ADMITERE 
+3.Creati o noua conexiune de baza de date identificata cu userul ADMITERE
 
 4.Rulati scriptul de crreare a tabelelor : "TabelsCreate.SQL" 
 
