@@ -1403,8 +1403,8 @@
 <?php
 
   if(isset($_POST['Submit'])){
-    $username = 'ADMITERE';
-    $password = 'ADMITERE';
+    $username = 'ADMITERE1';
+    $password = 'ADMITERE1';
     $connection_string = 'localhost/xe';
 
     $connection = oci_connect($username, $password, $connection_string);
@@ -1426,7 +1426,7 @@
       $v_Licenta_Serie_Buletin = $_POST['Licenta_Serie_Buletin'];
       $v_Licenta_Tara = $_POST['Licenta_Tara'];
       $v_Licenta_Judet = $_POST['Licenta_Localitate'];
-      $v_liceu = $_POST['Licenta_Liceu'];
+      $v_liceu = 'liceu';
       $v_licenta_limba_aleasa = $_POST['Licenta_Limba_Aleasa'];
 
       if($vLicenta_CNP !=0 and $vLicenta_Apartament != 0 and $vLicenta_Bloc != 0 and $vLicenta_Buletin_Eliberat_De != 0 and $vLicenta_Cod_Postal !=0
@@ -1468,8 +1468,7 @@
             :bloc_domiciliu,
             :etaj_domiciliu,
             :apartament_domiciliu,
-            :cod_postal_domiciliu,
-            :scara)");
+            :cod_postal_domiciliu)");
 
             oci_bind_by_name($statement1, ':nume', $v_Numele_De_Familie);
             oci_bind_by_name($statement1, ':CNP', $v_Licenta_CNP);
@@ -1508,7 +1507,6 @@
             oci_bind_by_name($statement1, ':etaj_domiciliu', $v_Licenta_Etaj);
             oci_bind_by_name($statement1, ':apartament_domiciliu', $v_Licenta_Apartament);
             oci_bind_by_name($statement1, ':cod_postal_domiciliu', $v_Licenta_Cod_Postal);
-            oci_bind_by_name($statement1, ':scara', $v_Licenta_Scara);
 
           
             if(!$statement1){
@@ -1523,7 +1521,7 @@
               error_reporting(E_ALL); 
               }
 
-			$statement2 = oci_parse($connection, "insert into liceu (id, nume, tara, judet, localitate) values (
+			$statement2 = oci_parse($connection, "insert into institutie (id, tip_institutie, tara, judet, localitate) values (
 				dept_seq2.nextval,
 				:nume,
 				:tara,
