@@ -140,4 +140,11 @@ function validare_locatie($id,$tara,$judet,$localitate,$strada)
 	return 1;
 }
 
+ function validPreferinta($p_preferinta)
+    {
+        if((1 > $p_preferinta) || ($p_preferinta > 11)) return 0;
+        if(!ctype_digit($p_preferinta)) return 0;
+        return 1;
+    }
+
 ?>
