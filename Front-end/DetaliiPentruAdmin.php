@@ -223,8 +223,13 @@
             <div id="DetaliiStudPreadmitere">
 
                 <div class="col-md-12" style="text-align:center;">
-
-                    <span name="NumeCompletStudent" class="entire-name">Mark Otto</span>
+                   <?php
+                   include 'adminMainPage.php';
+                    $id_formular=$_POST['id_formular'];
+                    $nume=getNume($id_formular);
+                    $prenume=getPrenume($id_formular);
+                    echo '<span name="NumeCompletStudent" class="entire-name">'.$nume.' '.$prenume.'</span>';
+                    ?>
 
                 </div>
 
@@ -243,45 +248,45 @@
                         </div>
 
                         <div class="col-md-12" style="font-size:17px;">
+                        <?php
+                        $id_formular=$_POST['id_formular'];
+                          echo '<label>Numele de familie</label><input class="form-control" value="'.getNume($id_formular).'"/>
 
-                           <label>Numele de familie</label><input class="form-control" value="Otto"/>
+                           <label class="marg-t10">Ini&#355;iala tat&#259;lui:</label><input class="form-control" value="'.getInitialaTata($id_formular).'"/>
 
-                           <label class="marg-t10">Ini&#355;iala tat&#259;lui:</label><input class="form-control" value="M"/>
+                            <label class="marg-t10">Prenume:</label><input class="form-control" value="'.getPrenume($id_formular).'" />
 
-                            <label class="marg-t10">Prenume:</label><input class="form-control" value="Mark" />
+                            <label class="marg-t10">Prenume mama:</label><input class="form-control" value="'.getPrenumeMama($id_formular).'"/>
 
-                            <label class="marg-t10">Prenume mama:</label><input class="form-control" value="Sofia"/>
+                            <label class="marg-t10">Prenume tata:</label><input class="form-control" value="'.getPrenumeTata($id_formular).'"/>
 
-                            <label class="marg-t10">Prenume tata:</label><input class="form-control" value="Mario"/>
+                            <label class="marg-t10">Stare civil&#259;</label><input class="form-control" value="'.getStareCivila($id_formular).'"/>
 
-                            <label class="marg-t10">Stare civil&#259;</label><input class="form-control" value="Casatorit/&#259;"/>
+                            <label class="marg-t10">Sex: </label><input class="form-control" value="'.getSex($id_formular).'" />
 
-                            <label class="marg-t10">Sex: </label><input class="form-control" value="M" />
+                            <label class="marg-t10">Nationalitate: </label><input class="form-control" value="'.getNationalitate($id_formular).'" />
 
-                            <label class="marg-t10">Nationalitate: </label><input class="form-control" value="Romana" />
+                            <label class="marg-t10">Etnie: </label><input class="form-control" value="'.getEtnie($id_formular).'" />
 
-                            <label class="marg-t10">Etnie: </label><input class="form-control" value="Romana" />
+                            <label class="marg-t10">Limba matern&#259;: </label><input class="form-control" value="'.getLimbaMaterna($id_formular).'" />
 
-                            <label class="marg-t10">Limba matern&#259;: </label><input class="form-control" value="M" />
+                          
+                            <label class="marg-t10">Num&#259;r de telefon:</label><input class="form-control" value="'.getTelefon($id_formular).'"/>
 
-                            <label class="marg-t10">Sex: </label><input class="form-control" value="M" />
-
-                            <label class="marg-t10">Num&#259;r de telefon:</label><input class="form-control" />
-
-                            <label class="marg-t10">E-mail:</label><input class="form-control"/>
+                            <label class="marg-t10">E-mail:</label><input class="form-control" value="'.getEmail($id_formular).'"/>
 
                             <label class="marg-t10">Data nastere:</label>
 
                              <div class="col-md-12" style="padding-left:0; padding-right:0;">
 
-                                <input class="form-control col-md-4 wid33 marg-r1" />
+                                <input class="form-control col-md-4 wid33 marg-r1" value="'.getDataDay($id_formular).'"/>
 
-                                <input class="form-control col-md-4 wid33 marg-r1"/>
+                                <input class="form-control col-md-4 wid33 marg-r1" value="'.getDataMonth($id_formular).'"/>
 
-                                <input class="form-control col-md-4 wid33"/>
+                                <input class="form-control col-md-4 wid33" value="'.getDataYear($id_formular).'"/>
 
-                            </div>
-
+                            </div>';
+                           ?>
                         </div>
 
                     </div>
@@ -297,36 +302,37 @@
                             </span>
 
                         </div>
+                        <?php
+                        $id_formular=$_POST['id_formular'];
+                        echo '<div class="col-md-12" style="font-size:17px; margin-bottom:45px;">
 
-                        <div class="col-md-12" style="font-size:17px; margin-bottom:45px;">
+                            <label>CNP:</label><input class="form-control" value="'.getCNP($id_formular).'" />
 
-                            <label>CNP:</label><input class="form-control" value="" />
+                            <label class="marg-t10">Tip Buletin: </label><input class="form-control" value="'.getTipBuletin($id_formular).'" />
 
-                            <label class="marg-t10">Tip Buletin: </label><input class="form-control" value="" />
+                            <label class="marg-t10">Serie Buletin: </label><input class="form-control" value="'.getSerieBuletin($id_formular).'" />
 
-                            <label class="marg-t10">Serie Buletin: </label><input class="form-control" value="" />
+                            <label class="marg-t10">Num&#259;r Buletin: </label><input class="form-control" value="'.getNumarBuletin($id_formular).'" />
 
-                            <label class="marg-t10">Num&#259;r Buletin: </label><input class="form-control" value="" />
-
-                            <label class="marg-t10">Eliberat de: </label><input class="form-control" value="" />
+                            <label class="marg-t10">Eliberat de: </label><input class="form-control" value="'.getBuletinEliberatDe($id_formular).'" />
 
                             <label class="marg-t10">Data Eliber&#259;rii:</label>
 
                             <div class="col-md-12" style="padding-left:0; padding-right:0;">
 
-                                <input class="col-md-4 form-control marg-r1 wid33"  value="23"/>
+                                <input class="col-md-4 form-control marg-r1 wid33"  value="'.getBuletinDay($id_formular).'"/>
 
-                                <input class="col-md-4 form-control marg-r1 wid33"  value="Ianuarie"/>
+                                <input class="col-md-4 form-control marg-r1 wid33"  value="'.getBuletinMonth($id_formular).'"/>
 
-                                <input class="col-md-4 form-control wid33" value="1998"/>
+                                <input class="col-md-4 form-control wid33" value="'.getBuletinYear($id_formular).'"/>
 
                             </div>
 
                             <div class="col-md-12" style="padding-left:0;">
 
-                                <label class="marg-t10">Liceul de provenien&#355;&#259;</label><input class="form-control" value="Colegiul Na&#355;onal ''Roman-Vod&#259;'' " />
+                                <label class="marg-t10">Liceul de provenien&#355;&#259;</label><input class="form-control" value="'.getNumeLiceu($id_formular).'" />
 
-                                <label class="marg-t10">Vrea s&#259; sus&#355;in&#259; testul la: </label><input class="form-control" value="Informatic&#259;"/>
+                                <label class="marg-t10">Vrea s&#259; sus&#355;in&#259; testul la: </label><input class="form-control" value="'.getMaterieTest($id_formular).'"/>
 
                              </div>
 
@@ -344,18 +350,18 @@
 
                             <div class="col-md-12" style="font-size:17px; margin-bottom:20px;">
 
-                                <label>Strada, Nr, Bloc, Scara, Apartament:</label><input class="form-control" />
+                                <label>Strada, Nr, Bloc, Scara, Apartament:</label><input class="form-control" value="'.getStrada($id_formular).','.getNrStrada($id_formular).','.getNrBloc($id_formular).',A,'.getApartament($id_formular).'"/>
 
-                                <label class="marg-t10">Localitate: </label><input class="form-control"/>
+                                <label class="marg-t10">Localitate: </label><input class="form-control" value="'.getLocalitate($id_formular).'"/>
 
-                                <label class="marg-t10">Jude&#355;:</label><input class="form-control"/>
+                                <label class="marg-t10">Jude&#355;:</label><input class="form-control" value="'.getJudet($id_formular).'"/>
 
-                                <label class="marg-t10">Cod Po&#351;tal:</label><input class="form-control"/>
+                                <label class="marg-t10">Cod Po&#351;tal:</label><input class="form-control" value="'.getCodPostal($id_formular).'"/>
 
-                                <label class="marg-t10">&#354;ara:</label><input class="form-control" />
+                                <label class="marg-t10">&#354;ara:</label><input class="form-control" value="'.getTara($id_formular).'"/>
 
-                            </div>
-
+                            </div>';
+                            ?>
                     </div>
 
                 </div>

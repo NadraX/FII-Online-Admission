@@ -350,16 +350,20 @@
                     oci_execute($s);
                     $i=1;
                     while (($row = oci_fetch_array($s, OCI_BOTH)) != false)
-                    {
+                    {   echo '<form action="DetaliiPentruAdmin.php" method="post">';
                         echo '<tr>';
                         echo ' <th scope="row">'.$i.'</th>';
                         echo '<td>'.$row['NUME'].'</td>';
                         echo '<td>'.$row['PRENUME'].'</td>';
                         echo '<td>'.$row['CREATION_DATE'].'</td>';
                         echo '<td>';
-                        echo '<a href="DetaliiPentruAdmin.php" class="actions-admin",nume="'.$row['ID'].'">Detalii</a>';
+                        echo '<input type="submit" value="Detalii" name="id_formular" >';
+
                         echo '</td>';
                         echo '</tr>';
+                        echo ' <input type="hidden" name="id_formular" value='.$row['ID'].' />';
+                        echo '</form>';
+
                         $i++;
 
                     }
@@ -415,15 +419,18 @@
                     $i=1;
                     while (($row = oci_fetch_array($s, OCI_BOTH)) != false)
                     {
+                        echo '<form action="DetaliiPentruAdmin.php" method="post">';
                         echo '<tr>';
                         echo ' <th scope="row">'.$i.'</th>';
                         echo '<td>'.$row['NUME'].'</td>';
                         echo '<td>'.$row['PRENUME'].'</td>';
                         echo '<td>'.$row['CREATION_DATE'].'</td>';
                         echo '<td>';
-                        echo '<a class="actions-admin",nume="'.$row['ID'].'">Detalii</a>';
+                        echo '<input type="submit" value="Detalii" name="id_formular" >';
                         echo '</td>';
                         echo '</tr>';
+                        echo ' <input type="hidden" name="id_formular" value='.$row['ID'].' /> ';
+                        echo '</form>';
                         $i++;
 
                     }
@@ -479,15 +486,18 @@
                     $i=1;
                     while (($row = oci_fetch_array($s, OCI_BOTH)) != false)
                     {
+                        echo '<form action="DetaliiPentruAdmin.php" method="post">';
                         echo '<tr>';
                         echo ' <th scope="row">'.$i.'</th>';
                         echo '<td>'.$row['NUME'].'</td>';
                         echo '<td>'.$row['PRENUME'].'</td>';
                         echo '<td>'.$row['CREATION_DATE'].'</td>';
                         echo '<td>';
-                        echo '<a class="actions-admin",nume="'.$row['ID'].'">Detalii</a>';
+                        echo '<input type="submit" value="Detalii" name="id_formular" >';
                         echo '</td>';
                         echo '</tr>';
+                        echo ' <input type="hidden" name="id_formular" value='.$row['ID'].' />';
+                        echo '</form>';
                         $i++;
 
                     }
@@ -552,7 +562,7 @@
                         echo '</td>';
                         echo '</tr>';
                         $i++;
-                        
+
 
                     }
                     oci_free_statement($s);
