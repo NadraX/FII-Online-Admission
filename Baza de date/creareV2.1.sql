@@ -256,3 +256,8 @@ ALTER TABLE Pregatiri_Anterioare ADD CONSTRAINT Pregatiri_Anterioare_Formular
 ALTER TABLE Pregatiri_Anterioare ADD CONSTRAINT Pregatiri_Anterioare_Inst
     FOREIGN KEY (Institutie_Id)
     REFERENCES Institutie(Id);
+
+alter table formular
+  modify (data_ultimei_modificari date null, data_compozitiei date null, validat varchar2(1 byte) null,
+  persoana_ultima_modificare varchar2(50 byte) null, last_update_date timestamp(6) null, 
+  serie_chitanta varchar2(20 byte) null, suma_achitata number(6, 2) null);
