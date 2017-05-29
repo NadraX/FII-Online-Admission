@@ -2039,28 +2039,28 @@
 	$v_preferinta10 = $_POST['OptimizareaComputationalaBuget'];
 	$v_preferinta11 = $_POST['LingvisticaComputationalaBuget'];
 
-	$statement = oci_parse($connection, "select count(*) as COUNT from date_personale_candidat");
+	$statement = oci_parse($connection, "select max(id) as COUNT from date_personale_candidat");
 			oci_execute($statement);
 			
 	 while (oci_fetch($statement)) {
     	$numaratoare1=oci_result($statement, "COUNT") + 1;
 	 }
 
-	 $statement_2_numaratoare = oci_parse($connection, "select count(*) as COUNT from institutie");
+	 $statement_2_numaratoare = oci_parse($connection, "select max(id) as COUNT from institutie");
 			oci_execute($statement_2_numaratoare);
 			
 	 while (oci_fetch($statement_2_numaratoare)) {
     	$numaratoare2=oci_result($statement_2_numaratoare, "COUNT") + 1;
 	}
 
-	$statement_3_numaratoare = oci_parse($connection, "select count(*) as COUNT from date_medie_concurs");
+	$statement_3_numaratoare = oci_parse($connection, "select max(id) as COUNT from date_medie_concurs");
 			oci_execute($statement_3_numaratoare);
 			
 	 while (oci_fetch($statement_3_numaratoare)) {
     	$numaratoare3=oci_result($statement_3_numaratoare, "COUNT") + 1;
 	}
 
-	$statement_4_numaratoare = oci_parse($connection, "select count(*) as COUNT from preferinte_master");
+	$statement_4_numaratoare = oci_parse($connection, "select max(id) as COUNT from preferinte_master");
 			oci_execute($statement_4_numaratoare);
 			
 	 while (oci_fetch($statement_4_numaratoare)) {
