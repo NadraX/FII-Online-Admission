@@ -324,6 +324,7 @@
 							$v_Licenta_Nationalitate = $_POST["Licenta_Nationalitate"];
 							$v_Licenta_Etnie = $_POST["Licenta_Etnie"];
 							$v_Licenta_Limba_Materna = $_POST["Licenta_Limba_Materna"];
+						    $v_id = 1;
 						?>
 						<ul>
 							<li class="form-line" data-type="control_fullname" id="id_1">
@@ -1429,6 +1430,35 @@
       $v_liceu = 'liceu';
       $v_licenta_limba_aleasa = $_POST['Licenta_Limba_Aleasa'];
 
+	  $statement = oci_parse($connection, "select count(*) as COUNT from date_personale_candidat");
+			oci_execute($statement);
+			
+	 while (oci_fetch($statement)) {
+    	$numaratoare1=oci_result($statement, "COUNT") + 1;
+	 }
+
+	$statement_2_numaratoare = oci_parse($connection, "select count(*) as COUNT from institutie");
+			oci_execute($statement_2_numaratoare);
+			
+	 while (oci_fetch($statement_2_numaratoare)) {
+    	$numaratoare2=oci_result($statement_2_numaratoare, "COUNT") + 1;
+	}
+
+	$statement_3_numaratoare = oci_parse($connection, "select count(*) as COUNT from date_medie_concurs");
+			oci_execute($statement_3_numaratoare);
+			
+	 while (oci_fetch($statement_3_numaratoare)) {
+    	$numaratoare3=oci_result($statement_3_numaratoare, "COUNT") + 1;
+	}
+
+	$statement_4_numaratoare = oci_parse($connection, "select count(*) as COUNT from formular");
+			oci_execute($statement_4_numaratoare);
+			
+	 while (oci_fetch($statement_4_numaratoare)) {
+    	$numaratoare4=oci_result($statement_4_numaratoare, "COUNT") + 1;
+	}
+
+
       if($vLicenta_CNP !=0 and $vLicenta_Apartament != 0 and $vLicenta_Bloc != 0 and $vLicenta_Buletin_Eliberat_De != 0 and $vLicenta_Cod_Postal !=0
 	  	and $vLicenta_Email != 0 and $vLicenta_Etaj != 0 and $vLicenta_Etnie != 0 and $vLicenta_Initiala_Tata != 0 and $vLicenta_Limba_Materna!=0 
 		  and $vLicenta_Localitate !=0 and $vLicenta_Medie_BAC !=0 and $vLicenta_Nota_MI !=0 and $vLicenta_Numar != 0 and $vLicenta_Numar_Buletin !=0
@@ -1437,9 +1467,10 @@
 	  
 			ini_set('display_errors', 1); 
             error_reporting(E_ALL);
+
            
-            $statement1 = oci_parse($connection, "insert into date_personale_candidat values (
-            dept_seq1.nextval,
+            $statement1 = oci_parse($connection, "insert into date_personale_candidat (id, cnp, nume, prenume, initiala_tata, sex, starecivila, cetatenie, prenume_mama, prenume_tata, telefon, email, data_nasterii, nationalitate, etnie, limba_materna, tip_buletin, serie_buletin, numar_buletin, buletin_eliberat_de, buletin_data_eliberarii, tara, judet, localitate, strada, numar_domiciliu, bloc_domiciliu, etaj_domiciliu, scara_domiciliu, apartament_domiciliu, cod_postal_domiciliu)  values (
+            :id,
             :CNP,
             :nume,
             :prenume,
@@ -1467,9 +1498,11 @@
             :numar_domiciliu,
             :bloc_domiciliu,
             :etaj_domiciliu,
+			:scara_domiciliu,
             :apartament_domiciliu,
             :cod_postal_domiciliu)");
 
+			oci_bind_by_name($statement1, ':id', $numaratoare1);
             oci_bind_by_name($statement1, ':nume', $v_Numele_De_Familie);
             oci_bind_by_name($statement1, ':CNP', $v_Licenta_CNP);
             oci_bind_by_name($statement1, ':prenume', $v_Licenta_Prenumele);
@@ -1505,6 +1538,7 @@
             oci_bind_by_name($statement1, ':numar_domiciliu', $v_Licenta_Numar);
             oci_bind_by_name($statement1, ':bloc_domiciliu', $v_Licenta_Bloc);
             oci_bind_by_name($statement1, ':etaj_domiciliu', $v_Licenta_Etaj);
+			oci_bind_by_name($statement1, ':scara_domiciliu', $v_Licenta_Scara);
             oci_bind_by_name($statement1, ':apartament_domiciliu', $v_Licenta_Apartament);
             oci_bind_by_name($statement1, ':cod_postal_domiciliu', $v_Licenta_Cod_Postal);
 
@@ -1521,13 +1555,16 @@
               error_reporting(E_ALL); 
               }
 
+			oci_fetch($statement);
+
 			$statement2 = oci_parse($connection, "insert into institutie (id, tip_institutie, tara, judet, localitate) values (
-				dept_seq2.nextval,
+				:id,
 				:nume,
 				:tara,
 				:judet,
 				:localitate)");
 
+			oci_bind_by_name($statement2, ':id', $numaratoare2);
 			oci_bind_by_name($statement2, ':nume', $v_liceu);
 			oci_bind_by_name($statement2, ':tara', $v_Licenta_Tara);
 			oci_bind_by_name($statement2, ':judet', $v_Licenta_Judet);
@@ -1546,10 +1583,11 @@
 			}
 
 			$statement3 = oci_parse($connection, "insert into date_medie_concurs (id, medie_bac, nota_proba_alegere) values (
-				dept_seq3.nextval,
+				:id,
 				:medie_bac,
 				:nota_alegere)");
 
+		    oci_bind_by_name($statement3, ':id', $numaratoare3);
 			oci_bind_by_name($statement3, ':medie_bac', $v_Licenta_Medie_BAC);
 			oci_bind_by_name($statement3, ':nota_alegere', $v_Licenta_Nota_MI);
 
@@ -1565,47 +1603,34 @@
     			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 			}
 
-                    $statement4 = oci_parse($connection, "insert into detalii_aplicare (id, tip_aplicare, preferinta_limba_studiu) values (
-                        dept_seq4.nextval,
-                        'licenta',
-                        :limba_studiu)");
 
-                    oci_bind_by_name($statement4, ':limba_studiu', $v_licenta_limba_aleasa);
-
-                    if (!$statement4) {
-                        $e = oci_error($connection);
-                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-                    }
-
-                    $result4= oci_execute($statement4);
-
-                    if(!$result4){
-                      $e = oci_error($statement4);
-                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-                    }
-
-                   $statement5 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, datemedieconcurs_id,  date_personale_candidat_id, creation_date) values (
-                        dept_seq5.nextval,
-                        dept_seq6.nextval,
-                        dept_seq7.nextval,
-                        dept_seq8.nextval,
+                   $statement4 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, datemedieconcurs_id,  date_personale_candidat_id, creation_date) values (
+                        :id,
+                        :id2,
+                        :id3,
+                    	:id4,
                         current_timestamp)
                         ");
 
-                   if (!$statement5) {
+					oci_bind_by_name($statement4, ':id', $numaratoare4);
+					oci_bind_by_name($statement4, ':id2', $numaratoare4);
+					oci_bind_by_name($statement4, ':id3', $numaratoare4);
+					oci_bind_by_name($statement4, ':id4', $numaratoare4);			
+
+                   if (!$statement4) {
                         $e = oci_error($connection);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
                     }
 
-                    $result5= oci_execute($statement5);
+                    $result5= oci_execute($statement4);
 
                     if(!$result5){
-                      $e = oci_error($statement5);
+                      $e = oci_error($statement4);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-                    }
+					}
 					echo '<script type="text/javascript">
            			window.location = "DespreFII.html"
-      			   </script>';
+      			    </script>';
 	  }
           }
         }
