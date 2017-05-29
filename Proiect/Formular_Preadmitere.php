@@ -1369,32 +1369,33 @@
       $v_buletin_luna = $_POST['Licenta_Buletin_Luna'];
       $v_Licenta_Serie_Buletin = $_POST['Licenta_Serie_Buletin'];
       $v_Licenta_Tara = $_POST['Licenta_Tara'];
-      $v_Licenta_Judet = $_POST['Licenta_Localitate'];
+      $v_Licenta_Localitate = $_POST['Licenta_Localitate'];
+	  $v_Licenta_Judet = $_POST['Licenta_Judet'];
       $v_liceu = 'liceu';
       $v_licenta_proba = $_POST['proba'];
 
-	  $statement = oci_parse($connection, "select count(*) as COUNT from date_personale_candidat");
+	  $statement = oci_parse($connection, "select max(id) as COUNT from date_personale_candidat");
 			oci_execute($statement);
 			
 	 while (oci_fetch($statement)) {
     	$numaratoare1=oci_result($statement, "COUNT") + 1;
 	 }
 
-	 $statement_2_numaratoare = oci_parse($connection, "select count(*) as COUNT from institutie");
+	 $statement_2_numaratoare = oci_parse($connection, "select max(id) as COUNT from institutie");
 			oci_execute($statement_2_numaratoare);
 			
 	 while (oci_fetch($statement_2_numaratoare)) {
     	$numaratoare2=oci_result($statement_2_numaratoare, "COUNT") + 1;
 	}
 
-	$statement_3_numaratoare = oci_parse($connection, "select count(*) as COUNT from formular");
+	$statement_3_numaratoare = oci_parse($connection, "select max(id) as COUNT from formular");
 			oci_execute($statement_3_numaratoare);
 			
 	 while (oci_fetch($statement_3_numaratoare)) {
     	$numaratoare4=oci_result($statement_3_numaratoare, "COUNT") + 1;
 	}
 
-	$statement_4_numaratoare = oci_parse($connection, "select count(*) as COUNT from date_medie_concurs");
+	$statement_4_numaratoare = oci_parse($connection, "select max(id) as COUNT from date_medie_concurs");
 			oci_execute($statement_4_numaratoare);
 			
 	 while (oci_fetch($statement_4_numaratoare)) {
@@ -1567,9 +1568,6 @@
                       $e = oci_error($statement3);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
                     }
-					echo '<script type="text/javascript">
-           			window.location = "DespreFII.html"
-      			   </script>';
 	  }
           }
         }

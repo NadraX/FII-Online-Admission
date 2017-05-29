@@ -440,8 +440,8 @@
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:25%;padding:0;margin:0;">
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Sex" data-component="country">
-												<option value="Feminin">Feminin</option>
-												<option value="Masculin">Masculin</option>
+												<option name="sexFeminin" value="F">F</option>
+												<option name="sexMasculin" value="M">M</option>
 											</select>
 											<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Sex</label>
 										</span>
@@ -1414,7 +1414,7 @@
       echo "Connection failed. Please try again";
     else {
 
-      $v_sex = 'M';
+      $v_sex = $_POST['Licenta_Sex'];
       $v_stare_civila = $_POST['Licenta_Stare_Civila'];
       $v_cetatenie = 'romana';
       $v_data_nastere_luna = $_POST['Licenta_Nastere_Luna'];
@@ -1426,32 +1426,33 @@
       $v_buletin_luna = $_POST['Licenta_Buletin_Luna'];
       $v_Licenta_Serie_Buletin = $_POST['Licenta_Serie_Buletin'];
       $v_Licenta_Tara = $_POST['Licenta_Tara'];
-      $v_Licenta_Judet = $_POST['Licenta_Localitate'];
+      $v_Licenta_Localitate = $_POST['Licenta_Localitate'];
+	  $v_Licenta_Judet = $_POST['Licenta_Judet'];
       $v_liceu = 'liceu';
       $v_licenta_limba_aleasa = $_POST['Licenta_Limba_Aleasa'];
 
-	  $statement = oci_parse($connection, "select count(*) as COUNT from date_personale_candidat");
+	  $statement = oci_parse($connection, "select max(id) as COUNT from date_personale_candidat");
 			oci_execute($statement);
 			
 	 while (oci_fetch($statement)) {
     	$numaratoare1=oci_result($statement, "COUNT") + 1;
 	 }
 
-	$statement_2_numaratoare = oci_parse($connection, "select count(*) as COUNT from institutie");
+	$statement_2_numaratoare = oci_parse($connection, "select max(id) as COUNT from institutie");
 			oci_execute($statement_2_numaratoare);
 			
 	 while (oci_fetch($statement_2_numaratoare)) {
     	$numaratoare2=oci_result($statement_2_numaratoare, "COUNT") + 1;
 	}
 
-	$statement_3_numaratoare = oci_parse($connection, "select count(*) as COUNT from date_medie_concurs");
+	$statement_3_numaratoare = oci_parse($connection, "select max(id) as COUNT from date_medie_concurs");
 			oci_execute($statement_3_numaratoare);
 			
 	 while (oci_fetch($statement_3_numaratoare)) {
     	$numaratoare3=oci_result($statement_3_numaratoare, "COUNT") + 1;
 	}
 
-	$statement_4_numaratoare = oci_parse($connection, "select count(*) as COUNT from formular");
+	$statement_4_numaratoare = oci_parse($connection, "select max(id) as COUNT from formular");
 			oci_execute($statement_4_numaratoare);
 			
 	 while (oci_fetch($statement_4_numaratoare)) {
@@ -1628,9 +1629,6 @@
                       $e = oci_error($statement4);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 					}
-					echo '<script type="text/javascript">
-           			window.location = "DespreFII.html"
-      			    </script>';
 	  }
           }
         }

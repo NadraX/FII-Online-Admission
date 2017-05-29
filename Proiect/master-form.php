@@ -528,9 +528,9 @@
 
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Master_Stare_Civila" data-component="country">
 
-												<option value="">Singur/&#259;</option>
+												<option value="Singur">Singur/&#259;</option>
 
-												<option value="">C&#259;s&#259;torit/&#259;</option>
+												<option value="Casatorit(a)">C&#259;s&#259;torit/&#259;</option>
 
 											</select>
 
@@ -1107,7 +1107,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="IngineriaSistemelorSoftwareTaxa" style="width: 40px; height:30px;" type="number" value=""/>
+											<input name="IngineriaSistemelorSoftwareTaxa" style="width: 40px; height:30px;" type="number" value="Ingineria sistemelor software tax&#259;"/>
 
 											<span style="font-size:15px;">Ingineria sistemelor software tax&#259;</span>
 
@@ -1115,7 +1115,7 @@
 
 										<div class="col-md-12 mrg-t10" > 
 
-											<input name="SistemeDistribuiteTaxa" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="SistemeDistribuiteTaxa" style="width: 40px; height:30px;" type="number" value="Sisteme distribuite tax&#259;" />
 
 											<span style="font-size:15px;">Sisteme distribuite tax&#259;</span>
 
@@ -1123,7 +1123,7 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="SecuritateaInformatieiTaxa" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="SecuritateaInformatieiTaxa" style="width: 40px; height:30px;" type="number" value="Securitatea informa&#355;iei tax&#259;" />
 
 											<span style="font-size:15px;">Securitatea informa&#355;iei tax&#259;</span>
 
@@ -1131,7 +1131,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="OptimizareaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="OptimizareaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="Optimizare computa&#355;ional&#259; tax&#259;" />
 
 											<span style="font-size:15px;">Optimizare computa&#355;ional&#259; tax&#259;</span>
 
@@ -1143,7 +1143,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="LingvistivaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="LingvistivaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="Lingvistic&#259; computational&#259; tax&#259;" />
 
 											<span style="font-size:15px;">Lingvistic&#259; computational&#259; tax&#259;</span>
 
@@ -1151,7 +1151,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="StudiiAvansateInInformaticaTaxa" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="StudiiAvansateInInformaticaTaxa" style="width: 40px; height:30px;" type="number" value="Studii avansate &#238;n informatic&#259; tax&#259;" />
 
 											<span style="font-size:15px;">Studii avansate &#238;n informatic&#259; tax&#259;</span>
 
@@ -1159,7 +1159,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="IngineriaSoftwareBuget" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="IngineriaSoftwareBuget" style="width: 40px; height:30px;" type="number" value="Ingineria sistemelor software buget" />
 
 											<span style="font-size:15px;">Ingineria sistemelor software buget</span>
 
@@ -1167,7 +1167,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="SistemeDIstribuiteBuget" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="SistemeDistribuiteBuget" style="width: 40px; height:30px;" type="number" value="Sisteme distribuite buget" />
 
 											<span style="font-size:15px;">Sisteme distribuite buget</span>
 
@@ -1179,7 +1179,7 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="SecuritateaInformatieiBuget" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="SecuritateaInformatieiBuget" style="width: 40px; height:30px;" type="number" value="Securitatea informa&#355;iei buget" />
 
 											<span style="font-size:15px;">Securitatea informa&#355;iei buget</span>
 
@@ -1187,7 +1187,7 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="OptimizareacomputationalaBuget" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="OptimizareaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="Optimizare computa&#355;ional&#259; buget" />
 
 											<span style="font-size:15px;">Optimizare computa&#355;ional&#259; buget</span>
 
@@ -1195,7 +1195,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="LingvisticaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="" />
+											<input name="LingvisticaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="Lingvistic&#259; computational&#259; buget" />
 
 											<span style="font-size:15px;">Lingvistic&#259; computational&#259; buget</span>
 
@@ -1979,8 +1979,8 @@
 <?php
 
   if(isset($_POST['Submit'])){
-    $username = 'ADMITERE';
-    $password = 'ADMITERE';
+    $username = 'ADMITERE1';
+    $password = 'ADMITERE1';
     $connection_string = 'localhost/xe';
 
     $connection = oci_connect($username, $password, $connection_string);
@@ -2003,7 +2003,7 @@
     $v_Licenta_Strada = $_POST["Master_Strada"];
     $v_Licenta_Nota_MI = $_POST["Master_Nota_Licenta"];
     $v_Licenta_Medie_BAC = $_POST["Master_Medie_BAC"];
-    $v_Licenta_Buletin_Eliberat_De = $_POST["Master_Buletin_Eliberat_De"];
+    $v_Licenta_Buletin_Eliberat_De = $_POST["Master_Eliberat_De"];
     $v_Licenta_Numar_Buletin = $_POST["Master_Numar_Buletin"];
     $v_Licenta_Serie_Buletin = $_POST["Master_Serie_Buletin"];
     $v_Licenta_Tip_Buletin = $_POST["Master_Tip_Buletin"];
@@ -2015,15 +2015,2428 @@
     $v_Licenta_Etnie = $_POST["Master_Etnie"];
     $v_Licenta_Limba_Materna = $_POST["Master_Limba_Materna"];
     $v_Licenta_Stare_Civila = $_POST["Master_Stare_Civila"];
+	$v_Licenta_Sex = $_POST['Master_Sex'];
+	$v_cetatenie = 'romana';
+	$v_data_nastere_luna = $_POST['Master_Nastere_Luna'];
+    $v_data_nastere_zi = $_POST['Master_Nastere_Zi'];
+    $v_data_nastere_an = $_POST['Master_Nastere_An'];
+    $v_buletin_zi = $_POST['Master_Buletin_Ziua'];
+    $v_buletin_an = $_POST['Master_Buletin_An'];
+    $v_buletin_luna = $_POST['Master_Buletin_Luna'];
+	$v_Licenta_Tara = $_POST['Licenta_Tara'];
+    $v_Licenta_Localitate = $_POST['Master_Localitate'];
+	$v_Licenta_Judet = $_POST['Master_Judet'];
+	$v_facultate = 'facultate';
+	$v_preferinta1 = $_POST['IngineriaSistemelorSoftwareTaxa'];
+	$v_preferinta2 = $_POST['SistemeDistribuiteTaxa'];
+	$v_preferinta3 = $_POST['SecuritateaInformatieiTaxa'];
+	$v_preferinta4 = $_POST['OptimizareaComputationalaTaxa'];
+	$v_preferinta5 = $_POST['LingvistivaComputationalaTaxa'];
+	$v_preferinta6 = $_POST['StudiiAvansateInInformaticaTaxa'];
+	$v_preferinta7 = $_POST['IngineriaSoftwareBuget'];
+	$v_preferinta8 = $_POST['SistemeDistribuiteBuget'];
+	$v_preferinta9 = $_POST['SecuritateaInformatieiBuget'];
+	$v_preferinta10 = $_POST['OptimizareaComputationalaBuget'];
+	$v_preferinta11 = $_POST['LingvisticaComputationalaBuget'];
 
-      if($vNumele_De_Familie != 0 and $vLicenta_Initiala_Tata != 0 and $vLicenta_Email != 0 and $vLicenta_Telefon != 0 and $vLicenta_Cod_Postal != 0 and $vLicenta_Localitate != 0 and $vLicenta_Apartament != 0 and $vLicenta_Etaj != 0 and $vLicenta_Scara != 0 and $vLicenta_Bloc != 0 and $vLicenta_Numar != 0 and $vLicenta_Strada != 0 and $vLicenta_Nota_MI != 0 and $vLicenta_Medie_BAC != 0 and $vLicenta_Buletin_Eliberat_De != 0 and $vLicenta_Numar_Buletin != 0 and $vLicenta_Serie_Buletin != 0 and $vLicenta_Tip_Buletin != 0 and $vLicenta_CNP != 0 and $vLicenta_Prenumele != 0){
+	$statement = oci_parse($connection, "select count(*) as COUNT from date_personale_candidat");
+			oci_execute($statement);
+			
+	 while (oci_fetch($statement)) {
+    	$numaratoare1=oci_result($statement, "COUNT") + 1;
+	 }
+
+	 $statement_2_numaratoare = oci_parse($connection, "select count(*) as COUNT from institutie");
+			oci_execute($statement_2_numaratoare);
+			
+	 while (oci_fetch($statement_2_numaratoare)) {
+    	$numaratoare2=oci_result($statement_2_numaratoare, "COUNT") + 1;
+	}
+
+	$statement_3_numaratoare = oci_parse($connection, "select count(*) as COUNT from date_medie_concurs");
+			oci_execute($statement_3_numaratoare);
+			
+	 while (oci_fetch($statement_3_numaratoare)) {
+    	$numaratoare3=oci_result($statement_3_numaratoare, "COUNT") + 1;
+	}
+
+	$statement_4_numaratoare = oci_parse($connection, "select count(*) as COUNT from preferinte_master");
+			oci_execute($statement_4_numaratoare);
+			
+	 while (oci_fetch($statement_4_numaratoare)) {
+    	$numaratoare4=oci_result($statement_4_numaratoare, "COUNT") + 1;
+	}
+
+	$statement_5_numaratoare = oci_parse($connection, "select max(id) as COUNT from formular");
+			oci_execute($statement_5_numaratoare);
+			
+	 while (oci_fetch($statement_5_numaratoare)) {
+    	$numaratoare5=oci_result($statement_5_numaratoare, "COUNT") + 1;
+	}
+
+      if($vNumele_De_Familie != 0 and $vLicenta_Initiala_Tata != 0 and $vLicenta_Email != 0 and $vLicenta_Telefon != 0 and $vLicenta_Cod_Postal != 0 and $vLicenta_Localitate != 0 and $vLicenta_Apartament != 0 and $vLicenta_Etaj != 0 and $vLicenta_Scara != 0 and $vLicenta_Bloc != 0 and $vLicenta_Numar != 0 and $vLicenta_Strada != 0 and $vLicenta_Nota_MI != 0 and $vLicenta_Medie_BAC != 0 and $vLicenta_Buletin_Eliberat_De != 0 and $vLicenta_Numar_Buletin != 0 and $vLicenta_Serie_Buletin != 0 and $vLicenta_Tip_Buletin != 0 and $vLicenta_CNP != 0 and $vLicenta_Prenumele != 0 and $vLicenta_PrenumeMama !=0 and $vLicenta_PrenumeTata !=0){
           
           ini_set('display_errors', 1); 
             error_reporting(E_ALL);
+
+			$statement1 = oci_parse($connection, "insert into date_personale_candidat (id, cnp, nume, prenume, initiala_tata, sex, starecivila, cetatenie, prenume_mama, prenume_tata, telefon, email, data_nasterii, nationalitate, etnie, limba_materna, tip_buletin, serie_buletin, numar_buletin, buletin_eliberat_de, buletin_data_eliberarii, tara, judet, localitate, strada, numar_domiciliu, bloc_domiciliu, etaj_domiciliu, scara_domiciliu, apartament_domiciliu, cod_postal_domiciliu)  values (
+            :id,
+            :CNP,
+            :nume,
+            :prenume,
+            :initialaTata, 
+            :sex,
+            :stareCivila,
+            :cetatenie,
+            :prenumeMama,
+            :prenumeTata,
+            :telefon,
+            :email,
+            to_date(:zi||'-'||:luna||'-'||:an, 'dd-mm-yyyy'),
+            :nationalitate,
+            :etnie,
+            :limbaMaterna,
+            :tipBuletin,
+            :serieBuletin,
+            :numarBuletin,
+            :eliberatDe, 
+            to_date(:bZi||'-'||:lZi||'-'||:aZi, 'dd-mm-yyyy'),
+            :tara,
+            :judet,
+            :localitate,
+            :strada,
+            :numar_domiciliu,
+            :bloc_domiciliu,
+            :etaj_domiciliu,
+			:scara_domiciliu,
+            :apartament_domiciliu,
+            :cod_postal_domiciliu)");
+
+			oci_bind_by_name($statement1, ':id', $numaratoare1);
+            oci_bind_by_name($statement1, ':nume', $v_Numele_De_Familie);
+            oci_bind_by_name($statement1, ':CNP', $v_Licenta_CNP);
+            oci_bind_by_name($statement1, ':prenume', $v_Licenta_Prenumele);
+            oci_bind_by_name($statement1, ':initialaTata', $v_Licenta_Initiala_Tata);
+            oci_bind_by_name($statement1, ':sex', $v_Licenta_Sex);
+            oci_bind_by_name($statement1, ':stareCivila', $v_Licenta_Stare_Civila);
+            oci_bind_by_name($statement1, ':cetatenie', $v_cetatenie);
+            oci_bind_by_name($statement1, ':prenumeMama', $v_Licenta_Prenume_Mama);
+            oci_bind_by_name($statement1, ':prenumeTata', $v_Licenta_Prenume_Tata);
+            oci_bind_by_name($statement1, ':telefon', $v_Licenta_Telefon);
+            oci_bind_by_name($statement1, ':email', $v_Licenta_Email);
+
+            oci_bind_by_name($statement1, ':zi', $v_data_nastere_zi);
+            oci_bind_by_name($statement1, ':luna', $v_data_nastere_luna);
+            oci_bind_by_name($statement1, ':an', $v_data_nastere_an);
+
+            oci_bind_by_name($statement1, ':nationalitate', $v_Licenta_Nationalitate);
+            oci_bind_by_name($statement1, ':etnie', $v_Licenta_Etnie);
+            oci_bind_by_name($statement1, ':limbaMaterna', $v_Licenta_Limba_Materna);
+            oci_bind_by_name($statement1, ':tipBuletin', $v_Licenta_Tip_Buletin);
+            oci_bind_by_name($statement1, ':serieBuletin', $v_Licenta_Serie_Buletin);
+            oci_bind_by_name($statement1, ':numarBuletin', $v_Licenta_Numar_Buletin);
+            oci_bind_by_name($statement1, ':eliberatDe', $v_Licenta_Buletin_Eliberat_De);
+
+            oci_bind_by_name($statement1, ':bZi' ,$v_buletin_zi);
+            oci_bind_by_name($statement1, ':lZi' ,$v_buletin_luna);
+            oci_bind_by_name($statement1, ':aZi' ,$v_buletin_an);
+
+            oci_bind_by_name($statement1, ':tara', $v_Licenta_Tara);
+            oci_bind_by_name($statement1, ':judet', $v_Licenta_Judet);
+            oci_bind_by_name($statement1, ':localitate', $v_Licenta_Localitate);
+            oci_bind_by_name($statement1, ':strada', $v_Licenta_Strada);
+            oci_bind_by_name($statement1, ':numar_domiciliu', $v_Licenta_Numar);
+            oci_bind_by_name($statement1, ':bloc_domiciliu', $v_Licenta_Bloc);
+            oci_bind_by_name($statement1, ':etaj_domiciliu', $v_Licenta_Etaj);
+			oci_bind_by_name($statement1, ':scara_domiciliu', $v_Licenta_Scara);
+            oci_bind_by_name($statement1, ':apartament_domiciliu', $v_Licenta_Apartament);
+            oci_bind_by_name($statement1, ':cod_postal_domiciliu', $v_Licenta_Cod_Postal);
+
           
-          echo '<script type="text/javascript">
-           			window.location = "DespreFII.html"
-      			   </script>';
+            if(!$statement1){
+              ini_set('display_errors', 1); 
+              error_reporting(E_ALL);
+            }
+
+            $result1=oci_execute($statement1);
+
+            if(!$result1){
+              ini_set('display_errors', 1); 
+              error_reporting(E_ALL); 
+              }	
+
+			$statement2 = oci_parse($connection, "insert into institutie (id, tip_institutie, tara, judet, localitate) values (
+				:id,
+				:nume,
+				:tara,
+				:judet,
+				:localitate)");
+
+			oci_bind_by_name($statement2, ':id', $numaratoare2);
+			oci_bind_by_name($statement2, ':nume', $v_facultate);
+			oci_bind_by_name($statement2, ':tara', $v_Licenta_Tara);
+			oci_bind_by_name($statement2, ':judet', $v_Licenta_Judet);
+			oci_bind_by_name($statement2, ':localitate', $v_Licenta_Localitate);
+
+			if (!$statement2) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			$result2= oci_execute($statement2);
+
+			if(!$result2){
+				$e = oci_error($statement2);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			$statement3 = oci_parse($connection, "insert into date_medie_concurs (id, medie_bac, nota_proba_alegere) values (
+				:id,
+				:medie_bac,
+				0)");
+
+		    oci_bind_by_name($statement3, ':id', $numaratoare3);
+			oci_bind_by_name($statement3, ':medie_bac', $v_Licenta_Medie_BAC);
+
+			if (!$statement3) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			$result3= oci_execute($statement3);
+
+			if(!$result3){
+				$e = oci_error($statement3);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+
+			$statement10 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, datemedieconcurs_id,  date_personale_candidat_id, creation_date) values (
+                        :id,
+                        :id2,
+                        :id3,
+                    	:id4,
+                        current_timestamp)
+                        ");
+
+					oci_bind_by_name($statement10, ':id', $numaratoare5);
+					oci_bind_by_name($statement10, ':id2', $numaratoare5);
+					oci_bind_by_name($statement10, ':id3', $numaratoare5);
+					oci_bind_by_name($statement10, ':id4', $numaratoare5);			
+
+                   if (!$statement10) {
+                        $e = oci_error($connection);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+                    }
+
+                    $result10= oci_execute($statement10);
+
+                    if(!$result10){
+                      $e = oci_error($statement10);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+					}
+
+			if($v_preferinta1 == 1){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_1) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 2){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_2) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 3){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_3) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 4){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_4) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 5){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_5) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 6){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_6) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 7){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_7) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 8){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_8) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 9){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_9) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 10){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_10) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta1 == 11){
+				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_11) values (
+					:id,
+					'Ingineria sistemelor software')");
+
+				oci_bind_by_name($statement4, ':id', $numaratoare4);
+
+				if (!$statement4) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result4= oci_execute($statement4);
+
+				if(!$result4){
+					$e = oci_error($statement4);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta2 == 1){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 2){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 3){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 4){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 5){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 6){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 7){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 8){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 9){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 10){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta2 == 11){
+				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Sisteme distribuite taxa' where id = :id");
+
+				oci_bind_by_name($statement5, ':id', $numaratoare4);
+
+				if (!$statement5) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result5= oci_execute($statement5);
+
+				if(!$result5){
+					$e = oci_error($statement5);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta3 == 1){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 2){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 3){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 4){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 5){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 6){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 7){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 8){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 9){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 10){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta3 == 11){
+				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Securitatea informatie taxa' where id = :id");
+
+				oci_bind_by_name($statement6, ':id', $numaratoare4);
+
+				if (!$statement6) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result6= oci_execute($statement6);
+
+				if(!$result6){
+					$e = oci_error($statement6);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta4 == 1){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 2){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 3){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 4){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 5){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 6){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 7){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 8){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 9){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 10){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta4 == 11){
+				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Optimizare computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement7, ':id', $numaratoare4);
+
+				if (!$statement7) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result7= oci_execute($statement7);
+
+				if(!$result7){
+					$e = oci_error($statement7);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta5 == 1){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 2){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 3){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 4){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 5){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 6){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 7){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 8){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 9){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 10){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta5 == 11){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Lingvistica computationala taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta6 == 1){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 2){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 3){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 4){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 5){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 6){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 7){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 8){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 9){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 10){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta6 == 11){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Studii avansate in informatica taxa' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta7 == 1){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 2){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 3){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 4){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 5){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 6){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 7){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 8){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 9){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 10){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta7 == 11){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Ingineria sistemelor software buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta8 == 1){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 2){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 3){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 4){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 5){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 6){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 7){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 8){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 9){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 10){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta8 == 11){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Sisteme distribuite buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta9 == 1){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 2){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 3){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 4){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 5){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 6){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 7){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 8){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 9){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 10){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta9 == 11){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Securitatea informatiei buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta10 == 1){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 2){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 3){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 4){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 5){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 6){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 7){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 8){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 9){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 10){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta10 == 11){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Optimizare computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			if($v_preferinta11 == 1){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 2){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 3){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 4){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 5){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 6){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 7){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 8){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 9){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 10){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+
+			else if($v_preferinta11 == 11){
+				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Lingvistica computationala buget' where id = :id");
+
+				oci_bind_by_name($statement8, ':id', $numaratoare4);
+
+				if (!$statement8) {
+    			$e = oci_error($connection);
+    			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+
+				$result8= oci_execute($statement8);
+
+				if(!$result8){
+					$e = oci_error($statement8);
+    				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+				}
+			}
+			
+
+			echo $v_preferinta1;
           
       }
     }
