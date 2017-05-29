@@ -1567,6 +1567,9 @@
                       $e = oci_error($statement3);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
                     }
+					echo '<script type="text/javascript">
+           			window.location = "DespreFII.html"
+      			   </script>';
 	  }
           }
         }
