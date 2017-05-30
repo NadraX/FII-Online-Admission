@@ -466,12 +466,12 @@
 			                    <tbody>
 			                      <tr>
 			                         <span id="chitanta" class="form-sub-label-container" style="vertical-align:top; width: 80%; margin-right: 5px;">
-			                            <input type="number"  name="Master_Chitanta_nr" class="form-textbox first_1" placeholder="ex:2643" size="10" data-component="first" value="<?php 
-																																												if($v_Chitanta == '')		
-																																													echo '';		
-																																												else		
-																																													echo $v_Chitanta;		
-																																											?>" />
+			                            <input type="number"  name="Master_Chitanta_nr" class="form-textbox first_1" size="10" data-component="first" value="<?php 
+																																								if($v_Chitanta == '')		
+																																									echo '';		
+																																								else		
+																																									echo $v_Chitanta;		
+																																							?>" />
 										
 										<span style="color:red">		
 											<?php		
@@ -487,13 +487,13 @@
 			                            <label class="form-sub-label sublabel_first" style="min-height:13px;"> Chitanța   nr. </label>
 			                        </span>
 			                        <span id="suma" class="form-sub-label-container" style="vertical-align:top; width: 18%; margin-right: 5px;">
-										<input type="number" name="Master_Suma_Taxa" class="form-textbox middle_1" placeholder="ex: 250" size="10" data-component="middle" value="<?php
-																																																if($v_Suma_Taxa == '')		
-																																																	echo '';		
-																																																else		
-																																																	echo $v_Suma_Taxa;		
-																																															?>" />
-
+										<input type="number" name="Master_Suma_Taxa" class="form-textbox middle_1" size="10" data-component="middle" value="<?php
+																																								if($v_Suma_Taxa == '')		
+																																									echo '';		
+																																								else		
+																																									echo $v_Suma_Taxa;		
+																																							?>" />
+										
 										<span style="color:red">		
 											<?php		
 												if(isset($_POST['Submit'])) {		
@@ -546,12 +546,12 @@
 										</span>
 			                          </span>
 			                          <span id="motiv-scutire" class="form-sub-label-container" style="vertical-align:top; width: 49%; margin-right: 5px;">
-			                              <input type="text" name="Master_Motiv_Scutire_taxa" class="form-textbox last_1" size="15" placeholder="ex: Fiu de Parlamentar"  data-component="last"  value="<?php 
-																																																			if($v_Scutire == '')		
-																																																				echo '';		
-																																																			else		
-																																																				echo $v_Scutire;		
-																																																		 ?>"/>
+			                              <input type="text" name="Master_Motiv_Scutire_taxa" class="form-textbox last_1" size="15" data-component="last" value="<?php 
+																																									if($v_Scutire == '')		
+																																										echo '';		
+																																									else		
+																																										echo $v_Scutire;		
+																																								 ?>"/>
 											<span style="color:red">		
 												<?php		
 													if(isset($_POST['Submit'])) {		
@@ -603,16 +603,13 @@
 
 										</span>
 										<span id="num2" class="form-sub-label-container" style="vertical-align:top;">
-                      						<input type="text" name="Master_Numele_De_Familie_La_nastere" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" data-component="first" value="<?php echo $_POST["Master_Numele_De_Familie_La_nastere"];?>" />
+                      						<input type="text" name="Master_Numele_De_Familie_La_nastere" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" data-component="first" />
                       						<label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie la nastere </label>
                     					</span>
 										<span id="initiala" class="form-sub-label-container" style="vertical-align:top;">
 
 											<input type="text" name="Master_Initiala_Tata" class="form-textbox middle_1" placeholder="ex: C/C./C.D." size="10" data-component="middle"  value="<?php 
-																																																	if($v_Licenta_Initiala_Tata == '')
-																																																		echo '';
-																																																	else
-																																																		echo $v_Licenta_Initiala_Tata;
+																																																	if($v_Licenta_Initiala_Tata == '') 
 																																																?>" />
 												<span style="color:red">
 													<?php
@@ -782,7 +779,7 @@
 
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
 
-										  <input  type="text"  name="Master_Etnie"  class="form-textbox first_1" placeholder="ex: Rrom" size="20"  data-component="first"  value="<?php 
+										  <input  type="text"  name="Master_Etnie"  class="form-textbox first_1"  size="20"  data-component="first"  value="<?php 
 																																								if($v_Licenta_Etnie == '') 
 																																									echo '';
 																																								else
@@ -807,7 +804,7 @@
 
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
 
-										  <input type="text"  name="Master_Limba_Materna" placeholder="ex: Romana" class="form-textbox first_1" size="20" data-component="first"   value="<?php 
+										  <input type="text"  name="Master_Limba_Materna"  class="form-textbox first_1" size="20" data-component="first"   value="<?php 
 																																										if($v_Licenta_Limba_Materna == '') 
 																																											echo '';
 																																										else
@@ -937,12 +934,15 @@
 										<span  class="form-sub-label-container" style="vertical-align:top; width:10%;padding:0;margin:0;">
 
 										  <input type="text"   name="Master_Eliberat_De"  class="form-textbox first_1" size="20" placeholder="ex: SPCLEP IA&#350;I" data-component="first"  value="<?php 
-																																																		echo $_POST["Master_Eliberat_De"];
-																																																	?>" />
+													if($v_Licenta_Buletin_Eliberat_De == '') 
+														echo '';
+													else
+														echo $v_Licenta_Buletin_Eliberat_De;
+													?>" />
 												<span style="color:red">
 													<?php 
 														if(isset($_POST['Submit'])) {
-															$v_Licenta_Buletin_Eliberat_De = $_POST["Master_Eliberat_De"];
+															$v_Licenta_Buletin_Eliberat_De = $_POST["Master_Eliberat_De"];  // V
 															$vLicenta_Buletin_Eliberat_De = validEliberareBuletin($v_Licenta_Buletin_Eliberat_De);
 															if($vLicenta_Buletin_Eliberat_De==0)
 																echo "C&#226;mp invalid!";
@@ -7405,18 +7405,8 @@
 
 											<select class="form-dropdown form-address-country middle_1" name="Master_Limba_Aleasa" data-component="tip_invatamant">
 
-												<option value="In limba romana" <?php
-																					if($v_Master_limba=="In limba romana")
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>>&#206;n limba rom&#226;n&#259;</option>		
-												<option value="In limba engleza"<?php		
-																					if($v_Master_limba=="In limba engleza")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>>&#206;n limba englez&#259;</option>
+												<option value="In limba romana">&#206;n limba rom&#226;n&#259;</option>
+												<option value="In limba engleza">&#206;n limba englez&#259;</option>
 
 											</select>
 
@@ -7437,48 +7427,32 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="IngineriaSistemelorSoftwareTaxa" style="width: 40px; height:30px;" type="number" value="<?php
-																																					if($Preferinte[1] == '') 		
-																																						echo '';		
-																																					else		
-																																						echo $Preferinte[1];		
-																																				?>" />
+											<input name="IngineriaSistemelorSoftwareTaxa" style="width: 40px; height:30px;" type="number" value="Ingineria sistemelor software tax&#259;"/>
+
 											<span style="font-size:15px;">Ingineria sistemelor software tax&#259;</span>
 
 										</div>
 
 										<div class="col-md-12 mrg-t10" > 
 
-											<input name="SistemeDistribuiteTaxa" style="width: 40px; height:30px;" type="number" value="<?php
-																																			if($Preferinte[2] == '') 		
-																																				echo '';		
-																																			else		
-																																				echo $Preferinte[2];		
-																																		?>" />
+											<input name="SistemeDistribuiteTaxa" style="width: 40px; height:30px;" type="number" value="Sisteme distribuite tax&#259;" />
+
 											<span style="font-size:15px;">Sisteme distribuite tax&#259;</span>
 
 										</div>
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="SecuritateaInformatieiTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
-																																				if($Preferinte[3] == '') 		
-																																					echo '';		
-																																				else		
-																																					echo $Preferinte[3];		
-																																			?>" />
+											<input name="SecuritateaInformatieiTaxa" style="width: 40px; height:30px;" type="number" value="Securitatea informa&#355;iei tax&#259;" />
+
 											<span style="font-size:15px;">Securitatea informa&#355;iei tax&#259;</span>
 
 										</div>
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="OptimizareaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="<?php
-																																					if($Preferinte[4] == '') 		
-																																						echo '';		
-																																					else		
-																																						echo $Preferinte[4];		
-																																				?>" />
+											<input name="OptimizareaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="Optimizare computa&#355;ional&#259; tax&#259;" />
+
 											<span style="font-size:15px;">Optimizare computa&#355;ional&#259; tax&#259;</span>
 
 										</div>
@@ -7489,48 +7463,32 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="LingvistivaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="<?php
-																																					if($Preferinte[5] == '') 		
-																																						echo '';		
-																																					else		
-																																						echo $Preferinte[5];		
-																																				?>" />
+											<input name="LingvistivaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="Lingvistic&#259; computational&#259; tax&#259;" />
+
 											<span style="font-size:15px;">Lingvistic&#259; computational&#259; tax&#259;</span>
 
 										</div>
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="StudiiAvansateInInformaticaTaxa" style="width: 40px; height:30px;" type="number" value="<?php
-																																					if($Preferinte[6] == '') 		
-																																						echo '';		
-																																					else		
-																																						echo $Preferinte[6];		
-																																				?>" />
+											<input name="StudiiAvansateInInformaticaTaxa" style="width: 40px; height:30px;" type="number" value="Studii avansate &#238;n informatic&#259; tax&#259;" />
+
 											<span style="font-size:15px;">Studii avansate &#238;n informatic&#259; tax&#259;</span>
 
 										</div>
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="IngineriaSoftwareBuget" style="width: 40px; height:30px;" type="number" value="<?php
-																																					if($Preferinte[7] == '') 		
-																																						echo '';		
-																																					else		
-																																						echo $Preferinte[7];		
-																																				?>" />
+											<input name="IngineriaSoftwareBuget" style="width: 40px; height:30px;" type="number" value="Ingineria sistemelor software buget" />
+
 											<span style="font-size:15px;">Ingineria sistemelor software buget</span>
 
 										</div>
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="SistemeDistribuiteBuget" style="width: 40px; height:30px;" type="number" value="<?php
-																																					if($Preferinte[8] == '') 		
-																																						echo '';		
-																																					else		
-																																						echo $Preferinte[8];		
-																																				?>" />
+											<input name="SistemeDistribuiteBuget" style="width: 40px; height:30px;" type="number" value="Sisteme distribuite buget" />
+
 											<span style="font-size:15px;">Sisteme distribuite buget</span>
 
 										</div>
@@ -7541,62 +7499,29 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="SecuritateaInformatieiBuget" style="width: 40px; height:30px;" type="number" value="<?php
-																																					if($Preferinte[9] == '') 		
-																																						echo '';		
-																																					else		
-																																						echo $Preferinte[9];		
-																																				?>" />
+											<input name="SecuritateaInformatieiBuget" style="width: 40px; height:30px;" type="number" value="Securitatea informa&#355;iei buget" />
+
 											<span style="font-size:15px;">Securitatea informa&#355;iei buget</span>
 
 										</div>
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="OptimizareaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="<?php
-																																					if($Preferinte[10] == '') 		
-																																						echo '';		
-																																					else		
-																																						echo $Preferinte[10];		
-																																				?>" />
+											<input name="OptimizareaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="Optimizare computa&#355;ional&#259; buget" />
+
 											<span style="font-size:15px;">Optimizare computa&#355;ional&#259; buget</span>
 
 										</div>
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="LingvisticaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="<?php
-																																					if($Preferinte[11] == '') 		
-																																						echo '';		
-																																					else		
-																																						echo $Preferinte[11];		
-																																				?>" />
+											<input name="LingvisticaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="Lingvistic&#259; computational&#259; buget" />
+
 											<span style="font-size:15px;">Lingvistic&#259; computational&#259; buget</span>
 
 										</div>
 
 									</div>
-									
-									<span style="color:red">		
-										<?php 		
-											if(isset($_POST['Submit'])) {		
-												$Preferinte[1] = $_POST["IngineriaSistemelorSoftwareTaxa"];		
-												$Preferinte[2] = $_POST["SistemeDistribuiteTaxa"];		
-												$Preferinte[3] = $_POST["SecuritateaInformatieiTaxa"];		
-												$Preferinte[4] = $_POST["OptimizareaComputationalaTaxa"];		
-												$Preferinte[5] = $_POST["LingvistivaComputationalaTaxa"];		
-												$Preferinte[6] = $_POST["StudiiAvansateInInformaticaTaxa"];		
-												$Preferinte[7] = $_POST["IngineriaSoftwareBuget"];		
-												$Preferinte[8] = $_POST["SistemeDistribuiteBuget"];		
-												$Preferinte[9] = $_POST["SecuritateaInformatieiBuget"];		
-												$Preferinte[10] = $_POST["OptimizareaComputationalaBuget"];		
-												$Preferinte[11] = $_POST["LingvisticaComputationalaBuget"];		
-												$vPreferinte = validarePreferinte($Preferinte);		
-												if($vPreferinte==0)		
-													echo "C&#226;mpuri invalide!";		
-											}		
-										?>		
-									</span>
 
 								</div>
 
@@ -7617,25 +7542,9 @@
 							                          style="color: gray; font-size:medium; width:25%; display:inline-block"> Domiciliu stabil: </label>
 							                        
 							                          <span style="width:75%">
-							                            <input type="radio" name="group3" id="checkbox1" class="css-checkbox" value="1" <?php
-																															if($v_Radio3 == '')
-																																echo '';
-																															else
-																																if($v_Radio3==1)
-																																	echo 'checked="checked"';
-																																else 
-																																	echo '';
-																															?> />
+							                            <input type="radio" name="group3" id="checkbox1" class="css-checkbox" value="Rural" />
 							                            <label for="checkbox1" class="css-label" style="margin-right:100px">Rural</label>
-							                            <input type="radio" name="group3" id="checkbox2" class="css-checkbox" value="2"<?php
-																															if($v_Radio3 == '')
-																																echo '';
-																															else
-																																if($v_Radio3==2)
-																																	echo 'checked="checked"';
-																																else 
-																																	echo '';
-																															?> />
+							                            <input type="radio" name="group3" id="checkbox2" class="css-checkbox" value="Urban" />
 							                            <label for="checkbox2" class="css-label">Urban</label>
 							                          </span>
 							                        </td>
@@ -7819,16 +7728,87 @@
 
 														   <select class="form-dropdown form-address-country gen" name="Master_Judet" data-component="judet">
 
-																<?php
-																	$array=array("Alba","Arad","Arges","Bacau","Bihor","BistritaNasaud","Botosani","Braila","Brasov","Bucuresti","Buzau","Calarasi","Caras-Severin","Cluj","Constanta","Covasna","Dambovita","Galati","Giurgiu","Gorj","Harghita","Hunedoara","Ialomita","Iasi","Ilfov","Maramures","Mehedinti","Mures","Neamt","Olt","Prahova","Salaj","Satu Mare","Sibiu","Suceava","Teleorman","Timisoara","Tulcea","Valcea","Vaslui","Vrancea");
-																	for($i=0;$i<41;$i++)
-																	{		
-																		echo '<option value="'.$array[$i].'" '; 
-																		if($v_Judet==$array[$i])		
-																			echo 'selected';
-																		echo '> '.$array[$i].' </option>';		
-																	}
-																?>
+																<option value="Alba">Alba</option>
+
+																<option value="Arad">Arad</option>
+
+																<option value="Arges">Arge&#351;</option>  
+
+																<option value="Bacau">Bac&#259;u</option>
+
+																<option value="Bihor">Bihor</option>
+
+																<option value="BistritaNasaud">Bistri&#355;a-N&#259;s&#259;ud</option>
+
+																<option value="Botosani">Boto&#351;ani</option>
+
+																<option value="Braila">Br&#259;ila</option>
+
+																<option value="Brasov">Bra&#351;ov</option>
+
+																<option value="Bucuresti">Bucure&#351;ti</option>
+
+																<option value="Buzau">Buz&#259;u</option>
+
+																<option value="Calarasi">C&#259;l&#259;ra&#351;i</option>
+
+																<option value="Caras-Severin">Cara&#351;-Severin</option>
+
+																<option value="Cluj">Cluj</option>
+
+																<option value="Constanta">Constan&#355;a</option>
+
+																<option value="Covasna">Covasna</option>
+
+																<option value="Dambovita">D&#226;mbovi&#355;a</option>
+
+																<option value="Galati">Gala&#355;i</option>
+
+																<option value="Giurgiu">Giurgiu</option>
+
+																<option value="Gorj">Gorj</option>
+
+																<option value="Harghita">Harghita</option>
+
+																<option value="Hunedoara">Hunedoara</option>
+
+																<option value="Ialomita">Ialomi&#355;a</option>
+
+																<option value="Iasi">Ia&#351;i</option>
+
+																<option value="Ilfov">Ilfov</option>
+
+																<option value="Maramures">Maramure&#351;</option>
+
+																<option value="Mehedinti">Mehedin&#355;i</option>
+
+																<option value="Mures">Mures</option>
+
+																<option value="Neamt">Neam&#355;</option>
+
+																<option value="Olt">Olt</option>
+
+																<option value="Prahova">Prahova</option>
+
+																<option value="Salaj">S&#259;laj</option>
+
+																<option value="Satu Mare">Satu Mare</option>
+
+																<option value="Sibiu">Sibiu</option>
+
+																<option value="Suceava">Suceava</option>
+
+																<option value="Teleorman">Teleorman</option>
+
+																<option value="Timisoara">Timi&#351;</option>
+
+																<option value="Tulcea">Tulcea</option>
+
+																<option value="Valcea">V&#226;lcea</option>
+
+																<option value="Vaslui">Vaslui</option>
+
+																<option value="Vrancea">Vrancea</option>
 
 															</select>
 
@@ -7862,24 +7842,9 @@
 														<span class="form-sub-label-container" style="vertical-align:top; width:24%">
 
 															<select class="form-dropdown form-address-country gen" name="Licenta_Tara" data-component="country">
-																<option value="Romania" <?php
-																					if($v_Tara=="Romania")
-																						echo 'selected';
-																					else		
-																						echo '';		
-																				?>> Rom&#226;nia </option>		
-																<option value="Republica Moldova"<?php		
-																					if($v_Tara=="Republica Moldova")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Republica Moldova </option>		
-																<option value="Alta Optiune"<?php		
-																					if($v_Tara=="Alta Optiune")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Alta op&#355;iune</option>
+																<option value="Romania"> Rom&#226;nia </option>
+																<option value="Republica Moldova"> Republica Moldova </option>
+																<option value="Alta Optiune"> Alta op&#355;iune</option>
 															</select>
 
 															<label class="form-sub-label" style="min-height:13px;">&#354;ar&#259; </label>
@@ -7908,25 +7873,9 @@
 				                          <label class="form-label form-label-left form-label-auto" 
 				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor?  </label>                        
 				                          <span style="width:55%">
-				                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" value="1" <?php
-																															if($v_Radio5 == '')		
-																																echo '';		
-																															else		
-																																if($v_Radio5==1)		
-																																	echo 'checked="checked"';		
-																																else 		
-																																	echo '';		
-																															?> />		
+				                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" value="1" />
 				                            <label for="checkbox3" class="css-label" style="margin-right:100px">Da</label>
-				                            <input type="radio" name="group5" id="checkbox4" class="css-checkbox" value="2" <?php
-																															if($v_Radio5 == '')		
-																																echo '';		
-																															else		
-																																if($v_Radio5==2)		
-																																	echo 'checked="checked"';		
-																																else 		
-																																	echo '';		
-																															?> />
+				                            <input type="radio" name="group5" id="checkbox4" class="css-checkbox" value="0" />
 				                            <label for="checkbox4" class="css-label">Nu</label>
 				                          </span>
 				                        </td>
@@ -7936,25 +7885,9 @@
 				                          <label class="form-label form-label-left form-label-auto" 
 				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul susținerii interviului?   </label>                        
 				                          <span style="width:55%">
-				                            <input type="radio" name="group6" id="checkbox5" class="css-checkbox" value="1" <?php
-																															if($v_Radio6 == '')		
-																																echo '';		
-																															else		
-																																if($v_Radio6==1)		
-																																	echo 'checked="checked"';		
-																																else 		
-																																	echo '';		
-																															?> />		
+				                            <input type="radio" name="group6" id="checkbox5" class="css-checkbox" value="1" />
 				                            <label for="checkbox5" class="css-label" style="margin-right:100px">Da</label>
-				                            <input type="radio" name="group6" id="checkbox6" class="css-checkbox" value="2" <?php
-																															if($v_Radio6 == '')		
-																																echo '';		
-																															else		
-																																if($v_Radio6==2)		
-																																	echo 'checked="checked"';		
-																																else 		
-																																	echo '';		
-																															?> />
+				                            <input type="radio" name="group6" id="checkbox6" class="css-checkbox" value="0" />
 				                            <label for="checkbox6" class="css-label">Nu</label>
 				                          </span>
 				                        </td>
@@ -7973,25 +7906,9 @@
 				                          <label class="form-label form-label-left form-label-auto" 
 				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Candidat care se încadrează în categoria persoanelor cu dizabilități  </label>                        
 				                          <span style="width:55%">
-				                                <input type="radio" name="group4" id="checkbox7" class="css-checkbox" value="1" <?php
-																															if($v_Radio4 == '')		
-																																echo '';		
-																															else		
-																																if($v_Radio4==1)		
-																																	echo 'checked="checked"';		
-																																else 		
-																																	echo '';		
-																															?> />		
+				                                <input type="radio" name="group4" id="checkbox7" class="css-checkbox" value="1" />
 				                                <label for="checkbox7" class="css-label" style="margin-right:100px">Da</label>
-				                                <input type="radio" name="group4" id="checkbox8" class="css-checkbox" value="2" <?php
-																															if($v_Radio4 == '')		
-																																echo '';		
-																															else		
-																																if($v_Radio4==2)		
-																																	echo 'checked="checked"';		
-																																else 		
-																																	echo '';		
-																															?> />
+				                                <input type="radio" name="group4" id="checkbox8" class="css-checkbox" value="0" />
 				                                <label for="checkbox8" class="css-label">Nu</label>
 				                          </span>
 				                        </td>
@@ -8001,42 +7918,12 @@
 				                          <br>
 				                          <span class="form-sub-label-container" style="vertical-align:top; width:30%">
 				                          <select class="form-dropdown form-address-country gen" name="Licenta_Stare_speciala"  data-component="country">
-				                              <option value="1"<?php                          
-																					if($v_Stare_Speciala=="1")
-																						echo 'selected';
-																					else
-																						echo '';
-																				?>>Nicio opţiune</option>
-				                            <option value="2"<?php		
-																					if($v_Stare_Speciala=="2")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>>Orfan de un părinte</option>		
-				                            <option value="3"<?php		
-																					if($v_Stare_Speciala=="3")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>>Orfan de ambii părinți</option>		
-				                            <option value="4"<?php		
-																					if($v_Stare_Speciala=="4")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>>Provenit din case de copii</option>  		
-				                            <option value="5"<?php		
-																					if($v_Stare_Speciala=="5")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>>Provenit din plasament familial</option>		
-				                            <option value="6"<?php		
-																					if($v_Stare_Speciala=="6")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>>Provenit din familie monoparentală</option>
+				                            <option value="0">Nicio opţiune</option>                            
+				                            <option value="Orfan de un parinte">Orfan de un părinte</option>
+				                            <option value="Orfan de ambii parinti">Orfan de ambii părinți</option>
+				                            <option value="Provenit din case de copii">Provenit din case de copii</option>  
+				                            <option value="Provenit din plasament familial">Provenit din plasament familial</option>
+				                            <option value="Provenit din familie monoparentala">Provenit din familie monoparentală</option>
 				                          </select>
 				                          <label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Stare socială specială </label>
 				                        </span>
@@ -8126,78 +8013,29 @@
 
 												<select style="height:40px;" name="Master_Nastere_Luna" id="input_10_month" class="form-dropdown" data-component="birthdate-month">
 
-													<option value="January" <?php
-																					if($v_Master_nastere_luna=="January")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>>Ianuarie</option>		
-													<option value="February" <?php
-																					if($v_Master_nastere_luna=="February")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Februarie</option>		
-													<option value="March" <?php
-																					if($v_Master_nastere_luna=="March")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Martie </option>		
-													<option value="April" <?php
-																					if($v_Master_nastere_luna=="April")		
-																						echo 'selected';
-																					else		
-																						echo '';		
-																				?>> Aprilie </option>		
-													<option value="May"<?php
-																					if($v_Master_nastere_luna=="May")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Mai </option>		
-													<option value="June"<?php
-																					if($v_Master_nastere_luna=="June")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Iunie </option>		
-													<option value="July"<?php
-																					if($v_Master_nastere_luna=="July")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Iulie</option>		
-													<option value="August"<?php
-																					if($v_Master_nastere_luna=="August")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> August </option>		
-													<option value="September"<?php
-																					if($v_Master_nastere_luna=="September")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Septembrie </option>		
-													<option value="October"<?php
-																					if($v_Master_nastere_luna=="October")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Octombrie </option>		
-													<option value="November"<?php
-																					if($v_Master_nastere_luna=="November")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Noiembrie</option>		
-													<option value="December"<?php		
-																					if($v_Master_nastere_luna=="December")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Decembrie </option>
+													<option value="January">Ianuarie</option>
+
+													<option value="February"> Februarie</option>
+
+													<option value="March"> Martie </option>
+
+													<option value="April"> Aprilie </option>
+
+													<option value="May"> Mai </option>
+
+													<option value="June"> Iunie </option>
+
+													<option value="July"> Iulie</option>
+
+													<option value="August"> August </option>
+
+													<option value="September"> Septembrie </option>
+
+													<option value="October"> Octombrie </option>
+
+													<option value="November"> Noiembrie</option>
+
+													<option value="December"> Decembrie </option>
 
 												</select>
 
@@ -8209,16 +8047,67 @@
 
 												<select style="height:40px;" name="Master_Nastere_Zi" id="input_10_day" class="form-dropdown" data-component="birthdate-day">
 
-													<?php
-														for($i=1;$i<=31;$i++)		
-														{
-															echo '<option value="'.$i.'" ';		
-															if($v_Master_nastere_zi==$i)
-																echo 'selected';		
-															echo '> '.$i.' </option>';
-															}		
-													?>
+													<option value="1"> 1 </option>
 
+													<option value="2"> 2 </option>
+
+													<option value="3"> 3 </option>
+
+													<option value="4"> 4 </option>
+
+													<option value="5"> 5 </option>
+
+													<option value="6"> 6 </option>
+
+													<option value="7"> 7 </option>
+
+													<option value="8"> 8 </option>
+
+													<option value="9"> 9 </option>
+
+													<option value="10"> 10 </option>
+
+													<option value="11"> 11 </option>
+
+													<option value="12"> 12 </option>
+
+													<option value="13"> 13 </option>
+
+													<option value="14"> 14 </option>
+
+													<option value="15"> 15 </option>
+
+													<option value="16"> 16 </option>
+
+													<option value="17"> 17 </option>
+
+													<option value="18"> 18 </option>
+
+													<option value="19"> 19 </option>
+
+													<option value="20"> 20 </option>
+
+													<option value="21"> 21 </option>
+
+													<option value="22"> 22 </option>
+
+													<option value="23"> 23 </option>
+
+													<option value="24"> 24 </option>
+
+													<option value="25"> 25 </option>
+
+													<option value="26"> 26 </option>
+
+													<option value="27"> 27 </option>
+
+													<option value="28"> 28 </option>
+
+													<option value="29"> 29 </option>
+
+													<option value="30"> 30 </option>
+
+													<option value="31"> 31 </option>
 
 												</select>
 
@@ -8230,15 +8119,99 @@
 
 												<select style="height:40px;" name="Master_Nastere_An" class="form-dropdown" data-component="birthdate-year">
 
-													<?php
-														for($i=2017;$i>=1971;$i--)		
-														{
-															echo '<option value="'.$i.'" ';		
-															if($v_Master_nastere_an==$i)
-																echo 'selected';		
-															echo '> '.$i.' </option>';
-															}		
-													?>
+													<option value="2017"> 2017 </option>
+
+													<option value="2016"> 2016 </option>
+
+													<option value="2015"> 2015 </option>
+
+													<option value="2014"> 2014 </option>
+
+													<option value="2013"> 2013 </option>
+
+													<option value="2012"> 2012 </option>
+
+													<option value="2011"> 2011 </option>
+
+													<option value="2010"> 2010 </option>
+
+													<option value="2009"> 2009 </option>
+
+													<option value="2008"> 2008 </option>
+
+													<option value="2007"> 2007 </option>
+
+													<option value="2006"> 2006 </option>
+
+													<option value="2005"> 2005 </option>
+
+													<option value="2004"> 2004 </option>
+
+													<option value="2003"> 2003 </option>
+
+													<option value="2002"> 2002 </option>
+
+													<option value="2001"> 2001 </option>
+
+													<option value="2000"> 2000 </option>
+
+													<option value="1999"> 1999 </option>
+
+													<option value="1998"> 1998 </option>
+
+													<option value="1997"> 1997 </option>
+
+													<option value="1996"> 1996 </option>
+
+													<option value="1995"> 1995 </option>
+
+													<option value="1994"> 1994 </option>
+
+													<option value="1993"> 1993 </option>
+
+													<option value="1992"> 1992 </option>
+
+													<option value="1991"> 1991 </option>
+
+													<option value="1990"> 1990 </option>
+
+													<option value="1989"> 1989 </option>
+
+													<option value="1988"> 1988 </option>
+
+													<option value="1987"> 1987 </option>
+
+													<option value="1986"> 1986 </option>
+
+													<option value="1985"> 1985 </option>
+
+													<option value="1984"> 1984 </option>
+
+													<option value="1983"> 1983 </option>
+
+													<option value="1982"> 1982 </option>
+
+													<option value="1981"> 1981 </option>
+
+													<option value="1980"> 1980 </option>
+
+													<option value="1979"> 1979 </option>
+
+													<option value="1978"> 1978 </option>
+
+													<option value="1977"> 1977 </option>
+
+													<option value="1976"> 1976 </option>
+
+													<option value="1975"> 1975 </option>
+
+													<option value="1974"> 1974 </option>
+
+													<option value="1973"> 1973 </option>
+
+													<option value="1972"> 1972 </option>
+
+													<option value="1971"> 1971 </option>
 
 												</select>
 
