@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style-check.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -19,18 +20,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
-    <script type="text/javascript">
-    $(document).ready(function(){
-        var $logo = $('#scroll');
-        var $logo2 = $('#no-scroll');
-        var $head2 = $('#header');
-        $(document).scroll(function() {
-            $head2.css({display: $(this).scrollTop() < 50? "block":"none"});
-            $logo2.css({display: $(this).scrollTop() < 50? "block":"none"});
-            $logo.css({display: $(this).scrollTop() > 100? "block":"none"});
-        });
-    });
-    </script>
+   
     <style type="text/css">
         .form-line{
             padding-top:12px;
@@ -176,9 +166,16 @@
         padding:0px;
       }
       #num {
-        width:44.5%;
+        width:22%;
         padding:0;
         margin:0;
+      }
+
+      #num2 {
+        width:22.2%;
+        padding:0;
+        margin:0;
+
       }
       #prenum {
         width:44.5%;
@@ -228,6 +225,38 @@
 
       #id_10 {
         padding-left: 10px;
+      }
+
+      
+     input[type=radio].css-checkbox {
+              position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+            }
+
+            input[type=radio].css-checkbox + label.css-label {
+              padding-left:50px;
+              height:21px; 
+              display:inline-block;
+              line-height:21px;
+              background-repeat:no-repeat;
+              background-position: 0 0;
+              font-size:18px;
+              color:grey;
+              vertical-align:middle;
+              cursor:pointer;
+
+            }
+
+            input[type=radio].css-checkbox:checked + label.css-label {
+              background-position: 0 -21px;
+            }
+            label.css-label {
+        background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_0cf84fec35537d1f4546496881280e34.png);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
     </style>
 
@@ -327,11 +356,51 @@
 						    $v_id = 1;
 						?>
 						<ul>
+              <li class="form-line" data-type="control_taxa" id="id_12">
+                <br>
+                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Taxă de înscriere  </label>
+                <div class="form-input jf-required cid_1">
+                  <table  style="width:100%">
+                    <tbody>
+                      <tr>
+                         <span id="chitanta" class="form-sub-label-container" style="vertical-align:top; width: 80%; margin-right: 5px;">
+                            <input type="number"  name="Licenta_Chitanta_nr" class="form-textbox first_1" size="10" value="" data-component="first" />
+                            <label class="form-sub-label sublabel_first" style="min-height:13px;"> Chitanța   nr. </label>
+                        </span>
+                        <span id="suma" class="form-sub-label-container" style="vertical-align:top; width: 18%; margin-right: 5px;">
+                          <input type="number" name="Licenta_Suma_Taxa" class="form-textbox middle_1" size="10" value="" data-component="middle" />
+                          <label class="form-sub-label"  style="min-height:13px;"> Suma achitată (RON) </label>
+                        </span>
+                      </tr>
+                      <tr>
+                        <td>
+                          <br>
+                          <label class="form-label form-label-left form-label-auto" 
+                          style="color: gray; font-size:medium; width:25%; display:inline-block"> Sunteţi scutit de această taxă?  </label>                        
+                          <span style="width:40%">
+                            <input type="radio" name="group1" id="checkbox11" class="css-checkbox" />
+                            <label for="checkbox11" class="css-label" style="margin-right:100px">Da</label>
+                            <input type="radio" name="group1" id="checkbox13" class="css-checkbox" />
+                            <label for="checkbox13" class="css-label" style="margin-right:50px;">Nu</label>
+                          </span>
+                          <span id="motiv-scutire" class="form-sub-label-container" style="vertical-align:top; width: 49%; margin-right: 5px;">
+                              <input type="text" name="Licenta_Motiv_Scutire_taxa" class="form-textbox last_1" size="15" value="" data-component="last" />
+                              <label class="form-sub-label"  id="sublabel_last" style="min-height:13px;"> Dacă da, motivul scutirii </label>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+
+							
+				
 							<li class="form-line" data-type="control_fullname" id="id_1">
 								<label class="form-label form-label-left form-label-auto" id="label_1"  style="color: #3488CB; font-size:large"> Informa&#355;ii   generale </label>
 								<div  class="form-input jf-required cid_1">
 									<div class="general_name" data-wrapper-react="true">
-										<span id="num" class="form-sub-label-container" style="vertical-align:top;">
+										<span id="num" class="form-sub-label-container" style="vertical-align:top;">  
 											<input type="text" name="Licenta_Numele_De_Familie" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" data-component="first" value="<?php 
 																																																	if($v_Numele_De_Familie == '') 
 																																																		echo '';
@@ -348,8 +417,12 @@
 													}
 												?>
 											</span>
-											<label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie </label>
+											<label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie actual</label>
 										</span>
+                    <span id="num2" class="form-sub-label-container" style="vertical-align:top;">
+                      <input type="text" name="Licenta_Numele_De_Familie_La_nastere" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" data-component="first" />
+                      <label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie la nastere </label>
+                    </span>
 										<span id="initiala" class="form-sub-label-container" style="vertical-align:top;">
 											<input type="text" name="Licenta_Initiala_Tata" class="form-textbox middle_1" size="10" placeholder="ex: C/C./C.D." data-component="first" value="<?php 
 																																											if($v_Licenta_Initiala_Tata == '') 
@@ -433,8 +506,9 @@
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:24%;padding:0;margin:0;">
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Stare_Civila" data-component="country">
-												<option value="Singur">Singur/&#259;</option>
+												<option value="Necasatorit(a)">Nec&#259;s&#259;torit/&#259;</option>
 												<option value="Casatorit(a)">C&#259;s&#259;torit/&#259;</option>
+                        <option value="Divortat(a)">Divor&#355;at//&#259;</option>
 											</select>
 											<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Stare civil&#259;</label>
 										</span>
@@ -453,9 +527,7 @@
 									<div data-wrapper-react="true">
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
 											
-											<select class="form-textbox first_1" style="width:100%; height:40px" name="Licenta_Nationalitate" data-component="first">
-												<option value="Romana">Rom&#226;n&#259;</option>
-											</select>
+                      <input type="text" name="Licenta_Nationalitate" class="form-textbox middle_1" style="vertical-align:top; width:100%;padding:0;margin:0;" placeholder="Rom&#226;n&#259;" data-component="middle" readonly />
 											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> Nationalitate </label>
 										</span>
 						
@@ -804,7 +876,21 @@
 										</div>
 										<br>
 									</div>
+                  <div  class="form-input jf-required cid_1" >
+                      <label class="form-label form-label-left form-label-auto" id="label_3" 
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitaţi echivalare cu diploma olimpiadă organizată MEN? </label>
+                        
+                      <span style="width:55%">
+                          <input type="radio" name="group2" id="checkbox10" class="css-checkbox" />
+                          <label for="checkbox10" class="css-label" style="margin-right:100px">Da</label>
+                          <input type="radio" name="group2" id="checkbox12" class="css-checkbox" />
+                          <label for="checkbox12" class="css-label">Nu</label>
+                      </span>
+
+                  </div>
+                  <br>
 									<div  class="form-input jf-required cid_1" >
+                    <br>
 										<div data-wrapper-react="true" class="mg">
 											<span class="form-sub-label-container" style="vertical-align:top; width:100%" >
 												<input type="number"  name="Licenta_Medie_BAC" class="form-textbox first_1"  size="20" data-component="first"  value="<?php 
@@ -868,17 +954,33 @@
 										</div> 
 									</div>       
 									<br>
+
 								</div>
 							</li>
 							<li class="form-line" data-type="control_address" id="id_3">
+                <br>
+                <br>
 								<label class="form-label form-label-left form-label-auto" id="label_3" style="color: #3488CB; font-size:large"> Adresa dvs. </label>
 								<div class="form-input jf-required cid_1">
 									<table  style="width:100%">
 										<tbody>
-								  
+								      <tr>
+                        <td>
+                          <label class="form-label form-label-left form-label-auto" id="label_3" 
+                          style="color: gray; font-size:medium; width:25%; display:inline-block"> Domiciliu stabil: </label>
+                        
+                          <span style="width:75%">
+                            <input type="radio" name="group3" id="checkbox1" class="css-checkbox" />
+                            <label for="checkbox1" class="css-label" style="margin-right:100px">Rural</label>
+                            <input type="radio" name="group3" id="checkbox2" class="css-checkbox" />
+                            <label for="checkbox2" class="css-label">Urban</label>
+                          </span>
+                        </td>
+                      </tr> 
+
 											<tr> 
 												<td>
-								  
+								          <br>
 													<span class="form-sub-label-container" style="vertical-align:top; width:44%">
 														<input type="text" name="Licenta_Strada" class="form-textbox first_1" size="15"  placeholder="ex: Independen&#355;ei" data-component="first" value="<?php 
 																																																				if($v_Licenta_Strada == '') 
@@ -1097,6 +1199,79 @@
 									</table>
 								</div>
 							</li>
+							
+							<li class="form-line" data-type="control_cazare" id="id_12">
+                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Informații despre cazare  </label>
+                <div class="form-input jf-required cid_1">
+                  <table  style="width:100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label class="form-label form-label-left form-label-auto" 
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor?  </label>                        
+                          <span style="width:55%">
+                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" />
+                            <label for="checkbox3" class="css-label" style="margin-right:100px">Da</label>
+                            <input type="radio" name="group5" id="checkbox4" class="css-checkbox" />
+                            <label for="checkbox4" class="css-label">Nu</label>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-label form-label-left form-label-auto" 
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul susținerii examenului?   </label>                        
+                          <span style="width:55%">
+                            <input type="radio" name="group6" id="checkbox5" class="css-checkbox" />
+                            <label for="checkbox5" class="css-label" style="margin-right:100px">Da</label>
+                            <input type="radio" name="group6" id="checkbox6" class="css-checkbox" />
+                            <label for="checkbox6" class="css-label">Nu</label>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+							<li class="form-line" data-type="control_cazare" id="id_13">
+                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Alte date personale ale candidatului </label>
+                <div class="form-input jf-required cid_1">
+                  <table  style="width:100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label class="form-label form-label-left form-label-auto" 
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Candidat care se încadrează în categoria persoanelor cu dizabilități  </label>                        
+                          <span style="width:55%">
+                                <input type="radio" name="group4" id="checkbox7" class="css-checkbox" />
+                                <label for="checkbox7" class="css-label" style="margin-right:100px">Da</label>
+                                <input type="radio" name="group4" id="checkbox8" class="css-checkbox" />
+                                <label for="checkbox8" class="css-label">Nu</label>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <br>
+                          <span class="form-sub-label-container" style="vertical-align:top; width:30%">
+                          <select class="form-dropdown form-address-country gen" name="Licenta_Stare_speciala"  data-component="country">
+                            <option value="">Nicio opţiune</option>                            
+                            <option value="">Orfan de un părinte</option>
+                            <option value="">Orfan de ambii părinți</option>
+                            <option value="">Provenit din case de copii</option>  
+                            <option value="">Provenit din plasament familial</option>
+                            <option value="">Provenit din familie monoparentală</option>
+                          </select>
+                          <label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Stare socială specială </label>
+                        </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+						  
+							
 							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%">
 								<label class="form-label form-label-left form-label-auto" id="label_6"   style="color: #3488CB; font-size:large">Contact </label>
 								<div id="cid_6" class="form-input jf-required" style="width:100%">

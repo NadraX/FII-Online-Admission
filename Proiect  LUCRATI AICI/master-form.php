@@ -181,10 +181,15 @@
 			padding:0px;		
 		  }		
 		  #num {		
-			width:44.5%;		
+			width:22%;		
 			padding:0;		
 			margin:0;		
 		  }		
+		  #num2 {
+		  	width:22.2%;		
+			padding:0;		
+			margin:0;	
+		  }
 		  #prenum {		
 			width:44.5%;		
 			padding:0;		
@@ -232,7 +237,37 @@
 		  }		
 		  #id_10 {		
 			padding-left: 10px;		
-		  }		
+		  }	
+		  input[type=radio].css-checkbox {
+              position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+            }
+
+            input[type=radio].css-checkbox + label.css-label {
+              padding-left:50px;
+              height:21px; 
+              display:inline-block;
+              line-height:21px;
+              background-repeat:no-repeat;
+              background-position: 0 0;
+              font-size:18px;
+              color:grey;
+              vertical-align:middle;
+              cursor:pointer;
+
+            }
+
+            input[type=radio].css-checkbox:checked + label.css-label {
+              background-position: 0 -21px;
+            }
+            label.css-label {
+        background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_0cf84fec35537d1f4546496881280e34.png);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }	
 		</style>		
 
 
@@ -387,19 +422,46 @@
 							$v_Licenta_Nationalitate = $_POST["Master_Nationalitate"];
 							$v_Licenta_Etnie = $_POST["Master_Etnie"];
 							$v_Licenta_Limba_Materna = $_POST["Master_Limba_Materna"];
-							$Preferinte[1] = $_POST["IngineriaSistemelorSoftwareTaxa"];
-							$Preferinte[2] = $_POST["SistemeDistribuiteTaxa"];
-							$Preferinte[3] = $_POST["SecuritateaInformatieiTaxa"];
-							$Preferinte[4] = $_POST["OptimizareaComputationalaTaxa"];
-							$Preferinte[5] = $_POST["LingvistivaComputationalaTaxa"];
-							$Preferinte[6] = $_POST["StudiiAvansateInInformaticaTaxa"];
-							$Preferinte[7] = $_POST["IngineriaSoftwareBuget"];
-							$Preferinte[8] = $_POST["SistemeDistribuiteBuget"];
-							$Preferinte[9] = $_POST["SecuritateaInformatieiBuget"];
-							$Preferinte[10] = $_POST["OptimizareaComputationalaBuget"];
-							$Preferinte[11] = $_POST["LingvisticaComputationalaBuget"];
 						?>
 						<ul>
+						
+				<li class="form-line" data-type="control_taxa" id="id_12">
+	                <br>
+	                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Taxă de înscriere  </label>
+	                <div class="form-input jf-required cid_1">
+		                  <table  style="width:100%">
+			                    <tbody>
+			                      <tr>
+			                         <span id="chitanta" class="form-sub-label-container" style="vertical-align:top; width: 80%; margin-right: 5px;">
+			                            <input type="number"  name="Master_Chitanta_nr" class="form-textbox first_1" size="10" value="" data-component="first" />
+			                            <label class="form-sub-label sublabel_first" style="min-height:13px;"> Chitanța   nr. </label>
+			                        </span>
+			                        <span id="suma" class="form-sub-label-container" style="vertical-align:top; width: 18%; margin-right: 5px;">
+			                          <input type="number" name="Master_Suma_Taxa" class="form-textbox middle_1" size="10" value="" data-component="middle" />
+			                          <label class="form-sub-label"  style="min-height:13px;"> Suma achitată (RON) </label>
+			                        </span>
+			                      </tr>
+			                      <tr>
+			                        <td>
+			                          <br>
+			                          <label class="form-label form-label-left form-label-auto" 
+			                          style="color: gray; font-size:medium; width:25%; display:inline-block"> Sunteţi scutit de această taxă?  </label>                        
+			                          <span style="width:40%">
+			                            <input type="radio" name="group1" id="checkbox11" class="css-checkbox" />
+			                            <label for="checkbox11" class="css-label" style="margin-right:100px">Da</label>
+			                            <input type="radio" name="group1" id="checkbox13" class="css-checkbox" />
+			                            <label for="checkbox13" class="css-label" style="margin-right:50px;">Nu</label>
+			                          </span>
+			                          <span id="motiv-scutire" class="form-sub-label-container" style="vertical-align:top; width: 49%; margin-right: 5px;">
+			                              <input type="text" name="Master_Motiv_Scutire_taxa" class="form-textbox last_1" size="15" value="" data-component="last" />
+			                              <label class="form-sub-label"  id="sublabel_last" style="min-height:13px;"> Dacă da, motivul scutirii </label>
+			                          </span>
+			                        </td>
+			                      </tr>
+			                    </tbody>
+		                  </table>
+	                </div>
+              	</li>
 
 							<li class="form-line" data-type="control_fullname" id="id_1">
 
@@ -432,14 +494,14 @@
 											<label class="form-sub-label"   style="min-height:13px;"> Numele de familie </label>
 
 										</span>
-
+										<span id="num2" class="form-sub-label-container" style="vertical-align:top;">
+                      						<input type="text" name="Master_Numele_De_Familie_La_nastere" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" data-component="first" />
+                      						<label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie la nastere </label>
+                    					</span>
 										<span id="initiala" class="form-sub-label-container" style="vertical-align:top;">
 
 											<input type="text" name="Master_Initiala_Tata" class="form-textbox middle_1" placeholder="ex: C/C./C.D." size="10" data-component="middle"  value="<?php 
 																																																	if($v_Licenta_Initiala_Tata == '') 
-																																																		echo '';
-																																																	else
-																																																		echo $v_Licenta_Initiala_Tata;
 																																																?>" />
 												<span style="color:red">
 													<?php
@@ -539,9 +601,9 @@
 
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Master_Stare_Civila" data-component="country">
 
-												<option value="Singur">Singur/&#259;</option>
-
+												<option value="Necasatorit(a)">Nec&#259;s&#259;torit/&#259;</option>
 												<option value="Casatorit(a)">C&#259;s&#259;torit/&#259;</option>
+                        						<option value="Divortat(a)">Divor&#355;at//&#259;</option>
 
 											</select>
 
@@ -576,15 +638,9 @@
 									<div data-wrapper-react="true">
 
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
-
-											<select class="form-textbox first_1" style="width:100%; height:40px" name="Master_Nationalitate" data-component="first">
-										 
-												<option value="Romana">Rom&#226;n&#259;</option>
-													
-											</select>
-
-										  <label class="form-sub-label sublabel_first"  style="min-height:13px;"> Nationalitate </label>
-
+											
+                      						<input type="text" name="Master_Nationalitate" class="form-textbox middle_1" style="vertical-align:top; width:100%;padding:0;margin:0;" placeholder="Rom&#226;n&#259;" data-component="middle" readonly />
+											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> Nationalitate </label>
 										</span>
 
 								
@@ -1118,12 +1174,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="IngineriaSistemelorSoftwareTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[1] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[1];
-																																				?>" />
+											<input name="IngineriaSistemelorSoftwareTaxa" style="width: 40px; height:30px;" type="number" value="Ingineria sistemelor software tax&#259;"/>
 
 											<span style="font-size:15px;">Ingineria sistemelor software tax&#259;</span>
 
@@ -1131,12 +1182,7 @@
 
 										<div class="col-md-12 mrg-t10" > 
 
-											<input name="SistemeDistribuiteTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[2] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[2];
-																																				?>" />
+											<input name="SistemeDistribuiteTaxa" style="width: 40px; height:30px;" type="number" value="Sisteme distribuite tax&#259;" />
 
 											<span style="font-size:15px;">Sisteme distribuite tax&#259;</span>
 
@@ -1144,12 +1190,7 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="SecuritateaInformatieiTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[3] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[3];
-																																				?>" />
+											<input name="SecuritateaInformatieiTaxa" style="width: 40px; height:30px;" type="number" value="Securitatea informa&#355;iei tax&#259;" />
 
 											<span style="font-size:15px;">Securitatea informa&#355;iei tax&#259;</span>
 
@@ -1157,12 +1198,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="OptimizareaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[4] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[4];
-																																				?>" />
+											<input name="OptimizareaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="Optimizare computa&#355;ional&#259; tax&#259;" />
 
 											<span style="font-size:15px;">Optimizare computa&#355;ional&#259; tax&#259;</span>
 
@@ -1174,12 +1210,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="LingvistivaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[5] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[5];
-																																				?>" />
+											<input name="LingvistivaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="Lingvistic&#259; computational&#259; tax&#259;" />
 
 											<span style="font-size:15px;">Lingvistic&#259; computational&#259; tax&#259;</span>
 
@@ -1187,12 +1218,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="StudiiAvansateInInformaticaTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[6] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[6];
-																																				?>" />
+											<input name="StudiiAvansateInInformaticaTaxa" style="width: 40px; height:30px;" type="number" value="Studii avansate &#238;n informatic&#259; tax&#259;" />
 
 											<span style="font-size:15px;">Studii avansate &#238;n informatic&#259; tax&#259;</span>
 
@@ -1200,12 +1226,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="IngineriaSoftwareBuget" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[7] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[7];
-																																				?>" />
+											<input name="IngineriaSoftwareBuget" style="width: 40px; height:30px;" type="number" value="Ingineria sistemelor software buget" />
 
 											<span style="font-size:15px;">Ingineria sistemelor software buget</span>
 
@@ -1213,12 +1234,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="SistemeDistribuiteBuget" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[8] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[8];
-																																				?>" />
+											<input name="SistemeDistribuiteBuget" style="width: 40px; height:30px;" type="number" value="Sisteme distribuite buget" />
 
 											<span style="font-size:15px;">Sisteme distribuite buget</span>
 
@@ -1230,12 +1246,7 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="SecuritateaInformatieiBuget" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[9] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[9];
-																																				?>" />
+											<input name="SecuritateaInformatieiBuget" style="width: 40px; height:30px;" type="number" value="Securitatea informa&#355;iei buget" />
 
 											<span style="font-size:15px;">Securitatea informa&#355;iei buget</span>
 
@@ -1243,12 +1254,7 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="OptimizareaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[10] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[10];
-																																				?>" />
+											<input name="OptimizareaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="Optimizare computa&#355;ional&#259; buget" />
 
 											<span style="font-size:15px;">Optimizare computa&#355;ional&#259; buget</span>
 
@@ -1256,12 +1262,7 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="LingvisticaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="<?php 
-																																					if($Preferinte[11] == '') 
-																																						echo '';
-																																					else
-																																						echo $Preferinte[11];
-																																				?>" />
+											<input name="LingvisticaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="Lingvistic&#259; computational&#259; buget" />
 
 											<span style="font-size:15px;">Lingvistic&#259; computational&#259; buget</span>
 
@@ -1269,32 +1270,11 @@
 
 									</div>
 
-									<span style="color:red">
-										<?php 
-											if(isset($_POST['Submit'])) {
-												$Preferinte[1] = $_POST["IngineriaSistemelorSoftwareTaxa"];
-												$Preferinte[2] = $_POST["SistemeDistribuiteTaxa"];
-												$Preferinte[3] = $_POST["SecuritateaInformatieiTaxa"];
-												$Preferinte[4] = $_POST["OptimizareaComputationalaTaxa"];
-												$Preferinte[5] = $_POST["LingvistivaComputationalaTaxa"];
-												$Preferinte[6] = $_POST["StudiiAvansateInInformaticaTaxa"];
-												$Preferinte[7] = $_POST["IngineriaSoftwareBuget"];
-												$Preferinte[8] = $_POST["SistemeDistribuiteBuget"];
-												$Preferinte[9] = $_POST["SecuritateaInformatieiBuget"];
-												$Preferinte[10] = $_POST["OptimizareaComputationalaBuget"];
-												$Preferinte[11] = $_POST["LingvisticaComputationalaBuget"];
-												$vPreferinte = validarePreferinte($Preferinte);
-												if($vPreferinte==0)
-													echo "C&#226;mpuri invalide!";
-											}
-										?>
-									</span>
-
 								</div>
 
 							</li>
-
 							<li class="form-line" data-type="control_address" id="id_3">
+							<br>
 
 									<label class="form-label form-label-left form-label-auto" id="label_3" style="color: #3488CB; font-size:large"> Adresa dvs.</label>
 
@@ -1303,7 +1283,19 @@
 										<table style="width:100%">
 
 											<tbody>
-
+												<tr>
+							                        <td>
+							                          <label class="form-label form-label-left form-label-auto" id="label_3" 
+							                          style="color: gray; font-size:medium; width:25%; display:inline-block"> Domiciliu stabil: </label>
+							                        
+							                          <span style="width:75%">
+							                            <input type="radio" name="group3" id="checkbox1" class="css-checkbox" />
+							                            <label for="checkbox1" class="css-label" style="margin-right:100px">Rural</label>
+							                            <input type="radio" name="group3" id="checkbox2" class="css-checkbox" />
+							                            <label for="checkbox2" class="css-label">Urban</label>
+							                          </span>
+							                        </td>
+							                    </tr> 
 												<tr>
 
 													<td>
@@ -1617,6 +1609,78 @@
 									</div>
 
 							</li>
+							
+							<li class="form-line" data-type="control_cazare" id="id_12">
+				                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Informații despre cazare  </label>
+				                <div class="form-input jf-required cid_1">
+				                  <table  style="width:100%">
+				                    <tbody>
+				                      <tr>
+				                        <td>
+				                          <label class="form-label form-label-left form-label-auto" 
+				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor?  </label>                        
+				                          <span style="width:55%">
+				                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" />
+				                            <label for="checkbox3" class="css-label" style="margin-right:100px">Da</label>
+				                            <input type="radio" name="group5" id="checkbox4" class="css-checkbox" />
+				                            <label for="checkbox4" class="css-label">Nu</label>
+				                          </span>
+				                        </td>
+				                      </tr>
+				                      <tr>
+				                        <td>
+				                          <label class="form-label form-label-left form-label-auto" 
+				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul susținerii interviului?   </label>                        
+				                          <span style="width:55%">
+				                            <input type="radio" name="group6" id="checkbox5" class="css-checkbox" />
+				                            <label for="checkbox5" class="css-label" style="margin-right:100px">Da</label>
+				                            <input type="radio" name="group6" id="checkbox6" class="css-checkbox" />
+				                            <label for="checkbox6" class="css-label">Nu</label>
+				                          </span>
+				                        </td>
+				                      </tr>
+				                    </tbody>
+				                  </table>
+				                </div>
+			              	</li>
+							<li class="form-line" data-type="control_cazare" id="id_13">
+				                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Alte date personale ale candidatului </label>
+				                <div class="form-input jf-required cid_1">
+				                  <table  style="width:100%">
+				                    <tbody>
+				                      <tr>
+				                        <td>
+				                          <label class="form-label form-label-left form-label-auto" 
+				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Candidat care se încadrează în categoria persoanelor cu dizabilități  </label>                        
+				                          <span style="width:55%">
+				                                <input type="radio" name="group4" id="checkbox7" class="css-checkbox" />
+				                                <label for="checkbox7" class="css-label" style="margin-right:100px">Da</label>
+				                                <input type="radio" name="group4" id="checkbox8" class="css-checkbox" />
+				                                <label for="checkbox8" class="css-label">Nu</label>
+				                          </span>
+				                        </td>
+				                      </tr>
+				                      <tr>
+				                        <td>
+				                          <br>
+				                          <span class="form-sub-label-container" style="vertical-align:top; width:30%">
+				                          <select class="form-dropdown form-address-country gen" name="Licenta_Stare_speciala"  data-component="country">
+				                            <option value="">Nicio opţiune</option>                            
+				                            <option value="">Orfan de un părinte</option>
+				                            <option value="">Orfan de ambii părinți</option>
+				                            <option value="">Provenit din case de copii</option>  
+				                            <option value="">Provenit din plasament familial</option>
+				                            <option value="">Provenit din familie monoparentală</option>
+				                          </select>
+				                          <label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Stare socială specială </label>
+				                        </span>
+				                        </td>
+				                      </tr>
+				                    </tbody>
+				                  </table>
+				                </div>
+				            </li>
+						  
 
 							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%">
 

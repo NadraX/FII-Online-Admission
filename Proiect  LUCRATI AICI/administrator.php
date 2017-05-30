@@ -540,7 +540,7 @@
 
                         throw new ErrorException($errstr, 0, $errno, $errfile, $errline);
                     });
-                    $c = oci_connect("ADMITERE1", "ADMITERE1", "localhost/xe");
+                    $c = oci_connect("ADMITERE", "ADMITERE", "localhost/xe");
                     /*$sql= " SELECT f.id,dpc.nume,dpc.prenume,f.creation_date from formular f
                                           join  date_personale_candidat dpc on f.date_personale_candidat_id=dpc.id
                                            join  detalii_aplicare da on f.detaliiaplicare_id=da.id
