@@ -387,6 +387,17 @@
 							$v_Licenta_Nationalitate = $_POST["Master_Nationalitate"];
 							$v_Licenta_Etnie = $_POST["Master_Etnie"];
 							$v_Licenta_Limba_Materna = $_POST["Master_Limba_Materna"];
+							$Preferinte[1] = $_POST["IngineriaSistemelorSoftwareTaxa"];
+							$Preferinte[2] = $_POST["SistemeDistribuiteTaxa"];
+							$Preferinte[3] = $_POST["SecuritateaInformatieiTaxa"];
+							$Preferinte[4] = $_POST["OptimizareaComputationalaTaxa"];
+							$Preferinte[5] = $_POST["LingvistivaComputationalaTaxa"];
+							$Preferinte[6] = $_POST["StudiiAvansateInInformaticaTaxa"];
+							$Preferinte[7] = $_POST["IngineriaSoftwareBuget"];
+							$Preferinte[8] = $_POST["SistemeDistribuiteBuget"];
+							$Preferinte[9] = $_POST["SecuritateaInformatieiBuget"];
+							$Preferinte[10] = $_POST["OptimizareaComputationalaBuget"];
+							$Preferinte[11] = $_POST["LingvisticaComputationalaBuget"];
 						?>
 						<ul>
 
@@ -1107,7 +1118,12 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="IngineriaSistemelorSoftwareTaxa" style="width: 40px; height:30px;" type="number" value="Ingineria sistemelor software tax&#259;"/>
+											<input name="IngineriaSistemelorSoftwareTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[1] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[1];
+																																				?>" />
 
 											<span style="font-size:15px;">Ingineria sistemelor software tax&#259;</span>
 
@@ -1115,7 +1131,12 @@
 
 										<div class="col-md-12 mrg-t10" > 
 
-											<input name="SistemeDistribuiteTaxa" style="width: 40px; height:30px;" type="number" value="Sisteme distribuite tax&#259;" />
+											<input name="SistemeDistribuiteTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[2] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[2];
+																																				?>" />
 
 											<span style="font-size:15px;">Sisteme distribuite tax&#259;</span>
 
@@ -1123,7 +1144,12 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="SecuritateaInformatieiTaxa" style="width: 40px; height:30px;" type="number" value="Securitatea informa&#355;iei tax&#259;" />
+											<input name="SecuritateaInformatieiTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[3] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[3];
+																																				?>" />
 
 											<span style="font-size:15px;">Securitatea informa&#355;iei tax&#259;</span>
 
@@ -1131,7 +1157,12 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="OptimizareaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="Optimizare computa&#355;ional&#259; tax&#259;" />
+											<input name="OptimizareaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[4] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[4];
+																																				?>" />
 
 											<span style="font-size:15px;">Optimizare computa&#355;ional&#259; tax&#259;</span>
 
@@ -1143,7 +1174,12 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="LingvistivaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="Lingvistic&#259; computational&#259; tax&#259;" />
+											<input name="LingvistivaComputationalaTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[5] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[5];
+																																				?>" />
 
 											<span style="font-size:15px;">Lingvistic&#259; computational&#259; tax&#259;</span>
 
@@ -1151,7 +1187,12 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="StudiiAvansateInInformaticaTaxa" style="width: 40px; height:30px;" type="number" value="Studii avansate &#238;n informatic&#259; tax&#259;" />
+											<input name="StudiiAvansateInInformaticaTaxa" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[6] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[6];
+																																				?>" />
 
 											<span style="font-size:15px;">Studii avansate &#238;n informatic&#259; tax&#259;</span>
 
@@ -1159,7 +1200,12 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="IngineriaSoftwareBuget" style="width: 40px; height:30px;" type="number" value="Ingineria sistemelor software buget" />
+											<input name="IngineriaSoftwareBuget" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[7] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[7];
+																																				?>" />
 
 											<span style="font-size:15px;">Ingineria sistemelor software buget</span>
 
@@ -1167,7 +1213,12 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="SistemeDistribuiteBuget" style="width: 40px; height:30px;" type="number" value="Sisteme distribuite buget" />
+											<input name="SistemeDistribuiteBuget" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[8] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[8];
+																																				?>" />
 
 											<span style="font-size:15px;">Sisteme distribuite buget</span>
 
@@ -1179,7 +1230,12 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="SecuritateaInformatieiBuget" style="width: 40px; height:30px;" type="number" value="Securitatea informa&#355;iei buget" />
+											<input name="SecuritateaInformatieiBuget" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[9] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[9];
+																																				?>" />
 
 											<span style="font-size:15px;">Securitatea informa&#355;iei buget</span>
 
@@ -1187,7 +1243,12 @@
 
 										<div class="col-md-12 mrg-t10">
 
-											<input name="OptimizareaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="Optimizare computa&#355;ional&#259; buget" />
+											<input name="OptimizareaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[10] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[10];
+																																				?>" />
 
 											<span style="font-size:15px;">Optimizare computa&#355;ional&#259; buget</span>
 
@@ -1195,13 +1256,39 @@
 
 										<div class="col-md-12 mrg-t10" >
 
-											<input name="LingvisticaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="Lingvistic&#259; computational&#259; buget" />
+											<input name="LingvisticaComputationalaBuget" style="width: 40px; height:30px;" type="number" value="<?php 
+																																					if($Preferinte[11] == '') 
+																																						echo '';
+																																					else
+																																						echo $Preferinte[11];
+																																				?>" />
 
 											<span style="font-size:15px;">Lingvistic&#259; computational&#259; buget</span>
 
 										</div>
 
 									</div>
+
+									<span style="color:red">
+										<?php 
+											if(isset($_POST['Submit'])) {
+												$Preferinte[1] = $_POST["IngineriaSistemelorSoftwareTaxa"];
+												$Preferinte[2] = $_POST["SistemeDistribuiteTaxa"];
+												$Preferinte[3] = $_POST["SecuritateaInformatieiTaxa"];
+												$Preferinte[4] = $_POST["OptimizareaComputationalaTaxa"];
+												$Preferinte[5] = $_POST["LingvistivaComputationalaTaxa"];
+												$Preferinte[6] = $_POST["StudiiAvansateInInformaticaTaxa"];
+												$Preferinte[7] = $_POST["IngineriaSoftwareBuget"];
+												$Preferinte[8] = $_POST["SistemeDistribuiteBuget"];
+												$Preferinte[9] = $_POST["SecuritateaInformatieiBuget"];
+												$Preferinte[10] = $_POST["OptimizareaComputationalaBuget"];
+												$Preferinte[11] = $_POST["LingvisticaComputationalaBuget"];
+												$vPreferinte = validarePreferinte($Preferinte);
+												if($vPreferinte==0)
+													echo "C&#226;mpuri invalide!";
+											}
+										?>
+									</span>
 
 								</div>
 

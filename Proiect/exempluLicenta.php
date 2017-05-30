@@ -5,6 +5,24 @@
 		return $d && $d->format('Y-m-d') === $date;
 	}
 
+	function validarePreferinte($preferinte)
+	{
+        for($i=1;$i<12;$i++){
+            $frecv[$i]=0;
+			if($preferinte[$i]<1||$preferinte[$i]>11)
+				return o;
+		}
+
+        for($i=1;$i<12;$i++)
+            $frecv[$preferinte[$i]]++;
+
+        for($i=1;$i<12;$i++)
+            if($frecv[$i]==0||$frecv[$i]>1)
+                return 0;
+				
+        return 1;
+    }
+
 	function validCNP($p_cnp)  // V
 	{  
 		// CNP must have 13 characters
