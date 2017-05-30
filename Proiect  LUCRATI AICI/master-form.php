@@ -2018,109 +2018,68 @@
 
 		</div>
 
-		<footer class="footer-distributed">
+			<footer class="footer-distributed">
 
 			<div class="footer-left">
-
 				<h3 class="headernou2">Admitere <span> FII</span></h3>
-
 				<p class="footer-links">
-
-					<a href="DespreFII.html">Despre Fii</a>
-
+					<a href="DespreFII.html">Despre FII</a>
+					·
 					<a href="paginaAdmitere.html">Admitere</a>
-
+					·
 					<a href="IntrebariFrecvente.html">&#206;ntrebari frecvente</a>
-
 					·
-
-					·
-
 					<a href="contact.html">Contact</a>	
-
 				</p>
-
 			</div>
 
-
-
-			<h3 class="headernou2">Contact</h3>
-
 			<div class="footer-center">
-
-				<i class="fa fa-map-marker" id="bloc1"></i>
-
+					<h3 class="headernou2">Contact</h3>
 				<div>
-
-					<p>Iasi, Rom&#226;nia</p>
-				
-				</div>
-
-				<div id="bloc2">
-
-					<p>&nbsp&nbspStrada General Henri Mathias Barthelot 16</p>
-
+					<i class="fa fa-map-marker" id="bloc1"></i>
+					<div id="bloc2"><p>&nbsp&nbspStrada General Henri Mathias Barthelot 16</p>
+					<p>Iasi, Rom&#226;nia</p></div>
 				</div>
 
 				<div>
-
-					<p>&nbsp&nbsp0232 201 102</p>
-
 					<i class="fa fa-phone"></i>
-
+					<p>&nbsp&nbsp0232 201 102</p>
 				</div>
 
-				<i class="fa fa-envelope"></i>
-
 				<div>
-
+					<i class="fa fa-envelope"></i>
 					<p class="footer-links"><a href="secretariat AT info.uaic.ro">&nbsp&nbspsecretariat AT info.uaic.ro</a></p>
-
 				</div>
 
 			</div>
 
 			<div class="footer-right">
-
 				<h3 class="headernou">Linkuri</h3>
-
 				<div class="footer-links">
-
-					<img class="footer_img grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
-
-					<a href="https://www.info.uaic.ro/bin/Main/"><p id="bloc2" class="footer-links"> &nbsp&nbspFacultatea de informatic&#259; Iasi<p></a>
-
+					 <img class="footer_img grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
+					 <a href="https://www.info.uaic.ro/bin/Main/"><p id="bloc2" class="footer-links"> &nbsp&nbspFacultatea de informatic&#259; Iasi<p></a>
 				</div>
-
 				<div class="footer-links">
-
-					<img class="footer_img grayscale" src="imagini/logo.png" alt="uaic" id="bloc1" />
-
-					<a href="http://www.uaic.ro/"><p id="bloc2" > &nbsp&nbspUAIC<p></a>
-
+					 <img class="footer_img grayscale" src="imagini/logo.png" alt="uaic" id="bloc1" />
+					 <a href="http://www.uaic.ro/"><p id="bloc2" > &nbsp&nbspUAIC<p></a>
 				</div>
-
-					
-
+				
 				<div class="footer-links">
-
-					<a href="https://www.facebook.com/FacultateaDeInformaticaUAICIasi/?fref=ts"><p id="bloc2"> &nbsp&nbspFacebook-ul faculta&#355;ii de informatic&#259;<p></a>
-
-					<img class="footer_img grayscale" src="imagini/facebook-icon.png" alt="fb" id="bloc1" >
-
-
+				<img class="footer_img grayscale" src="imagini/facebook-icon.png" alt="fb" id="bloc1" >
+				<a href="https://www.facebook.com/FacultateaDeInformaticaUAICIasi/?fref=ts"><p id="bloc2"> &nbsp&nbspFacebook-ul faculta&#355;ii de informatic&#259;<p></a>
 				</div>
-
+				
+	
+				
+			</div>
+			
+			<div class="footer-4"> <img class="footer_img2 grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
 			</div>
 
-			<div class="footer-4"> <img class="footer_img2 grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/></div>
-
-			<hr class="hr_footer">
 			
+			<hr class="hr_footer">
 				<p class="hr_text">&copy; 2017 Grupa B3 Facultatea de Informatic&#259; Iasi</p>
-				
 			</hr>
-
 		</footer>
 
 	</body>
