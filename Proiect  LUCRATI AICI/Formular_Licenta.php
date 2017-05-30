@@ -313,7 +313,7 @@
 											<p>V&#259; rug&#259;m completa&#355;i toate c&#226;mpurile de mai jos.</p>
 											<p>Pentru completarea notelor se acceptă valori cu virgulă (ex: 9,54)</p>
 											<p>În câmpul "Notă la Matematică sau Informatică" se va pune nota de la Bacalaureat cea mai mare dintre cele doua</p>
-											<p>La uploadarea diplomei şi a certificatului se va încârca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
+											<p>La uploadarea diplomei şi a certificatului se va încărca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
 										</div>
 									</div>
 								</div>
@@ -673,7 +673,7 @@
 											</span>
 											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> Eliberat de </label>
 										</span>
-										<div  class="form-input jf-required" style="vertical-align:top; width:21%;padding:0;margin:0;height:40px">
+										<div  class="form-input jf-required" style="vertical-align:top; width:25%;padding:0;margin:0;height:40px">
 											<div data-wrapper-react="true">
 												<span class="form-sub-label-container" style="vertical-align:top; ">
 													<select style="height:40px;" name="Licenta_Buletin_Luna"  class="form-dropdown" data-component="birthdate-month">

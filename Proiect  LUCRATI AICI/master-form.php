@@ -371,7 +371,7 @@
 
 											<p>În câmpul "Notă la Matematică sau Informatică" se va pune nota de la Bacalaureat cea mai mare dintre cele doua<p>
 
-											<p>La uploadarea diplomei şi a certificatului se va încârca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
+											<p>La uploadarea diplomei şi a certificatului se va încărca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
 
 										</div>
 
