@@ -362,7 +362,7 @@ function getMaterieTest($id_formular)
 function getNumeLiceu($id_formular)
 {
     $c = oci_connect("ADMITERE", "ADMITERE", "localhost/xe");
-    $s = oci_parse($c, " begin  select i.nume into :bv from institutie i
+    $s = oci_parse($c, " begin  select i.nume_institutie into :bv from institutie i
                                                  join pregatiri_anterioare pa on i.id=pa.institutie_id
                                                  join formular f on f.id=pa.formular_id
                                                  where f.id='$id_formular'; end; ");
