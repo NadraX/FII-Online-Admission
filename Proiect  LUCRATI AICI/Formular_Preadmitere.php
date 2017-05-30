@@ -19,7 +19,18 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
-    
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var $logo = $('#scroll');
+        var $logo2 = $('#no-scroll');
+        var $head2 = $('#header');
+        $(document).scroll(function() {
+            $head2.css({display: $(this).scrollTop() < 50? "block":"none"});
+            $logo2.css({display: $(this).scrollTop() < 50? "block":"none"});
+            $logo.css({display: $(this).scrollTop() > 100? "block":"none"});
+        });
+    });
+    </script>
     <style type="text/css">
         .form-line{
             padding-top:12px;
@@ -269,13 +280,12 @@
 											Examen preadmitere
 										</h1>
 										<div id="subHeader_34" class="form-subHeader">
-										  <br>
-                      <br>
+										
 											<p>V&#259; rug&#259;m completa&#355;i toate c&#226;mpurile de mai jos.</p>
+											<p>Pentru completarea notelor se acceptă valori cu virgulă (ex: 9,54)</p>
+											<p>În câmpul "Notă la Matematică sau Informatică" se va pune nota de la Bacalaureat cea mai mare dintre cele doua</p>
 											<p>La uploadarea diplomei şi a certificatului se va încârca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
-										  <br>
-                      <br>
-                    </div>
+										</div>
 									</div>
 								</div>
 								<div class="col-md-4">
@@ -1029,7 +1039,7 @@
 									</table>
 								</div>
 							</li>
-							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px">
+							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%">
 								<label class="form-label form-label-left form-label-auto" id="label_6"   style="color: #3488CB; font-size:large">Contact </label>
 								<div id="cid_6" class="form-input jf-required" style="width:100%">
 									<div data-wrapper-react="true" style="width:100%">
@@ -1054,7 +1064,6 @@
 											<label class="form-sub-label" for="input_6_phone"  style="min-height:13px;"> Num&#259;r de telefon </label>
 										</span>
 									</div>
-                  <br>
 									<div data-wrapper-react="true">
 										<span class="form-sub-label-container" style="vertical-align:top; width:100%">
 											<input type="email" id="input_9" name="Licenta_Email" class="form-textbox validate[Email]" size="30" placeholder="ex: adresamea@yahoo.com" data-component="email" style="width:100%;height:40px" value="<?php 
@@ -1245,9 +1254,7 @@
 										<span class="form-sub-label-container" style="vertical-align:top;">
 											<label class="form-label form-label-left form-label-auto" id="label_9" for="input_9" style="color: #3488CB; font-size:large">Uploadare diplome, certificate (format pdf)</label>
 											<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px" >
-												<a href="YourFile.pdf">
-                          <img src="imagini/descarca.jpg" style="width:30px; height:30px; margin-left:10px;"/>
-                          <b>Upload aici</b></a> 
+												<a href="YourFile.pdf">Upload aici</a> 
 											</object>
 										</span> 
 									</div>
@@ -1395,6 +1402,14 @@
     	$numaratoare3=oci_result($statement_4_numaratoare, "COUNT") + 1;
 	}
 
+  $statement_5_numaratoare = oci_parse($connection, "select max(id) as COUNT from detalii_aplicare");
+      oci_execute($statement_5_numaratoare);
+      
+   while (oci_fetch($statement_5_numaratoare)) {
+      $numaratoare5=oci_result($statement_5_numaratoare, "COUNT") + 1;
+  }
+
+
 
 
       if($vLicenta_CNP !=0 and $vLicenta_Apartament != 0 and $vLicenta_Bloc != 0 and $vLicenta_Buletin_Eliberat_De != 0 and $vLicenta_Cod_Postal !=0
@@ -1492,18 +1507,20 @@
               error_reporting(E_ALL); 
               }
 
-			$statement2 = oci_parse($connection, "insert into institutie (id, tip_institutie, tara, judet, localitate) values (
+			$statement2 = oci_parse($connection, "insert into institutie (id, tip_institutie, tara, judet, localitate, nume_institutie) values (
 				:id,
 				:nume,
 				:tara,
 				:judet,
-				:localitate)");
+				:localitate,
+                           :nume_liceu)");
 
 			oci_bind_by_name($statement2, ':id', $numaratoare2);
 			oci_bind_by_name($statement2, ':nume', $v_liceu);
 			oci_bind_by_name($statement2, ':tara', $v_Licenta_Tara);
 			oci_bind_by_name($statement2, ':judet', $v_Licenta_Judet);
 			oci_bind_by_name($statement2, ':localitate', $v_Licenta_Localitate);
+                    oci_bind_by_name($statement2, ':nume_liceu', $_POST['liceu']);
 
 			if (!$statement2) {
     			$e = oci_error($connection);
@@ -1536,12 +1553,40 @@
     			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 			}
 
+                  $statement6 = oci_parse($connection, "insert into detalii_aplicare(id, tip_aplicare, proba_concurs, tip_frecventa, scutit_plata_camin) values (
+                    :id,
+                    'preadmitere',
+                    :test_ales,
+                    1,
+                    0) 
+                    ");
 
-                   $statement3 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, date_personale_candidat_id, datemedieconcurs_id, creation_date) values (
+                  oci_bind_by_name($statement6, ':id', $numaratoare5);
+                  oci_bind_by_name($statement6, ':test_ales', $_POST['proba']);
+
+                  if (!$statement6) {
+                        $e = oci_error($connection);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+                    }
+
+                    $result5= oci_execute($statement6);
+
+                    if(!$result5){
+                      $e = oci_error($statement6);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+                    }
+
+
+                   $statement3 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, datemedieconcurs_id,  date_personale_candidat_id, data_ultimei_modificari, data_compozitiei, validat, persoana_ultima_modificare, creation_date, last_update_date) values (
                         :id,
                         :id2,
                         :id3,
-						:id4,
+			    :id4,
+                        current_timestamp,
+                        current_timestamp,
+                        0,
+                        :nume||' '||:prenume,
+                        current_timestamp,
                         current_timestamp)
                         ");
 
@@ -1549,6 +1594,8 @@
 						oci_bind_by_name($statement3, ':id2', $numaratoare4);
 						oci_bind_by_name($statement3, ':id3', $numaratoare4);
 						oci_bind_by_name($statement3, ':id4', $numaratoare4);
+                                         oci_bind_by_name($statement3, ':nume', $_POST['Licenta_Numele_De_Familie']);
+                                         oci_bind_by_name($statement3, ':prenume', $_POST['Licenta_Prenumele']);
 
                    if (!$statement3) {
                         $e = oci_error($connection);

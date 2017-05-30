@@ -1289,9 +1289,9 @@
 							                          style="color: gray; font-size:medium; width:25%; display:inline-block"> Domiciliu stabil: </label>
 							                        
 							                          <span style="width:75%">
-							                            <input type="radio" name="group3" id="checkbox1" class="css-checkbox" />
+							                            <input type="radio" name="group3" id="checkbox1" class="css-checkbox" value="Rural" />
 							                            <label for="checkbox1" class="css-label" style="margin-right:100px">Rural</label>
-							                            <input type="radio" name="group3" id="checkbox2" class="css-checkbox" />
+							                            <input type="radio" name="group3" id="checkbox2" class="css-checkbox" value="Urban" />
 							                            <label for="checkbox2" class="css-label">Urban</label>
 							                          </span>
 							                        </td>
@@ -1620,9 +1620,9 @@
 				                          <label class="form-label form-label-left form-label-auto" 
 				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor?  </label>                        
 				                          <span style="width:55%">
-				                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" />
+				                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" value="1" />
 				                            <label for="checkbox3" class="css-label" style="margin-right:100px">Da</label>
-				                            <input type="radio" name="group5" id="checkbox4" class="css-checkbox" />
+				                            <input type="radio" name="group5" id="checkbox4" class="css-checkbox" value="0" />
 				                            <label for="checkbox4" class="css-label">Nu</label>
 				                          </span>
 				                        </td>
@@ -1632,9 +1632,9 @@
 				                          <label class="form-label form-label-left form-label-auto" 
 				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul susținerii interviului?   </label>                        
 				                          <span style="width:55%">
-				                            <input type="radio" name="group6" id="checkbox5" class="css-checkbox" />
+				                            <input type="radio" name="group6" id="checkbox5" class="css-checkbox" value="1" />
 				                            <label for="checkbox5" class="css-label" style="margin-right:100px">Da</label>
-				                            <input type="radio" name="group6" id="checkbox6" class="css-checkbox" />
+				                            <input type="radio" name="group6" id="checkbox6" class="css-checkbox" value="0" />
 				                            <label for="checkbox6" class="css-label">Nu</label>
 				                          </span>
 				                        </td>
@@ -1653,9 +1653,9 @@
 				                          <label class="form-label form-label-left form-label-auto" 
 				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Candidat care se încadrează în categoria persoanelor cu dizabilități  </label>                        
 				                          <span style="width:55%">
-				                                <input type="radio" name="group4" id="checkbox7" class="css-checkbox" />
+				                                <input type="radio" name="group4" id="checkbox7" class="css-checkbox" value="1" />
 				                                <label for="checkbox7" class="css-label" style="margin-right:100px">Da</label>
-				                                <input type="radio" name="group4" id="checkbox8" class="css-checkbox" />
+				                                <input type="radio" name="group4" id="checkbox8" class="css-checkbox" value="0" />
 				                                <label for="checkbox8" class="css-label">Nu</label>
 				                          </span>
 				                        </td>
@@ -1665,12 +1665,12 @@
 				                          <br>
 				                          <span class="form-sub-label-container" style="vertical-align:top; width:30%">
 				                          <select class="form-dropdown form-address-country gen" name="Licenta_Stare_speciala"  data-component="country">
-				                            <option value="">Nicio opţiune</option>                            
-				                            <option value="">Orfan de un părinte</option>
-				                            <option value="">Orfan de ambii părinți</option>
-				                            <option value="">Provenit din case de copii</option>  
-				                            <option value="">Provenit din plasament familial</option>
-				                            <option value="">Provenit din familie monoparentală</option>
+				                            <option value="0">Nicio opţiune</option>                            
+				                            <option value="Orfan de un parinte">Orfan de un părinte</option>
+				                            <option value="Orfan de ambii parinti">Orfan de ambii părinți</option>
+				                            <option value="Provenit din case de copii">Provenit din case de copii</option>  
+				                            <option value="Provenit din plasament familial">Provenit din plasament familial</option>
+				                            <option value="Provenit din familie monoparentala">Provenit din familie monoparentală</option>
 				                          </select>
 				                          <label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Stare socială specială </label>
 				                        </span>
@@ -1682,13 +1682,13 @@
 				            </li>
 						  
 
-							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px;">
+							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%">
 
 									<label class="form-label form-label-left form-label-auto"  style="color: #3488CB; font-size:large">Contact </label>
 
-									<div id="cid_6" class="form-input jf-required" style="width:100%; display:inline-block">
+									<div id="cid_6" class="form-input jf-required" style="width:100%">
 
-										<div data-wrapper-react="true" style="width:100%;" >
+										<div data-wrapper-react="true" style="width:100%">
 
 											<span class="form-sub-label-container" style="vertical-align:top; width:100%">
 
@@ -1715,8 +1715,8 @@
 											</span>
 
 										</div>
-										<br>
-										<div data-wrapper-react="true" style="width:100%;">
+
+										<div data-wrapper-react="true">
 
 											<span class="form-sub-label-container" style="vertical-align:top; width:100%">
 
@@ -1974,10 +1974,10 @@
 
 												<label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large">Uploadare diplome,certificate (format pdf)</label>
 
-												<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" style="display:inline-block;font-size:30px">
-													<a href="YourFile.pdf">
-													<img src="imagini/descarca.jpg" style="width:30px; height:30px; margin-left:10px;"/>
-													<b>Upload aici</b></a>
+												<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px">
+
+													<a href="YourFile.pdf">Upload aici</a>
+
 												</object>
 
 											</span>
@@ -2184,15 +2184,23 @@
     	$numaratoare5=oci_result($statement_5_numaratoare, "COUNT") + 1;
 	}
 
+	$statement_6_numaratoare = oci_parse($connection, "select max(id) as COUNT from detalii_aplicare");
+			oci_execute($statement_6_numaratoare);
+			
+	 while (oci_fetch($statement_6_numaratoare)) {
+    	$numaratoare6=oci_result($statement_6_numaratoare, "COUNT") + 1;
+	}
+
       if($vNumele_De_Familie != 0 and $vLicenta_Initiala_Tata != 0 and $vLicenta_Email != 0 and $vLicenta_Telefon != 0 and $vLicenta_Cod_Postal != 0 and $vLicenta_Localitate != 0 and $vLicenta_Apartament != 0 and $vLicenta_Etaj != 0 and $vLicenta_Scara != 0 and $vLicenta_Bloc != 0 and $vLicenta_Numar != 0 and $vLicenta_Strada != 0 and $vLicenta_Nota_MI != 0 and $vLicenta_Medie_BAC != 0 and $vLicenta_Buletin_Eliberat_De != 0 and $vLicenta_Numar_Buletin != 0 and $vLicenta_Serie_Buletin != 0 and $vLicenta_Tip_Buletin != 0 and $vLicenta_CNP != 0 and $vLicenta_Prenumele != 0 and $vLicenta_PrenumeMama !=0 and $vLicenta_PrenumeTata !=0){
           
           ini_set('display_errors', 1); 
             error_reporting(E_ALL);
 
-			$statement1 = oci_parse($connection, "insert into date_personale_candidat (id, cnp, nume, prenume, initiala_tata, sex, starecivila, cetatenie, prenume_mama, prenume_tata, telefon, email, data_nasterii, nationalitate, etnie, limba_materna, tip_buletin, serie_buletin, numar_buletin, buletin_eliberat_de, buletin_data_eliberarii, tara, judet, localitate, strada, numar_domiciliu, bloc_domiciliu, etaj_domiciliu, scara_domiciliu, apartament_domiciliu, cod_postal_domiciliu)  values (
+			 $statement1 = oci_parse($connection, "insert into date_personale_candidat (id, cnp, nume, nume_actual, prenume, initiala_tata, sex, starecivila, cetatenie, prenume_mama, prenume_tata, telefon, email, data_nasterii, nationalitate, etnie, limba_materna, tip_buletin, serie_buletin, numar_buletin, buletin_eliberat_de, buletin_data_eliberarii, tara, judet, localitate, domiciliu_stabil, strada, numar_domiciliu, bloc_domiciliu, etaj_domiciliu, scara_domiciliu, apartament_domiciliu, cod_postal_domiciliu)  values (
             :id,
             :CNP,
             :nume,
+            :nume_actual,
             :prenume,
             :initialaTata, 
             :sex,
@@ -2203,7 +2211,7 @@
             :telefon,
             :email,
             to_date(:zi||'-'||:luna||'-'||:an, 'dd-mm-yyyy'),
-            :nationalitate,
+            'romana',
             :etnie,
             :limbaMaterna,
             :tipBuletin,
@@ -2214,16 +2222,18 @@
             :tara,
             :judet,
             :localitate,
+            :domiciliu_stabil,
             :strada,
             :numar_domiciliu,
             :bloc_domiciliu,
             :etaj_domiciliu,
-			:scara_domiciliu,
+            :scara_domiciliu,
             :apartament_domiciliu,
             :cod_postal_domiciliu)");
 
-			oci_bind_by_name($statement1, ':id', $numaratoare1);
-            oci_bind_by_name($statement1, ':nume', $v_Numele_De_Familie);
+            oci_bind_by_name($statement1, ':id', $numaratoare1);
+            oci_bind_by_name($statement1, ':nume', $_POST['Master_Numele_De_Familie_La_nastere']);
+            oci_bind_by_name($statement1, ':nume_actual', $_POST['Master_Numele_De_Familie']);
             oci_bind_by_name($statement1, ':CNP', $v_Licenta_CNP);
             oci_bind_by_name($statement1, ':prenume', $v_Licenta_Prenumele);
             oci_bind_by_name($statement1, ':initialaTata', $v_Licenta_Initiala_Tata);
@@ -2233,13 +2243,12 @@
             oci_bind_by_name($statement1, ':prenumeMama', $v_Licenta_Prenume_Mama);
             oci_bind_by_name($statement1, ':prenumeTata', $v_Licenta_Prenume_Tata);
             oci_bind_by_name($statement1, ':telefon', $v_Licenta_Telefon);
-            oci_bind_by_name($statement1, ':email', $v_Licenta_Email);
+            oci_bind_by_name($statement1,':email', $v_Licenta_Email);
 
             oci_bind_by_name($statement1, ':zi', $v_data_nastere_zi);
             oci_bind_by_name($statement1, ':luna', $v_data_nastere_luna);
             oci_bind_by_name($statement1, ':an', $v_data_nastere_an);
 
-            oci_bind_by_name($statement1, ':nationalitate', $v_Licenta_Nationalitate);
             oci_bind_by_name($statement1, ':etnie', $v_Licenta_Etnie);
             oci_bind_by_name($statement1, ':limbaMaterna', $v_Licenta_Limba_Materna);
             oci_bind_by_name($statement1, ':tipBuletin', $v_Licenta_Tip_Buletin);
@@ -2254,6 +2263,7 @@
             oci_bind_by_name($statement1, ':tara', $v_Licenta_Tara);
             oci_bind_by_name($statement1, ':judet', $v_Licenta_Judet);
             oci_bind_by_name($statement1, ':localitate', $v_Licenta_Localitate);
+            oci_bind_by_name($statement1, ':domiciliu_stabil', $_POST['group3']);
             oci_bind_by_name($statement1, ':strada', $v_Licenta_Strada);
             oci_bind_by_name($statement1, ':numar_domiciliu', $v_Licenta_Numar);
             oci_bind_by_name($statement1, ':bloc_domiciliu', $v_Licenta_Bloc);
@@ -2275,18 +2285,20 @@
               error_reporting(E_ALL); 
               }	
 
-			$statement2 = oci_parse($connection, "insert into institutie (id, tip_institutie, tara, judet, localitate) values (
+			$statement2 = oci_parse($connection, "insert into institutie (id, tip_institutie, tara, judet, localitate, nume_institutie) values (
 				:id,
 				:nume,
 				:tara,
 				:judet,
-				:localitate)");
+				:localitate,
+				:nume_institutie)");
 
 			oci_bind_by_name($statement2, ':id', $numaratoare2);
 			oci_bind_by_name($statement2, ':nume', $v_facultate);
 			oci_bind_by_name($statement2, ':tara', $v_Licenta_Tara);
 			oci_bind_by_name($statement2, ':judet', $v_Licenta_Judet);
 			oci_bind_by_name($statement2, ':localitate', $v_Licenta_Localitate);
+			oci_bind_by_name($statement2, ':nume_institutie', $_POST['Master_Liceu']);
 
 			if (!$statement2) {
     			$e = oci_error($connection);
@@ -2320,37 +2332,52 @@
     			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 			}
 
-			$statement10 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, datemedieconcurs_id,  date_personale_candidat_id, creation_date) values (
-                        :id,
-                        :id2,
-                        :id3,
-                    	:id4,
-                        current_timestamp)
-                        ");
+			$v_licenta_stare_speciala = $_POST['Licenta_Stare_speciala'];
+			$v_licenta = $_POST['group4'];
 
-					oci_bind_by_name($statement10, ':id', $numaratoare5);
-					oci_bind_by_name($statement10, ':id2', $numaratoare5);
-					oci_bind_by_name($statement10, ':id3', $numaratoare5);
-					oci_bind_by_name($statement10, ':id4', $numaratoare5);			
+	    $statement5 = oci_parse($connection, "insert into detalii_aplicare values (
+	    	:id,
+	    	'master',
+	    	'nementionat',
+	    	:preferinta_limba,
+	    	1,
+	    	'nementionat',
+	    	:stare_speciala_alegere,
+	    	:stare_speciala,
+	    	0,
+	    	'nementionat',
+		0,
+	    	:cazare_studii,
+	    	:cazare_examen)
+	    	");
 
-                   if (!$statement10) {
+
+	    oci_bind_by_name($statement5, ':id', $numaratoare6);
+	    oci_bind_by_name($statement5, ':preferinta_limba', $_POST['Master_Limba_Aleasa']);
+	    oci_bind_by_name($statement5, ':stare_speciala_alegere', $_POST['group4']);
+	    oci_bind_by_name($statement5, ':stare_speciala', $_POST['Licenta_Stare_speciala']);
+	    oci_bind_by_name($statement5, ':cazare_studii', $_POST['group5']);
+	    oci_bind_by_name($statement5, ':cazare_examen', $_POST['group6']);
+
+	    if (!$statement5) {
                         $e = oci_error($connection);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
                     }
 
-                    $result10= oci_execute($statement10);
+                    $result5= oci_execute($statement5);
 
-                    if(!$result10){
-                      $e = oci_error($statement10);
+                    if(!$result5){
+                      $e = oci_error($statement5);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-					}
+	      }
+
 
 			if($v_preferinta1 == 1){
 				$statement4 = oci_parse($connection, "insert into preferinte_master (id, preferinta_1) values (
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2370,7 +2397,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2390,7 +2417,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2410,7 +2437,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2430,7 +2457,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2450,7 +2477,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2470,7 +2497,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2490,7 +2517,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2510,7 +2537,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2530,7 +2557,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2550,7 +2577,7 @@
 					:id,
 					'Ingineria sistemelor software')");
 
-				oci_bind_by_name($statement4, ':id', $numaratoare4);
+				oci_bind_by_name($statement4, ':id', $numaratoare3);
 
 				if (!$statement4) {
     			$e = oci_error($connection);
@@ -2568,7 +2595,7 @@
 			if($v_preferinta2 == 1){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2586,7 +2613,7 @@
 			else if($v_preferinta2 == 2){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2604,7 +2631,7 @@
 			else if($v_preferinta2 == 3){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2622,7 +2649,7 @@
 			else if($v_preferinta2 == 4){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2640,7 +2667,7 @@
 			else if($v_preferinta2 == 5){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2658,7 +2685,7 @@
 			else if($v_preferinta2 == 6){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2676,7 +2703,7 @@
 			else if($v_preferinta2 == 7){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2694,7 +2721,7 @@
 			else if($v_preferinta2 == 8){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2712,7 +2739,7 @@
 			else if($v_preferinta2 == 9){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2730,7 +2757,7 @@
 			else if($v_preferinta2 == 10){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2748,7 +2775,7 @@
 			else if($v_preferinta2 == 11){
 				$statement5 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Sisteme distribuite taxa' where id = :id");
 
-				oci_bind_by_name($statement5, ':id', $numaratoare4);
+				oci_bind_by_name($statement5, ':id', $numaratoare3);
 
 				if (!$statement5) {
     			$e = oci_error($connection);
@@ -2766,7 +2793,7 @@
 			if($v_preferinta3 == 1){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2784,7 +2811,7 @@
 			else if($v_preferinta3 == 2){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2802,7 +2829,7 @@
 			else if($v_preferinta3 == 3){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2820,7 +2847,7 @@
 			else if($v_preferinta3 == 4){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2838,7 +2865,7 @@
 			else if($v_preferinta3 == 5){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2856,7 +2883,7 @@
 			else if($v_preferinta3 == 6){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2874,7 +2901,7 @@
 			else if($v_preferinta3 == 7){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2892,7 +2919,7 @@
 			else if($v_preferinta3 == 8){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2910,7 +2937,7 @@
 			else if($v_preferinta3 == 9){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2928,7 +2955,7 @@
 			else if($v_preferinta3 == 10){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2946,7 +2973,7 @@
 			else if($v_preferinta3 == 11){
 				$statement6 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Securitatea informatie taxa' where id = :id");
 
-				oci_bind_by_name($statement6, ':id', $numaratoare4);
+				oci_bind_by_name($statement6, ':id', $numaratoare3);
 
 				if (!$statement6) {
     			$e = oci_error($connection);
@@ -2964,7 +2991,7 @@
 			if($v_preferinta4 == 1){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -2982,7 +3009,7 @@
 			else if($v_preferinta4 == 2){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3000,7 +3027,7 @@
 			else if($v_preferinta4 == 3){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3018,7 +3045,7 @@
 			else if($v_preferinta4 == 4){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3036,7 +3063,7 @@
 			else if($v_preferinta4 == 5){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3054,7 +3081,7 @@
 			else if($v_preferinta4 == 6){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3072,7 +3099,7 @@
 			else if($v_preferinta4 == 7){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3090,7 +3117,7 @@
 			else if($v_preferinta4 == 8){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3108,7 +3135,7 @@
 			else if($v_preferinta4 == 9){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3126,7 +3153,7 @@
 			else if($v_preferinta4 == 10){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3144,7 +3171,7 @@
 			else if($v_preferinta4 == 11){
 				$statement7 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Optimizare computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement7, ':id', $numaratoare4);
+				oci_bind_by_name($statement7, ':id', $numaratoare3);
 
 				if (!$statement7) {
     			$e = oci_error($connection);
@@ -3162,7 +3189,7 @@
 			if($v_preferinta5 == 1){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3180,7 +3207,7 @@
 			else if($v_preferinta5 == 2){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3198,7 +3225,7 @@
 			else if($v_preferinta5 == 3){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3216,7 +3243,7 @@
 			else if($v_preferinta5 == 4){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3234,7 +3261,7 @@
 			else if($v_preferinta5 == 5){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3252,7 +3279,7 @@
 			else if($v_preferinta5 == 6){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3270,7 +3297,7 @@
 			else if($v_preferinta5 == 7){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3288,7 +3315,7 @@
 			else if($v_preferinta5 == 8){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3306,7 +3333,7 @@
 			else if($v_preferinta5 == 9){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3324,7 +3351,7 @@
 			else if($v_preferinta5 == 10){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3342,7 +3369,7 @@
 			else if($v_preferinta5 == 11){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Lingvistica computationala taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3360,7 +3387,7 @@
 			if($v_preferinta6 == 1){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3378,7 +3405,7 @@
 			else if($v_preferinta6 == 2){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3396,7 +3423,7 @@
 			else if($v_preferinta6 == 3){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3414,7 +3441,7 @@
 			else if($v_preferinta6 == 4){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3432,7 +3459,7 @@
 			else if($v_preferinta6 == 5){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3450,7 +3477,7 @@
 			else if($v_preferinta6 == 6){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3468,7 +3495,7 @@
 			else if($v_preferinta6 == 7){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3486,7 +3513,7 @@
 			else if($v_preferinta6 == 8){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3504,7 +3531,7 @@
 			else if($v_preferinta6 == 9){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3522,7 +3549,7 @@
 			else if($v_preferinta6 == 10){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3540,7 +3567,7 @@
 			else if($v_preferinta6 == 11){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Studii avansate in informatica taxa' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3558,7 +3585,7 @@
 			if($v_preferinta7 == 1){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3576,7 +3603,7 @@
 			else if($v_preferinta7 == 2){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3594,7 +3621,7 @@
 			else if($v_preferinta7 == 3){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3612,7 +3639,7 @@
 			else if($v_preferinta7 == 4){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3630,7 +3657,7 @@
 			else if($v_preferinta7 == 5){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3648,7 +3675,7 @@
 			else if($v_preferinta7 == 6){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3666,7 +3693,7 @@
 			else if($v_preferinta7 == 7){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3684,7 +3711,7 @@
 			else if($v_preferinta7 == 8){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3702,7 +3729,7 @@
 			else if($v_preferinta7 == 9){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3720,7 +3747,7 @@
 			else if($v_preferinta7 == 10){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3738,7 +3765,7 @@
 			else if($v_preferinta7 == 11){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Ingineria sistemelor software buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3756,7 +3783,7 @@
 			if($v_preferinta8 == 1){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3774,7 +3801,7 @@
 			else if($v_preferinta8 == 2){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3792,7 +3819,7 @@
 			else if($v_preferinta8 == 3){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3810,7 +3837,7 @@
 			else if($v_preferinta8 == 4){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3828,7 +3855,7 @@
 			else if($v_preferinta8 == 5){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3846,7 +3873,7 @@
 			else if($v_preferinta8 == 6){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3864,7 +3891,7 @@
 			else if($v_preferinta8 == 7){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3882,7 +3909,7 @@
 			else if($v_preferinta8 == 8){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3900,7 +3927,7 @@
 			else if($v_preferinta8 == 9){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3918,7 +3945,7 @@
 			else if($v_preferinta8 == 10){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3936,7 +3963,7 @@
 			else if($v_preferinta8 == 11){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Sisteme distribuite buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3954,7 +3981,7 @@
 			if($v_preferinta9 == 1){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3972,7 +3999,7 @@
 			else if($v_preferinta9 == 2){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -3990,7 +4017,7 @@
 			else if($v_preferinta9 == 3){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4008,7 +4035,7 @@
 			else if($v_preferinta9 == 4){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4026,7 +4053,7 @@
 			else if($v_preferinta9 == 5){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4044,7 +4071,7 @@
 			else if($v_preferinta9 == 6){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4062,7 +4089,7 @@
 			else if($v_preferinta9 == 7){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4080,7 +4107,7 @@
 			else if($v_preferinta9 == 8){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4098,7 +4125,7 @@
 			else if($v_preferinta9 == 9){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4116,7 +4143,7 @@
 			else if($v_preferinta9 == 10){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4134,7 +4161,7 @@
 			else if($v_preferinta9 == 11){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Securitatea informatiei buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4152,7 +4179,7 @@
 			if($v_preferinta10 == 1){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4170,7 +4197,7 @@
 			else if($v_preferinta10 == 2){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4188,7 +4215,7 @@
 			else if($v_preferinta10 == 3){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4206,7 +4233,7 @@
 			else if($v_preferinta10 == 4){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4224,7 +4251,7 @@
 			else if($v_preferinta10 == 5){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4242,7 +4269,7 @@
 			else if($v_preferinta10 == 6){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4260,7 +4287,7 @@
 			else if($v_preferinta10 == 7){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4278,7 +4305,7 @@
 			else if($v_preferinta10 == 8){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4296,7 +4323,7 @@
 			else if($v_preferinta10 == 9){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4314,7 +4341,7 @@
 			else if($v_preferinta10 == 10){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4332,7 +4359,7 @@
 			else if($v_preferinta10 == 11){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Optimizare computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4350,7 +4377,7 @@
 			if($v_preferinta11 == 1){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_1 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4368,7 +4395,7 @@
 			else if($v_preferinta11 == 2){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_2 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4386,7 +4413,7 @@
 			else if($v_preferinta11 == 3){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_3 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4404,7 +4431,7 @@
 			else if($v_preferinta11 == 4){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_4 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4422,7 +4449,7 @@
 			else if($v_preferinta11 == 5){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_5 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4440,7 +4467,7 @@
 			else if($v_preferinta11 == 6){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_6 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4458,7 +4485,7 @@
 			else if($v_preferinta11 == 7){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_7 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4476,7 +4503,7 @@
 			else if($v_preferinta11 == 8){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_8 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4494,7 +4521,7 @@
 			else if($v_preferinta11 == 9){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_9 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4512,7 +4539,7 @@
 			else if($v_preferinta11 == 10){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_10 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4530,7 +4557,7 @@
 			else if($v_preferinta11 == 11){
 				$statement8 = oci_parse($connection, "update preferinte_master set preferinta_11 = 'Lingvistica computationala buget' where id = :id");
 
-				oci_bind_by_name($statement8, ':id', $numaratoare4);
+				oci_bind_by_name($statement8, ':id', $numaratoare3);
 
 				if (!$statement8) {
     			$e = oci_error($connection);
@@ -4544,9 +4571,44 @@
     				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 				}
 			}
-			
 
-			echo $v_preferinta1;
+			$statement10 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, datemedieconcurs_id,  date_personale_candidat_id, preferinte_master_id, data_ultimei_modificari, data_compozitiei, validat, persoana_ultima_modificare, creation_date, last_update_date, serie_chitanta, suma_achitata) values (
+                        :id,
+                        :id2,
+                        :id3,
+                        :id4,
+                        :id5,
+                        current_timestamp,
+                        current_timestamp,
+                        0,
+                        :nume||' '||:prenume,
+                        current_timestamp,
+                        current_timestamp,
+                        :serie,
+                        :suma)
+                        ");
+
+					oci_bind_by_name($statement10, ':id', $numaratoare5);
+					oci_bind_by_name($statement10, ':id2', $numaratoare5);
+					oci_bind_by_name($statement10, ':id3', $numaratoare5);
+					oci_bind_by_name($statement10, ':id4', $numaratoare5);
+					oci_bind_by_name($statement10, ':id5', $numaratoare5);
+					oci_bind_by_name($statement10, ':nume', $_POST['Master_Numele_De_Familie']);
+					oci_bind_by_name($statement10, ':prenume', $_POST['Master_Prenumele']);
+					oci_bind_by_name($statement10, ':serie', $_POST['Master_Chitanta_nr']);
+					oci_bind_by_name($statement10, ':suma', $_POST['Master_Suma_Taxa']);			
+
+                   if (!$statement10) {
+                        $e = oci_error($connection);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+                    }
+
+                    $result10= oci_execute($statement10);
+
+                    if(!$result10){
+                      $e = oci_error($statement10);
+                        trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+					}
           
       }
     }
