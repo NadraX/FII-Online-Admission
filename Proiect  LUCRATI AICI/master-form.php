@@ -369,10 +369,8 @@
 
 											<p>Pentru completarea notelor se acceptă valori cu virgulă (ex: 9,54)</p>
 
-											<p>În câmpul "Notă la Matematică sau Informatică" se va pune nota de la Bacalaureat cea mai mare dintre cele doua<p>
-
 											<p>La uploadarea diplomei şi a certificatului se va încărca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
-
+											<br>
 										</div>
 
 									</div>
@@ -7837,7 +7835,7 @@
 				            </li>
 						  
 
-							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%">
+							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px">
 
 									<label class="form-label form-label-left form-label-auto"  style="color: #3488CB; font-size:large">Contact </label>
 
@@ -8131,8 +8129,12 @@
 
 												<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px">
 
-													<a href="YourFile.pdf">Upload aici</a>
-
+													<a href="YourFile.pdf">
+ 
+                          							<img src="imagini/descarca.jpg" style="width:30px; height:30px; margin-left:10px;"/>
+ 
+                          							<b>Upload aici</b></a> 
+ 
 												</object>
 
 											</span>

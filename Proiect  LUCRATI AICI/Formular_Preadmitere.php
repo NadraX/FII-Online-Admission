@@ -269,12 +269,13 @@
 											Examen preadmitere
 										</h1>
 										<div id="subHeader_34" class="form-subHeader">
-										
+										  <br>
+                      <br>
 											<p>V&#259; rug&#259;m completa&#355;i toate c&#226;mpurile de mai jos.</p>
-											<p>Pentru completarea notelor se acceptă valori cu virgulă (ex: 9,54)</p>
-											<p>În câmpul "Notă la Matematică sau Informatică" se va pune nota de la Bacalaureat cea mai mare dintre cele doua</p>
 											<p>La uploadarea diplomei şi a certificatului se va încărca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
-										</div>
+										  <br>
+                      <br>
+                    </div>
 									</div>
 								</div>
 								<div class="col-md-4">
@@ -7212,7 +7213,7 @@
 									</table>
 								</div>
 							</li>
-							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%">
+							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px">
 								<label class="form-label form-label-left form-label-auto" id="label_6"   style="color: #3488CB; font-size:large">Contact </label>
 								<div id="cid_6" class="form-input jf-required" style="width:100%">
 									<div data-wrapper-react="true" style="width:100%">
@@ -7427,7 +7428,11 @@
 										<span class="form-sub-label-container" style="vertical-align:top;">
 											<label class="form-label form-label-left form-label-auto" id="label_9" for="input_9" style="color: #3488CB; font-size:large">Uploadare diplome, certificate (format pdf)</label>
 											<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px" >
-												<a href="YourFile.pdf">Upload aici</a> 
+												<a href="YourFile.pdf">
+ 
+                                        <img src="imagini/descarca.jpg" style="width:30px; height:30px; margin-left:10px;"/>
+ 
+                                        <b>Upload aici</b></a> 
 											</object>
 										</span> 
 									</div>
