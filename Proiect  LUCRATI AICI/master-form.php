@@ -1682,13 +1682,13 @@
 				            </li>
 						  
 
-							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%">
+							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px;">
 
 									<label class="form-label form-label-left form-label-auto"  style="color: #3488CB; font-size:large">Contact </label>
 
-									<div id="cid_6" class="form-input jf-required" style="width:100%">
+									<div id="cid_6" class="form-input jf-required" style="width:100%; display:inline-block">
 
-										<div data-wrapper-react="true" style="width:100%">
+										<div data-wrapper-react="true" style="width:100%;" >
 
 											<span class="form-sub-label-container" style="vertical-align:top; width:100%">
 
@@ -1715,8 +1715,8 @@
 											</span>
 
 										</div>
-
-										<div data-wrapper-react="true">
+										<br>
+										<div data-wrapper-react="true" style="width:100%;">
 
 											<span class="form-sub-label-container" style="vertical-align:top; width:100%">
 
@@ -1974,10 +1974,10 @@
 
 												<label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large">Uploadare diplome,certificate (format pdf)</label>
 
-												<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px">
-
-													<a href="YourFile.pdf">Upload aici</a>
-
+												<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" style="display:inline-block;font-size:30px">
+													<a href="YourFile.pdf">
+													<img src="imagini/descarca.jpg" style="width:30px; height:30px; margin-left:10px;"/>
+													<b>Upload aici</b></a>
 												</object>
 
 											</span>

@@ -19,18 +19,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
-    <script type="text/javascript">
-    $(document).ready(function(){
-        var $logo = $('#scroll');
-        var $logo2 = $('#no-scroll');
-        var $head2 = $('#header');
-        $(document).scroll(function() {
-            $head2.css({display: $(this).scrollTop() < 50? "block":"none"});
-            $logo2.css({display: $(this).scrollTop() < 50? "block":"none"});
-            $logo.css({display: $(this).scrollTop() > 100? "block":"none"});
-        });
-    });
-    </script>
+    
     <style type="text/css">
         .form-line{
             padding-top:12px;
@@ -280,12 +269,13 @@
 											Examen preadmitere
 										</h1>
 										<div id="subHeader_34" class="form-subHeader">
-										
+										  <br>
+                      <br>
 											<p>V&#259; rug&#259;m completa&#355;i toate c&#226;mpurile de mai jos.</p>
-											<p>Pentru completarea notelor se acceptă valori cu virgulă (ex: 9,54)</p>
-											<p>În câmpul "Notă la Matematică sau Informatică" se va pune nota de la Bacalaureat cea mai mare dintre cele doua</p>
 											<p>La uploadarea diplomei şi a certificatului se va încârca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
-										</div>
+										  <br>
+                      <br>
+                    </div>
 									</div>
 								</div>
 								<div class="col-md-4">
@@ -1039,7 +1029,7 @@
 									</table>
 								</div>
 							</li>
-							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%">
+							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px">
 								<label class="form-label form-label-left form-label-auto" id="label_6"   style="color: #3488CB; font-size:large">Contact </label>
 								<div id="cid_6" class="form-input jf-required" style="width:100%">
 									<div data-wrapper-react="true" style="width:100%">
@@ -1064,6 +1054,7 @@
 											<label class="form-sub-label" for="input_6_phone"  style="min-height:13px;"> Num&#259;r de telefon </label>
 										</span>
 									</div>
+                  <br>
 									<div data-wrapper-react="true">
 										<span class="form-sub-label-container" style="vertical-align:top; width:100%">
 											<input type="email" id="input_9" name="Licenta_Email" class="form-textbox validate[Email]" size="30" placeholder="ex: adresamea@yahoo.com" data-component="email" style="width:100%;height:40px" value="<?php 
@@ -1254,7 +1245,9 @@
 										<span class="form-sub-label-container" style="vertical-align:top;">
 											<label class="form-label form-label-left form-label-auto" id="label_9" for="input_9" style="color: #3488CB; font-size:large">Uploadare diplome, certificate (format pdf)</label>
 											<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px" >
-												<a href="YourFile.pdf">Upload aici</a> 
+												<a href="YourFile.pdf">
+                          <img src="imagini/descarca.jpg" style="width:30px; height:30px; margin-left:10px;"/>
+                          <b>Upload aici</b></a> 
 											</object>
 										</span> 
 									</div>
