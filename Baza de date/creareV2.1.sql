@@ -71,10 +71,10 @@ CREATE TABLE Detalii_Aplicare (
     Tip_Frecventa char(1)  NOT NULL,
     Optional varchar2(50)  NULL,
     Stare_Sociala_Speciala char(1) NOT NULL,
-    Nume_Stare_Sociala_Speciala varchar2(30)  NULL,
+    Nume_Stare_Sociala varchar2(30)  NULL,
     Scutit_Plata_Camin char(1) NOT NULL,
     Cazare_Pe_Timpul_Studiilor char(1)  NOT NULL,
-    Cazare_Pe_Timpul_Sustinerii_Examenului char(1)  NOT NULL,
+    Cazare_Pe_Timpul_Examenului char(1)  NOT NULL,
     CONSTRAINT Detalii_Aplicare_pk PRIMARY KEY (Id)
 ) ;
 
