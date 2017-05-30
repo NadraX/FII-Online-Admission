@@ -51,6 +51,7 @@ CREATE TABLE Date_Personale_Candidat (
     tara varchar2(200 byte) not null,
     judet varchar2(60 byte) not null,
     localitate varchar2(100 byte) not null,
+    domiciliu_stabil varchar2(6) not null,
     strada varchar2(30 byte),
     numar_domiciliu number(38,0),
     bloc_domiciliu varchar2(6 byte),
@@ -73,12 +74,14 @@ CREATE TABLE Detalii_Aplicare (
     Stare_Sociala_Speciala char(1) NOT NULL,
     Nume_Stare_Sociala varchar2(30)  NULL,
     Scutit_Plata_Camin char(1) NOT NULL,
+    Motiv_Scutire varchar2(50) NULL,
+    Echivalare_Diploma_Olimpiada char(1) NOT NULL,
     Cazare_Pe_Timpul_Studiilor char(1)  NOT NULL,
     Cazare_Pe_Timpul_Examenului char(1)  NOT NULL,
     CONSTRAINT Detalii_Aplicare_pk PRIMARY KEY (Id)
 ) ;
 
-Create table Formular;
+DROP table Formular;
 -- Table: Formular
 CREATE TABLE Formular (
     Id integer  NOT NULL,
