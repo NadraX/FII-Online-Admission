@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7fda54b-77a9-49c8-9e41-ef13b1ab0f36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Baza de date/Un Insert.sql" afterPath="$PROJECT_DIR$/Baza de date/Un Insert.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Baza de date/creareV2.1.sql" afterPath="$PROJECT_DIR$/Baza de date/creareV2.1.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Baza de date/new user.txt" afterPath="$PROJECT_DIR$/Baza de date/new user.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Proiect  LUCRATI AICI/adminMainPage.php" afterPath="$PROJECT_DIR$/Proiect  LUCRATI AICI/adminMainPage.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Un Insert.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Un Insert.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Baza de date/Un Insert.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="502">
-              <caret line="42" column="7" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <caret line="42" column="64" lean-forward="false" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -66,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminMainPage.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminMainPage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Proiect  LUCRATI AICI/adminMainPage.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="349">
@@ -91,9 +87,9 @@
         <option value="$PROJECT_DIR$/Proiect/administrator.php" />
         <option value="$PROJECT_DIR$/Baza de date/new user.txt" />
         <option value="$PROJECT_DIR$/Proiect  LUCRATI AICI/administrator.php" />
-        <option value="$PROJECT_DIR$/Baza de date/Un Insert.sql" />
         <option value="$PROJECT_DIR$/Baza de date/creareV2.1.sql" />
         <option value="$PROJECT_DIR$/Proiect  LUCRATI AICI/adminMainPage.php" />
+        <option value="$PROJECT_DIR$/Baza de date/Un Insert.sql" />
       </list>
     </option>
   </component>
@@ -272,12 +268,12 @@
       <updated>1495641949848</updated>
       <workItem from="1495641951227" duration="22354000" />
       <workItem from="1495988159178" duration="15000" />
-      <workItem from="1496161725469" duration="3551000" />
+      <workItem from="1496161725469" duration="3713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25920000" />
+    <option name="totallyTimeSpent" value="26082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -406,18 +402,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Baza de date/Un Insert.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="42" column="7" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Proiect  LUCRATI AICI/adminMainPage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="364" column="56" lean-forward="false" selection-start-line="364" selection-start-column="56" selection-end-line="364" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Baza de date/Un Insert.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="42" column="64" lean-forward="false" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
           <folding />
         </state>
       </provider>
