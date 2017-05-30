@@ -39,6 +39,8 @@ Insert into DATE_PERSONALE_CANDIDAT values(1,
   insert into date_medie_concurs values(1,9,10,5,10);
   
   insert into preferinte_master values (1,'pref1','pref2','pref3','pref4','pref5','pref6','pref7','pref8','pref9','pref10','pref11');
-  
+
+  insert into institutie values (1,'liceu','Mihail Kogalniceanu',sysdate,sysdate,null,'real','mate-info',2010,'Romania','Vaslui','Vaslui');
+  insert into pregatiri_anterioare values(1,1);
 select * from formular;
    insert into formular values(1,1,1,1,1,Sysdate,sysdate,1,'admin',sysdate,sysdate,123456,250);
