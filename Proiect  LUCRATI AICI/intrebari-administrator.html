@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/style2.css" />
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+  <script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+
+
+
+      $("#testimonial-slider").owlCarousel({
+
+        items: 2,
+
+        itemsDesktop: [1000, 1],
+
+        itemsDesktopSmall: [979, 1],
+
+        itemsTablet: [768, 1],
+
+        pagination: true,
+
+        navigation: false,
+
+        navigationText: ["", ""],
+
+        slideSpeed: 9000,
+
+        singleItem: false,
+
+        autoPlay: false
+
+
+
+      });
+
+
+
+      var $logo = $('#scroll');
+
+      var $logo2 = $('#no-scroll');
+
+      var $head2 = $('#header');
+
+
+
+      $(document).scroll(function () {
+
+        $head2.css({ display: $(this).scrollTop() < 50 ? "block" : "none" });
+
+        $logo2.css({ display: $(this).scrollTop() < 50 ? "block" : "none" });
+
+        $logo.css({ display: $(this).scrollTop() > 100 ? "block" : "none" });
+
+
+
+      });
+
+
+
+    });
+
+
+
+  </script>
+
+
+
+  <meta charset="UTF-8">
+
+
+
+  <link href="css/style.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="widt=device-width, initial-scale=1">
+
+
+
+  <title>Administrator</title>
+
+</head>
+
+
+<body>
+
+<!--header-->
+ <div class="mare collapse navbar-collapse navbar nav-group nav-group--consistent">
+      <div class="nav navbar-nav bar2">
+        <ul style="widht:100%; height:40px; background-color:#3488CB;"></ul>
+        <ul class="left-menu">
+            <li class="lung"><a href="DespreFII.html">Despre FII</a></li>
+            <li class="scurt"><a href="DespreFII.html">FII</a></li>
+      <li><a href="paginaAdmitere.html">Admitere</a></li>
+            </ul>
+        <ul class="right-menu">
+              <li><a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri</a></li>
+        <li><a href="contact.html" >Contact</a></li>
+        </ul>
+      </div>      
+      <a href="https://www.info.uaic.ro/bin/Main/" >
+        <img id="no-scroll" class="sigla" src="imagini/sigla2.png" alt="sigla" />
+        <img id="scroll" class="sigla" src="imagini/sigla2-Copy.png" alt="sigla" />
+      </a>
+  </div >
+  
+  <div class="mic" style="background-color:white; height:80px; width:100%;; z-index:90;">
+    <a href="#menu" id="toggle"><span></span></a>
+   <div id="menu">
+      <ul class="tog1">
+        <li class="tog2"><a href="DespreFII.html">Despre FII</a></li>  
+        <li class="tog2"><a href="paginaAdmitere.html">Admitere</a></li>
+        <li class="tog2"><a href="IntrebariFrecvente.html">&#206;ntreb&#259;ri</a></li>
+        <li class="tog2"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div> 
+  </div>
+</br></br>
+
+ <div id="top">
+
+    <div class="container">
+
+      <div style="display: inline-flex;" class="col-md-10">
+        <img class="icon-admin" alt="logo" src="imagini/admin-logo.png"> <!--cealalta poza nu se vede pe internet explorer-->
+        <h1> Administra&#355;ie</span></h1>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<section id="bar">
+  <div class="container">
+    <ol class="bar">
+      <li class="active"><strong> &#206;ntreb&#259;ri Primite</strong></li>
+    </ol>
+  </div>
+</section>
+
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-list-alt" aria-hidden=true><strong> Formulare-Preadmitere</strong></span> 
+            <span class="badge">5</span>
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-list-alt" aria-hidden=true><strong> Formulare-Admitere</strong></span>
+            <span class="badge">600</span>
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-list-alt" aria-hidden=true><strong> Formulare-Master</strong></span> 
+            <span class="badge">100</span>
+          </a>
+          <a href="#" class="list-group-item active bar">
+            <span class="glyphicon glyphicon-blackboard active" aria-hidden=true><strong> &#206;ntreb&#259;ri-Primite</strong></span> 
+            <span class="badge">20</span>
+          </a>
+        </div>
+      </div>
+
+<!--sectiunea din mijolc-->
+    <div class="col-md-9">
+      <div class="container">
+            <button type="button" class="btn2 btn-lg" data-toggle="modal" data-target="#myModal1"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Care sunt actele necesare pentru înscriere?</strong></button></br>
+            <button type="button" class="btn2 btn-lg" data-toggle="modal" data-target="#myModal2"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Care sunt cele mai importante informații pe care trebuie să le dețin înainte de înscriere?</strong></button></br>
+            <button type="button" class="btn2 btn-lg" data-toggle="modal" data-target="#myModal3"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> De ce acte am nevoie când mă prezint la examenul de admitere în cazul în care susțin un examen scris?</strong></button><br>
+            <button type="button" class="btn2 btn-lg" data-toggle="modal" data-target="#myModal4"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Cum se desfășoară un examen scris?</strong></button><br>
+            <button type="button" class="btn2 btn-lg" data-toggle="modal" data-target="#myModal5"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Care este prima zi în care putem aplica?</strong></button><br>
+            <button type="button" class="btn2 btn-lg" data-toggle="modal" data-target="#myModal6"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Când vom afla rezultatele de la admitere?</strong></button><br>
+            <button type="button" class="btn2 btn-lg" data-toggle="modal" data-target="#myModal7"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Cât este taxa de inscriere?</strong></button><br>
+            <button type="button" class="btn2 btn-lg" data-toggle="modal" data-target="#myModal8"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Care sunt criterii de departajare a candidaților cu aceeași medie?</strong></button><br>
+
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="antet">
+                <h3> Nume emi&#355;&#259;tor: Alexandru Marian </h3>
+                <h4> Email emi&#355;&#259;tor: alex.marian@yahoo.com </h4>
+                <h4> Data trimiterii &#238;ntreb&#259;rii: 22.05.2017 </h4>
+                </div>
+              </div>
+                <div class="modal-body">
+                <div contenteditable="true"><h4 class="modal-title"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Care sunt actele necesare pentru înscriere?</strong></h4>
+                </div>
+                <div class="modal-body">
+                  <input type="text" class="box-popup" name="raspuns" placeholder="Raspuns..">
+                </div>
+                <hr>
+                  <div class="butoane-popup">
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Trimite email</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Adaug&#259; &#238;ntrebarea</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">&#206;nchide</button>
+                  </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModal2" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="antet">
+                <h3> Nume emi&#355;&#259;tor: Alexandru Marian </h3>
+                <h4> Email emi&#355;&#259;tor: alex.marian@yahoo.com </h4>
+                <h4> Data trimiterii &#238;ntreb&#259;rii: 22.05.2017 </h4>
+                </div>
+              </div>
+                <div class="modal-body">
+                <div contenteditable="true"><h4 class="modal-title"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Care sunt cele mai importante informații pe care trebuie să le dețin înainte de înscriere?</strong></h4>
+                </div>
+                <div class="modal-body">
+                  <input type="text" name="raspuns" placeholder="Raspuns..">
+                </div>
+                <hr>
+                  <div class="butoane-popup">
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Trimite email</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Adaug&#259; &#238;ntrebarea</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">&#206;nchide</button>
+                  </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModal3" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="antet">
+                <h3> Nume emi&#355;&#259;tor: Alexandru Marian </h3>
+                <h4> Email emi&#355;&#259;tor: alex.marian@yahoo.com </h4>
+                <h4> Data trimiterii &#238;ntreb&#259;rii: 22.05.2017 </h4>
+                </div>
+              </div>
+                <div class="modal-body">
+                <div contenteditable="true"><h4 class="modal-title"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> De ce acte am nevoie când mă prezint la examenul de admitere în cazul în care susțin un examen scris?</strong></h4>
+                </div>
+
+                  <input type="text" name="raspuns" placeholder="Raspuns..">
+                </div>
+                <hr>
+                  <div class="butoane-popup">
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Trimite email</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Adaug&#259; &#238;ntrebarea</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">&#206;nchide</button>
+                  </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModal4" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="antet">
+                <h3> Nume emi&#355;&#259;tor: Alexandru Marian </h3>
+                <h4> Email emi&#355;&#259;tor: alex.marian@yahoo.com </h4>
+                <h4> Data trimiterii &#238;ntreb&#259;rii: 22.05.2017 </h4>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div contenteditable="true"><h4 class="modal-title"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Cum se desfășoară un examen scris?</strong></h4>
+                </div>
+                <div class="modal-body">
+                  <input type="text" name="raspuns" placeholder="Raspuns..">
+                </div>
+                <hr>
+                  <div class="butoane-popup">
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Trimite email</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Adaug&#259; &#238;ntrebarea</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">&#206;nchide</button>
+                  </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModal5" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="antet">
+                <h3> Nume emi&#355;&#259;tor: Alexandru Marian </h3>
+                <h4> Email emi&#355;&#259;tor: alex.marian@yahoo.com </h4>
+                <h4> Data trimiterii &#238;ntreb&#259;rii: 22.05.2017 </h4>
+                </div>
+              </div>
+                <div class="modal-body">
+                <div contenteditable="true"><h4 class="modal-title"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Care este prima zi în care putem aplica?</strong></h4>
+                </div>
+                  <div class="modal-body">             
+                  <input type="text" name="raspuns" placeholder="Raspuns..">
+                </div>
+                <hr>
+                  <div class="butoane-popup">
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Trimite email</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Adaug&#259; &#238;ntrebarea</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">&#206;nchide</button>
+                  </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModal6" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="antet">
+                <h3> Nume emi&#355;&#259;tor: Alexandru Marian </h3>
+                <h4> Email emi&#355;&#259;tor: alex.marian@yahoo.com </h4>
+                <h4> Data trimiterii &#238;ntreb&#259;rii: 22.05.2017 </h4>
+                </div>
+              </div>
+                <div class="modal-body">
+                <div contenteditable="true"><h4 class="modal-title"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Când vom afla rezultatele de la admitere?</strong></h4>
+                </div>
+                <div class="modal-body">
+                  <input type="text" name="raspuns" placeholder="Raspuns..">
+                </div>
+                <hr>
+                  <div class="butoane-popup">
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Trimite email</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Adaug&#259; &#238;ntrebarea</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">&#206;nchide</button>
+                  </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModal7" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="antet">
+                <h3> Nume emi&#355;&#259;tor: Alexandru Marian </h3>
+                <h4> Email emi&#355;&#259;tor: alex.marian@yahoo.com </h4>
+                <h4> Data trimiterii &#238;ntreb&#259;rii: 22.05.2017 </h4>
+                </div>
+              </div>
+                <div class="modal-body">
+                <div contenteditable="true"><h4 class="modal-title"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Cât este taxa de inscriere?</strong></h4>
+                </div>
+                <div class="modal-body"> 
+                  <input type="text" name="raspuns" placeholder="Raspuns..">
+                </div>
+                <hr>
+                  <div class="butoane-popup">
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Trimite email</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">Adaug&#259; &#238;ntrebarea</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">&#206;nchide</button>
+                  </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModal8" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="antet">
+                <h3> Nume emi&#355;&#259;tor: Alexandru Marian </h3>
+                <h4> Email emi&#355;&#259;tor: alex.marian@yahoo.com </h4>
+                <h4> Data trimiterii &#238;ntreb&#259;rii: 22.05.2017 </h4>
+                </div>
+              </div>
+                <div class="modal-body">
+                <div contenteditable="true"><h4 class="modal-title"><img src="imagini/question0.png" width="25" height="25" data-toggle="collapse" data-target="#demo0"><strong> Care sunt criterii de departajare a candidaților cu aceeași medie?</strong></h4>
+                </div>
+                <div class="modal-body"> 
+                  <input type="text" name="raspuns" placeholder="Raspuns..">
+                </div>
+                <hr>
+                  <div class="butoane-popup">
+                  <button type="button" class="btn bar" data-dismiss="modal">Trimite email</button>
+                  <button type="button" class="btn bar" data-dismiss="modal">Adaug&#259; &#238;ntrebarea</button>
+                  <button type="button" class="btn btn-default bar" data-dismiss="modal">&#206;nchide</button>
+                  </div>
+              </div> 
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+</body>
+
+<!--footer-->
+
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+        <h3 class="headernou2">Admitere <span> FII</span></h3>
+        <p class="footer-links">
+          <a href="DespreFII.html">Despre Fii</a>
+          ·
+          <a href="paginaAdmitere.html">Admitere</a>
+          ·
+          <a href="IntrebariFrecvente.html">&#206;ntrebari frecvente</a>
+          ·
+          <a href="contact.html">Contact</a>  
+        </p>
+      </div>
+
+      <div class="footer-center">
+          <h3 class="headernou2">Contact</h3>
+        <div>
+          <i class="fa fa-map-marker" id="bloc1"></i>
+          <div id="bloc2"><p>&nbsp&nbspStrada General Henri Mathias Barthelot 16</p>
+          <p>Iasi, Rom&#226;nia</p></div>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>&nbsp&nbsp0232 201 102</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p class="footer-links"><a href="secretariat AT info.uaic.ro">&nbsp&nbspsecretariat AT info.uaic.ro</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+        <h3 class="headernou">Linkuri</h3>
+        <div class="footer-links">
+           <img class="footer_img grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
+           <a href="https://www.info.uaic.ro/bin/Main/"><p id="bloc2" class="footer-links"> &nbsp&nbspFacultatea de informatic&#259; Iasi<p></a>
+        </div>
+        <div class="footer-links">
+           <img class="footer_img grayscale" src="imagini/logo.png" alt="uaic" id="bloc1" />
+           <a href="http://www.uaic.ro/"><p id="bloc2" > &nbsp&nbspUAIC<p></a>
+        </div>
+        
+        <div class="footer-links">
+        <img class="footer_img grayscale" src="imagini/facebook-icon.png" alt="fb" id="bloc1" >
+        <a href="https://www.facebook.com/FacultateaDeInformaticaUAICIasi/?fref=ts"><p id="bloc2"> &nbsp&nbspFacebook-ul faculta&#355;ii de informatic&#259;<p></a>
+        </div>
+        
+  
+        
+      </div>
+      
+      <div class="footer-4"> <img class="footer_img2 grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
+      </div>
+
+      
+      <hr class="hr_footer">
+        <p class="hr_text">&copy; 2017 Grupa B3 Facultatea de Informatic&#259; Iasi</p>
+      </hr>
+    </footer>
+
+</html>
