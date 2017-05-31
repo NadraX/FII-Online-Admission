@@ -92,6 +92,12 @@
   <br>
   <br>
   <p style="font-size:larger; color:grey;">Ai completat corect formularul , vei fi redirecţionat <br> pe pagina home în câteva secunde<p>
+      
+      <script>
+    setTimeout(function(){
+       window.location='DespreFII.html';
+    }, 3000);
+</script>
   </span>
   <footer class="footer-distributed">
 

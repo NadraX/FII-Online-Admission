@@ -10931,6 +10931,10 @@
                       $e = oci_error($statement10);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 					}
+                    else
+                    {
+                        echo '<script>window.location.href = "Validare_Formular.php";</script>';
+                    }
           
       }
     }
