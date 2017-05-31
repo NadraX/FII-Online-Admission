@@ -7847,7 +7847,7 @@
                                                     if ($uploadOk == 0) {
                                                          echo '';
                                                      } else {
-                                                         $new_name = $v_Numele_De_Familie . "_" . $v_Licenta_Prenumele . $v_Licenta_Prenumele . "." . $imageFileType;
+                                                         $new_name = $v_Numele_De_Familie . "_" . $v_Licenta_Prenumele .  "." . $imageFileType;
                                                          if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir.$new_name)) {
                                                              echo '';
                                                          } else {

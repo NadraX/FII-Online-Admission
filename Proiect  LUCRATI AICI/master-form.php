@@ -8276,24 +8276,24 @@
                                                     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
                                             
 
-                                                    if ($_FILES["fileToUpload"]["size"] > 500000) {
-                                                        echo "Fisierul depaseste 5MB!";
+                                                    if ($_FILES["fileToUpload"]["size"] > 5000000) {
+                                                        echo '';
                                                         $uploadOk = 0;
                                                     }
                                                 
                                                     if($imageFileType != "pdf") {
-                                                        echo "Respectati formatul fisierelor!";
+                                                        echo '';
                                                         $uploadOk = 0;
                                                     }
 
                                                     if ($uploadOk == 0) {
-                                                         echo "Fisierul nu a fost uploadat.";
+                                                         echo '';
                                                      } else {
-                                                         $new_name = $v_Numele_De_Familie . "_" . $v_Licenta_Prenumele . $v_Licenta_Prenumele . "." . $imageFileType;
+                                                         $new_name = $v_Numele_De_Familie . "_" . $v_Licenta_Prenumele . "." . $imageFileType;
                                                          if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir.$new_name)) {
-                                                             echo "Fisierul ". basename( $_FILES["fileToUpload"]["name"]). " a fost uploadat.";
+                                                             echo '';
                                                          } else {
-                                                             echo "Ne pare rau, a aparut o eroare la upload-ul fisierului.";
+                                                             echo '';
                                                          }
                                                      }
 
