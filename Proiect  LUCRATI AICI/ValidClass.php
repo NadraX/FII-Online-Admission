@@ -1441,6 +1441,8 @@ function validareCodPostal($input)
 	}
 	function validScutire($scutire)
 	{
+		if(!$scutire)
+			return 1;
 		if(!(ctype_alpha(str_replace(' ', '', $scutire))))
 			return 0;
 		return 1;
