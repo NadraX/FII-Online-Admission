@@ -297,7 +297,7 @@
   </div> 
   </br>
   <div class="container formular2" style="width:100%">
-			<form  style="width:90%" action="" method='post'>
+			<form  style="width:90%" action="" method='post' enctype="multipart/form-data">
 				<input type="hidden" name="formID" value="71274520949360" />
 				<div class="">
 					<ul class="form-section page-section">
@@ -7815,11 +7815,50 @@
 										<span class="form-sub-label-container" style="vertical-align:top;">
 											<label class="form-label form-label-left form-label-auto" id="label_9" for="input_9" style="color: #3488CB; font-size:large">Uploadare diplome, certificate (format pdf)</label>
 											<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px" >
-												<a href="YourFile.pdf">
+										   
+                                                <input type="file" name="fileToUpload" id="fileToUpload">
+												<?php
+                                                    if(isset($_POST["fileToUpload"])) {
+                                                        
+                                                    }
+                                            
+                                                    if(isset($_POST['Submit'])) {
+                                                        $v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie_La_nastere"];
+                                                         $v_Licenta_Prenumele = $_POST["Licenta_Prenumele"];
+                                                    }
+                                            
+                                                    $target_dir = "uploads/";
+                                                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                                                    
+                                                    $uploadOk = 1;
+                                                    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+                                            
+
+                                                    if ($_FILES["fileToUpload"]["size"] > 500000) {
+                                                        echo "Fisierul depaseste 5MB!";
+                                                        $uploadOk = 0;
+                                                    }
+                                                
+                                                    if($imageFileType != "pdf") {
+                                                        echo "Respectati formatul fisierelor!";
+                                                        $uploadOk = 0;
+                                                    }
+
+                                                    if ($uploadOk == 0) {
+                                                         echo "Fisierul nu a fost uploadat.";
+                                                     } else {
+                                                         $new_name = $v_Numele_De_Familie . "_" . $v_Licenta_Prenumele . $v_Licenta_Prenumele . "." . $imageFileType;
+                                                         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir.$new_name)) {
+                                                             echo "Fisierul ". basename( $_FILES["fileToUpload"]["name"]). " a fost uploadat.";
+                                                         } else {
+                                                             echo "Ne pare rau, a aparut o eroare la upload-ul fisierului.";
+                                                         }
+                                                     }
+
+                                            
+													?>
  
-                                        <img src="imagini/descarca.jpg" style="width:30px; height:30px; margin-left:10px;"/>
- 
-                                        <b>Upload aici</b></a> 
+                                        
 											</object>
 										</span> 
 									</div>
@@ -7911,8 +7950,8 @@
 <?php
 
   if(isset($_POST['Submit'])){
-    $username = 'ADMITERE1';
-    $password = 'ADMITERE1';
+    $username = 'ADMITERE';
+    $password = 'ADMITERE';
     $connection_string = 'localhost/xe';
 
     $connection = oci_connect($username, $password, $connection_string);

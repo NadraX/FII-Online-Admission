@@ -343,7 +343,7 @@
 
 		<div class="container formular2" style="width:100%">
 
-			<form style="width:90%" method='post'>
+			<form style="width:90%" method='post' enctype="multipart/form-data">
 
 				<div>
 
@@ -8254,11 +8254,51 @@
 
 												<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px">
 
-													<a href="YourFile.pdf">
+													
  
-                          							<img src="imagini/descarca.jpg" style="width:30px; height:30px; margin-left:10px;"/>
- 
-                          							<b>Upload aici</b></a> 
+                          							
+                          							<input type="file" name="fileToUpload" id="fileToUpload">
+												
+                                                    <?php
+                                                    if(isset($_POST["fileToUpload"])) {
+                                                        
+                                                    }
+                                            
+                                                    if(isset($_POST['Submit'])) {
+                                                        $v_Numele_De_Familie=$_POST["Master_Numele_De_Familie"];
+                                                        $v_Licenta_Prenumele = $_POST["Master_Prenumele"];
+                                                    }
+                                            
+                                                    $target_dir = "uploads/";
+                                                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                                                    
+                                                    $uploadOk = 1;
+                                                    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+                                            
+
+                                                    if ($_FILES["fileToUpload"]["size"] > 500000) {
+                                                        echo "Fisierul depaseste 5MB!";
+                                                        $uploadOk = 0;
+                                                    }
+                                                
+                                                    if($imageFileType != "pdf") {
+                                                        echo "Respectati formatul fisierelor!";
+                                                        $uploadOk = 0;
+                                                    }
+
+                                                    if ($uploadOk == 0) {
+                                                         echo "Fisierul nu a fost uploadat.";
+                                                     } else {
+                                                         $new_name = $v_Numele_De_Familie . "_" . $v_Licenta_Prenumele . $v_Licenta_Prenumele . "." . $imageFileType;
+                                                         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir.$new_name)) {
+                                                             echo "Fisierul ". basename( $_FILES["fileToUpload"]["name"]). " a fost uploadat.";
+                                                         } else {
+                                                             echo "Ne pare rau, a aparut o eroare la upload-ul fisierului.";
+                                                         }
+                                                     }
+
+                                            
+													?>
  
 												</object>
 
@@ -8371,8 +8411,8 @@
 <?php
 
   if(isset($_POST['Submit'])){
-    $username = 'ADMITERE1';
-    $password = 'ADMITERE1';
+    $username = 'ADMITERE';
+    $password = 'ADMITERE';
     $connection_string = 'localhost/xe';
 
     $connection = oci_connect($username, $password, $connection_string);
