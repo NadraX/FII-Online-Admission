@@ -365,7 +365,7 @@ function validStareCivila($p_stare_civila)
 
         if($p_etaj=='parter')
             return 1;
-        if(preg_match('/^[0-9]$/', $p_etaj))
+        if($p_etaj>0)
             return 1;
         return 0;
     }
@@ -1107,7 +1107,7 @@ function validStareCivila($p_stare_civila)
 
         if($p_etaj=='parter')
             return 1;
-        if(preg_match('/^[0-9]$/', $p_etaj))
+        if($p_etaj>0)
             return 1;
         return 0;
     }
@@ -1441,6 +1441,8 @@ function validareCodPostal($input)
 	}
 	function validScutire($scutire)
 	{
+		if(!$scutire)
+			return 1;
 		if(!(ctype_alpha(str_replace(' ', '', $scutire))))
 			return 0;
 		return 1;

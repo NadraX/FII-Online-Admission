@@ -91,7 +91,7 @@
   <img src="imagini/check.png" style="width=250px; height:250px"/>
   <br>
   <br>
-  <p style="font-size:larger; color:grey;">Ai completat corect formularul , vei fi redirecţionat <br> pe pagina home în câteva secunde<p>
+  <p style="font-size:larger; color:grey;">Emailul a fost trimis cu succes , vei fi redirecţionat <br> pe pagina home în câteva secunde<p>
       
       <script>
     setTimeout(function(){

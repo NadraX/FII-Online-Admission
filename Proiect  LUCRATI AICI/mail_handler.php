@@ -52,6 +52,6 @@ $mail2->Body = $question;
 
 var_dump($mail2->send());
 }
-header('Location: DespreFII.html');
+echo '<script>window.location.href = "Validare_Email.php";</script>';
 exit;
 ?>

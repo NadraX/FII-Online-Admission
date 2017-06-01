@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style-check.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -19,7 +20,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
-    
+   
     <style type="text/css">
         .form-line{
             padding-top:12px;
@@ -165,9 +166,16 @@
         padding:0px;
       }
       #num {
-        width:44.5%;
+        width:22%;
         padding:0;
         margin:0;
+      }
+
+      #num2 {
+        width:22.2%;
+        padding:0;
+        margin:0;
+
       }
       #prenum {
         width:44.5%;
@@ -218,11 +226,43 @@
       #id_10 {
         padding-left: 10px;
       }
+
+      
+     input[type=radio].css-checkbox {
+              position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+            }
+
+            input[type=radio].css-checkbox + label.css-label {
+              padding-left:50px;
+              height:21px; 
+              display:inline-block;
+              line-height:21px;
+              background-repeat:no-repeat;
+              background-position: 0 0;
+              font-size:18px;
+              color:grey;
+              vertical-align:middle;
+              cursor:pointer;
+
+            }
+
+            input[type=radio].css-checkbox:checked + label.css-label {
+              background-position: 0 -21px;
+            }
+            label.css-label {
+        background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_0cf84fec35537d1f4546496881280e34.png);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
     </style>
 
     <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-steel.css?3.3.292"/>
     
-    <title>Examen preadmitere</title>
+    <title>Admitere licen&#355;&#259;</title>
 </head>
 <body>
   <div class="mare collapse navbar-collapse navbar nav-group nav-group--consistent">
@@ -257,7 +297,7 @@
   </div> 
   </br>
   <div class="container formular2" style="width:100%">
-			<form  style="width:90%" action="" method='post' enctype="multipart/form-data">
+			<form  style="width:90%" action="" method='post'>
 				<input type="hidden" name="formID" value="71274520949360" />
 				<div class="">
 					<ul class="form-section page-section">
@@ -266,16 +306,15 @@
 								<div class="form-header-group col-md-7" >
 									<div class="header-text httal htvam ">
 										<h1 id="header_34" class="form-header" data-component="header"  style="color: #3488CB;">
-											Examen preadmitere
+											Admitere licen&#355;&#259;
 										</h1>
 										<div id="subHeader_34" class="form-subHeader">
-										  <br>
-                      <br>
+										
 											<p>V&#259; rug&#259;m completa&#355;i toate c&#226;mpurile de mai jos.</p>
+											<p>Pentru completarea notelor se acceptă valori cu virgulă (ex: 9,54)</p>
+											<p>În câmpul "Notă la Matematică sau Informatică" se va pune nota de la Bacalaureat cea mai mare dintre cele doua</p>
 											<p>La uploadarea diplomei şi a certificatului se va încărca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
-										  <br>
-                      <br>
-                    </div>
+										</div>
 									</div>
 								</div>
 								<div class="col-md-4">
@@ -289,7 +328,7 @@
 							include "exempluLicenta.php";
 							error_reporting(0);
                                                 ini_set('display_errors', 0);
-							$v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie"];
+							$v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie_La_nastere"];
 							$v_Licenta_Initiala_Tata = $_POST["Licenta_Initiala_Tata"];
 							$v_Licenta_Email = $_POST["Licenta_Email"];
 							$v_Licenta_Telefon = $_POST["Licenta_Telefon"];
@@ -301,6 +340,8 @@
 							$v_Licenta_Bloc = $_POST["Licenta_Bloc"];
 							$v_Licenta_Numar = $_POST["Licenta_Numar"];
 							$v_Licenta_Strada = $_POST["Licenta_Strada"];
+							$v_Licenta_Nota_MI = $_POST["Licenta_Nota_MI"];
+							$v_Licenta_Medie_BAC = $_POST["Licenta_Medie_BAC"];
 							$v_Licenta_Buletin_Eliberat_De = $_POST["Licenta_Buletin_Eliberat_De"];
 							$v_Licenta_Numar_Buletin = $_POST["Licenta_Numar_Buletin"];
 							$v_Licenta_Serie_Buletin = $_POST["Licenta_Serie_Buletin"];
@@ -309,16 +350,57 @@
 							$v_Licenta_Prenumele = $_POST["Licenta_Prenumele"];
 							$v_Licenta_Prenume_Mama = $_POST["Licenta_Prenume_Mama"];
 							$v_Licenta_Prenume_Tata = $_POST["Licenta_Prenume_Tata"];
-							$v_Licenta_Nationalitate = $_POST["Licenta_Nationalitate"];
+							$v_Licenta_Nationalitate = "Romana";
 							$v_Licenta_Etnie = $_POST["Licenta_Etnie"];
 							$v_Licenta_Limba_Materna = $_POST["Licenta_Limba_Materna"];
+						    $v_id = 1;
 						?>
 						<ul>
+              <li class="form-line" data-type="control_taxa" id="id_12">
+                <br>
+                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Taxă de înscriere  </label>
+                <div class="form-input jf-required cid_1">
+                  <table  style="width:100%">
+                    <tbody>
+                      <tr>
+                         <span id="chitanta" class="form-sub-label-container" style="vertical-align:top; width: 80%; margin-right: 5px;">
+                            <input type="number"  name="Licenta_Chitanta_nr" class="form-textbox first_1" size="10" value="" data-component="first" />
+                            <label class="form-sub-label sublabel_first" style="min-height:13px;"> Chitanța   nr. </label>
+                        </span>
+                        <span id="suma" class="form-sub-label-container" style="vertical-align:top; width: 18%; margin-right: 5px;">
+                          <input type="number" name="Licenta_Suma_Taxa" class="form-textbox middle_1" size="10" value="" data-component="middle" />
+                          <label class="form-sub-label"  style="min-height:13px;"> Suma achitată (RON) </label>
+                        </span>
+                      </tr>
+                      <tr>
+                        <td>
+                          <br>
+                          <label class="form-label form-label-left form-label-auto" 
+                          style="color: gray; font-size:medium; width:25%; display:inline-block"> Sunteţi scutit de această taxă?  </label>                        
+                          <span style="width:40%">
+                            <input type="radio" name="group1" id="checkbox11" class="css-checkbox" />
+                            <label for="checkbox11" class="css-label" style="margin-right:100px">Da</label>
+                            <input type="radio" name="group1" id="checkbox13" class="css-checkbox" />
+                            <label for="checkbox13" class="css-label" style="margin-right:50px;">Nu</label>
+                          </span>
+                          <span id="motiv-scutire" class="form-sub-label-container" style="vertical-align:top; width: 49%; margin-right: 5px;">
+                              <input type="text" name="Licenta_Motiv_Scutire_taxa" class="form-textbox last_1" size="15" value="" data-component="last" />
+                              <label class="form-sub-label"  id="sublabel_last" style="min-height:13px;"> Dacă da, motivul scutirii </label>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+
+							
+				
 							<li class="form-line" data-type="control_fullname" id="id_1">
 								<label class="form-label form-label-left form-label-auto" id="label_1"  style="color: #3488CB; font-size:large"> Informa&#355;ii   generale </label>
 								<div  class="form-input jf-required cid_1">
 									<div class="general_name" data-wrapper-react="true">
-										<span id="num" class="form-sub-label-container" style="vertical-align:top;">
+										<span id="num" class="form-sub-label-container" style="vertical-align:top;">  
 											<input type="text" name="Licenta_Numele_De_Familie" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" data-component="first" value="<?php 
 																																																	if($v_Numele_De_Familie == '') 
 																																																		echo '';
@@ -335,8 +417,12 @@
 													}
 												?>
 											</span>
-											<label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie </label>
+											<label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie actual</label>
 										</span>
+                    <span id="num2" class="form-sub-label-container" style="vertical-align:top;">
+                      <input type="text" name="Licenta_Numele_De_Familie_La_nastere" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" data-component="first" />
+                      <label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie la nastere </label>
+                    </span>
 										<span id="initiala" class="form-sub-label-container" style="vertical-align:top;">
 											<input type="text" name="Licenta_Initiala_Tata" class="form-textbox middle_1" size="10" placeholder="ex: C/C./C.D." data-component="first" value="<?php 
 																																											if($v_Licenta_Initiala_Tata == '') 
@@ -420,15 +506,16 @@
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:24%;padding:0;margin:0;">
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Stare_Civila" data-component="country">
-												<option value="Singur">Singur/&#259;</option>
+												<option value="Necasatorit(a)">Nec&#259;s&#259;torit/&#259;</option>
 												<option value="Casatorit(a)">C&#259;s&#259;torit/&#259;</option>
+                        <option value="Divortat(a)">Divor&#355;at//&#259;</option>
 											</select>
 											<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Stare civil&#259;</label>
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:25%;padding:0;margin:0;">
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Sex" data-component="country">
-												<option value="Feminin">Feminin</option>
-												<option value="Masculin">Masculin</option>
+												<option name="sexFeminin" value="F">F</option>
+												<option name="sexMasculin" value="M">M</option>
 											</select>
 											<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Sex</label>
 										</span>
@@ -440,9 +527,7 @@
 									<div data-wrapper-react="true">
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
 											
-											<select class="form-textbox first_1" style="width:100%; height:40px" name="Licenta_Nationalitate" data-component="first">
-												<option value="Romana">Rom&#226;n&#259;</option>
-											</select>
+                      <input type="text" name="Licenta_Nationalitate" value="Romana" class="form-textbox middle_1" style="vertical-align:top; width:100%;padding:0;margin:0;" placeholder="Rom&#226;n&#259;" data-component="middle" readonly />
 											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> Nationalitate </label>
 										</span>
 						
@@ -752,11 +837,11 @@
 									</div>
 									<br>
 						
-									 <div class="form-input jf-required cid_1">
-                                <div style="width: 59%; margin:0; padding:0">
-                                    <span class="form-sub-label-container" id="liceu" style="vertical-align:top;margin:0; padding:0">
-										<input type="text" class="form-dropdown form-address-country liceu" name="liceu" id="input_3_country" data-component="country" list="licee">
-                                            <datalist id="licee">
+									<div class="form-input jf-required cid_1">
+										<div>
+											<span class="form-sub-label-container liceu" style="vertical-align:top;">
+												<input type="text" class="form-dropdown form-address-country liceu" name="Licenta_Liceu" id="input_3_country" data-component="country" list="licee">
+                                                    <datalist id="licee">
 <option value="GRUP SCOLAR &quot;HOREA, CLOSCA SI CRISAN&quot; ABRUD">
 <option value="GRUPUL SCOLAR &quot;HOREA, CLOSCA ȘI CRISAN&quot; ABRUD">
 <option value="LICEUL &quot;HOREA, CLOSCA ȘI CRISAN&quot; ABRUD">
@@ -6970,31 +7055,116 @@
 <option value="LICEUL &quot;SIMION MEHEDINTI&quot; VIDRA">
 <option value="LICEUL &quot;SIMION MEHEDINŢI&quot; VIDRA">
         </datalist>
-                                    </span>
-                                    <label class="form-sub-label" for="input_3_country" id="sublabel_3_country" style="min-height:13px;"> Liceul la care sunteti inscris</label>
-                                </div>
-                                <div style="width: 40%; margin:0; padding:0">
-                                    <span class="form-sub-label-container gen" style="vertical-align:top;margin:0; padding:0">
-                                        <select class="form-dropdown form-address-country middle_1" name="proba" data-component="country">
-                                            <option value="Matematica">Matematic&#259;</option>
-                                            <option value="Informatica">Informatic&#259; C/C++</option>
-                                        </select>
-                                        <label class="form-sub-label sublabel_3_country" for="input_3_country"  style="min-height:13px;">Doresc s&#259; sus&#355;in testul la</label>
-                                    </span>
-                                </div>
-                            </div>
+											</span>
+											<label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Liceul pe care l-ați absolvit</label>
+										</div>
+										<br>
+									</div>
+                  <div  class="form-input jf-required cid_1" >
+                      <label class="form-label form-label-left form-label-auto" id="label_3" 
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitaţi echivalare cu diploma olimpiadă organizată MEN? </label>
+                        
+                      <span style="width:55%">
+                          <input type="radio" name="group2" id="checkbox10" class="css-checkbox" value="1" />
+                          <label for="checkbox10" class="css-label" style="margin-right:100px">Da</label>
+                          <input type="radio" name="group2" id="checkbox12" class="css-checkbox" value="0" />
+                          <label for="checkbox12" class="css-label">Nu</label>
+                      </span>
+
+                  </div>
+                  <br>
+									<div  class="form-input jf-required cid_1" >
+                    <br>
+										<div data-wrapper-react="true" class="mg">
+											<span class="form-sub-label-container" style="vertical-align:top; width:100%" >
+												<input type="number"  name="Licenta_Medie_BAC" class="form-textbox first_1"  size="20" data-component="first"  value="<?php 
+																																										if($v_Licenta_Medie_BAC == '') 
+																																											echo '';
+																																										else
+																																											echo $v_Licenta_Medie_BAC;
+																																									?>" />
+												<span style="color:red">
+													<?php 
+														if(isset($_POST['Submit'])) {
+															$v_Licenta_Medie_BAC = $_POST["Licenta_Medie_BAC"];
+															$vLicenta_Medie_BAC = validareMedieBac($v_Licenta_Medie_BAC);
+															if($vLicenta_Medie_BAC==0)
+																echo "C&#226;mp invalid!";
+													}
+													?>
+												</span>
+												<label class="form-sub-label sublabel_first"  style="min-height:13px;">Media general&#259; Bacalaureat</label>
+											</span>
+										</div> 
+										<div data-wrapper-react="true" class="mg">
+											<span  class="form-sub-label-container gen" style="vertical-align:top;">
+												<input type="number"  name="Licenta_Nota_MI" class="form-textbox first_1" size="20" data-component="first" value="<?php 
+																																									if($v_Licenta_Nota_MI == '') 
+																																										echo '';
+																																									else
+																																										echo $v_Licenta_Nota_MI;
+																																								?>" />
+												<span style="color:red">
+													<?php 
+														if(isset($_POST['Submit'])) {
+															$v_Licenta_Nota_MI = $_POST["Licenta_Nota_MI"];  // V
+															$vLicenta_Nota_MI = validareProbaAlegere($v_Licenta_Nota_MI);
+															if($vLicenta_Nota_MI==0)
+																echo "C&#226;mp invalid!";
+														}
+													?>
+												</span>
+												<label class="form-sub-label sublabel_first"   style="min-height:13px;">Nota la Matematic&#259; sau Informatic&#259;</label>
+											</span>
+										</div>
+										<div class="mg">
+											<span class="form-sub-label-container gen" style="vertical-align:top;">
+												<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Limba_Aleasa" data-component="country">
+													<option value="In limba romana">&#206;n limba rom&#226;n&#259;</option>
+													<option value="In limba engleza">&#206;n limba englez&#259;</option>
+												</select>
+												<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Doresc &#238;nva&#355;&#259;m&#226;nt de zi</label>
+											</span>   
+										</div>  
+										<div data-wrapper-react="true" class="mg">
+											<span class="form-sub-label-container gen" style="vertical-align:top;">
+												<select class="form-dropdown form-address-country middle_1" name="Licenta_Obiect_Test_Ales"  data-component="country">
+													<option value="Matematica">Matematic&#259;</option>
+													<option value="Informatica C/C++">Informatic&#259; C/C++</option>
+													<option value="Informatica Pascal">Informatic&#259; Pascal</option>
+												</select>
+												<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Doresc s&#259; dau admitere la obiectul</label>
+											</span>   
+										</div> 
+									</div>       
 									<br>
+
 								</div>
 							</li>
 							<li class="form-line" data-type="control_address" id="id_3">
+                <br>
+                <br>
 								<label class="form-label form-label-left form-label-auto" id="label_3" style="color: #3488CB; font-size:large"> Adresa dvs. </label>
 								<div class="form-input jf-required cid_1">
 									<table  style="width:100%">
 										<tbody>
-								  
+								      <tr>
+                        <td>
+                          <label class="form-label form-label-left form-label-auto" id="label_3" 
+                          style="color: gray; font-size:medium; width:25%; display:inline-block"> Domiciliu stabil: </label>
+                        
+                          <span style="width:75%">
+                            <input type="radio" name="group3" id="checkbox1" class="css-checkbox" value="Rural"/>
+                            <label for="checkbox1" class="css-label" style="margin-right:100px">Rural</label>
+                            <input type="radio" name="group3" id="checkbox2" class="css-checkbox" value="Urban" />
+                            <label for="checkbox2" class="css-label">Urban</label>
+                          </span>
+                        </td>
+                      </tr> 
+
 											<tr> 
 												<td>
-								  
+								          <br>
 													<span class="form-sub-label-container" style="vertical-align:top; width:44%">
 														<input type="text" name="Licenta_Strada" class="form-textbox first_1" size="15"  placeholder="ex: Independen&#355;ei" data-component="first" value="<?php 
 																																																				if($v_Licenta_Strada == '') 
@@ -7213,6 +7383,79 @@
 									</table>
 								</div>
 							</li>
+							
+							<li class="form-line" data-type="control_cazare" id="id_12">
+                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Informații despre cazare  </label>
+                <div class="form-input jf-required cid_1">
+                  <table  style="width:100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label class="form-label form-label-left form-label-auto" 
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor?  </label>                        
+                          <span style="width:55%">
+                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" value="1" />
+                            <label for="checkbox3" class="css-label" style="margin-right:100px">Da</label>
+                            <input type="radio" name="group5" id="checkbox4" class="css-checkbox" value="0" />
+                            <label for="checkbox4" class="css-label">Nu</label>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-label form-label-left form-label-auto" 
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul susținerii examenului?   </label>                        
+                          <span style="width:55%">
+                            <input type="radio" name="group6" id="checkbox5" class="css-checkbox" value="1" />
+                            <label for="checkbox5" class="css-label" style="margin-right:100px">Da</label>
+                            <input type="radio" name="group6" id="checkbox6" class="css-checkbox" value="0" />
+                            <label for="checkbox6" class="css-label">Nu</label>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+							<li class="form-line" data-type="control_cazare" id="id_13">
+                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Alte date personale ale candidatului </label>
+                <div class="form-input jf-required cid_1">
+                  <table  style="width:100%">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label class="form-label form-label-left form-label-auto" 
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Candidat care se încadrează în categoria persoanelor cu dizabilități  </label>                        
+                          <span style="width:55%">
+                                <input type="radio" name="group4" id="checkbox7" class="css-checkbox" value="1" />
+                                <label for="checkbox7" class="css-label" style="margin-right:100px">Da</label>
+                                <input type="radio" name="group4" id="checkbox8" class="css-checkbox" value="0" />
+                                <label for="checkbox8" class="css-label">Nu</label>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <br>
+                          <span class="form-sub-label-container" style="vertical-align:top; width:30%">
+                          <select class="form-dropdown form-address-country gen" name="Licenta_Stare_speciala"  data-component="country">
+                            <option value="0">Nicio opţiune</option>                            
+                            <option value="Orfan de un parinte">Orfan de un părinte</option>
+                            <option value="Orfan de ambii parinti">Orfan de ambii părinți</option>
+                            <option value="Provenit din case de copii">Provenit din case de copii</option>  
+                            <option value="Provenit din plasament familial">Provenit din plasament familial</option>
+                            <option value="Provenit din familie monoparentala">Provenit din familie monoparentală</option>
+                          </select>
+                          <label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Stare socială specială </label>
+                        </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+						  
+							
 							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px">
 								<label class="form-label form-label-left form-label-auto" id="label_6"   style="color: #3488CB; font-size:large">Contact </label>
 								<div id="cid_6" class="form-input jf-required" style="width:100%">
@@ -7428,53 +7671,12 @@
 										<span class="form-sub-label-container" style="vertical-align:top;">
 											<label class="form-label form-label-left form-label-auto" id="label_9" for="input_9" style="color: #3488CB; font-size:large">Uploadare diplome, certificate (format pdf)</label>
 											<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px" >
-												
+												<a href="YourFile.pdf">
  
-                                            
-                                                <input type="file" name="fileToUpload" id="fileToUpload">
-												<?php
-                                                    if(isset($_POST["fileToUpload"])) {
-                                                        } 
-                                                    
-                                            
-                                                    if(isset($_POST['Submit'])) {
-                                                        $v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie"];
-                                                         $v_Licenta_Prenumele = $_POST["Licenta_Prenumele"];
-                                                    }
-                                            
-                                                    $target_dir = "uploads/";
-                                                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-                                                    
-                                                    $uploadOk = 1;
-                                                    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-                                            
-
-                                                    if ($_FILES["fileToUpload"]["size"] > 5000000) {
-                                                        echo '';
-                                                        $uploadOk = 0;
-                                                    }
-                                                
-                                                    if($imageFileType != "pdf") {
-                                                        echo '';
-                                                        $uploadOk = 0;
-                                                    }
-                                                            
-                                                    if ($uploadOk == 0) {
-                                                         echo '';
-                                                     } else {
-                                                         $new_name = $v_Numele_De_Familie . "_" . $v_Licenta_Prenumele . "." . $imageFileType;
-                                                         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir.$new_name)) {
-                                                             echo '';
-                                                         } else {
-                                                             echo '';
-                                                         }
-                                                     }
-
-                                           
-													?>
-                                                
+                                        <img src="imagini/descarca.jpg" style="width:30px; height:30px; margin-left:10px;"/>
+ 
+                                        <b>Upload aici</b></a> 
 											</object>
-                                            
 										</span> 
 									</div>
 								</div>
@@ -7563,11 +7765,10 @@
 </html>
 
 <?php
-	ob_start();
 
   if(isset($_POST['Submit'])){
-    $username = 'ADMITERE';
-    $password = 'ADMITERE';
+    $username = 'ADMITERE1';
+    $password = 'ADMITERE1';
     $connection_string = 'localhost/xe';
 
     $connection = oci_connect($username, $password, $connection_string);
@@ -7576,7 +7777,7 @@
       echo "Connection failed. Please try again";
     else {
 
-      $v_sex = 'M';
+      $v_sex = $_POST['Licenta_Sex'];
       $v_stare_civila = $_POST['Licenta_Stare_Civila'];
       $v_cetatenie = 'romana';
       $v_data_nastere_luna = $_POST['Licenta_Nastere_Luna'];
@@ -7589,9 +7790,10 @@
       $v_Licenta_Serie_Buletin = $_POST['Licenta_Serie_Buletin'];
       $v_Licenta_Tara = $_POST['Licenta_Tara'];
       $v_Licenta_Localitate = $_POST['Licenta_Localitate'];
-	  $v_Licenta_Judet = $_POST['Licenta_Judet'];
+      $v_Licenta_Judet = $_POST['Licenta_Judet'];
       $v_liceu = 'liceu';
-      $v_licenta_proba = $_POST['proba'];
+      $v_licenta_limba_aleasa = $_POST['Licenta_Limba_Aleasa'];
+      $v_domiciliu_stabil = $_POST['group3'];
 
 	  $statement = oci_parse($connection, "select max(id) as COUNT from date_personale_candidat");
 			oci_execute($statement);
@@ -7600,50 +7802,50 @@
     	$numaratoare1=oci_result($statement, "COUNT") + 1;
 	 }
 
-	 $statement_2_numaratoare = oci_parse($connection, "select max(id) as COUNT from institutie");
+	$statement_2_numaratoare = oci_parse($connection, "select max(id) as COUNT from institutie");
 			oci_execute($statement_2_numaratoare);
 			
 	 while (oci_fetch($statement_2_numaratoare)) {
     	$numaratoare2=oci_result($statement_2_numaratoare, "COUNT") + 1;
 	}
 
-	$statement_3_numaratoare = oci_parse($connection, "select max(id) as COUNT from formular");
+	$statement_3_numaratoare = oci_parse($connection, "select max(id) as COUNT from date_medie_concurs");
 			oci_execute($statement_3_numaratoare);
 			
 	 while (oci_fetch($statement_3_numaratoare)) {
-    	$numaratoare4=oci_result($statement_3_numaratoare, "COUNT") + 1;
+    	$numaratoare3=oci_result($statement_3_numaratoare, "COUNT") + 1;
 	}
 
-	$statement_4_numaratoare = oci_parse($connection, "select max(id) as COUNT from date_medie_concurs");
+	$statement_4_numaratoare = oci_parse($connection, "select max(id) as COUNT from formular");
 			oci_execute($statement_4_numaratoare);
 			
 	 while (oci_fetch($statement_4_numaratoare)) {
-    	$numaratoare3=oci_result($statement_4_numaratoare, "COUNT") + 1;
+    	$numaratoare4=oci_result($statement_4_numaratoare, "COUNT") + 1;
 	}
 
-  $statement_5_numaratoare = oci_parse($connection, "select max(id) as COUNT from detalii_aplicare");
-      oci_execute($statement_5_numaratoare);
-      
-   while (oci_fetch($statement_5_numaratoare)) {
-      $numaratoare5=oci_result($statement_5_numaratoare, "COUNT") + 1;
-  }
-
-
+	$statement_5_numaratoare = oci_parse($connection, "select max(id) as COUNT from detalii_aplicare");
+			oci_execute($statement_5_numaratoare);
+			
+	 while (oci_fetch($statement_5_numaratoare)) {
+    	$numaratoare5=oci_result($statement_5_numaratoare, "COUNT") + 1;
+	}
 
 
       if($vLicenta_CNP !=0 and $vLicenta_Apartament != 0 and $vLicenta_Bloc != 0 and $vLicenta_Buletin_Eliberat_De != 0 and $vLicenta_Cod_Postal !=0
 	  	and $vLicenta_Email != 0 and $vLicenta_Etaj != 0 and $vLicenta_Etnie != 0 and $vLicenta_Initiala_Tata != 0 and $vLicenta_Limba_Materna!=0 
-		  and $vLicenta_Localitate !=0 and $vLicenta_Numar != 0 and $vLicenta_Numar_Buletin !=0
+		  and $vLicenta_Localitate !=0 and $vLicenta_Medie_BAC !=0 and $vLicenta_Nota_MI !=0 and $vLicenta_Numar != 0 and $vLicenta_Numar_Buletin !=0
 		  and $vLicenta_Prenumele !=0 and $vLicenta_PrenumeMama !=0 and $vLicenta_PrenumeTata !=0 and $vLicenta_Scara !=0 and $vLicenta_Serie_Buletin !=0
 		  and $vLicenta_Strada !=0 and $vLicenta_Telefon !=0 and $vLicenta_Tip_Buletin !=0 ){
 	  
 			ini_set('display_errors', 1); 
             error_reporting(E_ALL);
+
            
-            $statement1 = oci_parse($connection, "insert into date_personale_candidat (id, cnp, nume, prenume, initiala_tata, sex, starecivila, cetatenie, prenume_mama, prenume_tata, telefon, email, data_nasterii, nationalitate, etnie, limba_materna, tip_buletin, serie_buletin, numar_buletin, buletin_eliberat_de, buletin_data_eliberarii, tara, judet, localitate, strada, numar_domiciliu, bloc_domiciliu, etaj_domiciliu, scara_domiciliu, apartament_domiciliu, cod_postal_domiciliu) values (
+            $statement1 = oci_parse($connection, "insert into date_personale_candidat (id, cnp, nume, nume_actual, prenume, initiala_tata, sex, starecivila, cetatenie, prenume_mama, prenume_tata, telefon, email, data_nasterii, nationalitate, etnie, limba_materna, tip_buletin, serie_buletin, numar_buletin, buletin_eliberat_de, buletin_data_eliberarii, tara, judet, localitate, domiciliu_stabil, strada, numar_domiciliu, bloc_domiciliu, etaj_domiciliu, scara_domiciliu, apartament_domiciliu, cod_postal_domiciliu)  values (
             :id,
             :CNP,
             :nume,
+            :nume_actual,
             :prenume,
             :initialaTata, 
             :sex,
@@ -7665,16 +7867,18 @@
             :tara,
             :judet,
             :localitate,
+            :domiciliu_stabil,
             :strada,
             :numar_domiciliu,
             :bloc_domiciliu,
             :etaj_domiciliu,
-			:scara_domiciliu,
+            :scara_domiciliu,
             :apartament_domiciliu,
             :cod_postal_domiciliu)");
 
 			oci_bind_by_name($statement1, ':id', $numaratoare1);
-            oci_bind_by_name($statement1, ':nume', $v_Numele_De_Familie);
+            oci_bind_by_name($statement1, ':nume', $_POST['Licenta_Numele_De_Familie_La_nastere']);
+            oci_bind_by_name($statement1, ':nume_actual', $_POST['Licenta_Numele_De_Familie']);
             oci_bind_by_name($statement1, ':CNP', $v_Licenta_CNP);
             oci_bind_by_name($statement1, ':prenume', $v_Licenta_Prenumele);
             oci_bind_by_name($statement1, ':initialaTata', $v_Licenta_Initiala_Tata);
@@ -7705,6 +7909,7 @@
             oci_bind_by_name($statement1, ':tara', $v_Licenta_Tara);
             oci_bind_by_name($statement1, ':judet', $v_Licenta_Judet);
             oci_bind_by_name($statement1, ':localitate', $v_Licenta_Localitate);
+            oci_bind_by_name($statement1, ':domiciliu_stabil', $v_domiciliu_stabil);
             oci_bind_by_name($statement1, ':strada', $v_Licenta_Strada);
             oci_bind_by_name($statement1, ':numar_domiciliu', $v_Licenta_Numar);
             oci_bind_by_name($statement1, ':bloc_domiciliu', $v_Licenta_Bloc);
@@ -7726,20 +7931,22 @@
               error_reporting(E_ALL); 
               }
 
+			oci_fetch($statement);
+
 			$statement2 = oci_parse($connection, "insert into institutie (id, tip_institutie, tara, judet, localitate, nume_institutie) values (
 				:id,
 				:nume,
 				:tara,
 				:judet,
 				:localitate,
-                           :nume_liceu)");
+				:nume_liceu)");
 
 			oci_bind_by_name($statement2, ':id', $numaratoare2);
 			oci_bind_by_name($statement2, ':nume', $v_liceu);
 			oci_bind_by_name($statement2, ':tara', $v_Licenta_Tara);
 			oci_bind_by_name($statement2, ':judet', $v_Licenta_Judet);
 			oci_bind_by_name($statement2, ':localitate', $v_Licenta_Localitate);
-                    oci_bind_by_name($statement2, ':nume_liceu', $_POST['liceu']);
+			oci_bind_by_name($statement2, ':nume_liceu', $_POST['Licenta_Liceu']);
 
 			if (!$statement2) {
     			$e = oci_error($connection);
@@ -7753,83 +7960,103 @@
     			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 			}
 
-			$statement4 = oci_parse($connection, "insert into date_medie_concurs (id, medie_bac, nota_proba_alegere) values (
+			$statement3 = oci_parse($connection, "insert into date_medie_concurs (id, medie_bac, nota_proba_alegere) values (
 				:id,
-				0,
-				0)");
+				:medie_bac,
+				:nota_alegere)");
 
-		    oci_bind_by_name($statement4, ':id', $numaratoare3);
+		    oci_bind_by_name($statement3, ':id', $numaratoare3);
+			oci_bind_by_name($statement3, ':medie_bac', $v_Licenta_Medie_BAC);
+			oci_bind_by_name($statement3, ':nota_alegere', $v_Licenta_Nota_MI);
 
-			if (!$statement4) {
+			if (!$statement3) {
     			$e = oci_error($connection);
     			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 			}
 
-			$result3= oci_execute($statement4);
+			$result3= oci_execute($statement3);
 
 			if(!$result3){
-				$e = oci_error($statement4);
+				$e = oci_error($statement3);
     			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 			}
 
-                  $statement6 = oci_parse($connection, "insert into detalii_aplicare(id, tip_aplicare, proba_concurs, tip_frecventa, scutit_plata_camin) values (
-                    :id,
-                    'preadmitere',
-                    :test_ales,
-                    1,
-                    0) 
-                    ");
+	$v_licenta_stare_speciala = $_POST['Licenta_Stare_speciala'];
 
-                  oci_bind_by_name($statement6, ':id', $numaratoare5);
-                  oci_bind_by_name($statement6, ':test_ales', $_POST['proba']);
+	    $statement5 = oci_parse($connection, "insert into detalii_aplicare values (
+	    	:id,
+	    	'licenta',
+	    	:test_ales,
+	    	:preferinta_limba,
+	    	1,
+	    	'nementionat',
+	    	:stare_speciala_alegere,
+	    	:stare_speciala,
+	    	0,
+	    	'nementionat',
+	    	:echivalare_diploma,
+	    	:cazare_studii,
+	    	:cazare_examen)
+	    	");
 
-                  if (!$statement6) {
+
+	    oci_bind_by_name($statement5, ':id', $numaratoare5);
+	    oci_bind_by_name($statement5, ':test_ales', $_POST['Licenta_Obiect_Test_Ales']);
+	    oci_bind_by_name($statement5, ':preferinta_limba', $_POST['Licenta_Limba_Aleasa']);
+	    oci_bind_by_name($statement5, ':stare_speciala_alegere', $_POST['group4']);
+	    oci_bind_by_name($statement5, ':stare_speciala', $v_licenta_stare_speciala);
+	    oci_bind_by_name($statement5, ':echivalare_diploma', $_POST['group2']);
+	    oci_bind_by_name($statement5, ':cazare_studii', $_POST['group5']);
+	    oci_bind_by_name($statement5, ':cazare_examen', $_POST['group6']);
+
+	    if (!$statement5) {
                         $e = oci_error($connection);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
                     }
 
-                    $result5= oci_execute($statement6);
+                    $result5= oci_execute($statement5);
 
                     if(!$result5){
-                      $e = oci_error($statement6);
+                      $e = oci_error($statement5);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-                    }
+	      }
 
 
-                   $statement3 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, datemedieconcurs_id,  date_personale_candidat_id, data_ultimei_modificari, data_compozitiei, validat, persoana_ultima_modificare, creation_date, last_update_date) values (
+                   $statement4 = oci_parse($connection, "insert into formular (id, detaliiaplicare_id, datemedieconcurs_id,  date_personale_candidat_id, data_ultimei_modificari, data_compozitiei, validat, persoana_ultima_modificare, creation_date, last_update_date, serie_chitanta, suma_achitata) values (
                         :id,
                         :id2,
                         :id3,
-			    :id4,
+                        :id4,
                         current_timestamp,
                         current_timestamp,
                         0,
                         :nume||' '||:prenume,
                         current_timestamp,
-                        current_timestamp)
+                        current_timestamp,
+                        :serie,
+                        :suma)
                         ");
 
-						oci_bind_by_name($statement3, ':id', $numaratoare4);
-						oci_bind_by_name($statement3, ':id2', $numaratoare4);
-						oci_bind_by_name($statement3, ':id3', $numaratoare4);
-						oci_bind_by_name($statement3, ':id4', $numaratoare4);
-                                         oci_bind_by_name($statement3, ':nume', $_POST['Licenta_Numele_De_Familie']);
-                                         oci_bind_by_name($statement3, ':prenume', $_POST['Licenta_Prenumele']);
+					oci_bind_by_name($statement4, ':id', $numaratoare4);
+					oci_bind_by_name($statement4, ':id2', $numaratoare4);
+					oci_bind_by_name($statement4, ':id3', $numaratoare4);
+					oci_bind_by_name($statement4, ':id4', $numaratoare4);
+					oci_bind_by_name($statement4, ':nume', $_POST['Licenta_Numele_De_Familie']);
+					oci_bind_by_name($statement4, ':prenume', $_POST['Licenta_Prenumele']);
+					oci_bind_by_name($statement4, ':serie', $_POST['Licenta_Chitanta_nr']);
+					oci_bind_by_name($statement4, ':suma', $_POST['Licenta_Suma_Taxa']);			
 
-                   if (!$statement3) {
+                   if (!$statement4) {
                         $e = oci_error($connection);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
                     }
 
-                    $result5= oci_execute($statement3);
+                    $result5= oci_execute($statement4);
 
                     if(!$result5){
-                      $e = oci_error($statement3);
+                      $e = oci_error($statement4);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-                    }
-                    else {
-                        echo '<script>window.location.href = "Validare_Formular.php";</script>';
-                    }
+	      }
 	  }
           }
         }

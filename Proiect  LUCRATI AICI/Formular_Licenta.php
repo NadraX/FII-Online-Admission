@@ -297,7 +297,7 @@
   </div> 
   </br>
   <div class="container formular2" style="width:100%">
-			<form  style="width:90%" action="" method='post'>
+			<form  style="width:90%" action="" method='post' enctype="multipart/form-data">
 				<input type="hidden" name="formID" value="71274520949360" />
 				<div class="">
 					<ul class="form-section page-section">
@@ -313,7 +313,7 @@
 											<p>V&#259; rug&#259;m completa&#355;i toate c&#226;mpurile de mai jos.</p>
 											<p>Pentru completarea notelor se acceptă valori cu virgulă (ex: 9,54)</p>
 											<p>În câmpul "Notă la Matematică sau Informatică" se va pune nota de la Bacalaureat cea mai mare dintre cele doua</p>
-											<p>La uploadarea diplomei şi a certificatului se va încârca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
+											<p>La uploadarea diplomei şi a certificatului se va încărca un singur pdf: prima pagină certificatul de nastere, a doua pagină diploma de bacalaureat</p>
 										</div>
 									</div>
 								</div>
@@ -325,9 +325,10 @@
 					</ul>
 					<div class="formular2">
 					    <?php
-							include "exempluLicenta.php";
+							//include "exempluLicenta.php";
+							include "validClass.php";
 							error_reporting(0);
-                                                ini_set('display_errors', 0);
+                            ini_set('display_errors', 0);
 							$v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie_La_nastere"];
 							$v_Licenta_Initiala_Tata = $_POST["Licenta_Initiala_Tata"];
 							$v_Licenta_Email = $_POST["Licenta_Email"];
@@ -350,12 +351,35 @@
 							$v_Licenta_Prenumele = $_POST["Licenta_Prenumele"];
 							$v_Licenta_Prenume_Mama = $_POST["Licenta_Prenume_Mama"];
 							$v_Licenta_Prenume_Tata = $_POST["Licenta_Prenume_Tata"];
-							$v_Licenta_Nationalitate = "Romana";
+							$v_Licenta_Nationalitate = $_POST["Licenta_Nationalitate"];
 							$v_Licenta_Etnie = $_POST["Licenta_Etnie"];
 							$v_Licenta_Limba_Materna = $_POST["Licenta_Limba_Materna"];
-						    $v_id = 1;
-						?>
-						<ul>
+							$v_id = 1;
+							$v_Chitanta = $_POST["Licenta_Chitanta_nr"];		
+							$v_Suma_Taxa = $_POST["Licenta_Suma_Taxa"];		
+							$v_Radio1 = $_POST["group1"];		
+							$v_Scutire = $_POST["Licenta_Motiv_Scutire_taxa"];		
+							$v_Stare_civila = $_POST["Licenta_Stare_Civila"];		
+							$v_Master_Sex = $_POST["Licenta_Sex"];		
+							$v_Master_luna = $_POST["Licenta_Buletin_Luna"];		
+							$v_Master_an = $_POST["Licenta_Buletin_An"];		
+							$v_Master_zi = $_POST["Licenta_Buletin_Ziua"];		
+							$v_Master_limba = $_POST["Licenta_Limba_Aleasa"];		
+							$v_Radio2 = $_POST["group2"];		
+							$v_Radio3 = $_POST["group3"];		
+							$v_Tara = $_POST["Licenta_Tara"];		
+							$v_Radio5 = $_POST["group5"];		
+							$v_Radio6 = $_POST["group6"];		
+							$v_Radio4 = $_POST["group4"];		
+							$v_Stare_Speciala = $_POST["Licenta_Stare_speciala"];		
+							$v_Master_nastere_luna = $_POST["Licenta_Nastere_Luna"];		
+							$v_Master_nastere_zi = $_POST["Licenta_Nastere_Zi"];		
+							$v_Master_nastere_an = $_POST["Licenta_Nastere_An"];		
+							$v_Licenta_Obiect = $_POST["Licenta_Obiect_Test_Ales"];		
+							$v_Judet = $_POST["Licenta_Judet"];		
+							$v_Liceu = $_POST["Licenta_Liceu"];
+						?>						
+					<ul>
               <li class="form-line" data-type="control_taxa" id="id_12">
                 <br>
                 <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Taxă de înscriere  </label>
@@ -364,13 +388,43 @@
                     <tbody>
                       <tr>
                          <span id="chitanta" class="form-sub-label-container" style="vertical-align:top; width: 80%; margin-right: 5px;">
-                            <input type="number"  name="Licenta_Chitanta_nr" class="form-textbox first_1" size="10" value="" data-component="first" />
+                             <input type="text"  name="Licenta_Chitanta_nr" class="form-textbox first_1" size="10" placeholder="ex:2643" data-component="first"  value="<?php
+																																						if($v_Chitanta == '')		
+																																							echo '';		
+																																						else		
+																																							echo $v_Chitanta;		
+																																					?>" />		
                             <label class="form-sub-label sublabel_first" style="min-height:13px;"> Chitanța   nr. </label>
-                        </span>
-                        <span id="suma" class="form-sub-label-container" style="vertical-align:top; width: 18%; margin-right: 5px;">
-                          <input type="number" name="Licenta_Suma_Taxa" class="form-textbox middle_1" size="10" value="" data-component="middle" />
-                          <label class="form-sub-label"  style="min-height:13px;"> Suma achitată (RON) </label>
-                        </span>
+                        </span>		                        </span>
+												<span style="color:red">		
+										<?php		
+											if(isset($_POST['Submit'])) {		
+											$v_Chitanta = $_POST["Licenta_Chitanta_nr"];		
+											$vChitanta = validChitanta($v_Chitanta);		
+											if($vChitanta==0)		
+												echo "C&#226;mp invalid!";		
+											}		
+										?>		
+									</span>		
+                        <span id="suma" class="form-sub-label-container" style="vertical-align:top; width: 18%; margin-right: 5px;">		                       
+                          <input type="number" name="Licenta_Suma_Taxa" class="form-textbox middle_1" size="10" placeholder="ex: 250" data-component="middle" value="<?php 
+																																					if($v_Suma_Taxa == '')		
+																																						echo '';		
+																																					else		
+																																						echo $v_Suma_Taxa;		
+																																				?>" />		
+                          <label class="form-sub-label"  style="min-height:13px;"> Suma achitată (RON) </label>	
+						  </span>
+												<span style="color:red">		
+										<?php		
+											if(isset($_POST['Submit'])) {		
+											$v_Suma_Taxa = $_POST["Licenta_Suma_Taxa"];		
+											$vsuma = validSuma($v_Suma_Taxa);		
+											if($vsuma==0)		
+												echo "C&#226;mp invalid!";		
+											}		
+										?>		
+									</span>	
                       </tr>
                       <tr>
                         <td>
@@ -378,15 +432,56 @@
                           <label class="form-label form-label-left form-label-auto" 
                           style="color: gray; font-size:medium; width:25%; display:inline-block"> Sunteţi scutit de această taxă?  </label>                        
                           <span style="width:40%">
-                            <input type="radio" name="group1" id="checkbox11" class="css-checkbox" />
+                            <input type="radio" name="group1" id="checkbox11" class="css-checkbox" value="1" <?php
+																												if($v_Radio1 == '')		
+																													echo '';		
+																												else		
+																													if($v_Radio1==1)		
+																														echo 'checked="checked"';		
+																													else 		
+																														echo '';		
+																												?> />		
                             <label for="checkbox11" class="css-label" style="margin-right:100px">Da</label>
-                            <input type="radio" name="group1" id="checkbox13" class="css-checkbox" />
+                            <input type="radio" name="group1" id="checkbox13" class="css-checkbox" value="2" <?php
+																												if($v_Radio1 == '')
+																													echo '';
+																												else
+																													if($v_Radio1==2)
+																														echo 'checked="checked"';
+																													else
+																														echo '';
+																												?> />
                             <label for="checkbox13" class="css-label" style="margin-right:50px;">Nu</label>
                           </span>
+							<span style="color:red">
+										<?php		
+											if(isset($_POST['Submit'])) {		
+											$v_Radio1 = $_POST["group1"];		
+											$vradio1 = validRadio($v_Radio1);		
+											if($vradio1==0)		
+												echo "C&#226;mp invalid!";		
+											}		
+										?>		
+									</span>		
                           <span id="motiv-scutire" class="form-sub-label-container" style="vertical-align:top; width: 49%; margin-right: 5px;">
-                              <input type="text" name="Licenta_Motiv_Scutire_taxa" class="form-textbox last_1" size="15" value="" data-component="last" />
+                              <input type="text" name="Licenta_Motiv_Scutire_taxa" class="form-textbox last_1" size="15" placeholder="ex: Fiu de Parlamentar" data-component="last" value="<?php
+																																						if($v_Scutire == '')
+																																							echo '';
+																																						else
+																																							echo $v_Scutire;
+																																					?>" />
                               <label class="form-sub-label"  id="sublabel_last" style="min-height:13px;"> Dacă da, motivul scutirii </label>
                           </span>
+													 <span style="color:red">		
+										<?php		
+											if(isset($_POST['Submit'])) {		
+											$v_Scutire = $_POST["Licenta_Motiv_Scutire_taxa"];		
+											$vscutire = validScutire($v_Scutire);		
+											if($vscutire==0)		
+												echo "C&#226;mp invalid!";		
+											}		
+										?>		
+									</span>
                         </td>
                       </tr>
                     </tbody>
@@ -420,7 +515,7 @@
 											<label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie actual</label>
 										</span>
                     <span id="num2" class="form-sub-label-container" style="vertical-align:top;">
-                      <input type="text" name="Licenta_Numele_De_Familie_La_nastere" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" data-component="first" />
+                      <input type="text" name="Licenta_Numele_De_Familie_La_nastere" class="form-textbox first_1" size="10" placeholder="ex: Ionescu" value="<?php echo $_POST["Licenta_Numele_De_Familie_La_nastere"];?>" data-component="first" />
                       <label class="form-sub-label sublabel_first" style="min-height:13px;"> Numele de familie la nastere </label>
                     </span>
 										<span id="initiala" class="form-sub-label-container" style="vertical-align:top;">
@@ -506,16 +601,41 @@
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:24%;padding:0;margin:0;">
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Stare_Civila" data-component="country">
-												<option value="Necasatorit(a)">Nec&#259;s&#259;torit/&#259;</option>
-												<option value="Casatorit(a)">C&#259;s&#259;torit/&#259;</option>
-                        <option value="Divortat(a)">Divor&#355;at//&#259;</option>
+												<option value="Necasatorit(a)" <?php
+																					if($v_Stare_civila=="Necasatorit(a)")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Nec&#259;s&#259;torit/&#259;</option>
+												<option value="Casatorit(a)" <?php		
+																					if($v_Stare_civila=="Casatorit(a)")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>C&#259;s&#259;torit/&#259;</option>
+                        						<option value="Divortat(a)" <?php
+																					if($v_Stare_civila=="Divortat(a)")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Divor&#355;at//&#259;</option>
 											</select>
 											<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Stare civil&#259;</label>
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:25%;padding:0;margin:0;">
 											<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Sex" data-component="country">
-												<option name="sexFeminin" value="F">F</option>
-												<option name="sexMasculin" value="M">M</option>
+												<option name="sexFeminin" value="F" <?php
+																					if($v_Master_Sex=="F")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Feminin</option>
+												<option name="sexMasculin" value="M" <?php
+																					if($v_Master_Sex=="M")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Masculin</option>
 											</select>
 											<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Sex</label>
 										</span>
@@ -532,7 +652,7 @@
 										</span>
 						
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
-											<input type="text" name="Licenta_Etnie"  class="form-textbox first_1" size="20"  data-component="first"  value="<?php 
+											<input type="text" name="Licenta_Etnie"  class="form-textbox first_1" size="20" placeholder="ex: Rrom"  data-component="first"  value="<?php 
 																																								if($v_Licenta_Etnie == '') 
 																																									echo '';
 																																								else
@@ -552,7 +672,7 @@
 										</span>
 
 										<span class="form-sub-label-container" style="vertical-align:top; width:33%;padding:0;margin:0;">
-											<input type="text" name="Licenta_Limba_Materna"  class="form-textbox first_1" size="20" data-component="first"   value="<?php 
+											<input type="text" name="Licenta_Limba_Materna"  class="form-textbox first_1" size="20"  placeholder="ex: Romana" data-component="first"   value="<?php 
 																																										if($v_Licenta_Limba_Materna == '') 
 																																											echo '';
 																																										else
@@ -673,161 +793,111 @@
 											</span>
 											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> Eliberat de </label>
 										</span>
-										<div  class="form-input jf-required" style="vertical-align:top; width:21%;padding:0;margin:0;height:40px">
+										<div  class="form-input jf-required" style="vertical-align:top; width:25%;padding:0;margin:0;height:40px">
 											<div data-wrapper-react="true">
 												<span class="form-sub-label-container" style="vertical-align:top; ">
 													<select style="height:40px;" name="Licenta_Buletin_Luna"  class="form-dropdown" data-component="birthdate-month">
-														<option value="January">Ianuarie</option>
-														<option value="February"> Februarie</option>
-														<option value="March"> Martie </option>
-														<option value="April"> Aprilie </option>
-														<option value="May"> Mai </option>
-														<option value="June"> Iunie </option>
+														<option value="January" <?php
+																					if($v_Master_luna=="January")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Ianuarie</option>
 														<option value="July"> Iulie</option>
-														<option value="August"> August </option>
-														<option value="September"> Septembrie </option>
-														<option value="October"> Octombrie </option>
-														<option value="November"> Noiembrie</option>
-														<option value="December"> Decembrie </option>
+													<option value="February" <?php
+																					if($v_Master_luna=="February")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>> Februarie</option>		
+													<option value="March" <?php		
+																					if($v_Master_luna=="March")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Martie </option>		
+													<option value="April" <?php		
+																					if($v_Master_luna=="April")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Aprilie </option>		
+													<option value="May"<?php		
+																					if($v_Master_luna=="May")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Mai </option>		
+													<option value="June"<?php		
+																					if($v_Master_luna=="June")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Iunie </option>		
+													<option value="July"<?php		
+																					if($v_Master_luna=="July")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Iulie</option>		
+													<option value="August"<?php		
+																					if($v_Master_luna=="August")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> August </option>		
+													<option value="September"<?php		
+																					if($v_Master_luna=="September")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Septembrie </option>		
+													<option value="October"<?php		
+																					if($v_Master_luna=="October")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Octombrie </option>		
+													<option value="November"<?php		
+																					if($v_Master_luna=="November")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Noiembrie</option>		
+													<option value="December"<?php		
+																					if($v_Master_luna=="December")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Decembrie </option>
 													</select>
 													<label class="form-sub-label"  style="min-height:13px;">în Luna</label>
 												</span>
 												<span class="form-sub-label-container" style="vertical-align:top;">
 													<select style="height:40px;" name="Licenta_Buletin_Ziua"  class="form-dropdown" data-component="birthdate-day">
-														<option value="1"> 1 </option>
-														<option value="2"> 2 </option>
-														<option value="3"> 3 </option>
-														<option value="4"> 4 </option>
-														<option value="5"> 5 </option>
-														<option value="6"> 6 </option>
-														<option value="7"> 7 </option>
-														<option value="8"> 8 </option>
-														<option value="9"> 9 </option>
-														<option value="10"> 10 </option>
-														<option value="11"> 11 </option>
-														<option value="12"> 12 </option>
-														<option value="13"> 13 </option>
-														<option value="14"> 14 </option>
-														<option value="15"> 15 </option>
-														<option value="16"> 16 </option>
-														<option value="17"> 17 </option>
-														<option value="18"> 18 </option>
-														<option value="19"> 19 </option>
-														<option value="20"> 20 </option>
-														<option value="21"> 21 </option>
-														<option value="22"> 22 </option>
-														<option value="23"> 23 </option>
-														<option value="24"> 24 </option>
-														<option value="25"> 25 </option>
-														<option value="26"> 26 </option>
-														<option value="27"> 27 </option>
-														<option value="28"> 28 </option>
-														<option value="29"> 29 </option>
-														<option value="30"> 30 </option>
-														<option value="31"> 31 </option>
+														<?php
+														for($i=1;$i<=31;$i++)
+														{
+															echo '<option value="'.$i.'" ';
+															if($v_Master_zi==$i)
+																echo 'selected';
+															echo '> '.$i.' </option>';
+															}
+													?>
 													</select>
 													<label class="form-sub-label"   style="min-height:13px;"> Ziua </label>
 												</span>
 												<span class="form-sub-label-container" style="vertical-align:top;">
 													<select style="height:40px;" name="Licenta_Buletin_An"  class="form-dropdown" data-component="birthdate-year">
-														<option value="2017"> 2017 </option>
-														<option value="2016"> 2016 </option>
-														<option value="2015"> 2015 </option>
-														<option value="2014"> 2014 </option>
-														<option value="2013"> 2013 </option>
-														<option value="2012"> 2012 </option>
-														<option value="2011"> 2011 </option>
-														<option value="2010"> 2010 </option>
-														<option value="2009"> 2009 </option>
-														<option value="2008"> 2008 </option>
-														<option value="2007"> 2007 </option>
-														<option value="2006"> 2006 </option>
-														<option value="2005"> 2005 </option>
-														<option value="2004"> 2004 </option>
-														<option value="2003"> 2003 </option>
-														<option value="2002"> 2002 </option>
-														<option value="2001"> 2001 </option>
-														<option value="2000"> 2000 </option>
-														<option value="1999"> 1999 </option>
-														<option value="1998"> 1998 </option>
-														<option value="1997"> 1997 </option>
-														<option value="1996"> 1996 </option>
-														<option value="1995"> 1995 </option>
-														<option value="1994"> 1994 </option>
-														<option value="1993"> 1993 </option>
-														<option value="1992"> 1992 </option>
-														<option value="1991"> 1991 </option>
-														<option value="1990"> 1990 </option>
-														<option value="1989"> 1989 </option>
-														<option value="1988"> 1988 </option>
-														<option value="1987"> 1987 </option>
-														<option value="1986"> 1986 </option>
-														<option value="1985"> 1985 </option>
-														<option value="1984"> 1984 </option>
-														<option value="1983"> 1983 </option>
-														<option value="1982"> 1982 </option>
-														<option value="1981"> 1981 </option>
-														<option value="1980"> 1980 </option>
-														<option value="1979"> 1979 </option>
-														<option value="1978"> 1978 </option>
-														<option value="1977"> 1977 </option>
-														<option value="1976"> 1976 </option>
-														<option value="1975"> 1975 </option>
-														<option value="1974"> 1974 </option>
-														<option value="1973"> 1973 </option>
-														<option value="1972"> 1972 </option>
-														<option value="1971"> 1971 </option>
-														<option value="1970"> 1970 </option>
-														<option value="1969"> 1969 </option>
-														<option value="1968"> 1968 </option>
-														<option value="1967"> 1967 </option>
-														<option value="1966"> 1966 </option>
-														<option value="1965"> 1965 </option>
-														<option value="1964"> 1964 </option>
-														<option value="1963"> 1963 </option>
-														<option value="1962"> 1962 </option>
-														<option value="1961"> 1961 </option>
-														<option value="1960"> 1960 </option>
-														<option value="1959"> 1959 </option>
-														<option value="1958"> 1958 </option>
-														<option value="1957"> 1957 </option>
-														<option value="1956"> 1956 </option>
-														<option value="1955"> 1955 </option>
-														<option value="1954"> 1954 </option>
-														<option value="1953"> 1953 </option>
-														<option value="1952"> 1952 </option>
-														<option value="1951"> 1951 </option>
-														<option value="1950"> 1950 </option>
-														<option value="1949"> 1949 </option>
-														<option value="1948"> 1948 </option>
-														<option value="1947"> 1947 </option>
-														<option value="1946"> 1946 </option>
-														<option value="1945"> 1945 </option>
-														<option value="1944"> 1944 </option>
-														<option value="1943"> 1943 </option>
-														<option value="1942"> 1942 </option>
-														<option value="1941"> 1941 </option>
-														<option value="1940"> 1940 </option>
-														<option value="1939"> 1939 </option>
-														<option value="1938"> 1938 </option>
-														<option value="1937"> 1937 </option>
-														<option value="1936"> 1936 </option>
-														<option value="1935"> 1935 </option>
-														<option value="1934"> 1934 </option>
-														<option value="1933"> 1933 </option>
-														<option value="1932"> 1932 </option>
-														<option value="1931"> 1931 </option>
-														<option value="1930"> 1930 </option>
-														<option value="1929"> 1929 </option>
-														<option value="1928"> 1928 </option>
-														<option value="1927"> 1927 </option>
-														<option value="1926"> 1926 </option>
-														<option value="1925"> 1925 </option>
-														<option value="1924"> 1924 </option>
-														<option value="1923"> 1923 </option>
-														<option value="1922"> 1922 </option>
-														<option value="1921"> 1921 </option>
-														<option value="1920"> 1920 </option>
+													<?php
+														for($i=2017;$i>=1920;$i--)
+														{
+															echo '<option value="'.$i.'" ';
+															if($v_Master_an==$i)
+																echo 'selected';
+															echo '> '.$i.' </option>';
+															}
+													?>
 													</select>
 													<label class="form-sub-label"   style="min-height:13px;">Anul</label>
 												</span>
@@ -839,9 +909,11 @@
 						
 									<div class="form-input jf-required cid_1">
 										<div>
-											<span class="form-sub-label-container liceu" style="vertical-align:top;">
-												<input type="text" class="form-dropdown form-address-country liceu" name="Licenta_Liceu" id="input_3_country" data-component="country" list="licee">
-                                                    <datalist id="licee">
+											<span class="form-sub-label-container liceu" style="vertical-align:top; width:100%;">
+                                          
+										<input type="text" class="form-dropdown form-address-country liceu" name="Master_Liceu"  data-component="country" list="licee">
+                                                
+                                            <datalist id="licee">
 <option value="GRUP SCOLAR &quot;HOREA, CLOSCA SI CRISAN&quot; ABRUD">
 <option value="GRUPUL SCOLAR &quot;HOREA, CLOSCA ȘI CRISAN&quot; ABRUD">
 <option value="LICEUL &quot;HOREA, CLOSCA ȘI CRISAN&quot; ABRUD">
@@ -7054,8 +7126,9 @@
 <option value="GRUPUL SCOLAR &quot;SIMION MEHEDINTI&quot; VIDRA">
 <option value="LICEUL &quot;SIMION MEHEDINTI&quot; VIDRA">
 <option value="LICEUL &quot;SIMION MEHEDINŢI&quot; VIDRA">
-        </datalist>
-											</span>
+										</datalist>
+
+									</span>
 											<label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Liceul pe care l-ați absolvit</label>
 										</div>
 										<br>
@@ -7065,9 +7138,25 @@
                           style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitaţi echivalare cu diploma olimpiadă organizată MEN? </label>
                         
                       <span style="width:55%">
-                          <input type="radio" name="group2" id="checkbox10" class="css-checkbox" value="1" />
+                          <input type="radio" name="group2" id="checkbox10" class="css-checkbox" value="1" <?php
+																												if($v_Radio2 == '')
+																													echo '';
+																												else
+																													if($v_Radio2==1)
+																														echo 'checked="checked"';
+																													else
+																														echo '';
+																											?> />		
                           <label for="checkbox10" class="css-label" style="margin-right:100px">Da</label>
-                          <input type="radio" name="group2" id="checkbox12" class="css-checkbox" value="0" />
+                          <input type="radio" name="group2" id="checkbox12" class="css-checkbox" value="2" <?php
+																												if($v_Radio2 == '')
+																													echo '';
+																												else
+																													if($v_Radio2==2)
+																														echo 'checked="checked"';
+																													else
+																														echo '';
+																											?> />
                           <label for="checkbox12" class="css-label">Nu</label>
                       </span>
 
@@ -7120,8 +7209,18 @@
 										<div class="mg">
 											<span class="form-sub-label-container gen" style="vertical-align:top;">
 												<select class="form-dropdown form-address-country" style="width:100%; height:40px" name="Licenta_Limba_Aleasa" data-component="country">
-													<option value="In limba romana">&#206;n limba rom&#226;n&#259;</option>
-													<option value="In limba engleza">&#206;n limba englez&#259;</option>
+													<option value="In limba romana" <?php
+																					if($v_Master_limba=="In limba romana")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>&#206;n limba rom&#226;n&#259;</option>
+												<option value="In limba engleza"<?php
+																					if($v_Master_limba=="In limba engleza")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>&#206;n limba englez&#259;</option>
 												</select>
 												<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Doresc &#238;nva&#355;&#259;m&#226;nt de zi</label>
 											</span>   
@@ -7129,9 +7228,24 @@
 										<div data-wrapper-react="true" class="mg">
 											<span class="form-sub-label-container gen" style="vertical-align:top;">
 												<select class="form-dropdown form-address-country middle_1" name="Licenta_Obiect_Test_Ales"  data-component="country">
-													<option value="Matematica">Matematic&#259;</option>
-													<option value="Informatica C/C++">Informatic&#259; C/C++</option>
-													<option value="Informatica Pascal">Informatic&#259; Pascal</option>
+													<option value="Matematica"<?php
+																					if($v_Licenta_Obiect=="Matematica")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Matematic&#259;</option>
+													<option value="Informatica C/C++"<?php
+																					if($v_Licenta_Obiect=="Informatica C/C++")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Informatic&#259; C/C++</option>
+													<option value="Informatica Pascal"<?php
+																					if($v_Licenta_Obiect=="Informatica Pascal")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Informatic&#259; Pascal</option>
 												</select>
 												<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">Doresc s&#259; dau admitere la obiectul</label>
 											</span>   
@@ -7154,9 +7268,25 @@
                           style="color: gray; font-size:medium; width:25%; display:inline-block"> Domiciliu stabil: </label>
                         
                           <span style="width:75%">
-                            <input type="radio" name="group3" id="checkbox1" class="css-checkbox" value="Rural"/>
+                            <input type="radio" name="group3" id="checkbox1" class="css-checkbox" value="1" <?php
+																												if($v_Radio3 == '')
+																													echo '';
+																												else
+																													if($v_Radio3==1)
+																														echo 'checked="checked"';
+																													else
+																														echo '';
+																												?> />
                             <label for="checkbox1" class="css-label" style="margin-right:100px">Rural</label>
-                            <input type="radio" name="group3" id="checkbox2" class="css-checkbox" value="Urban" />
+                            <input type="radio" name="group3" id="checkbox2" class="css-checkbox" value="2" <?php
+																												if($v_Radio3 == '')
+																													echo '';
+																												else
+																													if($v_Radio3==2)
+																														echo 'checked="checked"';
+																													else
+																														echo '';
+																												?> />
                             <label for="checkbox2" class="css-label">Urban</label>
                           </span>
                         </td>
@@ -7305,47 +7435,16 @@
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:24%">
 														<select class="form-dropdown form-address-country gen" name="Licenta_Judet"  data-component="country">
-															<option value="Alba">Alba</option>
-															<option value="Arad">Arad</option>
-															<option value="Arges">Arge&#351;</option>  
-															<option value="Bacau">Bac&#259;u</option>
-															<option value="Bihor">Bihor</option>
-															<option value="BistritaNasaud">Bistri&#355;a-N&#259;s&#259;ud</option>
-															<option value="Botosani">Boto&#351;ani</option>
-															<option value="Braila">Br&#259;ila</option>
-															<option value="Brasov">Bra&#351;ov</option>
-															<option value="Bucuresti">Bucure&#351;ti</option>
-															<option value="Buzau">Buz&#259;u</option>
-															<option value="Calarasi">C&#259;l&#259;ra&#351;i</option>
-															<option value="Caras-Severin">Cara&#351;-Severin</option>
-															<option value="Cluj">Cluj</option>
-															<option value="Constanta">Constan&#355;a</option>
-															<option value="Covasna">Covasna</option>
-															<option value="Dambovita">D&#226;mbovi&#355;a</option>
-															<option value="Galati">Gala&#355;i</option>
-															<option value="Giurgiu">Giurgiu</option>
-															<option value="Gorj">Gorj</option>
-															<option value="Harghita">Harghita</option>
-															<option value="Hunedoara">Hunedoara</option>
-															<option value="Ialomita">Ialomi&#355;a</option>
-															<option value="Iasi">Ia&#351;i</option>
-															<option value="Ilfov">Ilfov</option>
-															<option value="Maramures">Maramure&#351;</option>
-															<option value="Mehedinti">Mehedin&#355;i</option>
-															<option value="Mures">Mures</option>
-															<option value="Neamt">Neam&#355;</option>
-															<option value="Olt">Olt</option>
-															<option value="Prahova">Prahova</option>
-															<option value="Salaj">S&#259;laj</option>
-															<option value="Satu Mare">Satu Mare</option>
-															<option value="Sibiu">Sibiu</option>
-															<option value="Suceava">Suceava</option>
-															<option value="Teleorman">Teleorman</option>
-															<option value="Timisoara">Timi&#351;</option>
-															<option value="Tulcea">Tulcea</option>
-															<option value="Valcea">V&#226;lcea</option>
-															<option value="Vaslui">Vaslui</option>
-															<option value="Vrancea">Vrancea</option>
+															<?php
+	$array=array("Alba","Arad","Arges","Bacau","Bihor","BistritaNasaud","Botosani","Braila","Brasov","Bucuresti","Buzau","Calarasi","Caras-Severin","Cluj","Constanta","Covasna","Dambovita","Galati","Giurgiu","Gorj","Harghita","Hunedoara","Ialomita","Iasi","Ilfov","Maramures","Mehedinti","Mures","Neamt","Olt","Prahova","Salaj","Satu Mare","Sibiu","Suceava","Teleorman","Timisoara","Tulcea","Valcea","Vaslui","Vrancea");
+	for($i=0;$i<41;$i++)
+	{
+		echo '<option value="'.$array[$i].'" ';
+		if($v_Judet==$array[$i])
+			echo 'selected';
+		echo '> '.$array[$i].' </option>';
+	}
+?>
 														</select>
 														<label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Jude&#355; </label>
 													</span>
@@ -7370,9 +7469,24 @@
 													</span>
 													<span class="form-sub-label-container" style="vertical-align:top; width:24%">
 														<select class="form-dropdown form-address-country gen" name="Licenta_Tara" data-component="country">
-															<option value="Romania"> Rom&#226;nia </option>
-															<option value="Republica Moldova"> Republica Moldova </option>
-															<option value="Alta Optiune"> Alta op&#355;iune</option>
+															<option value="Romania" <?php
+																					if($v_Tara=="Romania")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>> Rom&#226;nia </option>
+																<option value="Republica Moldova"<?php
+																					if($v_Tara=="Republica Moldova")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>> Republica Moldova </option>
+																<option value="Alta Optiune"<?php
+																					if($v_Tara=="Alta Optiune")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>> Alta op&#355;iune</option>
 														</select>
 														<label class="form-sub-label" for="input_3_country"  style="min-height:13px;">&#354;ar&#259; </label>
 													</span>
@@ -7392,11 +7506,27 @@
                       <tr>
                         <td>
                           <label class="form-label form-label-left form-label-auto" 
-                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor?  </label>                        
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor?  </label>
                           <span style="width:55%">
-                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" value="1" />
+                           <input type="radio" name="group5" id="checkbox3" class="css-checkbox" value="1" <?php
+																												if($v_Radio5 == '')
+																													echo '';
+																												else
+																													if($v_Radio5==1)
+																														echo 'checked="checked"';
+																													else
+																														echo '';
+																												?> />
                             <label for="checkbox3" class="css-label" style="margin-right:100px">Da</label>
-                            <input type="radio" name="group5" id="checkbox4" class="css-checkbox" value="0" />
+                            <input type="radio" name="group5" id="checkbox4" class="css-checkbox" value="2" <?php
+																												if($v_Radio5 == '')
+																													echo '';
+																												else
+																													if($v_Radio5==2)
+																														echo 'checked="checked"';
+																													else
+																														echo '';
+																												?> />
                             <label for="checkbox4" class="css-label">Nu</label>
                           </span>
                         </td>
@@ -7404,11 +7534,27 @@
                       <tr>
                         <td>
                           <label class="form-label form-label-left form-label-auto" 
-                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul susținerii examenului?   </label>                        
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul susținerii examenului?   </label>
                           <span style="width:55%">
-                            <input type="radio" name="group6" id="checkbox5" class="css-checkbox" value="1" />
+                             <input type="radio" name="group6" id="checkbox5" class="css-checkbox" value="1" <?php
+																															if($v_Radio6 == '')
+																																echo '';
+																															else
+																																if($v_Radio6==1)
+																																	echo 'checked="checked"';
+																																else
+																																	echo '';
+																															?> />
                             <label for="checkbox5" class="css-label" style="margin-right:100px">Da</label>
-                            <input type="radio" name="group6" id="checkbox6" class="css-checkbox" value="0" />
+                            <input type="radio" name="group6" id="checkbox6" class="css-checkbox" value="2" <?php
+																															if($v_Radio6 == '')
+																																echo '';
+																															else
+																																if($v_Radio6==2)
+																																	echo 'checked="checked"';
+																																else
+																																	echo '';
+																															?> />
                             <label for="checkbox6" class="css-label">Nu</label>
                           </span>
                         </td>
@@ -7427,9 +7573,25 @@
                           <label class="form-label form-label-left form-label-auto" 
                           style="color: gray; font-size:medium; width:45%; display:inline-block"> Candidat care se încadrează în categoria persoanelor cu dizabilități  </label>                        
                           <span style="width:55%">
-                                <input type="radio" name="group4" id="checkbox7" class="css-checkbox" value="1" />
+                                <input type="radio" name="group4" id="checkbox7" class="css-checkbox" value="1" <?php
+																															if($v_Radio4 == '')
+																																echo '';
+																															else
+																																if($v_Radio4==1)
+																																	echo 'checked="checked"';
+																																else
+																																	echo '';
+																															?> />		
                                 <label for="checkbox7" class="css-label" style="margin-right:100px">Da</label>
-                                <input type="radio" name="group4" id="checkbox8" class="css-checkbox" value="0" />
+                                <input type="radio" name="group4" id="checkbox8" class="css-checkbox" value="2" <?php
+																															if($v_Radio4 == '')
+																																echo '';
+																															else
+																																if($v_Radio4==2)
+																																	echo 'checked="checked"';
+																																else
+																																	echo '';
+																															?> />
                                 <label for="checkbox8" class="css-label">Nu</label>
                           </span>
                         </td>
@@ -7439,12 +7601,43 @@
                           <br>
                           <span class="form-sub-label-container" style="vertical-align:top; width:30%">
                           <select class="form-dropdown form-address-country gen" name="Licenta_Stare_speciala"  data-component="country">
-                            <option value="0">Nicio opţiune</option>                            
-                            <option value="Orfan de un parinte">Orfan de un părinte</option>
-                            <option value="Orfan de ambii parinti">Orfan de ambii părinți</option>
-                            <option value="Provenit din case de copii">Provenit din case de copii</option>  
-                            <option value="Provenit din plasament familial">Provenit din plasament familial</option>
-                            <option value="Provenit din familie monoparentala">Provenit din familie monoparentală</option>
+                            <option value="1"<?php
+																					if($v_Stare_Speciala=="1")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Nicio opţiune</option>
+				                            <option value="2"<?php
+																					if($v_Stare_Speciala=="2")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>>Orfan de un părinte</option>		
+				                            <option value="3"<?php		
+																					if($v_Stare_Speciala=="3")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>>Orfan de ambii părinți</option>		
+				                            <option value="4"<?php		
+																					if($v_Stare_Speciala=="4")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>>Provenit din case de copii</option>  		
+				                            <option value="5"<?php		
+																					if($v_Stare_Speciala=="5")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>>Provenit din plasament familial</option>		
+				                            <option value="6"<?php		
+																					if($v_Stare_Speciala=="6")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>>Provenit din familie monoparentală</option>		
+				                          </select>
                           </select>
                           <label class="form-sub-label" for="input_3_country" style="min-height:13px;"> Stare socială specială </label>
                         </span>
@@ -7456,7 +7649,7 @@
               </li>
 						  
 							
-							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%">
+							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px">
 								<label class="form-label form-label-left form-label-auto" id="label_6"   style="color: #3488CB; font-size:large">Contact </label>
 								<div id="cid_6" class="form-input jf-required" style="width:100%">
 									<div data-wrapper-react="true" style="width:100%">
@@ -7512,157 +7705,108 @@
 									<div data-wrapper-react="true">
 										<span class="form-sub-label-container" style="vertical-align:top; ">
 											<select style="height:40px;" name="Licenta_Nastere_Luna" id="input_10_month" class="form-dropdown" data-component="birthdate-month">
-												<option value="January">Ianuarie</option>
-												<option value="February"> Februarie</option>
-												<option value="March"> Martie </option>
-												<option value="April"> Aprilie </option>
-												<option value="May"> Mai </option>
-												<option value="June"> Iunie </option>
+												<option value="January" <?php
+																					if($v_Master_nastere_luna=="January")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Ianuarie</option>
 												<option value="July"> Iulie</option>
-												<option value="August"> August </option>
-												<option value="September"> Septembrie </option>
-												<option value="October"> Octombrie </option>
-												<option value="November"> Noiembrie</option>
-												<option value="December"> Decembrie </option>
+													<option value="February" <?php
+																					if($v_Master_nastere_luna=="February")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>> Februarie</option>		
+													<option value="March" <?php		
+																					if($v_Master_nastere_luna=="March")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Martie </option>		
+													<option value="April" <?php		
+																					if($v_Master_nastere_luna=="April")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Aprilie </option>		
+													<option value="May"<?php		
+																					if($v_Master_nastere_luna=="May")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Mai </option>		
+													<option value="June"<?php		
+																					if($v_Master_nastere_luna=="June")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Iunie </option>		
+													<option value="July"<?php		
+																					if($v_Master_nastere_luna=="July")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Iulie</option>		
+													<option value="August"<?php		
+																					if($v_Master_nastere_luna=="August")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> August </option>		
+													<option value="September"<?php		
+																					if($v_Master_nastere_luna=="September")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Septembrie </option>		
+													<option value="October"<?php		
+																					if($v_Master_nastere_luna=="October")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Octombrie </option>		
+													<option value="November"<?php		
+																					if($v_Master_nastere_luna=="November")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Noiembrie</option>		
+													<option value="December"<?php		
+																					if($v_Master_nastere_luna=="December")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Decembrie </option>
 											</select>
 											<label class="form-sub-label" for="input_10_month" id="sublabel_month" style="min-height:13px;">Lun&#259;</label>
 										</span>
 										<span class="form-sub-label-container" style="vertical-align:top;">
 											<select style="height:40px;" name="Licenta_Nastere_Zi" id="input_10_day" class="form-dropdown" data-component="birthdate-day">
-												<option value="1"> 1 </option>
-												<option value="2"> 2 </option>
-												<option value="3"> 3 </option>
-												<option value="4"> 4 </option>
-												<option value="5"> 5 </option>
-												<option value="6"> 6 </option>
-												<option value="7"> 7 </option>
-												<option value="8"> 8 </option>
-												<option value="9"> 9 </option>
-												<option value="10"> 10 </option>
-												<option value="11"> 11 </option>
-												<option value="12"> 12 </option>
-												<option value="13"> 13 </option>
-												<option value="14"> 14 </option>
-												<option value="15"> 15 </option>
-												<option value="16"> 16 </option>
-												<option value="17"> 17 </option>
-												<option value="18"> 18 </option>
-												<option value="19"> 19 </option>
-												<option value="20"> 20 </option>
-												<option value="21"> 21 </option>
-												<option value="22"> 22 </option>
-												<option value="23"> 23 </option>
-												<option value="24"> 24 </option>
-												<option value="25"> 25 </option>
-												<option value="26"> 26 </option>
-												<option value="27"> 27 </option>
-												<option value="28"> 28 </option>
-												<option value="29"> 29 </option>
-												<option value="30"> 30 </option>
-												<option value="31"> 31 </option>
+												<?php
+														for($i=1;$i<=31;$i++)
+														{
+															echo '<option value="'.$i.'" ';
+															if($v_Master_nastere_zi==$i)
+																echo 'selected';
+															echo '> '.$i.' </option>';
+															}
+													?>
+
 											</select>
 											<label class="form-sub-label" for="input_10_day" id="sublabel_day" style="min-height:13px;"> Zi </label>
 										</span>
 										<span class="form-sub-label-container" style="vertical-align:top;">
 											<select style="height:40px;" name="Licenta_Nastere_An" id="input_10_year" class="form-dropdown" data-component="birthdate-year">
-												<option value="2017"> 2017 </option>
-												<option value="2016"> 2016 </option>
-												<option value="2015"> 2015 </option>
-												<option value="2014"> 2014 </option>
-												<option value="2013"> 2013 </option>
-												<option value="2012"> 2012 </option>
-												<option value="2011"> 2011 </option>
-												<option value="2010"> 2010 </option>
-												<option value="2009"> 2009 </option>
-												<option value="2008"> 2008 </option>
-												<option value="2007"> 2007 </option>
-												<option value="2006"> 2006 </option>
-												<option value="2005"> 2005 </option>
-												<option value="2004"> 2004 </option>
-												<option value="2003"> 2003 </option>
-												<option value="2002"> 2002 </option>
-												<option value="2001"> 2001 </option>
-												<option value="2000"> 2000 </option>
-												<option value="1999"> 1999 </option>
-												<option value="1998"> 1998 </option>
-												<option value="1997"> 1997 </option>
-												<option value="1996"> 1996 </option>
-												<option value="1995"> 1995 </option>
-												<option value="1994"> 1994 </option>
-												<option value="1993"> 1993 </option>
-												<option value="1992"> 1992 </option>
-												<option value="1991"> 1991 </option>
-												<option value="1990"> 1990 </option>
-												<option value="1989"> 1989 </option>
-												<option value="1988"> 1988 </option>
-												<option value="1987"> 1987 </option>
-												<option value="1986"> 1986 </option>
-												<option value="1985"> 1985 </option>
-												<option value="1984"> 1984 </option>
-												<option value="1983"> 1983 </option>
-												<option value="1982"> 1982 </option>
-												<option value="1981"> 1981 </option>
-												<option value="1980"> 1980 </option>
-												<option value="1979"> 1979 </option>
-												<option value="1978"> 1978 </option>
-												<option value="1977"> 1977 </option>
-												<option value="1976"> 1976 </option>
-												<option value="1975"> 1975 </option>
-												<option value="1974"> 1974 </option>
-												<option value="1973"> 1973 </option>
-												<option value="1972"> 1972 </option>
-												<option value="1971"> 1971 </option>
-												<option value="1970"> 1970 </option>
-												<option value="1969"> 1969 </option>
-												<option value="1968"> 1968 </option>
-												<option value="1967"> 1967 </option>
-												<option value="1966"> 1966 </option>
-												<option value="1965"> 1965 </option>
-												<option value="1964"> 1964 </option>
-												<option value="1963"> 1963 </option>
-												<option value="1962"> 1962 </option>
-												<option value="1961"> 1961 </option>
-												<option value="1960"> 1960 </option>
-												<option value="1959"> 1959 </option>
-												<option value="1958"> 1958 </option>
-												<option value="1957"> 1957 </option>
-												<option value="1956"> 1956 </option>
-												<option value="1955"> 1955 </option>
-												<option value="1954"> 1954 </option>
-												<option value="1953"> 1953 </option>
-												<option value="1952"> 1952 </option>
-												<option value="1951"> 1951 </option>
-												<option value="1950"> 1950 </option>
-												<option value="1949"> 1949 </option>
-												<option value="1948"> 1948 </option>
-												<option value="1947"> 1947 </option>
-												<option value="1946"> 1946 </option>
-												<option value="1945"> 1945 </option>
-												<option value="1944"> 1944 </option>
-												<option value="1943"> 1943 </option>
-												<option value="1942"> 1942 </option>
-												<option value="1941"> 1941 </option>
-												<option value="1940"> 1940 </option>
-												<option value="1939"> 1939 </option>
-												<option value="1938"> 1938 </option>
-												<option value="1937"> 1937 </option>
-												<option value="1936"> 1936 </option>
-												<option value="1935"> 1935 </option>
-												<option value="1934"> 1934 </option>
-												<option value="1933"> 1933 </option>
-												<option value="1932"> 1932 </option>
-												<option value="1931"> 1931 </option>
-												<option value="1930"> 1930 </option>
-												<option value="1929"> 1929 </option>
-												<option value="1928"> 1928 </option>
-												<option value="1927"> 1927 </option>
-												<option value="1926"> 1926 </option>
-												<option value="1925"> 1925 </option>
-												<option value="1924"> 1924 </option>
-												<option value="1923"> 1923 </option>
-												<option value="1922"> 1922 </option>
-												<option value="1921"> 1921 </option>
-												<option value="1920"> 1920 </option>
+												<?php
+														for($i=2017;$i>=1920;$i--)
+														{
+															echo '<option value="'.$i.'" ';
+															if($v_Master_nastere_an==$i)
+																echo 'selected';
+															echo '> '.$i.' </option>';
+															}
+													?>
 											</select>
 											<label class="form-sub-label" for="input_10_year" id="sublabel_year" style="min-height:13px;">An</label>
 										</span>
@@ -7671,7 +7815,50 @@
 										<span class="form-sub-label-container" style="vertical-align:top;">
 											<label class="form-label form-label-left form-label-auto" id="label_9" for="input_9" style="color: #3488CB; font-size:large">Uploadare diplome, certificate (format pdf)</label>
 											<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px" >
-												<a href="YourFile.pdf">Upload aici</a> 
+										   
+                                                <input type="file" name="fileToUpload" id="fileToUpload">
+												<?php
+                                                    if(isset($_POST["fileToUpload"])) {
+                                                        
+                                                    }
+                                            
+                                                    if(isset($_POST['Submit'])) {
+                                                        $v_Numele_De_Familie=$_POST["Licenta_Numele_De_Familie_La_nastere"];
+                                                         $v_Licenta_Prenumele = $_POST["Licenta_Prenumele"];
+                                                    }
+                                            
+                                                    $target_dir = "uploads/";
+                                                    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                                                    
+                                                    $uploadOk = 1;
+                                                    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+                                            
+
+                                                    if ($_FILES["fileToUpload"]["size"] > 5000000) {
+                                                        echo '';
+                                                        $uploadOk = 0;
+                                                    }
+                                                
+                                                    if($imageFileType != "pdf") {
+                                                        echo '';
+                                                        $uploadOk = 0;
+                                                    }
+
+                                                    if ($uploadOk == 0) {
+                                                         echo '';
+                                                     } else {
+                                                         $new_name = $v_Numele_De_Familie . "_" . $v_Licenta_Prenumele .  "." . $imageFileType;
+                                                         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir.$new_name)) {
+                                                             echo '';
+                                                         } else {
+                                                             echo '';
+                                                         }
+                                                     }
+
+                                            
+													?>
+ 
+                                        
 											</object>
 										</span> 
 									</div>
@@ -7763,8 +7950,8 @@
 <?php
 
   if(isset($_POST['Submit'])){
-    $username = 'ADMITERE1';
-    $password = 'ADMITERE1';
+    $username = 'ADMITERE';
+    $password = 'ADMITERE';
     $connection_string = 'localhost/xe';
 
     $connection = oci_connect($username, $password, $connection_string);
@@ -8053,6 +8240,9 @@
                       $e = oci_error($statement4);
                         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 	      }
+                else {
+                    echo '<script>window.location.href = "Validare_Formular.php";</script>';
+                }
 	  }
           }
         }
