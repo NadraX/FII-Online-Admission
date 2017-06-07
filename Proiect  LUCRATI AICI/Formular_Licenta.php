@@ -474,12 +474,19 @@
                           </span>
 													 <span style="color:red">		
 										<?php		
-											if(isset($_POST['Submit'])) {		
-											$v_Scutire = $_POST["Licenta_Motiv_Scutire_taxa"];		
-											$vscutire = validScutire($v_Scutire);		
-											if($vscutire==0)		
-												echo "C&#226;mp invalid!";		
-											}		
+											if(isset($_POST['Submit'])) {
+												if($v_Radio1==1) {
+													$v_Scutire = $_POST["Licenta_Motiv_Scutire_taxa"];		
+													$vscutire = validScutire($v_Scutire);		
+													if($vscutire==0){
+														echo "C&#226;mp invalid!";
+													}
+													else if(strlen($v_Scutire)==0) {
+															echo "C&#226;mp necompletat!";
+													}
+														
+												}
+											}	
 										?>		
 									</span>
                         </td>
@@ -572,7 +579,8 @@
 												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Prenume_Mama = $_POST["Licenta_Prenume_Mama"];
-														$vLicenta_PrenumeMama = validNume($v_Licenta_Prenume_Mama);
+                                                        
+														$vLicenta_PrenumeMama = validPremume($v_Licenta_Prenume_Mama);
 														if($vLicenta_PrenumeMama==0)
 															echo "C&#226;mp invalid!";
 													}
@@ -591,7 +599,8 @@
 												<?php 
 													if(isset($_POST['Submit'])) {
 														$v_Licenta_Prenume_Tata = $_POST["Licenta_Prenume_Tata"];
-														$vLicenta_PrenumeTata = validNume($v_Licenta_Prenume_Tata);
+                                                       
+														$vLicenta_PrenumeTata = validPremume($v_Licenta_Prenume_Tata);
 														if($vLicenta_PrenumeTata==0)
 															echo "C&#226;mp invalid!";
 													}

@@ -672,7 +672,7 @@
 													<?php 
 														if(isset($_POST['Submit'])) {
 															$v_Licenta_Prenume_Mama = $_POST["Master_Prenume_Mama"];
-															$vLicenta_PrenumeMama = validNume($v_Licenta_Prenume_Mama);
+															$vLicenta_PrenumeMama = validPremume($v_Licenta_Prenume_Mama);
 															if($vLicenta_PrenumeMama==0)
 																echo "C&#226;mp invalid!";
 														}
@@ -695,7 +695,7 @@
 													<?php 
 														if(isset($_POST['Submit'])) {
 															$v_Licenta_Prenume_Tata = $_POST["Master_Prenume_Tata"];
-															$vLicenta_PrenumeTata = validNume($v_Licenta_Prenume_Tata);
+															$vLicenta_PrenumeTata = validPremume($v_Licenta_Prenume_Tata);
 															if($vLicenta_PrenumeTata==0)
 																echo "C&#226;mp invalid!";
 														}
