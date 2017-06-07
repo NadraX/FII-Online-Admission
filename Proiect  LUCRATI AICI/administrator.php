@@ -183,7 +183,13 @@
 </div>
 
 </br></br>
+<?php
 
+    if ( isset($_GET['success']) && $_GET['success'] == 1 )
+    {
+        echo '<script>alert("Formularul a fost validat cu succes.");</script>';
+    }
+?>
 
 <div id="top">
 

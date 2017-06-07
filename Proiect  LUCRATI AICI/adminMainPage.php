@@ -179,7 +179,7 @@ function getDataDay($id_formular)
 function getDataMonth($id_formular)
 {
     $c = oci_connect("ADMITERE", "ADMITERE", "localhost/xe");
-    $s = oci_parse($c, " begin  select to_char(dpc.data_nasterii,'Month') into :bv from date_personale_candidat dpc
+    $s = oci_parse($c, " begin  select to_char(dpc.data_nasterii,'MM') into :bv from date_personale_candidat dpc
                                                  join formular f on f.date_personale_candidat_id=dpc.id
                                                  where f.id='$id_formular'; end; ");
     oci_bind_by_name($s, ":bv", $v, 100);
@@ -277,7 +277,7 @@ function getBuletinDay($id_formular)
 function getBuletinMonth($id_formular)
 {
     $c = oci_connect("ADMITERE", "ADMITERE", "localhost/xe");
-    $s = oci_parse($c, " begin  select to_char(dpc.buletin_data_eliberarii,'Month') into :bv from date_personale_candidat dpc
+    $s = oci_parse($c, " begin  select to_char(dpc.buletin_data_eliberarii,'MM') into :bv from date_personale_candidat dpc
                                                  join formular f on f.date_personale_candidat_id=dpc.id
                                                  where f.id='$id_formular'; end; ");
     oci_bind_by_name($s, ":bv", $v, 100);

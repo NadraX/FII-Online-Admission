@@ -60,21 +60,6 @@ $(document).ready(function(){
         $(this).find(":button").hide();
     });
 
-    $('#bprof').on('click',function(){
-    if($('#divstud').css('display')!='none'){
-    $('#divprof').show().siblings('div').hide();
-    }else if($('#divprof').css('display')!='none'){
-        $('#divstud').show().siblings('div').hide();
-    }
-    });
-
-    $('#bstud').on('click',function(){
-    if($('#divprof').css('display')!='none'){
-    $('#divstud').show().siblings('div').hide();
-    }else if($('#divstud').css('display')!='none'){
-        $('#divprof').show().siblings('div').hide();
-    }
-    });
 
     var theToggle = document.getElementById('toggle');
 
