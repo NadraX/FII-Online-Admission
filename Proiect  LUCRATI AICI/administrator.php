@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 
 
@@ -189,6 +189,12 @@
     {
         echo '<script>alert("Formularul a fost validat cu succes.");</script>';
     }
+
+    if ( isset($_GET['deleted']) && $_GET['deleted'] == 1 )
+    {
+        echo '<script>alert("Formularul a fost respins cu succes.");</script>';
+    }
+    
 ?>
 
 <div id="top">
