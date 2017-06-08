@@ -228,6 +228,17 @@
                     
                 </form>
                 
+                <form  method="post" action="pdf_licenta.php">
+                    
+                    <button class="btn buton validare-btn wid100" type="submit">
+
+                        <span  style="color:white;">Generare pdf</span>
+
+                    </button>
+                    
+                    
+                </form>
+                
 
             </div>
 
