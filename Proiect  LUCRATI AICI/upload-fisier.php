@@ -11,7 +11,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
     echo "Fisierul depaseste 5MB!";
     $uploadOk = 0;
 }
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "pdf") {
+if($imageFileType != "pdf") {
     echo "Respectati formatul fisierelor!";
     $uploadOk = 0;
 }

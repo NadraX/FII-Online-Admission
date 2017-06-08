@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 
 
@@ -205,7 +205,7 @@
 
                 <button class="btn btn-danger buton wid100 marg-t30" style="height:40px;" onclick="showModal()">
 
-                    <span>Respinge</span>
+                    <span>Retrimitere</span>
 
                 </button>
 
@@ -215,6 +215,29 @@
                         <span  style="color:white;">Validare</span>
 
                     </button>
+                </form>
+                
+                <form  method="post" action="respingereFormular.php">
+                    
+                    <button class="btn buton validare-btn wid100" type="submit">
+
+                        <span  style="color:white;">Respingere</span>
+
+                    </button>
+                    
+                    
+                </form>
+                
+                <form  method="post" action="pdf_licenta.php">
+                    
+                    <button class="btn buton validare-btn wid100" type="submit">
+
+                        <span  style="color:white;">Generare pdf</span>
+
+                    </button>
+                    
+                    
+                </form>
                 
 
             </div>
@@ -537,8 +560,6 @@
 
 
 
-
-
     <!--Modal Pentru Respingerea unui formular, de trimis e-mail-->
 
     <div class="modal fade" id="TrimiteMail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -559,13 +580,13 @@
 
                 <div class="modal-body">
 
-                    <form>
+                    <form action="mail_administrativ.php" method="post">
 
                         <div class="form-group">
 
                             <label for="recipient-name" class="form-control-label">E-mail:</label>
 
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" name="recipient-name" class="form-control" id="recipient-name">
 
                         </div>
 
@@ -573,21 +594,21 @@
 
                             <label for="message-text" class="form-control-label">Mesaj:</label>
 
-                            <textarea class="form-control" id="message-text"></textarea>
+                            <textarea class="form-control" id="message-text" name="message-text"></textarea>
 
                         </div>
+                        
+                        <div class="modal-footer">
 
-                    </form>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                </div>
+                            <input type="submit" name="submit" value="Submit" class="btn btn-primary">
 
-                <div class="modal-footer">
+                    </div>
 
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                    <button type="button" class="btn btn-primary">Send message</button>
-
-                </div>
+                    </form> 
+                    
+                </div> 
 
             </div>
 

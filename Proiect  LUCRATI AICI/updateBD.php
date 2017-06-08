@@ -450,4 +450,15 @@ function validare($id_formular)
     oci_close($c);
 
 }
+
+function respingere($id_formular)
+{
+    $c = oci_connect("ADMITERE", "ADMITERE", "localhost/xe");
+    $s = oci_parse($c, "DELETE FROM formular WHERE id='$id_formular' ");
+
+    oci_execute($s);
+    oci_close($c);
+
+}
+
 ?>
