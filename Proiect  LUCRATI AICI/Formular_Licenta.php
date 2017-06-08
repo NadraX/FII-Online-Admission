@@ -7846,7 +7846,13 @@
 									</div>
 								</div>
 							</li>
-			   
+			                 <div>
+                                <p><b>
+                                    VIII. Declar pe propria răspundere, cunoscând consecinţele administrative şi juridice ale declaraţiilor inexacte/ false, că datele furnizate în această fişă sunt conforme cu realitatea şi că am luat cunoştinţă prevederile metodologiei de admitere.<br><br>
+IX. Datele declarate de Dumneavoastră sunt prelucrate de Universitatea „Alexandru Ioan Cuza” din Iaşi, în conformitate cu prevederile Legii 677/2001, privind protecţia persoanelor cu privire la prelucrarea datelor cu caracter personal şi libera circulaţie a acestor date, modificată şi completată. 
+                                    </b> </p>
+                                    
+                             </div>
 							
                                 <li>
 									<div data-wrapper-react="true">
@@ -7961,7 +7967,10 @@
                             <li>adeverinţă de la facultatea urmată, care să ateste numărul de semestre finanţate de la buget de care au beneficiat
 
                             <li>Întrucât candidaţii au dreptul de a se prezenta concomitent la două sau mai multe domenii, în vederea admiterii în învăţământul superior, dosarul cu actele originale se depune la prima opţiune. Înscrierea pentru celelalte domenii se face pe baza documentelor mai sus menţionate, prezentate în copie (pentru domeniile din Universitatea „Alexandru Ioan Cuza” Iaşi) sau în copie legalizată (pentru domeniile altor instituţii în afara Universităţii „Alexandru Ioan Cuza” Iaşi), la care se adaugă o adeverinţă de înscriere de la facultatea unde s-a depus dosarul cu actele originale. Indiferent dacă Facultatea de Informatică reprezintă sau nu prima opţiune, testul scris este obligatoriu pentru toţi candidaţii.</li>
+                            
                         </ul>
+                        <p>Pot fi înscrişi fără susţinerea testului scris candidaţii, absolvenţi de liceu cu diploma de bacalaureat, care au obţinut performanţe recunoscute în concursuri internaţionale şi naţionale, în clasele IX-XII: <br>○ Medalie sau premiu la Olimpiada Internaţională la disciplinele Informatică, Matematică, Fizică, Chimie<br>
+○ Medalie sau premiu la concursurile şcolare internaţionale de informatică sau matematică (altele decât Olimpiadele Internaţionale) recunoscute de M.E.N. <br>○ Medalie sau premiu la Olimpiada Naţională la disciplinele Informatică, Matematică, Fizică, Chimie <br>○ Medalie sau premiu la concursurile de informatică sau matematică cu finanţare M.E.N. Absolvenţii de liceu care au participat la faza naţională a Olimpiadei de Informatică, Matematică, Fizică sau Chimie, în clasa a XI-a sau a XII-a, pot cere înlocuirea cu nota 10 a mediei generale de la Bacalaureat, dar cu obligaţia de a susţine testul scris. Candidaţii vor atașa acestei fișe diplomele scanate care dovedesc participările/rezultatele obţinute la aceste competiţii.</p>
                      </div>
 
 				</div>
@@ -8006,7 +8015,10 @@
 
 			<div class="footer-right">
 				<h3 class="headernou">Linkuri</h3>
-				<div class="footer-links">
+			
+                
+                
+                <div class="footer-links">
 					 <img class="footer_img grayscale" src="imagini/fii.png" alt="fii "  id="bloc1"/>
 					 <a href="https://www.info.uaic.ro/bin/Main/"><p id="bloc2" class="footer-links"> &nbsp&nbspFacultatea de informatic&#259; Iasi<p></a>
 				</div>
