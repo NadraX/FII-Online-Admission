@@ -226,6 +226,31 @@
       #id_10 {
         padding-left: 10px;
       }
+        .info-box {
+            display: inline-block;
+            position: relative;
+            padding: 0.5px 3px 0.3px;
+            background-color: #2d80bf;
+            color: white;
+            font-size: 12px;
+            line-height: 1;
+            border-radius: 20%;
+            margin: 0 5px;
+        }
+        .info-box__content {
+            display: none;
+            position: absolute;
+            left: calc(100% + 5px);
+            bottom: 100%;
+            padding: 10px;
+            background-color: #2d80bf;
+            color: white;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+        .info-box:hover .info-box__content {
+            display: block;
+        }
 
       
      input[type=radio].css-checkbox {
@@ -382,7 +407,7 @@
 					<ul>
               <li class="form-line" data-type="control_taxa" id="id_12">
                 <br>
-                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Taxă de înscriere  </label>
+                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> I. Taxă de înscriere  </label>
                 <div class="form-input jf-required cid_1">
                   <table  style="width:100%">
                     <tbody>
@@ -464,13 +489,13 @@
 										?>		
 									</span>		
                           <span id="motiv-scutire" class="form-sub-label-container" style="vertical-align:top; width: 49%; margin-right: 5px;">
-                              <input type="text" name="Licenta_Motiv_Scutire_taxa" class="form-textbox last_1" size="15" placeholder="ex: Fiu de Parlamentar" data-component="last" value="<?php
+                              <input type="text" name="Licenta_Motiv_Scutire_taxa" class="form-textbox last_1" size="15" placeholder="ex: Fiu de cadru didactic" data-component="last" value="<?php
 																																						if($v_Scutire == '')
 																																							echo '';
 																																						else
 																																							echo $v_Scutire;
 																																					?>" />
-                              <label class="form-sub-label"  id="sublabel_last" style="min-height:13px;"> Dacă da, motivul scutirii </label>
+                              <label class="form-sub-label"  id="sublabel_last" style="min-height:13px;"> Dacă da, motivul scutirii <span class="info-box">!<span class="info-box__content">Sunteți scutit de taxa de admitere în cazuri precum "copil de cadru de didactic"</span></span></label>
                           </span>
 													 <span style="color:red">		
 										<?php		
@@ -492,7 +517,7 @@
 							
 				
 							<li class="form-line" data-type="control_fullname" id="id_1">
-								<label class="form-label form-label-left form-label-auto" id="label_1"  style="color: #3488CB; font-size:large"> Informa&#355;ii   generale </label>
+								<label class="form-label form-label-left form-label-auto" id="label_1"  style="color: #3488CB; font-size:large"> II. Informa&#355;ii   generale <span class="info-box">!<span class="info-box__content">În măsura în care este posibil, datele personale se vor completa din buletin </span></span></label>
 								<div  class="form-input jf-required cid_1">
 									<div class="general_name" data-wrapper-react="true">
 										<span id="num" class="form-sub-label-container" style="vertical-align:top;">  
@@ -715,7 +740,7 @@
 													}
 												?>
 											</span>
-											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> CNP </label>
+											<label class="form-sub-label sublabel_first"  style="min-height:13px;"> CNP<span class="info-box">!<span class="info-box__content">Codul Numeric Personal cum se găsește în buletin</span></span> </label>
 										</span>
 										<span  class="form-sub-label-container" style="vertical-align:top; width:6%;padding:0;margin:0;">
 											<input type="text"  name="Licenta_Tip_Buletin" class="form-textbox first_1" size="20" placeholder="ex: C.I. / CI" data-component="first" value="<?php 
@@ -7203,7 +7228,7 @@
 														}
 													?>
 												</span>
-												<label class="form-sub-label sublabel_first"   style="min-height:13px;">Nota la Matematic&#259; sau Informatic&#259;</label>
+												<label class="form-sub-label sublabel_first"   style="min-height:13px;">Nota la Matematic&#259; sau Informatic&#259;<span class="info-box">!<span class="info-box__content">Nota la examenul de bacalaureat la una din cele două materii</span></span></label>
 											</span>
 										</div>
 										<div class="mg">
@@ -7255,10 +7280,124 @@
 
 								</div>
 							</li>
+                <li class="form-line form-line-column form-col-1" data-type="control_birthdate" id="id_10">
+								<label class="form-label form-label-left form-label-auto" id="label_10"  style="color: #3488CB; font-size:large">III. Data na&#351;tere</label>
+								<div id="cid_10" class="form-input jf-required">
+									<div data-wrapper-react="true">
+										<span class="form-sub-label-container" style="vertical-align:top; ">
+											<select style="height:40px;" name="Licenta_Nastere_Luna" id="input_10_month" class="form-dropdown" data-component="birthdate-month">
+												<option value="January" <?php
+																					if($v_Master_nastere_luna=="January")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>>Ianuarie</option>
+												<option value="July"> Iulie</option>
+													<option value="February" <?php
+																					if($v_Master_nastere_luna=="February")
+																						echo 'selected';
+																					else
+																						echo '';
+																				?>> Februarie</option>		
+													<option value="March" <?php		
+																					if($v_Master_nastere_luna=="March")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Martie </option>		
+													<option value="April" <?php		
+																					if($v_Master_nastere_luna=="April")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Aprilie </option>		
+													<option value="May"<?php		
+																					if($v_Master_nastere_luna=="May")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Mai </option>		
+													<option value="June"<?php		
+																					if($v_Master_nastere_luna=="June")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Iunie </option>		
+													<option value="July"<?php		
+																					if($v_Master_nastere_luna=="July")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Iulie</option>		
+													<option value="August"<?php		
+																					if($v_Master_nastere_luna=="August")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> August </option>		
+													<option value="September"<?php		
+																					if($v_Master_nastere_luna=="September")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Septembrie </option>		
+													<option value="October"<?php		
+																					if($v_Master_nastere_luna=="October")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Octombrie </option>		
+													<option value="November"<?php		
+																					if($v_Master_nastere_luna=="November")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Noiembrie</option>		
+													<option value="December"<?php		
+																					if($v_Master_nastere_luna=="December")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Decembrie </option>
+											</select>
+											<label class="form-sub-label" for="input_10_month" id="sublabel_month" style="min-height:13px;">Lun&#259;</label>
+										</span>
+										<span class="form-sub-label-container" style="vertical-align:top;">
+											<select style="height:40px;" name="Licenta_Nastere_Zi" id="input_10_day" class="form-dropdown" data-component="birthdate-day">
+												<?php
+														for($i=1;$i<=31;$i++)
+														{
+															echo '<option value="'.$i.'" ';
+															if($v_Master_nastere_zi==$i)
+																echo 'selected';
+															echo '> '.$i.' </option>';
+															}
+													?>
+
+											</select>
+											<label class="form-sub-label" for="input_10_day" id="sublabel_day" style="min-height:13px;"> Zi </label>
+										</span>
+										<span class="form-sub-label-container" style="vertical-align:top;">
+											<select style="height:40px;" name="Licenta_Nastere_An" id="input_10_year" class="form-dropdown" data-component="birthdate-year">
+												<?php
+														for($i=2017;$i>=1920;$i--)
+														{
+															echo '<option value="'.$i.'" ';
+															if($v_Master_nastere_an==$i)
+																echo 'selected';
+															echo '> '.$i.' </option>';
+															}
+													?>
+											</select>
+											<label class="form-sub-label" for="input_10_year" id="sublabel_year" style="min-height:13px;">An</label>
+										</span>
+									</div>
+                                </div>
+                                    </li>
 							<li class="form-line" data-type="control_address" id="id_3">
                 <br>
                 <br>
-								<label class="form-label form-label-left form-label-auto" id="label_3" style="color: #3488CB; font-size:large"> Adresa dvs. </label>
+								<label class="form-label form-label-left form-label-auto" id="label_3" style="color: #3488CB; font-size:large"> VI. Adresa dvs. </label>
 								<div class="form-input jf-required cid_1">
 									<table  style="width:100%">
 										<tbody>
@@ -7499,14 +7638,14 @@
 							</li>
 							
 							<li class="form-line" data-type="control_cazare" id="id_12">
-                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Informații despre cazare  </label>
+                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> V. Informații despre cazare  </label>
                 <div class="form-input jf-required cid_1">
                   <table  style="width:100%">
                     <tbody>
                       <tr>
                         <td>
                           <label class="form-label form-label-left form-label-auto" 
-                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor?  </label>
+                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor? <span class="info-box">!<span class="info-box__content">Cazare în căminele Universității "Alexandru Ioan Cuza"</span></span> </label>
                           <span style="width:55%">
                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" value="1" <?php
 																												if($v_Radio5 == '')
@@ -7564,7 +7703,7 @@
                 </div>
               </li>
 							<li class="form-line" data-type="control_cazare" id="id_13">
-                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Alte date personale ale candidatului </label>
+                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> VI. Alte date personale ale candidatului </label>
                 <div class="form-input jf-required cid_1">
                   <table  style="width:100%">
                     <tbody>
@@ -7650,7 +7789,7 @@
 						  
 							
 							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px">
-								<label class="form-label form-label-left form-label-auto" id="label_6"   style="color: #3488CB; font-size:large">Contact </label>
+								<label class="form-label form-label-left form-label-auto" id="label_6"   style="color: #3488CB; font-size:large">VII. Contact </label>
 								<div id="cid_6" class="form-input jf-required" style="width:100%">
 									<div data-wrapper-react="true" style="width:100%">
 										<span class="form-sub-label-container" style="vertical-align:top; width:100%" >
@@ -7699,121 +7838,11 @@
 								</div>
 							</li>
 			   
-							<li class="form-line form-line-column form-col-1" data-type="control_birthdate" id="id_10">
-								<label class="form-label form-label-left form-label-auto" id="label_10"  style="color: #3488CB; font-size:large">Data na&#351;tere</label>
-								<div id="cid_10" class="form-input jf-required">
-									<div data-wrapper-react="true">
-										<span class="form-sub-label-container" style="vertical-align:top; ">
-											<select style="height:40px;" name="Licenta_Nastere_Luna" id="input_10_month" class="form-dropdown" data-component="birthdate-month">
-												<option value="January" <?php
-																					if($v_Master_nastere_luna=="January")
-																						echo 'selected';
-																					else
-																						echo '';
-																				?>>Ianuarie</option>
-												<option value="July"> Iulie</option>
-													<option value="February" <?php
-																					if($v_Master_nastere_luna=="February")
-																						echo 'selected';
-																					else
-																						echo '';
-																				?>> Februarie</option>		
-													<option value="March" <?php		
-																					if($v_Master_nastere_luna=="March")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Martie </option>		
-													<option value="April" <?php		
-																					if($v_Master_nastere_luna=="April")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Aprilie </option>		
-													<option value="May"<?php		
-																					if($v_Master_nastere_luna=="May")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Mai </option>		
-													<option value="June"<?php		
-																					if($v_Master_nastere_luna=="June")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Iunie </option>		
-													<option value="July"<?php		
-																					if($v_Master_nastere_luna=="July")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Iulie</option>		
-													<option value="August"<?php		
-																					if($v_Master_nastere_luna=="August")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> August </option>		
-													<option value="September"<?php		
-																					if($v_Master_nastere_luna=="September")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Septembrie </option>		
-													<option value="October"<?php		
-																					if($v_Master_nastere_luna=="October")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Octombrie </option>		
-													<option value="November"<?php		
-																					if($v_Master_nastere_luna=="November")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Noiembrie</option>		
-													<option value="December"<?php		
-																					if($v_Master_nastere_luna=="December")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Decembrie </option>
-											</select>
-											<label class="form-sub-label" for="input_10_month" id="sublabel_month" style="min-height:13px;">Lun&#259;</label>
-										</span>
-										<span class="form-sub-label-container" style="vertical-align:top;">
-											<select style="height:40px;" name="Licenta_Nastere_Zi" id="input_10_day" class="form-dropdown" data-component="birthdate-day">
-												<?php
-														for($i=1;$i<=31;$i++)
-														{
-															echo '<option value="'.$i.'" ';
-															if($v_Master_nastere_zi==$i)
-																echo 'selected';
-															echo '> '.$i.' </option>';
-															}
-													?>
-
-											</select>
-											<label class="form-sub-label" for="input_10_day" id="sublabel_day" style="min-height:13px;"> Zi </label>
-										</span>
-										<span class="form-sub-label-container" style="vertical-align:top;">
-											<select style="height:40px;" name="Licenta_Nastere_An" id="input_10_year" class="form-dropdown" data-component="birthdate-year">
-												<?php
-														for($i=2017;$i>=1920;$i--)
-														{
-															echo '<option value="'.$i.'" ';
-															if($v_Master_nastere_an==$i)
-																echo 'selected';
-															echo '> '.$i.' </option>';
-															}
-													?>
-											</select>
-											<label class="form-sub-label" for="input_10_year" id="sublabel_year" style="min-height:13px;">An</label>
-										</span>
-									</div>
+							
+                                <li>
 									<div data-wrapper-react="true">
 										<span class="form-sub-label-container" style="vertical-align:top;">
-											<label class="form-label form-label-left form-label-auto" id="label_9" for="input_9" style="color: #3488CB; font-size:large">Uploadare diplome, certificate (format pdf)</label>
+											<label class="form-label form-label-left form-label-auto" id="label_9" for="input_9" style="color: #3488CB; font-size:large">VIII. Uploadare diplome, certificate (format pdf)</label>
 											<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px" >
 										   
                                                 <input type="file" name="fileToUpload" id="fileToUpload">
@@ -7862,7 +7891,7 @@
 											</object>
 										</span> 
 									</div>
-								</div>
+								
 							</li>
 			  
 							<li class="form-line" data-type="control_button" id="id_2" style="text-align:center">
@@ -7874,9 +7903,57 @@
 									</div>
 								</div>
 							</li>
+                          
 		   
 						</ul>
+                     
 					</div>
+                    <div class="informatii-admitere">
+                        <p>Taxe:</p>
+                            <ul>
+                                <li>Taxă de înscriere: 300 RON</li>
+
+                                <li>Taxă de școlarizare: 3500 RON</li>
+                            </ul>
+
+                        <p>Acte necesare:</p>
+                        <ul>
+                        <li>fişa de înscriere</li>
+
+                        <li>trei fotografii tip buletin de identitate</li>
+
+                        <li>diploma de bacalaureat sau echivalentă cu aceasta, recunoscută de M.E.N.</li>
+
+                        <li>candidaţii care au promovat examenul de bacalaureat în sesiunea iunie-iulie 2016 pot prezenta la înscriere, în locul diplomei de bacalaureat, adeverinţa eliberată de liceu, în care se menţionează atât media generală, cât şi notele obţinute la probele susţinute şi notele la disciplinele care se iau în calcul la stabilirea mediei</li>
+
+                        <li>dacă un candidat nu depune la o specializare diploma în original, va depune şi o adeverinţă de la facultatea unde are actele în original</li>
+
+                        <li>certificat de naştere, în copie legalizată</li>
+
+                        <li>certificatul de căsătorie sau documentul care atestă schimbarea numelui, în copie legalizată (dacă este cazul)</li>
+
+                        <li>copie după cartea de identitate, care atestă domiciliul în România</li>
+
+                        <li>adeverinţă medicală tip
+                        chitanţă care dovedeşte plata taxei de înscriere sau actele necesare pentru scutirea de plata taxei</li>
+
+                        <li>dosar plic</li>
+                        </ul>
+
+                        <p>Candidaţii cetăţeni români cu domiciliul în România, dar cu studii efectuate în străinătate (inclusiv Republica Moldova) vor prezenta la înscriere diploma de bacalaureat echivalată de către Ministerul Educaţiei Naţionale
+                        (CNRED).</p>
+
+                        <p>Precizare</p>
+
+                        <p>Candidaţii care au absolvit liceul inainte de 2016 vor depune la dosar, după caz:<p>
+                        <ul>
+                            <li>declaraţie pe propria răspundere că nu au urmat cursurile nici unei facultăţi
+
+                            <li>adeverinţă de la facultatea urmată, care să ateste numărul de semestre finanţate de la buget de care au beneficiat
+
+                            <li>Întrucât candidaţii au dreptul de a se prezenta concomitent la două sau mai multe domenii, în vederea admiterii în învăţământul superior, dosarul cu actele originale se depune la prima opţiune. Înscrierea pentru celelalte domenii se face pe baza documentelor mai sus menţionate, prezentate în copie (pentru domeniile din Universitatea „Alexandru Ioan Cuza” Iaşi) sau în copie legalizată (pentru domeniile altor instituţii în afara Universităţii „Alexandru Ioan Cuza” Iaşi), la care se adaugă o adeverinţă de înscriere de la facultatea unde s-a depus dosarul cu actele originale. Indiferent dacă Facultatea de Informatică reprezintă sau nu prima opţiune, testul scris este obligatoriu pentru toţi candidaţii.</li>
+                        </ul>
+                     </div>
 
 				</div>
 			</form>
@@ -7941,7 +8018,7 @@
 
 			
 			<hr class="hr_footer">
-				<p class="hr_text">&copy; 2017 Grupa B3 Facultatea de Informatic&#259; Iasi</p>
+				<p class="hr_text">&copy; 2017 Grupa B3 Facultatea de Informatic&#259; Iași</p>
 			</hr>
 		</footer>
 </body>

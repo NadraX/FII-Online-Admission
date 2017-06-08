@@ -268,6 +268,32 @@
         -ms-user-select: none;
         user-select: none;
       }	
+            .info-box {
+            display: inline-block;
+            position: relative;
+            padding: 0.5px 3px 0.3px;
+            background-color: #2d80bf;
+            color: white;
+            font-size: 12px;
+            line-height: 1;
+            border-radius: 20%;
+            margin: 0 5px;
+        }
+        .info-box__content {
+            display: none;
+            position: absolute;
+            left: calc(100% + 5px);
+            bottom: 100%;
+            padding: 10px;
+            background-color: #2d80bf;
+            color: white;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+        .info-box:hover .info-box__content {
+            display: block;
+        }
+
 		</style>		
 
 
@@ -458,7 +484,7 @@
 						
 				<li class="form-line" data-type="control_taxa" id="id_12">
 	                <br>
-	                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Taxă de înscriere  </label>
+	                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> I. Taxă de înscriere  </label>
 	                <div class="form-input jf-required cid_1">
 		                  <table  style="width:100%">
 			                    <tbody>
@@ -560,7 +586,7 @@
 													}		
 												?>		
 											</span>
-			                              <label class="form-sub-label"  id="sublabel_last" style="min-height:13px;"> Dacă da, motivul scutirii </label>
+			                              <label class="form-sub-label"  id="sublabel_last" style="min-height:13px;"> Dacă da, motivul scutirii <span class="info-box">!<span class="info-box__content">Sunteți scutit de taxa de admitere în cazuri precum "copil de cadru de didactic"</span></span> </label>
 			                          </span>
 			                        </td>
 			                      </tr>
@@ -571,7 +597,7 @@
 
 							<li class="form-line" data-type="control_fullname" id="id_1">
 
-								<label class="form-label form-label-left form-label-auto" id="label_1" style="color: #3488CB; font-size:large"> Informa&#355;ii generale </label>
+								<label class="form-label form-label-left form-label-auto" id="label_1" style="color: #3488CB; font-size:large"> II. Informa&#355;ii generale <span class="info-box">!<span class="info-box__content">În măsura în care este posibil, datele personale se vor completa din buletin </span></span></label>
 
 								<div  class="form-input jf-required cid_1">
 
@@ -859,7 +885,7 @@
 													?>
 												</span>
 
-											<label class="form-sub-label"  style="min-height:13px;"> CNP </label>
+											<label class="form-sub-label"  style="min-height:13px;"> CNP <span class="info-box">!<span class="info-box__content">Codul Numeric Personal cum se găsește în buletin</span></span> </label>
 
 										</span>
 
@@ -7429,7 +7455,7 @@
 
 								<div class="col-md-12" style="margin-top:40px; padding:0; margin-bottom:10px"> 
 
-									<label class="form-sub-label form-label" style="width:100%; float:left;color: #3488CB;font-size: large;">Numerota&#355;i op&#355;iunile dvs. in ordinea preferin&#355;elor:</label>
+									<label class="form-sub-label form-label" style="width:100%; float:left;color: #3488CB;font-size: large;">III. Numerota&#355;i op&#355;iunile dvs. in ordinea preferin&#355;elor:</label>
 
 									<div class="col-md-4" style="padding:0;">
 
@@ -7599,10 +7625,145 @@
 								</div>
 
 							</li>
+                            <li class="form-line form-line-column form-col-1" data-type="control_birthdate" id="id_10">
+
+									<label class="form-label form-label-left form-label-auto" id="label_10" style="color: #3488CB; font-size:large">IV. Data na&#351;tere</label>
+
+									<div id="cid_10" class="form-input jf-required">
+
+										<div data-wrapper-react="true">
+
+											<span class="form-sub-label-container" style="vertical-align:top; ">
+
+												<select style="height:40px;" name="Master_Nastere_Luna" id="input_10_month" class="form-dropdown" data-component="birthdate-month">
+
+													<option value="January" <?php
+																					if($v_Master_nastere_luna=="January")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>>Ianuarie</option>		
+													<option value="February" <?php
+																					if($v_Master_nastere_luna=="February")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Februarie</option>		
+													<option value="March" <?php
+																					if($v_Master_nastere_luna=="March")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Martie </option>		
+													<option value="April" <?php
+																					if($v_Master_nastere_luna=="April")		
+																						echo 'selected';
+																					else		
+																						echo '';		
+																				?>> Aprilie </option>		
+													<option value="May"<?php
+																					if($v_Master_nastere_luna=="May")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Mai </option>		
+													<option value="June"<?php
+																					if($v_Master_nastere_luna=="June")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Iunie </option>		
+													<option value="July"<?php
+																					if($v_Master_nastere_luna=="July")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Iulie</option>		
+													<option value="August"<?php
+																					if($v_Master_nastere_luna=="August")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> August </option>		
+													<option value="September"<?php
+																					if($v_Master_nastere_luna=="September")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Septembrie </option>		
+													<option value="October"<?php
+																					if($v_Master_nastere_luna=="October")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Octombrie </option>		
+													<option value="November"<?php
+																					if($v_Master_nastere_luna=="November")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Noiembrie</option>		
+													<option value="December"<?php		
+																					if($v_Master_nastere_luna=="December")		
+																						echo 'selected';		
+																					else		
+																						echo '';		
+																				?>> Decembrie </option>
+
+												</select>
+
+												<label class="form-sub-label"  style="min-height:13px;">Lun&#259;</label>
+
+											</span>
+
+											<span class="form-sub-label-container" style="vertical-align:top;">
+
+												<select style="height:40px;" name="Master_Nastere_Zi" id="input_10_day" class="form-dropdown" data-component="birthdate-day">
+
+													<?php
+														for($i=1;$i<=31;$i++)		
+														{
+															echo '<option value="'.$i.'" ';		
+															if($v_Master_nastere_zi==$i)
+																echo 'selected';		
+															echo '> '.$i.' </option>';
+															}		
+													?>
+
+
+												</select>
+
+												<label class="form-sub-label"  style="min-height:13px;"> Zi </label>
+
+											</span>
+
+											<span class="form-sub-label-container" style="vertical-align:top;">
+
+												<select style="height:40px;" name="Master_Nastere_An" class="form-dropdown" data-component="birthdate-year">
+
+													<?php
+														for($i=2017;$i>=1971;$i--)		
+														{
+															echo '<option value="'.$i.'" ';		
+															if($v_Master_nastere_an==$i)
+																echo 'selected';		
+															echo '> '.$i.' </option>';
+															}		
+													?>
+
+												</select>
+
+												<label class="form-sub-label" style="min-height:13px;">An</label>
+
+											</span>
+
+										</div>
+                                </div>
+                                        </li>
 							<li class="form-line" data-type="control_address" id="id_3">
 							<br>
 
-									<label class="form-label form-label-left form-label-auto" id="label_3" style="color: #3488CB; font-size:large"> Adresa dvs.</label>
+									<label class="form-label form-label-left form-label-auto" id="label_3" style="color: #3488CB; font-size:large"> V. Adresa dvs.</label>
 
 									<div class="form-input jf-required cid_1">
 
@@ -7897,14 +8058,14 @@
 							</li>
 							
 							<li class="form-line" data-type="control_cazare" id="id_12">
-				                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Informații despre cazare  </label>
+				                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large">VI. Informații despre cazare  </label>
 				                <div class="form-input jf-required cid_1">
 				                  <table  style="width:100%">
 				                    <tbody>
 				                      <tr>
 				                        <td>
 				                          <label class="form-label form-label-left form-label-auto" 
-				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor?  </label>                        
+				                          style="color: gray; font-size:medium; width:45%; display:inline-block"> Solicitați cazare pe timpul studiilor? <span class="info-box">!<span class="info-box__content">Cazare în căminele Universității "Alexandru Ioan Cuza"</span></span> </label>                        
 				                          <span style="width:55%">
 				                            <input type="radio" name="group5" id="checkbox3" class="css-checkbox" value="1" <?php
 																															if($v_Radio5 == '')		
@@ -7962,7 +8123,7 @@
 				                </div>
 			              	</li>
 							<li class="form-line" data-type="control_cazare" id="id_13">
-				                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> Alte date personale ale candidatului </label>
+				                <label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large"> VII. Alte date personale ale candidatului </label>
 				                <div class="form-input jf-required cid_1">
 				                  <table  style="width:100%">
 				                    <tbody>
@@ -8048,7 +8209,7 @@
 
 							<li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_6" style="width:50%; margin-right:50px">
 
-									<label class="form-label form-label-left form-label-auto"  style="color: #3488CB; font-size:large">Contact </label>
+									<label class="form-label form-label-left form-label-auto"  style="color: #3488CB; font-size:large">VIII. Contact </label>
 
 									<div id="cid_6" class="form-input jf-required" style="width:100%">
 
@@ -8112,145 +8273,14 @@
 
 							</li>
 
-							<li class="form-line form-line-column form-col-1" data-type="control_birthdate" id="id_10">
-
-									<label class="form-label form-label-left form-label-auto" id="label_10" style="color: #3488CB; font-size:large">Data na&#351;tere</label>
-
-									<div id="cid_10" class="form-input jf-required">
-
-										<div data-wrapper-react="true">
-
-											<span class="form-sub-label-container" style="vertical-align:top; ">
-
-												<select style="height:40px;" name="Master_Nastere_Luna" id="input_10_month" class="form-dropdown" data-component="birthdate-month">
-
-													<option value="January" <?php
-																					if($v_Master_nastere_luna=="January")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>>Ianuarie</option>		
-													<option value="February" <?php
-																					if($v_Master_nastere_luna=="February")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Februarie</option>		
-													<option value="March" <?php
-																					if($v_Master_nastere_luna=="March")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Martie </option>		
-													<option value="April" <?php
-																					if($v_Master_nastere_luna=="April")		
-																						echo 'selected';
-																					else		
-																						echo '';		
-																				?>> Aprilie </option>		
-													<option value="May"<?php
-																					if($v_Master_nastere_luna=="May")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Mai </option>		
-													<option value="June"<?php
-																					if($v_Master_nastere_luna=="June")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Iunie </option>		
-													<option value="July"<?php
-																					if($v_Master_nastere_luna=="July")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Iulie</option>		
-													<option value="August"<?php
-																					if($v_Master_nastere_luna=="August")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> August </option>		
-													<option value="September"<?php
-																					if($v_Master_nastere_luna=="September")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Septembrie </option>		
-													<option value="October"<?php
-																					if($v_Master_nastere_luna=="October")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Octombrie </option>		
-													<option value="November"<?php
-																					if($v_Master_nastere_luna=="November")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Noiembrie</option>		
-													<option value="December"<?php		
-																					if($v_Master_nastere_luna=="December")		
-																						echo 'selected';		
-																					else		
-																						echo '';		
-																				?>> Decembrie </option>
-
-												</select>
-
-												<label class="form-sub-label"  style="min-height:13px;">Lun&#259;</label>
-
-											</span>
-
-											<span class="form-sub-label-container" style="vertical-align:top;">
-
-												<select style="height:40px;" name="Master_Nastere_Zi" id="input_10_day" class="form-dropdown" data-component="birthdate-day">
-
-													<?php
-														for($i=1;$i<=31;$i++)		
-														{
-															echo '<option value="'.$i.'" ';		
-															if($v_Master_nastere_zi==$i)
-																echo 'selected';		
-															echo '> '.$i.' </option>';
-															}		
-													?>
-
-
-												</select>
-
-												<label class="form-sub-label"  style="min-height:13px;"> Zi </label>
-
-											</span>
-
-											<span class="form-sub-label-container" style="vertical-align:top;">
-
-												<select style="height:40px;" name="Master_Nastere_An" class="form-dropdown" data-component="birthdate-year">
-
-													<?php
-														for($i=2017;$i>=1971;$i--)		
-														{
-															echo '<option value="'.$i.'" ';		
-															if($v_Master_nastere_an==$i)
-																echo 'selected';		
-															echo '> '.$i.' </option>';
-															}		
-													?>
-
-												</select>
-
-												<label class="form-sub-label" style="min-height:13px;">An</label>
-
-											</span>
-
-										</div>
+							
+                                <li>
 
 										<div data-wrapper-react="true">
 
 											<span class="form-sub-label-container" style="vertical-align:top;">
 
-												<label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large">Uploadare diplome,certificate (format pdf)</label>
+												<label class="form-label form-label-left form-label-auto" style="color: #3488CB; font-size:large">IX. Uploadare diplome,certificate (format pdf)</label>
 
 												<object data="YourFile.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="320" style="font-size:30px">
 
@@ -8306,7 +8336,7 @@
 
 										</div>
 
-									</div>
+									
 
 							</li>
 
@@ -8332,7 +8362,39 @@
 
 					</div>
 
+                    <div>
+                        <p>Taxe:</p>
+                        <ul>
+                            <li>Taxă de înscriere: 300 RON</li>
 
+                            <li>Taxă de școlarizare: 3900 RON</li>
+                        </ul>
+                        <p>Acte necesare pentru înscriere</p>
+                        <ul>
+                            <li>fişa de înscriere tip;</li>
+
+                            <li>diploma de bacalaureat şi diploma de licenţă (sau echivalentul ei), originale sau copii legalizate însoţite de dovada că originalele sunt depuse la altă facultate;</li>
+
+                            <li>foaia matricolă din facultate - nivel licenţă (cu media ECTS); aceasta nu este necesară în cazul în care media ECTS de nivel licenţă apare în documentele de la punctul anterior</li>
+
+                            <li>certificat de naştere, în copie legalizată;</li>
+
+                            <li>copie simplă carte de identitate;</li>
+
+                            <li>două fotografii tip buletin;</li>
+
+                            <li>chitanţa ce dovedeşte plata taxei de înscriere (la concursul de admitere pentru studii universitare de masterat nu se acordă scutiri de la taxa de înscriere);</li>
+
+                            <li>adeverinţă medicală tip;</li>
+
+                            <li>adeverinţă din care să rezulte calitatea de masterand (pentru masteranzii care urmează o a doua specializare);</li>
+
+                            <li>certificatul de căsătorie sau documentul care atestă schimbarea numelui, în copie legalizată (dacă este cazul);</li>
+
+                            <li>dosar plic.</li>
+                        </ul>
+                        <p>Candidaţii absolvenţi de studii universitare de licenţă de la universităţile particulare vor prezenta, la înscriere, o dovadă a acreditării specializării absolvite.</p>
+                    </div>
 
 				</div>
 
